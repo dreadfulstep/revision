@@ -18,6 +18,10 @@ router.get('/', (req, res) => {
     });
 
     res.redirect(`https://discord.com/api/oauth2/authorize?${params.toString()}`);
-})
+});
+
+router.get('/discord/callback', (req, res) => {
+    const { code, state } = req.query;
+});
 
 export default router;
