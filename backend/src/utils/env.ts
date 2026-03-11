@@ -10,6 +10,9 @@ const env = {
 
   databaseUrl: process.env.DATABASE_URL!,
   redisUrl: process.env.REDIS_URL!,
+
+  encryptionSecret: process.env.ENCRYPTION_SECRET!,
+  sessionSecret: process.env.SESSION_SECRET!
 };
 
 export default env;

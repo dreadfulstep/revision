@@ -1,16 +1,16 @@
 import { createClient } from "redis";
 import env from "@/utils/env";
 
-const client = createClient({
+const redis = createClient({
   url: env.redisUrl,
 });
 
-client.on("error", (err) => console.error("Redis error:", err));
+redis.on("error", (err) => console.error("Redis error:", err));
 
 async function connect() {
-  if (!client.isOpen) await client.connect();
+  if (!redis.isOpen) await redis.connect();
 }
 
 connect();
 
-export default client;
+export default redis;

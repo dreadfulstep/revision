@@ -1,0 +1,15 @@
+{
+  "id": "maths",
+  "name": "Mathematics",
+  "examBoard": "EDEXCEL",
+  "tier": "higher",
+  "colour": "#3b82f6",
+  "papers": ["1", "2", "3"],
+  "topics": [
+    { "id": "algebra", "name": "Algebra" },
+    { "id": "geometry", "name": "Geometry & Measures" },
+    { "id": "statistics", "name": "Statistics & Probability" },
+    { "id": "number", "name": "Number" },
+    { "id": "ratio", "name": "Ratio, Proportion & Rates of Change" }
+  ]
+}
