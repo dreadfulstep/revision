@@ -9,7 +9,9 @@ type ServiceResult<T> =
   | { ok: true; data: T }
   | { ok: false; status: number; error: string; meta?: object };
 
-export async function getStats(userId: string): Promise<ServiceResult<UserStats>> {
+export async function getStats(
+  userId: string,
+): Promise<ServiceResult<UserStats>> {
   const user = await db
     .select()
     .from(users)
@@ -28,6 +30,21 @@ export async function getStats(userId: string): Promise<ServiceResult<UserStats>
 
   const levelInfo = getLevel(user.xp);
 
+  const attempts = await db
+    .select()
+    .from(quizAttemptsTable)
+    .where(eq(quizAttemptsTable.userId, userId))
+    .execute();
+
+  const scoredAttempts = attempts.filter(
+    (a) => a.score !== null && a.score !== undefined,
+  );
+  const accuracy =
+    scoredAttempts.length > 0
+      ? scoredAttempts.reduce((acc, a) => acc + (a.score || 0), 0) /
+        scoredAttempts.length
+      : 0;
+
   return {
     ok: true,
     data: {
@@ -38,11 +55,14 @@ export async function getStats(userId: string): Promise<ServiceResult<UserStats>
       streak: streak
         ? { current: streak.current, longest: streak.longest }
         : { current: 0, longest: 0 },
+      accuracy: Math.round(accuracy),
     },
   };
 }
 
-export async function getStreak(userId: string): Promise<ServiceResult<StreakInfo>> {
+export async function getStreak(
+  userId: string,
+): Promise<ServiceResult<StreakInfo>> {
   const streak = await db
     .select()
     .from(streaks)
@@ -53,7 +73,11 @@ export async function getStreak(userId: string): Promise<ServiceResult<StreakInf
   return {
     ok: true,
     data: streak
-      ? { current: streak.current, longest: streak.longest, lastActivityDate: streak.lastActivityDate }
+      ? {
+          current: streak.current,
+          longest: streak.longest,
+          lastActivityDate: streak.lastActivityDate,
+        }
       : { current: 0, longest: 0, lastActivityDate: null },
   };
 }
@@ -64,6 +88,7 @@ type UserStats = {
   quizzesCompleted: number;
   questionsAnswered: number;
   streak: { current: number; longest: number };
+  accuracy: number;
 };
 
 type StreakInfo = {

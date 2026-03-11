@@ -1,9 +1,17 @@
 import db from "@/db";
 import { quizAnswersTable, quizAttemptsTable, quizzesTable } from "@/db/schema";
-import { AnswerQuestionParams, AnswerResult, AttemptDetails, AttemptSummary, CompletedAttempt, Question, StartedAttempt } from "@/types/quiz";
+import {
+  AnswerQuestionParams,
+  AnswerResult,
+  AttemptDetails,
+  AttemptSummary,
+  CompletedAttempt,
+  Question,
+  StartedAttempt,
+} from "@/types/quiz";
 import { getQuestions, getSubject, subjects } from "@/utils/content";
 import { generateSeed, seedArray } from "@/utils/seed";
-import { and, eq } from "drizzle-orm";
+import { and, eq, inArray } from "drizzle-orm";
 import { randomUUID } from "crypto";
 import { checkAnswer } from "@/utils/answer";
 import { updateStreak } from "./streak.service";
@@ -108,8 +116,16 @@ export async function generateQuiz(
   };
 }
 
-export async function startAttempt(userId: string, seed: string): Promise<ServiceResult<StartedAttempt>> {
-  const quiz = await db.select().from(quizzesTable).where(eq(quizzesTable.id, seed)).limit(1).then((r) => r[0]);
+export async function startAttempt(
+  userId: string,
+  seed: string,
+): Promise<ServiceResult<StartedAttempt>> {
+  const quiz = await db
+    .select()
+    .from(quizzesTable)
+    .where(eq(quizzesTable.id, seed))
+    .limit(1)
+    .then((r) => r[0]);
   if (!quiz) return { ok: false, status: 404, error: "Quiz not found" };
 
   const attemptId = randomUUID();
@@ -127,31 +143,51 @@ export async function startAttempt(userId: string, seed: string): Promise<Servic
   };
 }
 
-export async function answerQuestion(params: AnswerQuestionParams): Promise<ServiceResult<AnswerResult>> {
+export async function answerQuestion(
+  params: AnswerQuestionParams,
+): Promise<ServiceResult<AnswerResult>> {
   // verify attempt exists and belongs to user
   const attempt = await db
     .select()
     .from(quizAttemptsTable)
-    .where(and(eq(quizAttemptsTable.id, params.attemptId), eq(quizAttemptsTable.userId, params.userId)))
+    .where(
+      and(
+        eq(quizAttemptsTable.id, params.attemptId),
+        eq(quizAttemptsTable.userId, params.userId),
+      ),
+    )
     .limit(1)
     .then((r) => r[0]);
 
   if (!attempt) return { ok: false, status: 404, error: "Attempt not found" };
-  if (attempt.completedAt) return { ok: false, status: 400, error: "Attempt already completed" };
+  if (attempt.completedAt)
+    return { ok: false, status: 400, error: "Attempt already completed" };
 
   // check not already answered
   const alreadyAnswered = await db
     .select()
     .from(quizAnswersTable)
-    .where(and(eq(quizAnswersTable.attemptId, params.attemptId), eq(quizAnswersTable.questionId, params.questionId)))
+    .where(
+      and(
+        eq(quizAnswersTable.attemptId, params.attemptId),
+        eq(quizAnswersTable.questionId, params.questionId),
+      ),
+    )
     .limit(1)
     .then((r) => r[0]);
 
-  if (alreadyAnswered) return { ok: false, status: 400, error: "Question already answered" };
+  if (alreadyAnswered)
+    return { ok: false, status: 400, error: "Question already answered" };
 
   // get quiz to verify question belongs to it
-  const quiz = await db.select().from(quizzesTable).where(eq(quizzesTable.id, attempt.quizId)).limit(1).then((r) => r[0]);
-  if (!quiz.questionIds.includes(params.questionId)) return { ok: false, status: 400, error: "Question not part of this quiz" };
+  const quiz = await db
+    .select()
+    .from(quizzesTable)
+    .where(eq(quizzesTable.id, attempt.quizId))
+    .limit(1)
+    .then((r) => r[0]);
+  if (!quiz.questionIds.includes(params.questionId))
+    return { ok: false, status: 400, error: "Question not part of this quiz" };
 
   // get the real question from content
   const pool = getQuestions(quiz.subjectId);
@@ -171,16 +207,25 @@ export async function answerQuestion(params: AnswerQuestionParams): Promise<Serv
   return { ok: true, data: result };
 }
 
-export async function completeAttempt(userId: string, attemptId: string): Promise<ServiceResult<CompletedAttempt>> {
+export async function completeAttempt(
+  userId: string,
+  attemptId: string,
+): Promise<ServiceResult<CompletedAttempt>> {
   const attempt = await db
     .select()
     .from(quizAttemptsTable)
-    .where(and(eq(quizAttemptsTable.id, attemptId), eq(quizAttemptsTable.userId, userId)))
+    .where(
+      and(
+        eq(quizAttemptsTable.id, attemptId),
+        eq(quizAttemptsTable.userId, userId),
+      ),
+    )
     .limit(1)
     .then((r) => r[0]);
 
   if (!attempt) return { ok: false, status: 404, error: "Attempt not found" };
-  if (attempt.completedAt) return { ok: false, status: 400, error: "Attempt already completed" };
+  if (attempt.completedAt)
+    return { ok: false, status: 400, error: "Attempt already completed" };
 
   const quiz = await db
     .select()
@@ -226,7 +271,9 @@ export async function completeAttempt(userId: string, attemptId: string): Promis
   };
 }
 
-export async function getQuiz(seed: string): Promise<ServiceResult<GeneratedQuiz>> {
+export async function getQuiz(
+  seed: string,
+): Promise<ServiceResult<GeneratedQuiz>> {
   const quiz = await db
     .select()
     .from(quizzesTable)
@@ -237,12 +284,19 @@ export async function getQuiz(seed: string): Promise<ServiceResult<GeneratedQuiz
   if (!quiz) return { ok: false, status: 404, error: "Quiz not found" };
 
   const subject = getSubject(quiz.subjectId);
-  if (!subject) return { ok: false, status: 404, error: "Subject no longer exists" };
+  if (!subject)
+    return { ok: false, status: 404, error: "Subject no longer exists" };
 
-  const pool = getQuestions(quiz.subjectId, quiz.topics.length > 0 ? quiz.topics : undefined);
+  const pool = getQuestions(
+    quiz.subjectId,
+    quiz.topics.length > 0 ? quiz.topics : undefined,
+  );
   const questions = seedArray(pool, seed)
     .slice(0, quiz.count)
-    .map(({ answer: _a, explanation: _e, ...q }) => q) as Omit<Question, "answer" | "explanation">[];
+    .map(({ answer: _a, explanation: _e, ...q }) => q) as Omit<
+    Question,
+    "answer" | "explanation"
+  >[];
 
   return {
     ok: true,
@@ -250,37 +304,62 @@ export async function getQuiz(seed: string): Promise<ServiceResult<GeneratedQuiz
       seed,
       subjectId: subject.id,
       subjectName: subject.name,
-      topics: quiz.topics.length > 0 ? quiz.topics : subject.topics.map((t) => t.id),
+      topics:
+        quiz.topics.length > 0 ? quiz.topics : subject.topics.map((t) => t.id),
       count: questions.length,
       questions,
     },
   };
 }
 
-export async function getAttempt(userId: string, attemptId: string): Promise<ServiceResult<AttemptDetails>> {
+export async function getAttempt(
+  userId: string,
+  attemptId: string,
+): Promise<ServiceResult<AttemptDetails>> {
   const attempt = await db
     .select()
     .from(quizAttemptsTable)
-    .where(and(eq(quizAttemptsTable.id, attemptId), eq(quizAttemptsTable.userId, userId)))
+    .where(
+      and(
+        eq(quizAttemptsTable.id, attemptId),
+        eq(quizAttemptsTable.userId, userId),
+      ),
+    )
     .limit(1)
     .then((r) => r[0]);
 
   if (!attempt) return { ok: false, status: 404, error: "Attempt not found" };
-  if (!attempt.completedAt || attempt.score === null) return { ok: false, status: 400, error: "Attempt not completed yet" };
+  if (!attempt.completedAt || attempt.score === null)
+    return { ok: false, status: 400, error: "Attempt not completed yet" };
 
   const answers = await db
     .select()
     .from(quizAnswersTable)
     .where(eq(quizAnswersTable.attemptId, attemptId));
 
+  const quiz = await db
+    .select()
+    .from(quizzesTable)
+    .where(eq(quizzesTable.id, attempt.quizId))
+    .limit(1)
+    .then((r) => r[0]);
+
+  const subject = quiz
+    ? subjects.find((s) => s.id === quiz.subjectId)
+    : undefined;
+
   return {
     ok: true,
     data: {
       attemptId: attempt.id,
       seed: attempt.quizId,
-      subjectId: attempt.quizId.split("-")[0], // subjectId is the prefix of the seed
-      score: attempt.score,
+      subjectId: quiz?.subjectId || attempt.quizId.split("-")[0],
+      subjectName: subject?.name,
+      topics: quiz?.topics || [],
+      accuracy: attempt.score,
       completedAt: attempt.completedAt,
+      duration:
+        (attempt.completedAt.getTime() - attempt.createdAt.getTime()) / 1000,
       answers: answers.map((a) => ({
         questionId: a.questionId,
         answer: JSON.parse(a.answer),
@@ -290,23 +369,42 @@ export async function getAttempt(userId: string, attemptId: string): Promise<Ser
   };
 }
 
-export async function getUserHistory(userId: string, subjectId?: string): Promise<ServiceResult<AttemptSummary[]>> {
+export async function getUserHistory(
+  userId: string,
+  subjectId?: string
+): Promise<ServiceResult<AttemptSummary[]>> {
   const attempts = await db
     .select()
     .from(quizAttemptsTable)
     .where(eq(quizAttemptsTable.userId, userId));
 
-  const completed = attempts.filter((a) => a.completedAt !== null && a.score !== null);
+  const completed = attempts.filter(
+    (a) => a.completedAt !== null && a.score !== null
+  );
 
-  const summaries: AttemptSummary[] = completed
-    .filter((a) => !subjectId || a.quizId.startsWith(subjectId))
-    .map((a) => ({
+  const quizIds = completed.map((a) => a.quizId);
+
+  const quizzes = await db
+    .select()
+    .from(quizzesTable)
+    .where(inArray(quizzesTable.id, quizIds));
+
+  const summaries: AttemptSummary[] = completed.map((a) => {
+    const quiz = quizzes.find((q) => q.id === a.quizId);
+    const subject = quiz ? subjects.find((s) => s.id === quiz.subjectId) : undefined;
+
+    return {
       attemptId: a.id,
       seed: a.quizId,
-      subjectId: a.quizId.split("-")[0],
-      score: a.score!,
+      subjectId: quiz?.subjectId || a.quizId.split("-")[0],
+      subjectName: subject?.name || "Unknown",
+      topics: quiz?.topics || [],
+      questionsAnswered: quiz?.questionIds.length || 0,
+      accuracy: a.score!,
       completedAt: a.completedAt!,
-    }));
+      duration: quiz ? (a.completedAt!.getTime() - a.createdAt.getTime()) / 1000 : undefined,
+    };
+  });
 
   return { ok: true, data: summaries };
 }

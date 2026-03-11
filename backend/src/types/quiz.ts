@@ -74,14 +74,32 @@ export type CompletedAttempt = {
   streak: { current: number; longest: number; }
 }
 
+export type AttemptAnswer = {
+  questionId: string;
+  answer: unknown; // parsed JSON
+  correct: boolean;
+};
+
+export type AttemptDetails = {
+  attemptId: string;
+  seed: string;
+  subjectId: string;
+  subjectName?: string;
+  topics: string[];
+  accuracy: number;
+  completedAt: Date;
+  duration?: number; // in seconds
+  answers: AttemptAnswer[];
+};
+
 export type AttemptSummary = {
   attemptId: string;
   seed: string;
   subjectId: string;
-  score: number;
+  subjectName: string;
+  topics: string[];
+  questionsAnswered: number;
+  accuracy: number;
   completedAt: Date;
-}
-
-export type AttemptDetails = AttemptSummary & {
-  answers: { questionId: string; answer: number | string | boolean; correct: boolean; }[];
-}
+  duration?: number;
+};

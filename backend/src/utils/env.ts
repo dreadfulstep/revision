@@ -12,7 +12,9 @@ const env = {
   redisUrl: process.env.REDIS_URL!,
 
   encryptionSecret: process.env.ENCRYPTION_SECRET!,
-  sessionSecret: process.env.SESSION_SECRET!
+  sessionSecret: process.env.SESSION_SECRET!,
+
+  frontendUrl: process.env.FRONTEND_URL!
 };
 
 export default env;

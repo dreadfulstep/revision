@@ -120,10 +120,12 @@ router.get("/discord", async (req, res) => {
       maxAge: tokenData.expires_in * 1000,
     });
 
-    res.json({
-      message: "Success",
-      user: discordUser,
-    });
+    res.send(`
+      <script>
+        window.opener.postMessage({ type: "AUTH_SUCCESS", user: ${JSON.stringify(discordUser)} }, "${env.frontendUrl}");
+        window.close();
+      </script>
+    `);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Internal server error" });
