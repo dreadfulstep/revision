@@ -11,9 +11,10 @@ import authRouter from "@/routes/auth";
 import userRouter from "@/routes/users"
 import subjectRouter from "@/routes/subjects";
 import quizRouter from "@/routes/quiz";
+import meRouter from "@/routes/users";
+import leaderboardRouter from "@/routes/leaderboard";
 
 import { authMiddleware } from "./middleware/auth";
-import { generateQuiz } from "./services/quiz.service";
 
 const app = express();
 
@@ -28,9 +29,10 @@ app.use(cors({
 app.use(authMiddleware);
 
 app.use('/auth', authRouter);
-app.use('/users', userRouter);
-app.use('/subjects', subjectRouter);
-app.use('/quiz', quizRouter);
+app.use("/subjects", subjectRouter);
+app.use("/quiz", quizRouter);
+app.use("/me", meRouter);
+app.use("/leaderboard", leaderboardRouter);
 
 app.listen(env.port, () => {
     console.log(`Server is running on port ${env.port}`)

@@ -5,7 +5,7 @@ import * as me from "@/controllers/me.controller";
 const router = Router();
 router.use(requireAuth);
 
-router.get("/@me", (req, res) => {
+router.get("/", (req, res) => {
   res.json(req.user)
 });
 
