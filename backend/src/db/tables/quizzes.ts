@@ -1,4 +1,12 @@
-import { pgTable, varchar, timestamp, integer, boolean, jsonb } from "drizzle-orm/pg-core";
+import {
+  pgTable,
+  varchar,
+  timestamp,
+  integer,
+  boolean,
+  jsonb,
+  text,
+} from "drizzle-orm/pg-core";
 import { users } from "./users";
 
 export const quizzesTable = pgTable("quizzes", {
@@ -31,7 +39,7 @@ export const quizAnswersTable = pgTable("quiz_answers", {
     .notNull()
     .references(() => quizAttemptsTable.id),
   questionId: varchar("question_id", { length: 255 }).notNull(),
-  answer: integer("answer").notNull(), // index the user chose
+  answer: text("answer").notNull(),
   correct: boolean("correct").notNull(),
   answeredAt: timestamp("answered_at").defaultNow().notNull(),
 });

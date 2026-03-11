@@ -15,6 +15,13 @@
       "when": 1773188593791,
       "tag": "0001_clean_zaladane",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1773189059161,
+      "tag": "0002_careful_wildside",
+      "breakpoints": true
     }
   ]
 }

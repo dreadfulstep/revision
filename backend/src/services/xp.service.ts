@@ -1,9 +1,15 @@
-import { calculateXP } from "@/utils/xp";
 import db from "@/db";
 import { users } from "@/db/tables/users";
-import { sql, eq } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 
-export async function awardXP(userId: string, score: number, questionCount: number, streakDays: number) {
+export function calculateXP(score: number, questionCount: number, streakDays: number): number {
+  const base = questionCount * 10;
+  const scoreBonus = Math.round((score / 100) * questionCount * 15);
+  const streakBonus = Math.min(streakDays * 5, 50);
+  return base + scoreBonus + streakBonus;
+}
+
+export async function awardXP(userId: string, score: number, questionCount: number, streakDays: number): Promise<number> {
   const earned = calculateXP(score, questionCount, streakDays);
 
   await db.update(users)

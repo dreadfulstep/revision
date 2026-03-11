@@ -1,0 +1,1 @@
+ALTER TABLE "quiz_answers" ALTER COLUMN "answer" SET DATA TYPE text;

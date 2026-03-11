@@ -1,9 +1,11 @@
 import db from "@/db";
-import { quizzesTable } from "@/db/schema";
+import { quizAnswersTable, quizAttemptsTable, quizzesTable } from "@/db/schema";
 import { AnswerQuestionParams, AnswerResult, AttemptDetails, AttemptSummary, CompletedAttempt, Question, StartedAttempt } from "@/types/quiz";
 import { getQuestions, getSubject, subjects } from "@/utils/content";
 import { generateSeed, seedArray } from "@/utils/seed";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
+import { randomUUID } from "crypto";
+import { checkAnswer } from "@/utils/answer";
 
 type GenerateQuizParams = {
   subjectId: string;
@@ -104,9 +106,68 @@ export async function generateQuiz(
   };
 }
 
-export async function startAttempt(userId: string, seed: string): Promise<ServiceResult<StartedAttempt>>
+export async function startAttempt(userId: string, seed: string): Promise<ServiceResult<StartedAttempt>> {
+  const quiz = await db.select().from(quizzesTable).where(eq(quizzesTable.id, seed)).limit(1).then((r) => r[0]);
+  if (!quiz) return { ok: false, status: 404, error: "Quiz not found" };
 
-export async function answerQuestion(params: AnswerQuestionParams): Promise<ServiceResult<AnswerResult>>
+  const attemptId = randomUUID();
+  await db.insert(quizAttemptsTable).values({
+    id: attemptId,
+    userId,
+    quizId: seed,
+    score: null,
+    completedAt: null,
+  });
+
+  return {
+    ok: true,
+    data: { attemptId, quizId: seed, questionCount: quiz.count },
+  };
+}
+
+export async function answerQuestion(params: AnswerQuestionParams): Promise<ServiceResult<AnswerResult>> {
+  // verify attempt exists and belongs to user
+  const attempt = await db
+    .select()
+    .from(quizAttemptsTable)
+    .where(and(eq(quizAttemptsTable.id, params.attemptId), eq(quizAttemptsTable.userId, params.userId)))
+    .limit(1)
+    .then((r) => r[0]);
+
+  if (!attempt) return { ok: false, status: 404, error: "Attempt not found" };
+  if (attempt.completedAt) return { ok: false, status: 400, error: "Attempt already completed" };
+
+  // check not already answered
+  const alreadyAnswered = await db
+    .select()
+    .from(quizAnswersTable)
+    .where(and(eq(quizAnswersTable.attemptId, params.attemptId), eq(quizAnswersTable.questionId, params.questionId)))
+    .limit(1)
+    .then((r) => r[0]);
+
+  if (alreadyAnswered) return { ok: false, status: 400, error: "Question already answered" };
+
+  // get quiz to verify question belongs to it
+  const quiz = await db.select().from(quizzesTable).where(eq(quizzesTable.id, attempt.quizId)).limit(1).then((r) => r[0]);
+  if (!quiz.questionIds.includes(params.questionId)) return { ok: false, status: 400, error: "Question not part of this quiz" };
+
+  // get the real question from content
+  const pool = getQuestions(quiz.subjectId);
+  const question = pool.find((q) => q.id === params.questionId);
+  if (!question) return { ok: false, status: 404, error: "Question not found" };
+
+  const result = checkAnswer(question, params.answer);
+
+  await db.insert(quizAnswersTable).values({
+    id: randomUUID(),
+    attemptId: params.attemptId,
+    questionId: params.questionId,
+    answer: JSON.stringify(params.answer),
+    correct: result.correct,
+  });
+
+  return { ok: true, data: result };
+}
 
 export async function completeAttempt(userId: string, attemptId: string): Promise<ServiceResult<CompletedAttempt>>
 
