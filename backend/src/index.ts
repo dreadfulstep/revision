@@ -3,6 +3,7 @@ import "tsconfig-paths/register";
 import express from "express";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 
 import env from "@/utils/env";
 
@@ -18,6 +19,11 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(cookieParser(env.sessionSecret));
+
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true,
+}));
 
 app.use(authMiddleware);
 
