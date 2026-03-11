@@ -6,6 +6,8 @@ import { generateSeed, seedArray } from "@/utils/seed";
 import { and, eq } from "drizzle-orm";
 import { randomUUID } from "crypto";
 import { checkAnswer } from "@/utils/answer";
+import { updateStreak } from "./streak.service";
+import { awardXP } from "./xp.service";
 
 type GenerateQuizParams = {
   subjectId: string;
@@ -169,11 +171,142 @@ export async function answerQuestion(params: AnswerQuestionParams): Promise<Serv
   return { ok: true, data: result };
 }
 
-export async function completeAttempt(userId: string, attemptId: string): Promise<ServiceResult<CompletedAttempt>>
+export async function completeAttempt(userId: string, attemptId: string): Promise<ServiceResult<CompletedAttempt>> {
+  const attempt = await db
+    .select()
+    .from(quizAttemptsTable)
+    .where(and(eq(quizAttemptsTable.id, attemptId), eq(quizAttemptsTable.userId, userId)))
+    .limit(1)
+    .then((r) => r[0]);
 
-export async function getQuiz(seed: string): Promise<ServiceResult<GeneratedQuiz>>
+  if (!attempt) return { ok: false, status: 404, error: "Attempt not found" };
+  if (attempt.completedAt) return { ok: false, status: 400, error: "Attempt already completed" };
 
-export async function getAttempt(userId: string, attemptId: string): Promise<ServiceResult<AttemptDetails>>
+  const quiz = await db
+    .select()
+    .from(quizzesTable)
+    .where(eq(quizzesTable.id, attempt.quizId))
+    .limit(1)
+    .then((r) => r[0]);
 
-export async function getUserHistory(userId: string, subjectId?: string): Promise<ServiceResult<AttemptSummary[]>>
+  const answers = await db
+    .select()
+    .from(quizAnswersTable)
+    .where(eq(quizAnswersTable.attemptId, attemptId));
 
+  if (answers.length < quiz.count) {
+    return {
+      ok: false,
+      status: 400,
+      error: "Not all questions answered",
+      meta: { answered: answers.length, total: quiz.count },
+    };
+  }
+
+  const correct = answers.filter((a) => a.correct).length;
+  const score = Math.round((correct / quiz.count) * 100);
+
+  await db
+    .update(quizAttemptsTable)
+    .set({ score, completedAt: new Date() })
+    .where(eq(quizAttemptsTable.id, attemptId));
+
+  const streak = await updateStreak(userId);
+  const xpEarned = await awardXP(userId, score, quiz.count, streak.current);
+
+  return {
+    ok: true,
+    data: {
+      score,
+      correct,
+      total: quiz.count,
+      xpEarned,
+      streak,
+    },
+  };
+}
+
+export async function getQuiz(seed: string): Promise<ServiceResult<GeneratedQuiz>> {
+  const quiz = await db
+    .select()
+    .from(quizzesTable)
+    .where(eq(quizzesTable.id, seed))
+    .limit(1)
+    .then((r) => r[0]);
+
+  if (!quiz) return { ok: false, status: 404, error: "Quiz not found" };
+
+  const subject = getSubject(quiz.subjectId);
+  if (!subject) return { ok: false, status: 404, error: "Subject no longer exists" };
+
+  const pool = getQuestions(quiz.subjectId, quiz.topics.length > 0 ? quiz.topics : undefined);
+  const questions = seedArray(pool, seed)
+    .slice(0, quiz.count)
+    .map(({ answer: _a, explanation: _e, ...q }) => q) as Omit<Question, "answer" | "explanation">[];
+
+  return {
+    ok: true,
+    data: {
+      seed,
+      subjectId: subject.id,
+      subjectName: subject.name,
+      topics: quiz.topics.length > 0 ? quiz.topics : subject.topics.map((t) => t.id),
+      count: questions.length,
+      questions,
+    },
+  };
+}
+
+export async function getAttempt(userId: string, attemptId: string): Promise<ServiceResult<AttemptDetails>> {
+  const attempt = await db
+    .select()
+    .from(quizAttemptsTable)
+    .where(and(eq(quizAttemptsTable.id, attemptId), eq(quizAttemptsTable.userId, userId)))
+    .limit(1)
+    .then((r) => r[0]);
+
+  if (!attempt) return { ok: false, status: 404, error: "Attempt not found" };
+  if (!attempt.completedAt || attempt.score === null) return { ok: false, status: 400, error: "Attempt not completed yet" };
+
+  const answers = await db
+    .select()
+    .from(quizAnswersTable)
+    .where(eq(quizAnswersTable.attemptId, attemptId));
+
+  return {
+    ok: true,
+    data: {
+      attemptId: attempt.id,
+      seed: attempt.quizId,
+      subjectId: attempt.quizId.split("-")[0], // subjectId is the prefix of the seed
+      score: attempt.score,
+      completedAt: attempt.completedAt,
+      answers: answers.map((a) => ({
+        questionId: a.questionId,
+        answer: JSON.parse(a.answer),
+        correct: a.correct,
+      })),
+    },
+  };
+}
+
+export async function getUserHistory(userId: string, subjectId?: string): Promise<ServiceResult<AttemptSummary[]>> {
+  const attempts = await db
+    .select()
+    .from(quizAttemptsTable)
+    .where(eq(quizAttemptsTable.userId, userId));
+
+  const completed = attempts.filter((a) => a.completedAt !== null && a.score !== null);
+
+  const summaries: AttemptSummary[] = completed
+    .filter((a) => !subjectId || a.quizId.startsWith(subjectId))
+    .map((a) => ({
+      attemptId: a.id,
+      seed: a.quizId,
+      subjectId: a.quizId.split("-")[0],
+      score: a.score!,
+      completedAt: a.completedAt!,
+    }));
+
+  return { ok: true, data: summaries };
+}

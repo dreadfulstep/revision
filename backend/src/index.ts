@@ -9,7 +9,7 @@ import env from "@/utils/env";
 import authRouter from "@/routes/auth";
 import userRouter from "@/routes/users"
 import subjectRouter from "@/routes/subjects";
-// import quizRouter from "@/routes/quiz";
+import quizRouter from "@/routes/quiz";
 
 import { authMiddleware } from "./middleware/auth";
 import { generateQuiz } from "./services/quiz.service";
@@ -24,7 +24,7 @@ app.use(authMiddleware);
 app.use('/auth', authRouter);
 app.use('/users', userRouter);
 app.use('/subjects', subjectRouter);
-// app.use('/quiz', quizRouter);
+app.use('/quiz', quizRouter);
 
 app.listen(env.port, () => {
     console.log(`Server is running on port ${env.port}`)

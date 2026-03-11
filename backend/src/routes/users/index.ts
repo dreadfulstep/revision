@@ -1,13 +1,17 @@
 import { Router } from "express";
+import { requireAuth } from "@/middleware/requireAuth";
+import * as me from "@/controllers/me.controller";
 
 const router = Router();
+router.use(requireAuth);
 
 router.get("/@me", (req, res) => {
-  if (!req.user) {
-    return res.status(403).json({ error: `Unauthenticated` });
-  };
-
   res.json(req.user)
 });
+
+router.get("/stats", me.getStats);
+router.get("/streak", me.getStreak);
+router.get("/history", me.getHistory);
+router.get("/history/:attemptId", me.getAttempt);
 
 export default router;
