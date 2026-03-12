@@ -1,11 +1,9 @@
 import { cookies } from "next/headers";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
-
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
-  const cookieStore = await cookies();
+  const cookieStore = cookies();
 
-  const res = await fetch(`${BASE_URL}${path}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${path}`, {
     cache: "no-store",
     headers: {
       "Content-Type": "application/json",

@@ -1,11 +1,9 @@
 import { CalendarResponse } from "@/app/dashboard/calendar/page";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
-
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
-  const res = await fetch(`${BASE_URL}${path}`, {
-    credentials: "include", // always send cookies
-    headers: { "Content-Type": "application/json" },
+  const res = await fetch(`/api${path}`, {
+    credentials: "include",
+    headers: { "Content-Type": "application/json", ...(options?.headers || {}) },
     ...options,
   });
 
