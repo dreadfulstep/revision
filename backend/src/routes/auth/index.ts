@@ -20,6 +20,7 @@ const router = Router();
 
 router.get("/", (req, res) => {
   const state = crypto.randomBytes(16).toString("hex");
+  const isLocal = req.query.local === "true";
 
   res.cookie("oauth_state", state, {
     httpOnly: true,
@@ -27,11 +28,13 @@ router.get("/", (req, res) => {
     sameSite: "lax",
     expires: new Date(Date.now() + 10 * 60 * 1000),
   });
-  redis.set(`oauth_state:${state}`, "valid", { EX: 10 * 60 });
+  redis.set(`oauth_state:${state}`, isLocal ? "local" : "valid", {
+    EX: 10 * 60,
+  });
 
-  const { local } = req.query;
-
-  const redirectUrl = local ? env.localDiscordRedirectUrl : env.discordRedirectUrl 
+  const redirectUrl = isLocal
+    ? env.localDiscordRedirectUrl
+    : env.discordRedirectUrl;
 
   const params = new URLSearchParams({
     client_id: env.discordClientId,
@@ -52,13 +55,18 @@ router.get("/discord", async (req, res) => {
       return res.status(400).json({ error: "Missing code or state" });
     }
 
-    if ((await redis.get(`oauth_state:${state}`)) !== "valid") {
-      return res.status(400).json({ error: "Invalid state" });
-    }
-
     if ((await redis.get(`invalid-code:${code}`)) === "TRUE") {
       return res.status(400).json({ error: "Invalid code" });
     }
+
+    const stateValue = await redis.get(`oauth_state:${state}`);
+    if (!stateValue) return res.status(400).json({ error: "Invalid state" });
+
+    const isLocal = stateValue === "local";
+    const redirectUrl = isLocal
+      ? env.localDiscordRedirectUrl
+      : env.discordRedirectUrl;
+    const frontendUrl = isLocal ? env.localFrontendUrl : env.frontendUrl;
 
     const tokenRes = await fetch("https://discord.com/api/oauth2/token", {
       method: "POST",
@@ -68,7 +76,7 @@ router.get("/discord", async (req, res) => {
         client_secret: env.discordClientSecret,
         grant_type: "authorization_code",
         code: code as string,
-        redirect_uri: env.discordRedirectUrl,
+        redirect_uri: redirectUrl,
       }),
     });
 
@@ -119,14 +127,14 @@ router.get("/discord", async (req, res) => {
 
     res.cookie("session", sessionId, {
       httpOnly: true,
-      secure: env.nodeEnv === "production",
-      sameSite: "lax",
+      secure: !isLocal,
+      sameSite: isLocal ? "lax" : "none",
       maxAge: tokenData.expires_in * 1000,
     });
 
     res.send(`
       <script>
-        window.opener.postMessage({ type: "AUTH_SUCCESS", user: ${JSON.stringify(discordUser)} }, "${env.frontendUrl}");
+        window.opener.postMessage({ type: "AUTH_SUCCESS", user: ${JSON.stringify(discordUser)} }, "${frontendUrl}");
         window.close();
       </script>
     `);
