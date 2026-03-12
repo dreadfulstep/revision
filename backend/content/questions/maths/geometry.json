@@ -1,0 +1,212 @@
+[
+  {
+    "id": "right-triangle-find-hypotenuse",
+    "topic": "geometry",
+    "difficulty": 3,
+    "type": "number",
+    "image": { "type": "generated", "renderer": "right-triangle" },
+    "template": "Find the length of the hypotenuse. Give your answer to 2 d.p.",
+    "variables": {
+      "a": { "type": "int", "min": 3, "max": 12 },
+      "b": { "type": "int", "min": 3, "max": 12 }
+    },
+    "answer": "Math.sqrt(a*a + b*b)",
+    "tolerance": 0.01,
+    "dp": 2,
+    "unit": "cm",
+    "explanation": "Use Pythagoras: c² = a² + b², so c = √({{a}}² + {{b}}²) = {{answer}} cm"
+  },
+  {
+    "id": "right-triangle-find-leg-a",
+    "topic": "geometry",
+    "difficulty": 3,
+    "type": "number",
+    "image": { "type": "generated", "renderer": "right-triangle" },
+    "template": "The hypotenuse is {{c}} cm and one leg is {{b}} cm. Find the missing side. Give your answer to 2 d.p.",
+    "variables": {
+      "a": { "type": "int", "min": 3, "max": 10 },
+      "b": { "type": "int", "min": 3, "max": 10 },
+      "c": { "type": "derived", "expr": "parseFloat(Math.sqrt(a*a + b*b).toFixed(2))" },
+      "find_a": { "type": "derived", "expr": "1" }
+    },
+    "answer": "Math.sqrt(c*c - b*b)",
+    "tolerance": 0.01,
+    "dp": 2,
+    "unit": "cm",
+    "explanation": "Rearranging Pythagoras: a² = c² − b², so a = √({{c}}² − {{b}}²) = {{answer}} cm"
+  },
+  {
+    "id": "right-triangle-is-right-angle",
+    "topic": "geometry",
+    "difficulty": 2,
+    "type": "true-false",
+    "image": null,
+    "template": "A triangle has sides {{a}} cm, {{b}} cm and {{c}} cm. Is it a right-angled triangle?",
+    "variables": {
+      "a": { "type": "int", "min": 3, "max": 10 },
+      "b": { "type": "int", "min": 3, "max": 10 },
+      "isRight": { "type": "pick", "options": [1, 0] },
+      "c": { "type": "derived", "expr": "isRight ? parseFloat(Math.sqrt(a*a + b*b).toFixed(1)) : a + b - 1" }
+    },
+    "boolAnswer": true,
+    "explanation": "Check: {{a}}² + {{b}}² = {{a*a + b*b}}. {{c}}² = {{c*c}}. {{a*a+b*b === c*c ? 'These are equal, so it is a right-angled triangle.' : 'These are not equal, so it is not a right-angled triangle.'}}"
+  },
+  {
+    "id": "pythagoras-word-problem-ladder",
+    "topic": "geometry",
+    "difficulty": 3,
+    "type": "number",
+    "image": null,
+    "template": "A ladder {{c}} m long leans against a wall. The base of the ladder is {{b}} m from the wall. How high up the wall does the ladder reach? Give your answer to 2 d.p.",
+    "variables": {
+      "b": { "type": "int", "min": 1, "max": 4 },
+      "a": { "type": "int", "min": 3, "max": 8 },
+      "c": { "type": "derived", "expr": "parseFloat(Math.sqrt(a*a + b*b).toFixed(2))" }
+    },
+    "answer": "Math.sqrt(c*c - b*b)",
+    "tolerance": 0.01,
+    "dp": 2,
+    "unit": "m",
+    "explanation": "Using Pythagoras: height = √(c² − b²) = √({{c}}² − {{b}}²) = {{answer}} m"
+  },
+  {
+    "id": "pythagoras-word-problem-diagonal",
+    "topic": "geometry",
+    "difficulty": 3,
+    "type": "number",
+    "image": null,
+    "template": "A rectangle is {{a}} cm wide and {{b}} cm tall. What is the length of the diagonal? Give your answer to 2 d.p.",
+    "variables": {
+      "a": { "type": "int", "min": 4, "max": 15 },
+      "b": { "type": "int", "min": 4, "max": 15 }
+    },
+    "answer": "Math.sqrt(a*a + b*b)",
+    "tolerance": 0.01,
+    "dp": 2,
+    "unit": "cm",
+    "explanation": "The diagonal splits the rectangle into two right-angled triangles. d = √({{a}}² + {{b}}²) = {{answer}} cm"
+  },
+  {
+    "id": "area-triangle",
+    "topic": "geometry",
+    "difficulty": 2,
+    "type": "number",
+    "image": null,
+    "template": "Find the area of a triangle with base {{b}} cm and perpendicular height {{h}} cm.",
+    "variables": {
+      "b": { "type": "int", "min": 4, "max": 20 },
+      "h": { "type": "int", "min": 3, "max": 15 }
+    },
+    "answer": "0.5 * b * h",
+    "tolerance": 0.01,
+    "unit": "cm²",
+    "explanation": "Area = ½ × base × height = ½ × {{b}} × {{h}} = {{answer}} cm²"
+  },
+  {
+    "id": "area-rectangle",
+    "topic": "geometry",
+    "difficulty": 1,
+    "type": "number",
+    "image": null,
+    "template": "Find the area of a rectangle with length {{l}} cm and width {{w}} cm.",
+    "variables": {
+      "l": { "type": "int", "min": 3, "max": 20 },
+      "w": { "type": "int", "min": 2, "max": 15 }
+    },
+    "answer": "l * w",
+    "unit": "cm²",
+    "explanation": "Area = length × width = {{l}} × {{w}} = {{answer}} cm²"
+  },
+  {
+    "id": "area-circle",
+    "topic": "geometry",
+    "difficulty": 2,
+    "type": "number",
+    "image": null,
+    "template": "Find the area of a circle with radius {{r}} cm. Give your answer to 2 d.p.",
+    "variables": {
+      "r": { "type": "int", "min": 2, "max": 12 }
+    },
+    "answer": "Math.PI * r * r",
+    "tolerance": 0.01,
+    "dp": 2,
+    "unit": "cm²",
+    "explanation": "Area = πr² = π × {{r}}² = {{answer}} cm²"
+  },
+  {
+    "id": "circumference-circle",
+    "topic": "geometry",
+    "difficulty": 2,
+    "type": "number",
+    "image": null,
+    "template": "Find the circumference of a circle with diameter {{d}} cm. Give your answer to 2 d.p.",
+    "variables": {
+      "d": { "type": "int", "min": 4, "max": 20 }
+    },
+    "answer": "Math.PI * d",
+    "tolerance": 0.01,
+    "dp": 2,
+    "unit": "cm",
+    "explanation": "Circumference = πd = π × {{d}} = {{answer}} cm"
+  },
+  {
+    "id": "angles-triangle-missing",
+    "topic": "geometry",
+    "difficulty": 2,
+    "type": "number",
+    "image": null,
+    "template": "A triangle has angles of {{a}}° and {{b}}°. What is the third angle?",
+    "variables": {
+      "a": { "type": "int", "min": 30, "max": 80 },
+      "b": { "type": "int", "min": 30, "max": 80, "notEqualTo": "a" }
+    },
+    "answer": "180 - a - b",
+    "unit": "°",
+    "explanation": "Angles in a triangle sum to 180°. Third angle = 180 − {{a}} − {{b}} = {{answer}}°"
+  },
+  {
+    "id": "angles-on-straight-line",
+    "topic": "geometry",
+    "difficulty": 1,
+    "type": "number",
+    "image": null,
+    "template": "Two angles on a straight line are {{a}}° and x°. Find x.",
+    "variables": {
+      "a": { "type": "int", "min": 20, "max": 160 }
+    },
+    "answer": "180 - a",
+    "unit": "°",
+    "explanation": "Angles on a straight line sum to 180°. x = 180 − {{a}} = {{answer}}°"
+  },
+  {
+    "id": "volume-cuboid",
+    "topic": "geometry",
+    "difficulty": 2,
+    "type": "number",
+    "image": null,
+    "template": "Find the volume of a cuboid with length {{l}} cm, width {{w}} cm and height {{h}} cm.",
+    "variables": {
+      "l": { "type": "int", "min": 2, "max": 10 },
+      "w": { "type": "int", "min": 2, "max": 10 },
+      "h": { "type": "int", "min": 2, "max": 10 }
+    },
+    "answer": "l * w * h",
+    "unit": "cm³",
+    "explanation": "Volume = l × w × h = {{l}} × {{w}} × {{h}} = {{answer}} cm³"
+  },
+  {
+    "id": "perimeter-rectangle",
+    "topic": "geometry",
+    "difficulty": 1,
+    "type": "number",
+    "image": null,
+    "template": "Find the perimeter of a rectangle with length {{l}} cm and width {{w}} cm.",
+    "variables": {
+      "l": { "type": "int", "min": 3, "max": 20 },
+      "w": { "type": "int", "min": 2, "max": 15 }
+    },
+    "answer": "2 * (l + w)",
+    "unit": "cm",
+    "explanation": "Perimeter = 2(l + w) = 2({{l}} + {{w}}) = {{answer}} cm"
+  }
+]
