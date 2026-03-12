@@ -1,17 +1,24 @@
 import { cookies } from "next/headers";
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
+  const cookieHeader = cookieStore
+    .getAll()
+    .map((c) => `${c.name}=${c.value}`)
+    .join("; ");
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_FRONTEND_URL}/api${path}`, {
-    cache: "no-store",
-    headers: {
-      "Content-Type": "application/json",
-      cookie: cookieStore.toString(),
-      ...(options?.headers || {}),
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_FRONTEND_URL}/api${path}`,
+    {
+      cache: "no-store",
+      headers: {
+        "Content-Type": "application/json",
+        cookie: cookieHeader,
+        ...(options?.headers || {}),
+      },
+      ...options,
     },
-    ...options,
-  });
+  );
 
   if (!res.ok) {
     const error = await res.json().catch(() => ({ error: "Unknown error" }));
