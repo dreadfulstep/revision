@@ -15,6 +15,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Navbar from "@/components/layout/navbar";
+import { useUser } from "@/components/providers/user-provider";
 
 const features = [
   {
@@ -64,6 +65,7 @@ const features = [
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const user = useUser();
 
   async function handleLogin() {
     setLoading(true);
@@ -96,7 +98,6 @@ export default function Home() {
           Free for all students
         </Badge>
         <h1 className="text-5xl sm:text-[4.5rem] font-bold tracking-tight leading-[1.06] mb-6">
-          {" "}
           Revise smarter,
           <br />
           <span className="text-primary">score higher.</span>
@@ -104,6 +105,7 @@ export default function Home() {
         <p className="text-muted-foreground text-xl max-w-md mb-9 leading-relaxed">
           Seeded quizzes, instant feedback, streaks and predicted grades;
           everything you need to ace your GCSEs.
+          {JSON.stringify(user)}
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-3 mb-5">
           <Button
