@@ -16,21 +16,23 @@ export function openAuthPopup(): Promise<DiscordUser> {
       "discord-auth",
       "width=500,height=800,scrollbars=yes",
     );
-
     if (!popup) {
       reject(new Error("Popup blocked"));
       return;
     }
 
-    function onMessage(event: MessageEvent) {
-      if (event.origin !== process.env.NEXT_PUBLIC_API_URL) return;
-      if (event.data?.type !== "AUTH_SUCCESS") return;
+    const allowedOrigins = [
+      process.env.NEXT_PUBLIC_API_URL,
+      window.location.origin,
+    ].filter(Boolean);
 
+    function onMessage(event: MessageEvent) {
+      if (!allowedOrigins.includes(event.origin)) return;
+      if (event.data?.type !== "AUTH_SUCCESS") return;
       cleanup();
       resolve(event.data.user);
     }
 
-    // handle user closing popup without authing
     const interval = setInterval(() => {
       if (popup.closed) {
         cleanup();
