@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import { BookOpen, ChevronRight, Clock, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
-import { History } from "@/lib/dashboard-data"
+import { BookOpen, Clock, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { History } from "@/lib/dashboard-data";
 
 function getScoreColor(score: number) {
-  if (score >= 80) return "text-primary"
-  if (score >= 60) return "text-amber-500"
-  return "text-destructive"
+  if (score >= 80) return "text-primary";
+  if (score >= 60) return "text-amber-500";
+  return "text-destructive";
 }
 
 function getScoreBg(score: number) {
-  if (score >= 80) return "bg-primary/10"
-  if (score >= 60) return "bg-amber-500/10"
-  return "bg-destructive/10"
+  if (score >= 80) return "bg-primary/10";
+  if (score >= 60) return "bg-amber-500/10";
+  return "bg-destructive/10";
 }
 
 export function RecentActivity({ history }: { history: History[] }) {
@@ -36,7 +36,7 @@ export function RecentActivity({ history }: { history: History[] }) {
           </div>
         </div>
       </section>
-    )
+    );
   }
 
   return (
@@ -56,12 +56,19 @@ export function RecentActivity({ history }: { history: History[] }) {
           <article
             key={attempt.attemptId}
             className={cn(
-              "flex items-center gap-4 p-4 transition-colors hover:bg-accent/50 cursor-pointer",
-              index !== history.length - 1 && "border-b border-border"
+              "flex items-center gap-4 p-4 transition-colors",
+              index !== history.length - 1 && "border-b border-border",
             )}
           >
-            <div className={cn("flex size-10 shrink-0 items-center justify-center rounded-xl", getScoreBg(attempt.accuracy))}>
-              <BookOpen className={cn("size-5", getScoreColor(attempt.accuracy))} />
+            <div
+              className={cn(
+                "flex size-10 shrink-0 items-center justify-center rounded-xl",
+                getScoreBg(attempt.accuracy),
+              )}
+            >
+              <BookOpen
+                className={cn("size-5", getScoreColor(attempt.accuracy))}
+              />
             </div>
 
             <div className="min-w-0 flex-1">
@@ -70,7 +77,9 @@ export function RecentActivity({ history }: { history: History[] }) {
                 {attempt.topics}
               </p>
               <div className="mt-1 flex items-center gap-2 text-[10px] text-muted-foreground">
-                <span>{new Date(attempt.completedAt).toLocaleDateString()}</span>
+                <span>
+                  {new Date(attempt.completedAt).toLocaleDateString()}
+                </span>
                 <span>·</span>
                 <span>{attempt.questionsAnswered} questions</span>
                 <span>·</span>
@@ -79,15 +88,17 @@ export function RecentActivity({ history }: { history: History[] }) {
 
             <div className="flex shrink-0 items-center gap-2">
               <span
-                className={cn("text-lg font-bold", getScoreColor(attempt.accuracy))}
+                className={cn(
+                  "text-lg font-bold",
+                  getScoreColor(attempt.accuracy),
+                )}
               >
                 {attempt.accuracy}%
-              </span>
-              <ChevronRight className="size-4 text-muted-foreground/30" />
+              </span>{" "}
             </div>
           </article>
         ))}
       </div>
     </section>
-  )
+  );
 }

@@ -8,12 +8,12 @@ import { ReactNode } from "react";
 
 const Layout = async ({ children }: { children: ReactNode }) => {
   const user = (await serverApi.me.get().catch(() => null)) as User;
-    if (!user) redirect("/login");
+  if (!user) redirect("/login");
   return (
     <UserProvider user={user}>
       <SidebarProvider>
         <DesktopSidebar />
-        <SidebarInset>{children}</SidebarInset>
+        <SidebarInset className="pb-20">{children}</SidebarInset>
         <MobileBottomNav />
       </SidebarProvider>
     </UserProvider>

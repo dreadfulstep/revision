@@ -26,7 +26,7 @@ const Navbar = ({
           <Button
             variant="ghost"
             size="sm"
-            className="rounded-full text-sm text-muted-foreground hover:text-foreground cursor-pointer h-8"
+            className="rounded-full hidden md:block text-sm text-muted-foreground hover:text-foreground cursor-pointer h-8"
             onClick={handleLogin}
             disabled={loading}
           >

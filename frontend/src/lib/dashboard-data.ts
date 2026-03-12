@@ -101,8 +101,7 @@ export async function getDashboardData(): Promise<DashboardData> {
       subjects,
       history,
     };
-  } catch (err) {
-    console.error("Dashboard fetch failed", err);
+  } catch {
     return {
       user: null,
       streak: { current: 0, longest: 0, lastActivityDate: "" },

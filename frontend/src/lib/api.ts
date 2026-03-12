@@ -1,3 +1,5 @@
+import { CalendarResponse } from "@/app/dashboard/calendar/page";
+
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
@@ -22,15 +24,29 @@ export const api = {
   },
 
   quiz: {
-    generate: (body: { subjectId: string; topics?: string[]; count?: number; seed?: string }) =>
+    generate: (body: {
+      subjectId: string;
+      topics?: string[];
+      count?: number;
+      seed?: string;
+    }) =>
       request("/quiz/generate", { method: "POST", body: JSON.stringify(body) }),
     getBySeed: (seed: string) => request(`/quiz/${seed}`),
     startAttempt: (seed: string) =>
       request(`/quiz/${seed}/attempt`, { method: "POST" }),
-    answer: (seed: string, attemptId: string, body: { questionId: string; answer: number | string | boolean }) =>
-      request(`/quiz/${seed}/attempt/${attemptId}/answer`, { method: "POST", body: JSON.stringify(body) }),
+    answer: (
+      seed: string,
+      attemptId: string,
+      body: { questionId: string; answer: number | string | boolean },
+    ) =>
+      request(`/quiz/${seed}/attempt/${attemptId}/answer`, {
+        method: "POST",
+        body: JSON.stringify(body),
+      }),
     complete: (seed: string, attemptId: string) =>
-      request(`/quiz/${seed}/attempt/${attemptId}/complete`, { method: "POST" }),
+      request(`/quiz/${seed}/attempt/${attemptId}/complete`, {
+        method: "POST",
+      }),
   },
 
   me: {
@@ -39,11 +55,15 @@ export const api = {
     getHistory: (subjectId?: string) =>
       request(`/me/history${subjectId ? `?subjectId=${subjectId}` : ""}`),
     getAttempt: (attemptId: string) => request(`/me/history/${attemptId}`),
-    get: () => request("/me")
+    get: () => request("/me"),
   },
 
   leaderboard: {
     getAll: () => request("/leaderboard"),
     getMyRank: () => request("/leaderboard/me"),
+  },
+
+  calendar: {
+    get: () => request<CalendarResponse>("/calendar"),
   },
 };

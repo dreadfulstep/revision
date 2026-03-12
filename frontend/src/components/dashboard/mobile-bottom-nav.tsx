@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const navItems = [
   { href: "/dashboard", icon: Home, label: "Home" },
-  { href: "/dashboard/calendar", icon: Calendar, label: "Calendar" },
+  { href: "/dashboard/calendar", icon: Calendar, label: "Schedule" },
   { href: "/dashboard/create", icon: Plus, label: "Create", isCenter: true },
   { href: "/dashboard/leaderboard", icon: Trophy, label: "Leaderboard" },
   { href: "/dashboard/menu", icon: Menu, label: "Menu" },

@@ -43,7 +43,7 @@ const features = [
     colour: "text-primary",
     bg: "bg-primary/10",
     title: "Shareable seeds",
-    desc: "Every quiz has a seed — share it so friends attempt the exact same questions.",
+    desc: "Every quiz has a seed, share it so friends attempt the exact same questions.",
   },
   {
     icon: TrendingUp,
@@ -87,8 +87,7 @@ export default function Home() {
 
       <Navbar handleLogin={handleLogin} loading={loading} />
 
-      <section className="relative flex flex-col items-center justify-center text-center min-h-screen pb-16 px-6 max-w-4xl mx-auto">
-        {" "}
+      <section className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 max-w-4xl mx-auto">
         <Badge
           variant="secondary"
           className="rounded-full mb-6 gap-1.5 px-4 py-1.5 text-xs font-medium border"
@@ -132,29 +131,13 @@ export default function Home() {
         <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
           Sign in with Discord: takes 10 seconds, no setup needed
         </p>
-        <div className="mt-16 flex items-center gap-0 divide-x divide-border border rounded-2xl overflow-hidden bg-card shadow-sm">
-          {[
-            { value: "10+", label: "Subjects" },
-            { value: "500+", label: "Questions" },
-            { value: "Free", label: "Forever" },
-          ].map(({ value, label }) => (
-            <div key={label} className="flex flex-col items-center px-12 py-5">
-              <span className="text-2xl font-bold text-foreground">
-                {value}
-              </span>
-              <span className="text-sm text-muted-foreground mt-0.5">
-                {label}
-              </span>
-            </div>
-          ))}
-        </div>
       </section>
 
       <section id="features" className="max-w-6xl mx-auto px-6 pb-28">
         <div className="text-center mb-10">
           <h2 className="text-2xl font-bold mb-2.5">Everything in one place</h2>
           <p className="text-muted-foreground text-sm max-w-sm mx-auto leading-relaxed">
-            Built around how students actually revise — not how teachers think
+            Built around how students actually revise, not how teachers think
             they should.
           </p>
         </div>
