@@ -3,8 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { serverApi } from "@/lib/server-api";
+import { User, UserProvider } from "@/components/providers/user-provider";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,17 +21,19 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const user = (await serverApi.me.get().catch(() => null)) as User;
+
   return (
     <html lang="en" className={cn("dark", "font-sans", inter.variable)}>
-      <body
-        className={`antialiased`}
-      >
-        <TooltipProvider>{children}</TooltipProvider>
+      <body className={`antialiased`}>
+        <UserProvider user={user}>
+          <TooltipProvider>{children}</TooltipProvider>
+        </UserProvider>
       </body>
     </html>
   );
