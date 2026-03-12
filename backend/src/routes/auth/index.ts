@@ -116,7 +116,7 @@ router.get("/discord", async (req, res) => {
     res.cookie("session", sessionId, {
       httpOnly: true,
       secure: env.nodeEnv === "production",
-      sameSite: "none",
+      sameSite: "lax",
       maxAge: tokenData.expires_in * 1000,
     });
 
