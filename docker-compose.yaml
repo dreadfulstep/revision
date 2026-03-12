@@ -1,15 +1,18 @@
 services:
   backend:
-    build: .
-    container_name: backend
-    env_file: .env
-    ports:
-      - "8080:8080"
-    depends_on:
-      - db
-      - redis
-    networks:
-      - app-network
+  build: .
+  container_name: backend
+  env_file: .env
+  ports:
+    - "8080:8080"
+  depends_on:
+    - db
+    - redis
+  networks:
+    - app-network
+  command: sh -c "
+    npx drizzle-kit migrate:dev &&
+    npm run start"
 
   db:
     image: postgres:16-alpine
