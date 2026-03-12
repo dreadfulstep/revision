@@ -94,7 +94,7 @@ export default function Leaderboard() {
   const myRankInPodium = myRank && myRank.rank <= 3;
 
   return (
-    <div className="px-4 py-6 max-w-md mx-auto w-full">
+    <div className="px-4 md:px-8 py-6 max-w-md md:max-w-3xl mx-auto w-full">
       <div className="flex items-center gap-2 mb-6">
         <div className="flex size-9 items-center justify-center rounded-xl bg-yellow-500/10">
           <Trophy size={16} className="text-yellow-500" />
@@ -102,8 +102,7 @@ export default function Leaderboard() {
         <h1 className="text-xl font-bold">Leaderboard</h1>
       </div>
 
-      {/* ── Podium ── */}
-      <div className="grid grid-cols-3 gap-2 mb-4">
+      <div className="grid grid-cols-3 gap-2 md:gap-4 mb-4 md:max-w-lg md:mx-auto">
         {podiumOrder.map((entry, visualIndex) => {
           const medals = ["🥈", "🥇", "🥉"];
           const isFirst = visualIndex === 1;
@@ -113,7 +112,7 @@ export default function Leaderboard() {
             return (
               <div
                 key={`placeholder-${visualIndex}`}
-                className={`rounded-2xl border-2 border-dashed border-border p-4 flex flex-col items-center text-center gap-2 ${isFirst ? "ring-0" : ""}`}
+                className="rounded-2xl border-2 border-dashed border-border p-4 flex flex-col items-center text-center gap-2"
               >
                 <span className="text-2xl opacity-30">
                   {medals[visualIndex]}
@@ -163,63 +162,67 @@ export default function Leaderboard() {
       </div>
 
       <div className="rounded-2xl border bg-card overflow-hidden mb-4">
-        {listEntries.map((entry, i) => {
-          const isMe = currentUser && entry.userId === currentUser.id;
-          return (
-            <div
-              key={entry.userId}
-              className={`flex items-center gap-3 px-4 py-3 transition-colors ${
-                isMe ? "bg-primary/5" : "hover:bg-accent"
-              } ${i !== listEntries.length - 1 || listPlaceholders > 0 ? "border-b border-border" : ""}`}
-            >
-              <span className="text-xs text-muted-foreground w-5 text-right shrink-0 tabular-nums">
-                {entry.rank}
-              </span>
-              <Avatar
-                userId={entry.userId}
-                avatar={entry.avatar}
-                username={entry.username}
-                size={28}
-              />
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium truncate">
-                  {isMe ? "You" : entry.username}
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  {entry.levelIcon} {entry.levelName}
-                </p>
-              </div>
-              <div className="text-right shrink-0">
-                <p className="text-sm font-semibold text-primary">
-                  {entry.xp.toLocaleString()}
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  {entry.quizzesCompleted} quizzes
-                </p>
-              </div>
-            </div>
-          );
-        })}
+        <div className="md:grid md:grid-cols-2 md:divide-x md:divide-border">
+          <div>
+            {listEntries.map((entry, i) => {
+              const isMe = currentUser && entry.userId === currentUser.id;
+              const isLast =
+                i === listEntries.length - 1 && listPlaceholders === 0;
+              return (
+                <div
+                  key={entry.userId}
+                  className={`flex items-center gap-3 px-4 py-3 transition-colors ${
+                    isMe ? "bg-primary/5" : "hover:bg-accent"
+                  } ${!isLast ? "border-b border-border" : ""}`}
+                >
+                  <span className="text-xs text-muted-foreground w-5 text-right shrink-0 tabular-nums">
+                    {entry.rank}
+                  </span>
+                  <Avatar
+                    userId={entry.userId}
+                    avatar={entry.avatar}
+                    username={entry.username}
+                    size={28}
+                  />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium truncate">
+                      {isMe ? "You" : entry.username}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {entry.levelIcon} {entry.levelName}
+                    </p>
+                  </div>
+                  <div className="text-right shrink-0">
+                    <p className="text-sm font-semibold text-primary">
+                      {entry.xp.toLocaleString()}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {entry.quizzesCompleted} quizzes
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
 
-        {Array.from({ length: listPlaceholders }).map((_, i) => (
-          <div
-            key={`list-placeholder-${i}`}
-            className={`flex items-center gap-3 px-4 py-3 ${
-              i !== listPlaceholders - 1 ? "border-b border-border" : ""
-            }`}
-          >
-            <div className="w-5 h-2.5 rounded-full bg-muted shrink-0" />
-            <div className="w-7 h-7 rounded-full border-2 border-dashed border-border shrink-0" />
-            <div className="flex-1 space-y-1.5">
-              <div className="h-2.5 w-20 rounded-full bg-muted" />
-              <div className="h-2 w-12 rounded-full bg-muted" />
-            </div>
-            <div className="space-y-1.5 items-end flex flex-col">
-              <div className="h-2.5 w-12 rounded-full bg-muted" />
-              <div className="h-2 w-10 rounded-full bg-muted" />
-            </div>
+            {Array.from({ length: listPlaceholders }).map((_, i) => (
+              <div
+                key={`list-placeholder-${i}`}
+                className={`flex items-center gap-3 px-4 py-3 ${i !== listPlaceholders - 1 ? "border-b border-border" : ""}`}
+              >
+                <div className="w-5 h-2.5 rounded-full bg-muted shrink-0" />
+                <div className="w-7 h-7 rounded-full border-2 border-dashed border-border shrink-0" />
+                <div className="flex-1 space-y-1.5">
+                  <div className="h-2.5 w-20 rounded-full bg-muted" />
+                  <div className="h-2 w-12 rounded-full bg-muted" />
+                </div>
+                <div className="space-y-1.5 items-end flex flex-col">
+                  <div className="h-2.5 w-12 rounded-full bg-muted" />
+                  <div className="h-2 w-10 rounded-full bg-muted" />
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
 
       {myRank && !myRankInPodium && myRank.rank > entries.length && (

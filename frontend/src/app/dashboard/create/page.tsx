@@ -58,7 +58,7 @@ export default function CreateQuiz() {
   }
 
   return (
-    <div className="px-4 py-6 max-w-md mx-auto w-full">
+    <div className="px-4 md:px-8 py-6 max-w-md md:max-w-full mx-auto w-full">
       <div className="text-center mb-8">
         <h1 className="text-2xl font-bold">New quiz</h1>
         <p className="text-sm text-muted-foreground mt-1">
@@ -66,7 +66,7 @@ export default function CreateQuiz() {
         </p>
       </div>
 
-      <div className="space-y-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         {subjects.map((subject) => (
           <Link
             key={subject.id}

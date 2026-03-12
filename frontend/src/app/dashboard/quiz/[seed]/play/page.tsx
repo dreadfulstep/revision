@@ -276,10 +276,8 @@ export default function QuizPlay() {
     );
   }
 
-  // ── Quiz screen ────────────────────────────────────────────────────────────
   return (
     <div className="flex flex-col flex-1">
-      {/* Progress bar */}
       <div className="w-full h-1 bg-muted">
         <div
           className="h-full bg-primary transition-all duration-300"
@@ -287,7 +285,6 @@ export default function QuizPlay() {
         />
       </div>
 
-      {/* Top bar */}
       <div className="flex items-center justify-between px-4 py-3 max-w-2xl mx-auto w-full">
         <span className="text-xs text-muted-foreground">
           {quiz.subjectName}
@@ -300,24 +297,10 @@ export default function QuizPlay() {
       <div className="flex-1 flex flex-col max-w-2xl mx-auto w-full px-4 pb-8">
         {currentQuestion && (
           <>
-            {/* Difficulty + topic */}
-            <div className="flex items-center gap-2 mb-5">
-              <div className="flex items-center gap-0.5">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className={`w-1.5 h-1.5 rounded-full ${
-                      i < currentQuestion.difficulty ? "bg-primary" : "bg-muted"
-                    }`}
-                  />
-                ))}
-              </div>
-              <span className="text-xs text-muted-foreground capitalize">
-                {currentQuestion.topic}
-              </span>
-            </div>
+            <span className="text-xs text-muted-foreground capitalize">
+              {currentQuestion.topic}
+            </span>
 
-            {/* Question */}
             <h2 className="text-lg font-semibold leading-relaxed mb-6">
               {currentQuestion.question}
             </h2>

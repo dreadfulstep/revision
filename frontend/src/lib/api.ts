@@ -1,4 +1,5 @@
 import { CalendarResponse } from "@/app/dashboard/calendar/page";
+import { Streak, UserStats } from "./dashboard-data";
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const res = await fetch(`/api${path}`, {
@@ -48,8 +49,8 @@ export const api = {
   },
 
   me: {
-    getStats: () => request("/me/stats"),
-    getStreak: () => request("/me/streak"),
+    getStats: () => request<UserStats>("/me/stats"),
+    getStreak: () => request<Streak>("/me/streak"),
     getHistory: (subjectId?: string) =>
       request(`/me/history${subjectId ? `?subjectId=${subjectId}` : ""}`),
     getAttempt: (attemptId: string) => request(`/me/history/${attemptId}`),

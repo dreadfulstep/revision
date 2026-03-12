@@ -3,22 +3,15 @@
 import Link from "next/link";
 import {
   LayoutDashboard,
-  BarChart3,
-  User,
-  BookOpen,
   Trophy,
-  History,
-  Settings,
-  LogOut,
   Zap,
   Plus,
+  Calendar,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -32,21 +25,12 @@ import { usePathname } from "next/navigation";
 
 const mainNavItems = [
   { href: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
-  { href: "/statistics", icon: BarChart3, label: "Statistics" },
-  { href: "/subjects", icon: BookOpen, label: "Subjects" },
-  { href: "/history", icon: History, label: "History" },
-  { href: "/leaderboard", icon: Trophy, label: "Leaderboard" },
-];
-
-const accountNavItems = [
-  { href: "/profile", icon: User, label: "Profile" },
-  { href: "/settings", icon: Settings, label: "Settings" },
+  { href: "/dashboard/leaderboard", icon: Trophy, label: "Leaderboard" },
+  { href: "/dashboard/calendar", icon: Calendar, label: "Schedule" },
 ];
 
 export function DesktopSidebar() {
   const pathname = usePathname();
-
-  const getActivePath = (path: string) => path === pathname;
 
   return (
     <Sidebar
@@ -58,7 +42,7 @@ export function DesktopSidebar() {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild className="rounded-xl">
-              <Link href="/" className="flex items-center gap-3">
+              <Link href="/dashboard" className="flex items-center gap-3">
                 <div className="flex size-9 items-center justify-center rounded-xl bg-primary">
                   <Zap className="size-5 text-primary-foreground" />
                 </div>
@@ -72,12 +56,14 @@ export function DesktopSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>
-            <Link href={"/dashboard/create"}>
-              <Button className="w-full gap-2 rounded-xl" size="sm">
-                <Plus className="size-4" />
-                <span>Create Quiz</span>
-              </Button>
-            </Link>
+            <SidebarMenuButton asChild className="rounded-xl p-0">
+              <Link href="/dashboard/create">
+                <Button className="w-full gap-2 rounded-xl" size="sm">
+                  <Plus className="size-4" />
+                  <span>New Quiz</span>
+                </Button>
+              </Link>
+            </SidebarMenuButton>
           </SidebarGroupContent>
         </SidebarGroup>
 
@@ -90,34 +76,15 @@ export function DesktopSidebar() {
               {mainNavItems.map((item) => (
                 <SidebarMenuItem key={item.href}>
                   <SidebarMenuButton
-                    isActive={getActivePath(item.href)}
+                    asChild
+                    isActive={pathname === item.href}
                     className="rounded-xl"
                     tooltip={item.label}
                   >
-                    <item.icon className="size-4" />
-                    <span>{item.label}</span>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
-        <SidebarSeparator />
-
-        <SidebarGroup>
-          <SidebarGroupLabel>Account</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {accountNavItems.map((item) => (
-                <SidebarMenuItem key={item.href}>
-                  <SidebarMenuButton
-                    isActive={getActivePath(item.href)}
-                    className="rounded-xl"
-                    tooltip={item.label}
-                  >
-                    <item.icon className="size-4" />
-                    <span>{item.label}</span>
+                    <Link href={item.href}>
+                      <item.icon className="size-4" />
+                      <span>{item.label}</span>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -125,35 +92,6 @@ export function DesktopSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-
-      <SidebarFooter>
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton className="rounded-xl" tooltip="User profile">
-              <Avatar className="size-6">
-                <AvatarImage
-                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex"
-                  alt="Alex"
-                />
-                <AvatarFallback>AX</AvatarFallback>
-              </Avatar>
-              <div className="flex flex-col items-start text-xs">
-                <span className="font-medium">Alex Chen</span>
-                <span className="text-muted-foreground">Level 12</span>
-              </div>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          <SidebarMenuItem>
-            <SidebarMenuButton
-              className="rounded-xl text-muted-foreground hover:text-destructive hover:bg-destructive/10"
-              tooltip="Sign out"
-            >
-              <LogOut className="size-4" />
-              <span>Sign out</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
-      </SidebarFooter>
     </Sidebar>
   );
 }
