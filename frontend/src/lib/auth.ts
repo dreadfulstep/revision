@@ -12,7 +12,7 @@ export type DiscordUser = {
 export function openAuthPopup(): Promise<DiscordUser> {
   return new Promise((resolve, reject) => {
     const popup = window.open(
-      `/api/auth`,
+      `/api/auth${process.env.NODE_ENV === "production" ? "" : "?local=true"}`,
       "discord-auth",
       "width=500,height=800,scrollbars=yes",
     );

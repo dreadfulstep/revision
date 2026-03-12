@@ -29,9 +29,13 @@ router.get("/", (req, res) => {
   });
   redis.set(`oauth_state:${state}`, "valid", { EX: 10 * 60 });
 
+  const { local } = req.query;
+
+  const redirectUrl = local ? env.localDiscordRedirectUrl : env.discordRedirectUrl 
+
   const params = new URLSearchParams({
     client_id: env.discordClientId,
-    redirect_uri: env.discordRedirectUrl,
+    redirect_uri: redirectUrl,
     response_type: "code",
     scope: "identify email",
     state: state,

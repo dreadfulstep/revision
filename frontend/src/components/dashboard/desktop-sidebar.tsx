@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import Link from "next/link"
+import Link from "next/link";
 import {
   LayoutDashboard,
   BarChart3,
@@ -12,9 +12,9 @@ import {
   LogOut,
   Zap,
   Plus,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Sidebar,
   SidebarContent,
@@ -27,8 +27,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarSeparator,
-} from "@/components/ui/sidebar"
-import { usePathname } from "next/navigation"
+} from "@/components/ui/sidebar";
+import { usePathname } from "next/navigation";
 
 const mainNavItems = [
   { href: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
@@ -36,12 +36,12 @@ const mainNavItems = [
   { href: "/subjects", icon: BookOpen, label: "Subjects" },
   { href: "/history", icon: History, label: "History" },
   { href: "/leaderboard", icon: Trophy, label: "Leaderboard" },
-]
+];
 
 const accountNavItems = [
   { href: "/profile", icon: User, label: "Profile" },
   { href: "/settings", icon: Settings, label: "Settings" },
-]
+];
 
 export function DesktopSidebar() {
   const pathname = usePathname();
@@ -72,10 +72,12 @@ export function DesktopSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>
-            <Button className="w-full gap-2 rounded-xl" size="sm">
-              <Plus className="size-4" />
-              <span>Create Quiz</span>
-            </Button>
+            <Link href={"/dashboard/create"}>
+              <Button className="w-full gap-2 rounded-xl" size="sm">
+                <Plus className="size-4" />
+                <span>Create Quiz</span>
+              </Button>
+            </Link>
           </SidebarGroupContent>
         </SidebarGroup>
 
@@ -129,7 +131,10 @@ export function DesktopSidebar() {
           <SidebarMenuItem>
             <SidebarMenuButton className="rounded-xl" tooltip="User profile">
               <Avatar className="size-6">
-                <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex" alt="Alex" />
+                <AvatarImage
+                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex"
+                  alt="Alex"
+                />
                 <AvatarFallback>AX</AvatarFallback>
               </Avatar>
               <div className="flex flex-col items-start text-xs">
@@ -150,5 +155,5 @@ export function DesktopSidebar() {
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
-  )
+  );
 }
