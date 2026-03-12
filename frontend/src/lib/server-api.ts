@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const cookieStore = cookies();
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${path}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_FRONTEND_URL}${path}`, {
     cache: "no-store",
     headers: {
       "Content-Type": "application/json",
