@@ -6,8 +6,10 @@ services:
   ports:
     - "8080:8080"
   depends_on:
-    - db
-    - redis
+    db:
+      condition: service_healthy
+  redis:
+    condition: service_started
   networks:
     - app-network
   command: sh -c "
