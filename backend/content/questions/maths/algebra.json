@@ -1,0 +1,14 @@
+{
+  "id": "expand-double-brackets",
+  "topic": "algebra",
+  "difficulty": 2,
+  "type": "text",
+  "image": null,
+  "template": "Expand and simplify (x + {{a}})(x + {{b}})",
+  "variables": {
+    "a": { "type": "int", "min": 1, "max": 10 },
+    "b": { "type": "int", "min": 1, "max": 10, "notEqualTo": "a" }
+  },
+  "answer": "x² + {{a+b}}x + {{a*b}}",
+  "acceptedAnswers": ["x²+{{a+b}}x+{{a*b}}", "x^2+{{a+b}}x+{{a*b}}"]
+}
