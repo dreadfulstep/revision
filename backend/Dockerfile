@@ -1,10 +1,11 @@
-FROM node:20-alpine
+FROM node:20-slim
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json package-lock.json* ./
+COPY tsconfig.json tsconfig.paths.json ./
 
-RUN npm install --production
+RUN npm install
 
 COPY . .
 
@@ -12,4 +13,4 @@ RUN npm run build
 
 EXPOSE 8080
 
-CMD ["node", "dist/index.js"]
+CMD ["sh", "-c", "npx drizzle-kit migrate:dev && node dist/index.js"]

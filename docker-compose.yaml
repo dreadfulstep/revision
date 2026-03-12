@@ -1,25 +1,7 @@
 services:
-  backend:
-  build: .
-  container_name: backend
-  env_file: .env
-  ports:
-    - "8080:8080"
-  depends_on:
-    db:
-      condition: service_healthy
-    redis:
-      condition: service_started
-  networks:
-    - app-network
-  command: sh -c "
-    npx drizzle-kit migrate:dev &&
-    npm run start"
-
   db:
-    image: postgres:16-alpine
-    container_name: postgres
-    restart: always
+    image: postgres:16
+    container_name: revision_db
     environment:
       POSTGRES_USER: dev
       POSTGRES_PASSWORD: devpassword
@@ -27,21 +9,34 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
-    networks:
-      - app-network
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dev"]
+      interval: 5s
+      retries: 5
 
   redis:
-    image: redis:7-alpine
-    container_name: redis
+    image: redis:7
+    container_name: revision_redis
     ports:
       - "6379:6379"
+
+  backend:
+    build: .
+    container_name: revision_backend
+    env_file: .env
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
     networks:
       - app-network
 
 volumes:
-  pgdata:
+  db_data:
 
 networks:
   app-network:
-    driver: bridge
