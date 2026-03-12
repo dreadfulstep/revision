@@ -9,8 +9,6 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
-
 EXPOSE 8080
 
-CMD ["sh", "-c", "npm run migrate && npm run generate && node dist/index.js"]
+CMD ["sh", "-c", "npm run migrate && npm run generate && npm start"]
