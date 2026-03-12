@@ -3,7 +3,7 @@ FROM node:20-slim
 WORKDIR /app
 
 COPY package.json package-lock.json* ./
-COPY tsconfig.json tsconfig.paths.json ./
+COPY tsconfig.json ./
 
 RUN npm install
 
