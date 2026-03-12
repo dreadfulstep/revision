@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(cookieParser(env.sessionSecret));
 
 app.use(cors({
-  origin: ["http://localhost:3000", "http://192.168.0.174:3000"],
+  origin: ["http://localhost:3000", "http://192.168.0.174:3000", "https://revision-b6a1.vercel.app"],
   credentials: true,
 }));
 
