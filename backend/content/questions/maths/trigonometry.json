@@ -11,6 +11,7 @@
   },
   "answer": "Math.sqrt(a*a + b*b)",
   "tolerance": 0.01,
+  "dp": 2,
   "unit": "cm",
   "explanation": "Use Pythagoras: c² = a² + b², so c = √({{a}}² + {{b}}²) = {{answer}}"
 }

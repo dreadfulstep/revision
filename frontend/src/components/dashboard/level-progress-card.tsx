@@ -20,7 +20,7 @@ export function LevelProgressCard({ stats }: { stats?: UserStats }) {
     xp: 0,
     quizzesCompleted: 0,
     questionsAnswered: 0,
-    streak: { current: 0, longest: 0 },
+    streak: { current: 0, longest: 0, lastActivityDate: "" },
     accuracy: 0
   };
 

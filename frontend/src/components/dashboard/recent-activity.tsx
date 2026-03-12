@@ -5,45 +5,6 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { History } from "@/lib/dashboard-data"
 
-const recentAttempts = [
-  {
-    id: "1",
-    subject: "Mathematics",
-    topic: "Calculus - Integration",
-    score: 85,
-    questionsAnswered: 20,
-    timeAgo: "2 hours ago",
-    duration: "15 min",
-  },
-  {
-    id: "2",
-    subject: "Physics",
-    topic: "Mechanics - Forces",
-    score: 72,
-    questionsAnswered: 15,
-    timeAgo: "Yesterday",
-    duration: "12 min",
-  },
-  {
-    id: "3",
-    subject: "Chemistry",
-    topic: "Organic Chemistry",
-    score: 90,
-    questionsAnswered: 25,
-    timeAgo: "2 days ago",
-    duration: "20 min",
-  },
-  {
-    id: "4",
-    subject: "Biology",
-    topic: "Cell Biology",
-    score: 45,
-    questionsAnswered: 10,
-    timeAgo: "3 days ago",
-    duration: "8 min",
-  },
-]
-
 function getScoreColor(score: number) {
   if (score >= 80) return "text-primary"
   if (score >= 60) return "text-amber-500"
@@ -96,14 +57,13 @@ export function RecentActivity({ history }: { history: History[] }) {
             key={attempt.attemptId}
             className={cn(
               "flex items-center gap-4 p-4 transition-colors hover:bg-accent/50 cursor-pointer",
-              index !== recentAttempts.length - 1 && "border-b border-border"
+              index !== history.length - 1 && "border-b border-border"
             )}
           >
             <div className={cn("flex size-10 shrink-0 items-center justify-center rounded-xl", getScoreBg(attempt.accuracy))}>
               <BookOpen className={cn("size-5", getScoreColor(attempt.accuracy))} />
             </div>
 
-            {/* Content */}
             <div className="min-w-0 flex-1">
               <p className="truncate font-medium">{attempt.subjectName}</p>
               <p className="truncate text-xs text-muted-foreground">
@@ -117,7 +77,6 @@ export function RecentActivity({ history }: { history: History[] }) {
               </div>
             </div>
 
-            {/* Score */}
             <div className="flex shrink-0 items-center gap-2">
               <span
                 className={cn("text-lg font-bold", getScoreColor(attempt.accuracy))}

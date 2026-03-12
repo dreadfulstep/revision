@@ -33,7 +33,6 @@ type GenerateQuizParams = {
   seed?: string;
 };
 
-// Questions sent to the client have answer/explanation stripped
 type QuestionPreview = Omit<Question, "answer" | "explanation"> | Omit<GeneratedQuestion, "answer" | "explanation" | "vars">;
 
 type GeneratedQuiz = {
@@ -48,8 +47,6 @@ type GeneratedQuiz = {
 type ServiceResult<T> =
   | { ok: true; data: T }
   | { ok: false; status: number; error: string; meta?: object };
-
-// ── Generate / fetch quiz ──────────────────────────────────────────────────
 
 export async function generateQuiz(
   params: GenerateQuizParams,
@@ -93,7 +90,6 @@ export async function generateQuiz(
       id: questionIds[i],
     }));
   } else {
-    // Static question pool — original behaviour
     const pool = getQuestions(
       subject.id,
       params.topics?.length ? params.topics : undefined,
@@ -219,8 +215,6 @@ export async function startAttempt(
   return { ok: true, data: { attemptId, quizId: seed, questionCount: quiz.count } };
 }
 
-// ── Answer ─────────────────────────────────────────────────────────────────
-
 export async function answerQuestion(
   params: AnswerQuestionParams,
 ): Promise<ServiceResult<AnswerResult>> {
@@ -285,8 +279,6 @@ export async function answerQuestion(
   return { ok: true, data: result };
 }
 
-// ── Complete ───────────────────────────────────────────────────────────────
-
 export async function completeAttempt(
   userId: string,
   attemptId: string,
@@ -336,8 +328,6 @@ export async function completeAttempt(
 
   return { ok: true, data: { score, correct, total: quiz.count, xpEarned, streak } };
 }
-
-// ── History ────────────────────────────────────────────────────────────────
 
 export async function getAttempt(
   userId: string,

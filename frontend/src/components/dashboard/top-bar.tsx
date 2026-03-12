@@ -1,10 +1,8 @@
 "use client";
 
-import { Bell, Search } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Search } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import { Badge } from "@/components/ui/badge";
 import { useUser } from "../providers/user-provider";
 
 export function TopBar() {
@@ -29,21 +27,6 @@ export function TopBar() {
           />
         </div>
       </div>
-
-      <Button
-        variant="ghost"
-        size="icon"
-        className="relative rounded-xl"
-        aria-label="Notifications"
-      >
-        <Bell className="size-5" />
-        <Badge
-          className="absolute -top-1 -right-1 size-5 items-center justify-center rounded-full p-0 text-[10px]"
-          aria-label="3 unread notifications"
-        >
-          3
-        </Badge>
-      </Button>
 
       <Avatar className="md:hidden size-8">
         <AvatarImage

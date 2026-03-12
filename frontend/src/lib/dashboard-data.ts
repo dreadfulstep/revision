@@ -14,7 +14,7 @@ export type DiscordUser = {
 export interface Streak {
   current: number;
   longest: number;
-  lastActivityDate: Date;
+  lastActivityDate: string;
 }
 
 export interface LevelInfo {
@@ -42,6 +42,7 @@ export interface UserStats {
   streak: {
     current: number;
     longest: number;
+    lastActivityDate: string;
   };
   accuracy: number;
 }
@@ -104,7 +105,7 @@ export async function getDashboardData(): Promise<DashboardData> {
     console.error("Dashboard fetch failed", err);
     return {
       user: null,
-      streak: { current: 0, longest: 0, lastActivityDate: new Date() },
+      streak: { current: 0, longest: 0, lastActivityDate: "" },
       stats: undefined,
       subjects: [],
       history: [],

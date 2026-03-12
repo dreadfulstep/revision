@@ -4,10 +4,13 @@ import { Flame, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Fragment } from "react";
 
-function getWeekDays(streakCount: number) {
+function getWeekDays(streakCount: number, lastActivityDate: string | null) {
   const today = new Date();
+  const todayStr = today.toISOString().split("T")[0];
   const todayIndex = today.getDay() === 0 ? 6 : today.getDay() - 1;
-  const labels = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+  const labels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  const completedToday = lastActivityDate === todayStr;
 
   return Array.from({ length: 7 }, (_, i) => {
     const offset = i - 6;
@@ -15,7 +18,12 @@ function getWeekDays(streakCount: number) {
     const daysAgo = -offset;
     const isToday = offset === 0;
     const isFuture = offset > 0;
-    const active = !isFuture && daysAgo < streakCount;
+
+    const active =
+      !isFuture &&
+      (completedToday
+        ? daysAgo < streakCount
+        : daysAgo >= 1 && daysAgo <= streakCount);
 
     return { label: labels[dayIndex], isToday, isFuture, active };
   });
@@ -24,9 +32,9 @@ function getWeekDays(streakCount: number) {
 export function StreakCard({
   streak,
 }: {
-  streak: { current: number; longest: number };
+  streak: { current: number; longest: number, lastActivityDate: string };
 }) {
-  const weekDays = getWeekDays(streak.current);
+  const weekDays = getWeekDays(streak.current, streak.lastActivityDate);
 
   return (
     <article className="rounded-2xl border border-border bg-card p-5">

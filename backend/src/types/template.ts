@@ -21,6 +21,7 @@ export interface QuestionTemplate {
   answer?: string; // expression e.g. "Math.sqrt(a*a + b*b)"
   tolerance?: number;
   unit?: string;
+  dp?: number;
   // For text questions
   textAnswer?: string; // expression returning string e.g. "`x^2 + ${a+b}x + ${a*b}`"
   acceptedAnswers?: string[]; // expressions

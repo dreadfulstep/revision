@@ -8,10 +8,10 @@ import cors from "cors";
 import env from "@/utils/env";
 
 import authRouter from "@/routes/auth";
-import userRouter from "@/routes/users"
 import subjectRouter from "@/routes/subjects";
 import quizRouter from "@/routes/quiz";
 import meRouter from "@/routes/users";
+import calendarRouter from "@/routes/calendar";
 import leaderboardRouter from "@/routes/leaderboard";
 
 import { authMiddleware } from "./middleware/auth";
@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(cookieParser(env.sessionSecret));
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: ["http://localhost:3000", "http://192.168.0.174:3000"],
   credentials: true,
 }));
 
@@ -33,6 +33,7 @@ app.use("/subjects", subjectRouter);
 app.use("/quiz", quizRouter);
 app.use("/me", meRouter);
 app.use("/leaderboard", leaderboardRouter);
+app.use("/calendar", calendarRouter);
 
 app.listen(env.port, () => {
     console.log(`Server is running on port ${env.port}`)

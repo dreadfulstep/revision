@@ -1,6 +1,6 @@
 {
-  "name": "Revision",
-  "short_name": "Revision",
+  "name": "StudyBuddy",
+  "short_name": "StudyBuddy",
   "display": "standalone",
   "start_url": "/dashboard",
   "icons": [

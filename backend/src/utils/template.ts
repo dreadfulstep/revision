@@ -1,12 +1,18 @@
-import { QuestionTemplate, ResolvedVars, GeneratedQuestion, VariableDef } from "../types/template";
+import {
+  QuestionTemplate,
+  ResolvedVars,
+  GeneratedQuestion,
+  VariableDef,
+} from "../types/template";
 import { getRenderer } from "../renderers";
 
 function mulberry32(seed: number) {
   return function () {
-    seed |= 0; seed = seed + 0x6D2B79F5 | 0;
-    let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
-    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
-    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    seed |= 0;
+    seed = (seed + 0x6d2b79f5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
 }
 
@@ -20,7 +26,10 @@ function makeRng(seed: string) {
   return mulberry32(djb2(seed));
 }
 
-function resolveVariables(defs: Record<string, VariableDef>, rng: () => number): ResolvedVars {
+function resolveVariables(
+  defs: Record<string, VariableDef>,
+  rng: () => number,
+): ResolvedVars {
   const vars: ResolvedVars = {};
 
   for (const [key, def] of Object.entries(defs)) {
@@ -31,10 +40,9 @@ function resolveVariables(defs: Record<string, VariableDef>, rng: () => number):
         val = Math.floor(rng() * (def.max - def.min + 1)) + def.min;
         attempts++;
       } while (
-        attempts < 100 && (
-          (def.notEqualTo && val === vars[def.notEqualTo]) ||
-          (def.multipleOf && val % def.multipleOf !== 0)
-        )
+        attempts < 100 &&
+        ((def.notEqualTo && val === vars[def.notEqualTo]) ||
+          (def.multipleOf && val % def.multipleOf !== 0))
       );
       vars[key] = val;
     } else if (def.type === "float") {
@@ -76,11 +84,9 @@ export function templateToQuestion(
 ): GeneratedQuestion {
   const rng = makeRng(seed + template.id);
   const vars = resolveVariables(template.variables, rng);
-
+ 
   const question = interpolate(template.template, vars);
-  const explanation = template.explanation ? interpolate(template.explanation, vars) : undefined;
-
-  // Resolve image
+ 
   let image: GeneratedQuestion["image"] = null;
   if (template.image?.type === "generated") {
     const renderer = getRenderer(template.image.renderer);
@@ -90,27 +96,41 @@ export function templateToQuestion(
   } else if (template.image?.type === "static") {
     image = { type: "static", src: template.image.src };
   }
-
+ 
   let answer: number | string | boolean;
   let acceptedAnswers: string[] | undefined;
   let options: string[] | undefined;
-
-  if (template.type === "number" && template.answer) {
-    answer = Number(safeEval(template.answer, vars));
-  } else if (template.type === "text" && template.textAnswer) {
-    answer = String(safeEval(template.textAnswer, vars));
-    if (template.acceptedAnswers) {
-      acceptedAnswers = template.acceptedAnswers.map(a => interpolate(a, vars));
+  let varsWithAnswer: ResolvedVars;
+ 
+  if (template.type === "number") {
+    const expr = (template as any).answer ?? "0";
+    let val = Number(safeEval(expr, vars));
+    if ((template as any).dp !== undefined) {
+      val = parseFloat(val.toFixed((template as any).dp));
     }
+    answer = val;
+    varsWithAnswer = { ...vars, answer: val };
+ 
+  } else if (template.type === "text") {
+    const raw = (template as any).textAnswer ?? (template as any).answer ?? "";
+    answer = interpolate(String(raw), vars);
+    acceptedAnswers = template.acceptedAnswers?.map((a) => interpolate(a, vars));
+    varsWithAnswer = { ...vars, answer };
+ 
   } else if (template.type === "multi-choice") {
     answer = template.choiceAnswer ?? 0;
-    options = template.options?.map(o => interpolate(o, vars));
-  } else if (template.type === "true-false") {
-    answer = template.boolAnswer ?? false;
+    options = template.options?.map((o) => interpolate(o, vars));
+    varsWithAnswer = { ...vars, answer };
+ 
   } else {
-    answer = 0;
+    answer = template.boolAnswer ?? false;
+    varsWithAnswer = { ...vars, answer: String(answer) };
   }
-
+ 
+  const explanation = template.explanation
+    ? interpolate(template.explanation, varsWithAnswer)
+    : undefined;
+ 
   return {
     id: `${template.id}:${seed}`,
     templateId: template.id,

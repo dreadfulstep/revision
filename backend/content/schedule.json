@@ -1,0 +1,310 @@
+{
+  "exams": [
+    {
+      "subject": "Computer Science",
+      "examBoard": "AQA",
+      "qualification": "GCSE",
+      "specCode": "8525",
+      "papers": [
+        {
+          "paper": "Paper 1",
+          "title": "Computational Thinking and Programming Skills",
+          "note": "Choice of language: C# (1A), Python (1B), or VB.Net (1C)",
+          "examCode": "8525/1A, 8525/1B, 8525/1C",
+          "date": "2026-05-13",
+          "dayOfWeek": "Wednesday",
+          "session": "afternoon",
+          "time": "13:30",
+          "duration": "2h 00m"
+        },
+        {
+          "paper": "Paper 2",
+          "title": "Computing Concepts",
+          "examCode": "8525/2",
+          "date": "2026-05-19",
+          "dayOfWeek": "Tuesday",
+          "session": "afternoon",
+          "time": "13:30",
+          "duration": "1h 45m"
+        }
+      ]
+    },
+    {
+      "subject": "Computer Science",
+      "examBoard": "OCR",
+      "qualification": "GCSE",
+      "specCode": "J277",
+      "papers": [
+        {
+          "paper": "Paper 1",
+          "title": "Computer Systems",
+          "examCode": "J277/01",
+          "date": "2026-05-14",
+          "dayOfWeek": "Thursday",
+          "session": "afternoon",
+          "time": "13:30",
+          "duration": "1h 30m"
+        },
+        {
+          "paper": "Paper 2",
+          "title": "Computational Thinking, Algorithms and Programming",
+          "examCode": "J277/02",
+          "date": "2026-05-19",
+          "dayOfWeek": "Tuesday",
+          "session": "afternoon",
+          "time": "13:30",
+          "duration": "1h 30m"
+        }
+      ]
+    },
+    {
+      "subject": "History",
+      "examBoard": "AQA",
+      "qualification": "GCSE",
+      "specCode": "8145",
+      "papers": [
+        {
+          "paper": "Paper 1",
+          "title": "Understanding the Modern World",
+          "examCode": "8145/1A–1B",
+          "note": "Section A (period study) + Section B (wider world depth study). Total 2h.",
+          "date": "2026-05-15",
+          "dayOfWeek": "Friday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "2h 00m"
+        },
+        {
+          "paper": "Paper 2",
+          "title": "Shaping the Nation",
+          "examCode": "8145/2A–2B",
+          "note": "Section A (thematic study) + Section B (British depth study). Total 2h.",
+          "date": "2026-06-04",
+          "dayOfWeek": "Thursday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "2h 00m"
+        }
+      ]
+    },
+    {
+      "subject": "English Language",
+      "examBoard": "AQA",
+      "qualification": "GCSE",
+      "specCode": "8700",
+      "papers": [
+        {
+          "paper": "Paper 1",
+          "title": "Explorations in Creative Reading and Writing",
+          "examCode": "8700/1",
+          "date": "2026-05-21",
+          "dayOfWeek": "Thursday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "1h 45m"
+        },
+        {
+          "paper": "Paper 2",
+          "title": "Writers' Viewpoints and Perspectives",
+          "examCode": "8700/2",
+          "date": "2026-06-05",
+          "dayOfWeek": "Friday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "1h 45m"
+        }
+      ]
+    },
+    {
+      "subject": "English Literature",
+      "examBoard": "AQA",
+      "qualification": "GCSE",
+      "specCode": "8702",
+      "papers": [
+        {
+          "paper": "Paper 1",
+          "title": "Shakespeare and the 19th Century Novel",
+          "examCode": "8702/1",
+          "date": "2026-05-11",
+          "dayOfWeek": "Monday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "1h 45m"
+        },
+        {
+          "paper": "Paper 2",
+          "title": "Modern Texts and Poetry",
+          "examCode": "8702/2",
+          "date": "2026-05-19",
+          "dayOfWeek": "Tuesday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "2h 15m"
+        }
+      ]
+    },
+    {
+      "subject": "Mathematics",
+      "examBoard": "Edexcel (Pearson)",
+      "qualification": "GCSE",
+      "specCode": "1MA1",
+      "papers": [
+        {
+          "paper": "Paper 1",
+          "title": "Non-Calculator (Foundation & Higher)",
+          "examCode": "1MA1 1F / 1MA1 1H",
+          "date": "2026-05-14",
+          "dayOfWeek": "Thursday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "1h 30m"
+        },
+        {
+          "paper": "Paper 2",
+          "title": "Calculator (Foundation & Higher)",
+          "examCode": "1MA1 2F / 1MA1 2H",
+          "date": "2026-06-03",
+          "dayOfWeek": "Wednesday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "1h 30m"
+        },
+        {
+          "paper": "Paper 3",
+          "title": "Calculator (Foundation & Higher)",
+          "examCode": "1MA1 3F / 1MA1 3H",
+          "date": "2026-06-10",
+          "dayOfWeek": "Wednesday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "1h 30m"
+        }
+      ]
+    },
+    {
+      "subject": "Combined Science: Trilogy",
+      "examBoard": "Edexcel (Pearson)",
+      "qualification": "GCSE",
+      "specCode": "1SC0",
+      "note": "Worth 2 GCSEs. Six papers total — Biology 1 & 2, Chemistry 1 & 2, Physics 1 & 2.",
+      "papers": [
+        {
+          "paper": "Paper 1",
+          "title": "Biology 1 (Foundation & Higher)",
+          "examCode": "1SC0 1BF / 1SC0 1BH",
+          "date": "2026-05-12",
+          "dayOfWeek": "Tuesday",
+          "session": "afternoon",
+          "time": "13:30",
+          "duration": "1h 10m"
+        },
+        {
+          "paper": "Paper 2",
+          "title": "Chemistry 1 (Foundation & Higher)",
+          "examCode": "1SC0 1CF / 1SC0 1CH",
+          "date": "2026-05-18",
+          "dayOfWeek": "Monday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "1h 10m"
+        },
+        {
+          "paper": "Paper 3",
+          "title": "Physics 1 (Foundation & Higher)",
+          "examCode": "1SC0 1PF / 1SC0 1PH",
+          "date": "2026-06-02",
+          "dayOfWeek": "Tuesday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "1h 10m"
+        },
+        {
+          "paper": "Paper 4",
+          "title": "Biology 2 (Foundation & Higher)",
+          "examCode": "1SC0 2BF / 1SC0 2BH",
+          "date": "2026-06-08",
+          "dayOfWeek": "Monday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "1h 10m"
+        },
+        {
+          "paper": "Paper 5",
+          "title": "Chemistry 2 (Foundation & Higher)",
+          "examCode": "1SC0 2CF / 1SC0 2CH",
+          "date": "2026-06-15",
+          "dayOfWeek": "Monday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "1h 10m"
+        },
+        {
+          "paper": "Paper 6",
+          "title": "Physics 2 (Foundation & Higher)",
+          "examCode": "1SC0 2PF / 1SC0 2PH",
+          "date": "2026-06-18",
+          "dayOfWeek": "Thursday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "1h 10m"
+        }
+      ]
+    },
+    {
+      "subject": "Creative iMedia",
+      "examBoard": "OCR",
+      "qualification": "Cambridge National",
+      "specCode": "J834",
+      "papers": [
+        {
+          "paper": "R093",
+          "title": "Creative iMedia in the Media Industry",
+          "examCode": "R093/01",
+          "date": "2026-06-08",
+          "dayOfWeek": "Monday",
+          "session": "afternoon",
+          "time": "13:30",
+          "duration": "1h 30m"
+        }
+      ]
+    },
+    {
+      "subject": "Geography",
+      "examBoard": "AQA",
+      "qualification": "GCSE",
+      "specCode": "8035",
+      "papers": [
+        {
+          "paper": "Paper 1",
+          "title": "Living with the Physical Environment",
+          "examCode": "8035/1",
+          "date": "2026-05-13",
+          "dayOfWeek": "Wednesday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "1h 30m"
+        },
+        {
+          "paper": "Paper 2",
+          "title": "Challenges in the Human Environment",
+          "examCode": "8035/2",
+          "date": "2026-06-03",
+          "dayOfWeek": "Wednesday",
+          "session": "afternoon",
+          "time": "13:30",
+          "duration": "1h 30m"
+        },
+        {
+          "paper": "Paper 3",
+          "title": "Geographical Applications",
+          "examCode": "8035/3",
+          "date": "2026-06-11",
+          "dayOfWeek": "Thursday",
+          "session": "morning",
+          "time": "09:00",
+          "duration": "1h 30m"
+        }
+      ]
+    }
+  ]
+}

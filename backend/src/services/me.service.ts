@@ -53,8 +53,12 @@ export async function getStats(
       quizzesCompleted: user.quizzesCompleted,
       questionsAnswered: user.questionsAnswered,
       streak: streak
-        ? { current: streak.current, longest: streak.longest }
-        : { current: 0, longest: 0 },
+        ? {
+            current: streak.current,
+            longest: streak.longest,
+            lastActivityDate: streak.lastActivityDate,
+          }
+        : { current: 0, longest: 0, lastActivityDate: null },
       accuracy: Math.round(accuracy),
     },
   };
@@ -87,7 +91,7 @@ type UserStats = {
   level: ReturnType<typeof getLevel>;
   quizzesCompleted: number;
   questionsAnswered: number;
-  streak: { current: number; longest: number };
+  streak: { current: number; longest: number; lastActivityDate: string | null };
   accuracy: number;
 };
 

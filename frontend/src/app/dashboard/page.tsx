@@ -3,7 +3,6 @@ import { StatsOverview } from "@/components/dashboard/stats-overview";
 import { StreakCard } from "@/components/dashboard/streak-card";
 import { LevelProgressCard } from "@/components/dashboard/level-progress-card";
 import { RecentActivity } from "@/components/dashboard/recent-activity";
-import { SubjectsGrid } from "@/components/dashboard/subjects-grid";
 import { TopBar } from "@/components/dashboard/top-bar";
 import { getDashboardData } from "@/lib/dashboard-data";
 
@@ -34,8 +33,6 @@ export default async function DashboardPage() {
             <StatsOverview stats={data.stats} />
 
             {/* <PerformanceChart /> */}
-
-            <SubjectsGrid subjects={data.subjects || []}/>
 
             <RecentActivity history={data.history || []}/>
           </div>
