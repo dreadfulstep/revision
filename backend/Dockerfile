@@ -13,4 +13,4 @@ RUN npm run build
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "npx drizzle-kit migrate:dev && node dist/index.js"]
+CMD ["sh", "-c", "npm run migrate && npm run generate && node dist/index.js"]
