@@ -2,35 +2,6 @@
   "exams": [
     {
       "subject": "Computer Science",
-      "examBoard": "AQA",
-      "qualification": "GCSE",
-      "specCode": "8525",
-      "papers": [
-        {
-          "paper": "Paper 1",
-          "title": "Computational Thinking and Programming Skills",
-          "note": "Choice of language: C# (1A), Python (1B), or VB.Net (1C)",
-          "examCode": "8525/1A, 8525/1B, 8525/1C",
-          "date": "2026-05-13",
-          "dayOfWeek": "Wednesday",
-          "session": "afternoon",
-          "time": "13:30",
-          "duration": "2h 00m"
-        },
-        {
-          "paper": "Paper 2",
-          "title": "Computing Concepts",
-          "examCode": "8525/2",
-          "date": "2026-05-19",
-          "dayOfWeek": "Tuesday",
-          "session": "afternoon",
-          "time": "13:30",
-          "duration": "1h 45m"
-        }
-      ]
-    },
-    {
-      "subject": "Computer Science",
       "examBoard": "OCR",
       "qualification": "GCSE",
       "specCode": "J277",
