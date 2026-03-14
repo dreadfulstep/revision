@@ -4,10 +4,9 @@ export function renderRightTriangle(vars: ResolvedVars): string {
   const a = Number(vars.a); // vertical leg
   const b = Number(vars.b); // horizontal leg
 
-  // Determine which side is unknown
   const findA   = Boolean(vars.find_a);
   const findB   = Boolean(vars.find_b);
-  const findHyp = !findA && !findB; // hyp is unknown only if neither leg is
+  const findHyp = !findA && !findB;
 
   const hyp = Math.sqrt(a * a + b * b);
 
@@ -33,11 +32,11 @@ export function renderRightTriangle(vars: ResolvedVars): string {
   const offX = (drawW - pw) / 2;
   const offY = (drawH - ph) / 2;
 
-  const x0 = padL + offX;        // bottom-left (right angle)
+  const x0 = padL + offX;
   const y0 = padT + offY + ph;
-  const x1 = padL + offX + pw;   // bottom-right
+  const x1 = padL + offX + pw;
   const y1 = y0;
-  const x2 = x0;                 // top-left
+  const x2 = x0;
   const y2 = padT + offY;
 
   const sq = 9;
@@ -45,7 +44,6 @@ export function renderRightTriangle(vars: ResolvedVars): string {
 
   const labelAx = x0 - 22;
   const labelAy = (y0 + y2) / 2 + 4;
-
   const labelBx = (x0 + x1) / 2;
   const labelBy = y0 + 20;
 
@@ -61,14 +59,23 @@ export function renderRightTriangle(vars: ResolvedVars): string {
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px">
   <style>
-    text { font-family: sans-serif; font-size: 12px; fill: currentColor; }
-    .unknown { font-weight: bold; font-size: 14px; fill: currentColor; }
-    .side { stroke: currentColor; stroke-width: 2; fill: none; }
+    text { font-family: sans-serif; font-size: 12px; }
+    .label { fill: #1a1a1a; }
+    .unknown { font-weight: bold; font-size: 14px; fill: #2563eb; }
+    .side { stroke: #374151; stroke-width: 2; fill: none; }
+    @media (prefers-color-scheme: dark) {
+      .label { fill: #f3f4f6; }
+      .side { stroke: #d1d5db; }
+    }
   </style>
+  <polygon points="${x0},${y0} ${x1},${y1} ${x2},${y2}" fill="#dbeafe" stroke="none" />
   <polygon points="${x0},${y0} ${x1},${y1} ${x2},${y2}" class="side" />
   <path d="${rightAngle}" class="side" stroke-width="1.5" />
-  <text text-anchor="middle" x="${labelAx}" y="${labelAy}" class="${findA ? "unknown" : ""}">${aLabel}</text>
-  <text text-anchor="middle" x="${labelBx}" y="${labelBy}" class="${findB ? "unknown" : ""}">${bLabel}</text>
-  <text text-anchor="middle" x="${labelCx}" y="${labelCy}" class="${findHyp ? "unknown" : ""}">${hypLabel}</text>
+  <rect x="${labelAx - 20}" y="${labelAy - 11}" width="40" height="16" rx="3" fill="white" fill-opacity="0.85" />
+  <rect x="${labelBx - 20}" y="${labelBy - 11}" width="40" height="16" rx="3" fill="white" fill-opacity="0.85" />
+  <rect x="${labelCx - 22}" y="${labelCy - 11}" width="44" height="16" rx="3" fill="white" fill-opacity="0.85" />
+  <text text-anchor="middle" x="${labelAx}" y="${labelAy}" class="${findA ? "unknown" : "label"}">${aLabel}</text>
+  <text text-anchor="middle" x="${labelBx}" y="${labelBy}" class="${findB ? "unknown" : "label"}">${bLabel}</text>
+  <text text-anchor="middle" x="${labelCx}" y="${labelCy}" class="${findHyp ? "unknown" : "label"}">${hypLabel}</text>
 </svg>`;
 }
