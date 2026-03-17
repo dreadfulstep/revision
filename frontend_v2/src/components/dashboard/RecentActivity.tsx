@@ -49,7 +49,7 @@ export default function RecentActivity({ attempts }: { attempts: Attempt[] }) {
         <Card className="py-0!">
           <CardContent className="p-0">
             {attempts.map((a, i) => (
-              <Link key={a.id} href={`/quiz/${a.id}/results`}>
+              <Link key={a.id} href={`/dashboard/quiz/${a.id}/results`}>
                 <div
                   className={`flex items-center gap-3 px-4 py-3 hover:bg-muted/40 transition-colors
                   ${i < attempts.length - 1 ? "border-b border-border" : ""}`}
