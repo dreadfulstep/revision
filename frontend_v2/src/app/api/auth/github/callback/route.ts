@@ -10,7 +10,7 @@ import { nanoid } from "nanoid";
 const github = new GitHub(
   process.env.GITHUB_CLIENT_ID!,
   process.env.GITHUB_CLIENT_SECRET!,
-  process.env.GITHUB_REDIRECT_URI!
+  process.env.GITHUB_REDIRECT_URI!,
 );
 
 export async function GET(req: NextRequest) {
@@ -58,7 +58,7 @@ export async function GET(req: NextRequest) {
         providerUserId,
         userId,
         accessToken: tokens.accessToken(),
-        expiresAt: tokens.accessTokenExpiresAt() || null, 
+        expiresAt: null
       });
     }
 
@@ -66,6 +66,9 @@ export async function GET(req: NextRequest) {
     return NextResponse.redirect(new URL("/dashboard", req.url));
   } catch (e) {
     console.error(e);
-    return NextResponse.json({ error: "Authentication failed" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Authentication failed" },
+      { status: 500 },
+    );
   }
 }
