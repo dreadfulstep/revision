@@ -34,7 +34,7 @@ export default function RecentActivity({ attempts }: { attempts: Attempt[] }) {
 
       {attempts.length === 0 ? (
         <Card className="border-dashed">
-          <CardContent className="py-8 text-center space-y-2">
+          <CardContent className="py-8 text-center flex justify-center flex-col items-center space-y-2">
             <p className="text-sm text-muted-foreground">
               No quizzes completed yet.
             </p>
