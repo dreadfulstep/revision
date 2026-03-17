@@ -48,8 +48,8 @@ export default function StreakCard({ streak }: Props) {
       <CardContent className="px-4 space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-streak/10 flex items-center justify-center">
-              <Flame size={16} className="text-streak" />
+            <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Flame size={16} className="text-primary" />
             </div>
             <div>
               <p className="font-semibold text-sm leading-none">Daily Streak</p>
@@ -83,7 +83,6 @@ export default function StreakCard({ streak }: Props) {
 
             return (
               <Fragment key={i}>
-                {/* Dot */}
                 <div className="flex justify-center">
                   <div
                     className={cn(
@@ -107,7 +106,6 @@ export default function StreakCard({ streak }: Props) {
                   </div>
                 </div>
 
-                {/* Connector line */}
                 {i < 6 && (
                   <div
                     className="h-0.5 w-full"
@@ -124,7 +122,6 @@ export default function StreakCard({ streak }: Props) {
           })}
         </div>
 
-        {/* Day labels — aligned under dots */}
         <div
           className="grid"
           style={{ gridTemplateColumns: "repeat(13, auto)" }}

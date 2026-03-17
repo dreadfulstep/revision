@@ -284,7 +284,7 @@ export default function QuizClient({
         </div>
       </main>
 
-      <footer className="fixed bottom-25 left-0 right-0 p-4 bg-background border-t backdrop-blur-lg">
+      <footer className="fixed bottom-20 left-0 right-0 p-4 bg-background border-t backdrop-blur-lg">
         <div className="max-w-lg mx-auto">
           {!feedback ? (
             !["true_false", "multiple_choice"].includes(cfg.type) && (
