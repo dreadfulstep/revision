@@ -1,0 +1,2731 @@
+[
+  {
+    "id": "forces-scalarvector-classify",
+    "topic": "forces",
+    "difficulty": 1,
+    "image": null,
+    "template": "Which of the following is a vector quantity?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Speed",
+        "Mass",
+        "Velocity",
+        "Distance"
+      ],
+      "answer": "Velocity"
+    },
+    "explanation": "Vector quantities have both magnitude and direction. Velocity is speed in a given direction, making it a vector. Speed, mass and distance are scalar quantities (magnitude only)."
+  },
+  {
+    "id": "forces-scalarvector-identify",
+    "topic": "forces",
+    "difficulty": 1,
+    "image": null,
+    "template": "State whether force is a scalar or vector quantity and explain why.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "vector",
+      "acceptedAnswers": [
+        "vector quantity",
+        "vector \u2014 it has both magnitude and direction"
+      ]
+    },
+    "explanation": "Force is a vector quantity because it has both a magnitude (size) and a direction. You must specify both to fully describe a force."
+  },
+  {
+    "id": "forces-displacement-calc",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "A car travels {{d1}} km north, then {{d2}} km south. What is the car's displacement from its starting point? Give your answer in km.",
+    "variables": {
+      "d1": {
+        "type": "int",
+        "min": 10,
+        "max": 50
+      },
+      "d2": {
+        "type": "int",
+        "min": 5,
+        "max": 45
+      },
+      "displacement": {
+        "type": "derived",
+        "expr": "d1 - d2"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "displacement",
+      "unit": "km"
+    },
+    "explanation": "Displacement is the straight-line distance from start to finish with direction. Travelling {{d1}} km north then {{d2}} km south gives a displacement of {{d1}} \u2212 {{d2}} = {{displacement}} km north (positive = north)."
+  },
+  {
+    "id": "forces-speed-calc",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "A runner covers {{d}} m in {{t}} s. Calculate their average speed in m/s.",
+    "variables": {
+      "d": {
+        "type": "int",
+        "min": 100,
+        "max": 1500
+      },
+      "t": {
+        "type": "int",
+        "min": 20,
+        "max": 300
+      },
+      "speed": {
+        "type": "derived",
+        "expr": "round(d/t, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "speed",
+      "unit": "m/s"
+    },
+    "explanation": "Average speed = distance \u00f7 time = {{d}} \u00f7 {{t}} = {{speed}} m/s."
+  },
+  {
+    "id": "forces-acceleration-calc",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "A car accelerates from {{u}} m/s to {{v}} m/s in {{t}} s. Calculate the acceleration.",
+    "variables": {
+      "u": {
+        "type": "int",
+        "min": 0,
+        "max": 15
+      },
+      "v": {
+        "type": "int",
+        "min": 20,
+        "max": 40
+      },
+      "t": {
+        "type": "int",
+        "min": 4,
+        "max": 12
+      },
+      "a": {
+        "type": "derived",
+        "expr": "round((v - u) / t, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "a",
+      "unit": "m/s\u00b2"
+    },
+    "explanation": "a = (v \u2212 u) / t = ({{v}} \u2212 {{u}}) / {{t}} = {{a}} m/s\u00b2."
+  },
+  {
+    "id": "forces-suvat-distance",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "A ball starts from rest and accelerates at {{a}} m/s\u00b2 for {{t}} s. Calculate the distance travelled.",
+    "variables": {
+      "a": {
+        "type": "float",
+        "min": 1.0,
+        "max": 6.0,
+        "dp": 1
+      },
+      "t": {
+        "type": "int",
+        "min": 3,
+        "max": 10
+      },
+      "s": {
+        "type": "derived",
+        "expr": "round(0.5 * a * t * t, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "s",
+      "unit": "m"
+    },
+    "explanation": "Using s = ut + \u00bdat\u00b2 with u = 0: s = 0 + \u00bd \u00d7 {{a}} \u00d7 {{t}}\u00b2 = 0.5 \u00d7 {{a}} \u00d7 {{t*t}} = {{s}} m."
+  },
+  {
+    "id": "forces-suvat-finalv",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "A cyclist starts at {{u}} m/s and accelerates at {{a}} m/s\u00b2 over a distance of {{s}} m. Calculate the final velocity using v\u00b2 = u\u00b2 + 2as.",
+    "variables": {
+      "u": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      },
+      "a": {
+        "type": "float",
+        "min": 0.5,
+        "max": 3.0,
+        "dp": 1
+      },
+      "s": {
+        "type": "int",
+        "min": 20,
+        "max": 80
+      },
+      "v2": {
+        "type": "derived",
+        "expr": "u*u + 2*a*s"
+      },
+      "v": {
+        "type": "derived",
+        "expr": "round(sqrt(v2), 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "v",
+      "unit": "m/s"
+    },
+    "explanation": "v\u00b2 = u\u00b2 + 2as = {{u}}\u00b2 + 2 \u00d7 {{a}} \u00d7 {{s}} = {{u*u}} + {{2*a*s}} = {{v2}}, so v = \u221a{{v2}} = {{v}} m/s."
+  },
+  {
+    "id": "forces-newton2-fma",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "A resultant force of {{F}} N acts on an object of mass {{m}} kg. Calculate the acceleration.",
+    "variables": {
+      "F": {
+        "type": "int",
+        "min": 10,
+        "max": 200
+      },
+      "m": {
+        "type": "int",
+        "min": 2,
+        "max": 50
+      },
+      "a": {
+        "type": "derived",
+        "expr": "round(F / m, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "a",
+      "unit": "m/s\u00b2"
+    },
+    "explanation": "F = ma \u2192 a = F/m = {{F}} / {{m}} = {{a}} m/s\u00b2."
+  },
+  {
+    "id": "forces-weight-calc",
+    "topic": "forces",
+    "difficulty": 1,
+    "image": null,
+    "template": "Calculate the weight of an object with a mass of {{m}} kg on Earth (g = 10 N/kg).",
+    "variables": {
+      "m": {
+        "type": "int",
+        "min": 1,
+        "max": 100
+      },
+      "W": {
+        "type": "derived",
+        "expr": "m * 10"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "W",
+      "unit": "N"
+    },
+    "explanation": "W = mg = {{m}} \u00d7 10 = {{W}} N."
+  },
+  {
+    "id": "forces-momentum-calc",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "A {{m}} kg trolley moves at {{v}} m/s. Calculate its momentum.",
+    "variables": {
+      "m": {
+        "type": "int",
+        "min": 2,
+        "max": 30
+      },
+      "v": {
+        "type": "float",
+        "min": 1.0,
+        "max": 10.0,
+        "dp": 1
+      },
+      "p": {
+        "type": "derived",
+        "expr": "round(m * v, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "p",
+      "unit": "kg m/s"
+    },
+    "explanation": "p = mv = {{m}} \u00d7 {{v}} = {{p}} kg m/s."
+  },
+  {
+    "id": "forces-impulse-force",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "A {{m}} kg ball travelling at {{u}} m/s is brought to rest in {{t}} s. Calculate the average force acting on it.",
+    "variables": {
+      "m": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      },
+      "u": {
+        "type": "float",
+        "min": 5.0,
+        "max": 20.0,
+        "dp": 1
+      },
+      "t": {
+        "type": "float",
+        "min": 0.1,
+        "max": 2.0,
+        "dp": 2
+      },
+      "dp": {
+        "type": "derived",
+        "expr": "m * u"
+      },
+      "F": {
+        "type": "derived",
+        "expr": "round(dp / t, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "F",
+      "unit": "N"
+    },
+    "explanation": "Impulse = change in momentum. F \u00d7 t = \u0394p = m \u00d7 \u0394v = {{m}} \u00d7 {{u}} = {{dp}} kg m/s. F = {{dp}} / {{t}} = {{F}} N."
+  },
+  {
+    "id": "forces-conservation-momentum",
+    "topic": "forces",
+    "difficulty": 4,
+    "image": null,
+    "template": "A {{m1}} kg trolley moving at {{v1}} m/s collides with a stationary {{m2}} kg trolley. They stick together. Calculate their combined velocity after the collision.",
+    "variables": {
+      "m1": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      },
+      "v1": {
+        "type": "float",
+        "min": 2.0,
+        "max": 8.0,
+        "dp": 1
+      },
+      "m2": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      },
+      "total_m": {
+        "type": "derived",
+        "expr": "m1 + m2"
+      },
+      "p_before": {
+        "type": "derived",
+        "expr": "m1 * v1"
+      },
+      "v_after": {
+        "type": "derived",
+        "expr": "round(p_before / total_m, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "v_after",
+      "unit": "m/s"
+    },
+    "explanation": "Conservation of momentum: p_before = p_after. {{m1}} \u00d7 {{v1}} = ({{m1}} + {{m2}}) \u00d7 v. {{p_before}} = {{total_m}} \u00d7 v. v = {{p_before}} / {{total_m}} = {{v_after}} m/s."
+  },
+  {
+    "id": "forces-pressure-calc",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "A force of {{F}} N acts on an area of {{A}} m\u00b2. Calculate the pressure.",
+    "variables": {
+      "F": {
+        "type": "int",
+        "min": 50,
+        "max": 500
+      },
+      "A": {
+        "type": "float",
+        "min": 0.1,
+        "max": 2.0,
+        "dp": 2
+      },
+      "P": {
+        "type": "derived",
+        "expr": "round(F / A, 1)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "P",
+      "unit": "Pa"
+    },
+    "explanation": "p = F/A = {{F}} / {{A}} = {{P}} Pa."
+  },
+  {
+    "id": "forces-hookes-law",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "A spring has a spring constant of {{k}} N/m. It is extended by {{e}} m. Calculate the force applied, assuming the spring obeys Hooke's Law.",
+    "variables": {
+      "k": {
+        "type": "int",
+        "min": 20,
+        "max": 200
+      },
+      "e": {
+        "type": "float",
+        "min": 0.05,
+        "max": 0.5,
+        "dp": 2
+      },
+      "F": {
+        "type": "derived",
+        "expr": "round(k * e, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "F",
+      "unit": "N"
+    },
+    "explanation": "F = ke = {{k}} \u00d7 {{e}} = {{F}} N."
+  },
+  {
+    "id": "forces-moments-calc",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "A force of {{F}} N acts at a perpendicular distance of {{d}} m from a pivot. Calculate the moment of the force.",
+    "variables": {
+      "F": {
+        "type": "int",
+        "min": 5,
+        "max": 100
+      },
+      "d": {
+        "type": "float",
+        "min": 0.2,
+        "max": 3.0,
+        "dp": 1
+      },
+      "M": {
+        "type": "derived",
+        "expr": "round(F * d, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "M",
+      "unit": "N m"
+    },
+    "explanation": "Moment = Force \u00d7 perpendicular distance from pivot = {{F}} \u00d7 {{d}} = {{M}} N m."
+  },
+  {
+    "id": "forces-density-calc",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "An object has a mass of {{m}} kg and a volume of {{V}} m\u00b3. Calculate its density.",
+    "variables": {
+      "m": {
+        "type": "float",
+        "min": 0.5,
+        "max": 20.0,
+        "dp": 1
+      },
+      "V": {
+        "type": "float",
+        "min": 0.001,
+        "max": 0.05,
+        "dp": 3
+      },
+      "rho": {
+        "type": "derived",
+        "expr": "round(m / V, 1)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "rho",
+      "unit": "kg/m\u00b3"
+    },
+    "explanation": "\u03c1 = m/V = {{m}} / {{V}} = {{rho}} kg/m\u00b3."
+  },
+  {
+    "id": "forces-boyles-law",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "A gas has a pressure of {{p1}} Pa and a volume of {{V1}} m\u00b3 at constant temperature. The volume changes to {{V2}} m\u00b3. Calculate the new pressure.",
+    "variables": {
+      "p1": {
+        "type": "int",
+        "min": 100000,
+        "max": 300000
+      },
+      "V1": {
+        "type": "float",
+        "min": 0.002,
+        "max": 0.01,
+        "dp": 3
+      },
+      "V2": {
+        "type": "float",
+        "min": 0.001,
+        "max": 0.008,
+        "dp": 3
+      },
+      "p2": {
+        "type": "derived",
+        "expr": "round((p1 * V1) / V2, 0)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "p2",
+      "unit": "Pa"
+    },
+    "explanation": "Boyle's Law: p\u2081V\u2081 = p\u2082V\u2082. p\u2082 = p\u2081V\u2081 / V\u2082 = ({{p1}} \u00d7 {{V1}}) / {{V2}} = {{p2}} Pa."
+  },
+  {
+    "id": "forces-newton3-identify",
+    "topic": "forces",
+    "difficulty": 1,
+    "image": null,
+    "template": "State Newton's Third Law of Motion.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "For every action there is an equal and opposite reaction",
+      "acceptedAnswers": [
+        "When object A exerts a force on object B, object B exerts an equal and opposite force on object A",
+        "Every action has an equal and opposite reaction"
+      ]
+    },
+    "explanation": "Newton's Third Law: When object A exerts a force on object B, object B exerts an equal and opposite force on object A. These forces act on different objects, are equal in magnitude, opposite in direction, and of the same type."
+  },
+  {
+    "id": "forces-stopping-distance",
+    "topic": "forces",
+    "difficulty": 4,
+    "image": null,
+    "template": "A car has a thinking distance of {{td}} m and a braking distance of {{bd}} m. What is the total stopping distance? Also state one factor that increases thinking distance.",
+    "variables": {
+      "td": {
+        "type": "int",
+        "min": 6,
+        "max": 18
+      },
+      "bd": {
+        "type": "int",
+        "min": 12,
+        "max": 55
+      },
+      "sd": {
+        "type": "derived",
+        "expr": "td + bd"
+      }
+    },
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        {
+          "label": "Total stopping distance (m)",
+          "answer": "sd",
+          "unit": "m"
+        },
+        {
+          "label": "Factor increasing thinking distance",
+          "answer": "tiredness"
+        }
+      ]
+    },
+    "explanation": "Stopping distance = thinking distance + braking distance = {{td}} + {{bd}} = {{sd}} m. Factors increasing thinking distance include tiredness, alcohol/drugs, distractions, or reaction time. Braking distance is increased by wet/icy roads, worn tyres/brakes, higher speed."
+  },
+  {
+    "id": "energy-ke-calc",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "Calculate the kinetic energy of a {{m}} kg object moving at {{v}} m/s.",
+    "variables": {
+      "m": {
+        "type": "int",
+        "min": 1,
+        "max": 80
+      },
+      "v": {
+        "type": "float",
+        "min": 2.0,
+        "max": 20.0,
+        "dp": 1
+      },
+      "KE": {
+        "type": "derived",
+        "expr": "round(0.5 * m * v * v, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "KE",
+      "unit": "J"
+    },
+    "explanation": "KE = \u00bdmv\u00b2 = 0.5 \u00d7 {{m}} \u00d7 {{v}}\u00b2 = 0.5 \u00d7 {{m}} \u00d7 {{v*v}} = {{KE}} J."
+  },
+  {
+    "id": "energy-gpe-calc",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "A {{m}} kg object is raised to a height of {{h}} m. Calculate the gain in gravitational potential energy (g = 10 N/kg).",
+    "variables": {
+      "m": {
+        "type": "int",
+        "min": 1,
+        "max": 50
+      },
+      "h": {
+        "type": "float",
+        "min": 1.0,
+        "max": 20.0,
+        "dp": 1
+      },
+      "GPE": {
+        "type": "derived",
+        "expr": "round(m * 10 * h, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "GPE",
+      "unit": "J"
+    },
+    "explanation": "GPE = mgh = {{m}} \u00d7 10 \u00d7 {{h}} = {{GPE}} J."
+  },
+  {
+    "id": "energy-elastic-pe",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "A spring with spring constant {{k}} N/m is compressed by {{e}} m. Calculate the elastic potential energy stored.",
+    "variables": {
+      "k": {
+        "type": "int",
+        "min": 20,
+        "max": 300
+      },
+      "e": {
+        "type": "float",
+        "min": 0.05,
+        "max": 0.4,
+        "dp": 2
+      },
+      "EPE": {
+        "type": "derived",
+        "expr": "round(0.5 * k * e * e, 3)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "EPE",
+      "unit": "J"
+    },
+    "explanation": "Elastic PE = \u00bdke\u00b2 = 0.5 \u00d7 {{k}} \u00d7 {{e}}\u00b2 = 0.5 \u00d7 {{k}} \u00d7 {{e*e}} = {{EPE}} J."
+  },
+  {
+    "id": "energy-workdone-calc",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "A force of {{F}} N moves an object {{d}} m in the direction of the force. Calculate the work done.",
+    "variables": {
+      "F": {
+        "type": "int",
+        "min": 10,
+        "max": 500
+      },
+      "d": {
+        "type": "float",
+        "min": 1.0,
+        "max": 20.0,
+        "dp": 1
+      },
+      "W": {
+        "type": "derived",
+        "expr": "round(F * d, 1)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "W",
+      "unit": "J"
+    },
+    "explanation": "W = Fd = {{F}} \u00d7 {{d}} = {{W}} J."
+  },
+  {
+    "id": "energy-power-wt",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "A motor does {{W}} J of work in {{t}} s. Calculate its power output.",
+    "variables": {
+      "W": {
+        "type": "int",
+        "min": 500,
+        "max": 10000
+      },
+      "t": {
+        "type": "int",
+        "min": 5,
+        "max": 60
+      },
+      "P": {
+        "type": "derived",
+        "expr": "round(W / t, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "P",
+      "unit": "W"
+    },
+    "explanation": "P = W/t = {{W}} / {{t}} = {{P}} W."
+  },
+  {
+    "id": "energy-power-fv",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "A car engine exerts a driving force of {{F}} N at a constant speed of {{v}} m/s. Calculate the power output of the engine.",
+    "variables": {
+      "F": {
+        "type": "int",
+        "min": 500,
+        "max": 5000
+      },
+      "v": {
+        "type": "float",
+        "min": 10.0,
+        "max": 30.0,
+        "dp": 1
+      },
+      "P": {
+        "type": "derived",
+        "expr": "round(F * v, 0)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "P",
+      "unit": "W"
+    },
+    "explanation": "P = Fv = {{F}} \u00d7 {{v}} = {{P}} W. (At constant speed, driving force = resistive force.)"
+  },
+  {
+    "id": "energy-efficiency-calc",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "A machine receives {{E_in}} J of energy and produces {{E_out}} J of useful output. Calculate the efficiency as a percentage.",
+    "variables": {
+      "E_in": {
+        "type": "int",
+        "min": 200,
+        "max": 2000
+      },
+      "E_out": {
+        "type": "derived",
+        "expr": "round(E_in * (0.3 + floor(E_in/5000)), 0)"
+      },
+      "eff": {
+        "type": "derived",
+        "expr": "round((E_out / E_in) * 100, 1)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "eff",
+      "unit": "%"
+    },
+    "explanation": "Efficiency = (useful output / total input) \u00d7 100 = ({{E_out}} / {{E_in}}) \u00d7 100 = {{eff}}%."
+  },
+  {
+    "id": "energy-efficiency-concept",
+    "topic": "energy",
+    "difficulty": 1,
+    "image": null,
+    "template": "A light bulb transfers 100 J of electrical energy. 5 J is emitted as light and the rest as heat. What is the efficiency of the bulb?",
+    "variables": {},
+    "answerConfig": {
+      "type": "number",
+      "answer": "5",
+      "unit": "%"
+    },
+    "explanation": "Efficiency = useful output / total input \u00d7 100 = 5/100 \u00d7 100 = 5%. Most energy is wasted as heat (thermal energy)."
+  },
+  {
+    "id": "energy-shc-calc",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "A {{m}} kg block of aluminium (specific heat capacity = {{c}} J/kg\u00b0C) is heated from {{T1}} \u00b0C to {{T2}} \u00b0C. Calculate the energy required.",
+    "variables": {
+      "m": {
+        "type": "float",
+        "min": 0.5,
+        "max": 5.0,
+        "dp": 1
+      },
+      "c": {
+        "type": "pick",
+        "options": [
+          900,
+          910,
+          880
+        ]
+      },
+      "T1": {
+        "type": "int",
+        "min": 20,
+        "max": 40
+      },
+      "T2": {
+        "type": "int",
+        "min": 80,
+        "max": 200
+      },
+      "dT": {
+        "type": "derived",
+        "expr": "T2 - T1"
+      },
+      "Q": {
+        "type": "derived",
+        "expr": "round(m * c * dT, 0)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "Q",
+      "unit": "J"
+    },
+    "explanation": "Q = mc\u0394T = {{m}} \u00d7 {{c}} \u00d7 ({{T2}} \u2212 {{T1}}) = {{m}} \u00d7 {{c}} \u00d7 {{dT}} = {{Q}} J."
+  },
+  {
+    "id": "energy-latent-heat",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "Calculate the energy needed to melt {{m}} kg of ice. The specific latent heat of fusion of water is {{L}} J/kg.",
+    "variables": {
+      "m": {
+        "type": "float",
+        "min": 0.1,
+        "max": 3.0,
+        "dp": 1
+      },
+      "L": {
+        "type": "pick",
+        "options": [
+          334000,
+          330000,
+          336000
+        ]
+      },
+      "Q": {
+        "type": "derived",
+        "expr": "round(m * L, 0)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "Q",
+      "unit": "J"
+    },
+    "explanation": "Q = mL = {{m}} \u00d7 {{L}} = {{Q}} J. Latent heat is the energy needed to change state without a temperature change."
+  },
+  {
+    "id": "energy-energy-transfer-types",
+    "topic": "energy",
+    "difficulty": 1,
+    "image": null,
+    "template": "Which method of heat transfer requires a medium (particles) to transfer energy?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Radiation",
+        "Conduction",
+        "Convection",
+        "Both conduction and convection"
+      ],
+      "answer": "Both conduction and convection"
+    },
+    "explanation": "Both conduction and convection require particles to transfer energy. Radiation (infrared) can travel through a vacuum and does not need a medium."
+  },
+  {
+    "id": "energy-transformer-step",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "A step-up transformer has {{np}} turns on the primary coil and {{ns}} turns on the secondary coil. The primary voltage is {{Vp}} V. Calculate the secondary voltage.",
+    "variables": {
+      "np": {
+        "type": "int",
+        "min": 100,
+        "max": 500
+      },
+      "ns": {
+        "type": "int",
+        "min": 1000,
+        "max": 5000
+      },
+      "Vp": {
+        "type": "pick",
+        "options": [
+          230,
+          240,
+          200
+        ]
+      },
+      "Vs": {
+        "type": "derived",
+        "expr": "round((Vp * ns) / np, 0)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "Vs",
+      "unit": "V"
+    },
+    "explanation": "Vs/Vp = ns/np \u2192 Vs = Vp \u00d7 ns/np = {{Vp}} \u00d7 {{ns}} / {{np}} = {{Vs}} V."
+  },
+  {
+    "id": "energy-renewable-nonrenewable",
+    "topic": "energy",
+    "difficulty": 1,
+    "image": null,
+    "template": "Which of the following is a renewable energy source?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Coal",
+        "Natural gas",
+        "Wind",
+        "Nuclear"
+      ],
+      "answer": "Wind"
+    },
+    "explanation": "Wind is a renewable energy source because it will not run out. Coal and natural gas are fossil fuels (non-renewable). Nuclear fuel (uranium) is also non-renewable as it is a finite resource, though it is sometimes classified separately from fossil fuels."
+  },
+  {
+    "id": "energy-ke-gpe-transfer",
+    "topic": "energy",
+    "difficulty": 4,
+    "image": null,
+    "template": "A {{m}} kg ball is dropped from a height of {{h}} m. Assuming no air resistance, calculate its speed just before hitting the ground using energy conservation.",
+    "variables": {
+      "m": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      },
+      "h": {
+        "type": "float",
+        "min": 2.0,
+        "max": 15.0,
+        "dp": 1
+      },
+      "GPE": {
+        "type": "derived",
+        "expr": "m * 10 * h"
+      },
+      "v2": {
+        "type": "derived",
+        "expr": "(2 * GPE) / m"
+      },
+      "v": {
+        "type": "derived",
+        "expr": "round(sqrt(v2), 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "v",
+      "unit": "m/s"
+    },
+    "explanation": "GPE at top = KE at bottom (energy conservation). mgh = \u00bdmv\u00b2. v\u00b2 = 2gh = 2 \u00d7 10 \u00d7 {{h}} = {{v2}}. v = \u221a{{v2}} = {{v}} m/s."
+  },
+  {
+    "id": "energy-national-grid",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "Explain why the National Grid uses very high voltages to transmit electricity over long distances.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "High voltage means low current, which reduces energy lost as heat in the cables (P = I\u00b2R), making transmission more efficient.",
+      "acceptedAnswers": [
+        "High voltage reduces current, less energy wasted as heat",
+        "P = I\u00b2R so lower current means less power lost in resistance of cables"
+      ]
+    },
+    "explanation": "Using P = I\u00b2R: a higher voltage means a lower current for the same power (P = IV). Lower current \u2192 much less power lost as heat in the resistance of the cables. This makes the National Grid far more efficient."
+  },
+  {
+    "id": "waves-equation-calc",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "A wave has a frequency of {{f}} Hz and a wavelength of {{lam}} m. Calculate the wave speed.",
+    "variables": {
+      "f": {
+        "type": "int",
+        "min": 50,
+        "max": 2000
+      },
+      "lam": {
+        "type": "float",
+        "min": 0.05,
+        "max": 5.0,
+        "dp": 2
+      },
+      "v": {
+        "type": "derived",
+        "expr": "round(f * lam, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "v",
+      "unit": "m/s"
+    },
+    "explanation": "v = f\u03bb = {{f}} \u00d7 {{lam}} = {{v}} m/s."
+  },
+  {
+    "id": "waves-period-freq",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "A wave has a period of {{T}} s. Calculate its frequency.",
+    "variables": {
+      "T": {
+        "type": "float",
+        "min": 0.001,
+        "max": 0.5,
+        "dp": 3
+      },
+      "f": {
+        "type": "derived",
+        "expr": "round(1 / T, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "f",
+      "unit": "Hz"
+    },
+    "explanation": "f = 1/T = 1 / {{T}} = {{f}} Hz."
+  },
+  {
+    "id": "waves-transverse-longitudinal",
+    "topic": "waves",
+    "difficulty": 1,
+    "image": null,
+    "template": "Which of the following correctly describes a longitudinal wave?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Oscillations are perpendicular to the direction of wave travel",
+        "Oscillations are parallel to the direction of wave travel",
+        "The wave cannot transfer energy",
+        "The wave requires no medium to travel"
+      ],
+      "answer": "Oscillations are parallel to the direction of wave travel"
+    },
+    "explanation": "In a longitudinal wave (e.g. sound), particles oscillate parallel to the direction of energy transfer, creating compressions and rarefactions. Transverse waves have perpendicular oscillations."
+  },
+  {
+    "id": "waves-em-spectrum-order",
+    "topic": "waves",
+    "difficulty": 1,
+    "image": null,
+    "template": "Arrange the following electromagnetic waves in order of increasing frequency: Radio waves, X-rays, Visible light, Microwaves.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Radio waves",
+        "Microwaves",
+        "Visible light",
+        "X-rays"
+      ]
+    },
+    "explanation": "The EM spectrum in order of increasing frequency (lowest to highest): Radio \u2192 Microwave \u2192 Infrared \u2192 Visible \u2192 Ultraviolet \u2192 X-ray \u2192 Gamma. So the correct order here is: Radio waves, Microwaves, Visible light, X-rays."
+  },
+  {
+    "id": "waves-snells-law",
+    "topic": "waves",
+    "difficulty": 4,
+    "image": null,
+    "template": "A ray of light enters glass with a refractive index of {{n}}. The angle of incidence is {{i}}\u00b0. Calculate the angle of refraction (to 1 d.p.). Use n = sin i / sin r.",
+    "variables": {
+      "n": {
+        "type": "float",
+        "min": 1.3,
+        "max": 1.6,
+        "dp": 2
+      },
+      "i": {
+        "type": "int",
+        "min": 20,
+        "max": 60
+      },
+      "sin_i": {
+        "type": "derived",
+        "expr": "round(sin_deg(i), 4)"
+      },
+      "sin_r": {
+        "type": "derived",
+        "expr": "round(sin_i / n, 4)"
+      },
+      "r": {
+        "type": "derived",
+        "expr": "round(asin_deg(sin_r), 1)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "r",
+      "unit": "\u00b0"
+    },
+    "explanation": "n = sin i / sin r \u2192 sin r = sin i / n = {{sin_i}} / {{n}} = {{sin_r}}. r = arcsin({{sin_r}}) = {{r}}\u00b0. Light bends towards the normal when entering a denser medium."
+  },
+  {
+    "id": "waves-wavelength-from-speed",
+    "topic": "waves",
+    "difficulty": 3,
+    "image": null,
+    "template": "A sound wave travels at {{v}} m/s with a frequency of {{f}} Hz. Calculate the wavelength.",
+    "variables": {
+      "v": {
+        "type": "pick",
+        "options": [
+          340,
+          330,
+          350
+        ]
+      },
+      "f": {
+        "type": "int",
+        "min": 100,
+        "max": 1000
+      },
+      "lam": {
+        "type": "derived",
+        "expr": "round(v / f, 3)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "lam",
+      "unit": "m"
+    },
+    "explanation": "v = f\u03bb \u2192 \u03bb = v/f = {{v}} / {{f}} = {{lam}} m."
+  },
+  {
+    "id": "waves-reflection-law",
+    "topic": "waves",
+    "difficulty": 1,
+    "image": null,
+    "template": "State the law of reflection.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "The angle of incidence equals the angle of reflection",
+      "acceptedAnswers": [
+        "angle of incidence = angle of reflection",
+        "angle in = angle out (measured from the normal)"
+      ]
+    },
+    "explanation": "The law of reflection states that the angle of incidence equals the angle of reflection, both measured from the normal to the surface at the point of incidence."
+  },
+  {
+    "id": "waves-total-internal-reflection",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "What are the two conditions needed for total internal reflection to occur?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Light must be travelling from a less dense to a more dense medium",
+        "Light must be travelling from a more dense to a less dense medium",
+        "The angle of incidence must exceed the critical angle",
+        "The angle of incidence must be less than the critical angle"
+      ],
+      "correctOptions": [
+        "Light must be travelling from a more dense to a less dense medium",
+        "The angle of incidence must exceed the critical angle"
+      ]
+    },
+    "explanation": "Total internal reflection requires: (1) light travelling from a denser medium to a less dense medium (e.g. glass to air), and (2) the angle of incidence must be greater than the critical angle for that material."
+  },
+  {
+    "id": "waves-seismic-p-s",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which type of seismic wave can travel through both solids and liquids?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "S waves",
+        "P waves",
+        "Both P and S waves",
+        "Neither"
+      ],
+      "answer": "P waves"
+    },
+    "explanation": "P waves (primary/pressure waves) are longitudinal and can travel through solids and liquids. S waves (secondary/shear waves) are transverse and can only travel through solids. This difference is used to study Earth's interior."
+  },
+  {
+    "id": "waves-em-uses",
+    "topic": "waves",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each electromagnetic wave to its correct use.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "X-rays",
+          "right": "Medical imaging of bones"
+        },
+        {
+          "left": "Microwaves",
+          "right": "Satellite communication"
+        },
+        {
+          "left": "Ultraviolet",
+          "right": "Sunbed / sterilisation"
+        },
+        {
+          "left": "Infrared",
+          "right": "Thermal imaging cameras"
+        }
+      ]
+    },
+    "explanation": "X-rays penetrate soft tissue but are absorbed by bone. Microwaves are used in satellite and mobile communication. UV is used in sunbeds and sterilisation. Infrared is emitted by warm objects and used in thermal cameras."
+  },
+  {
+    "id": "waves-ultrasound-uses",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "Give two medical uses of ultrasound.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Breaking up kidney stones",
+        "Scanning unborn babies",
+        "Treating cancer with radiation",
+        "Measuring lung capacity"
+      ],
+      "correctOptions": [
+        "Breaking up kidney stones",
+        "Scanning unborn babies"
+      ]
+    },
+    "explanation": "Ultrasound (sound above 20 kHz) is used to scan unborn babies (prenatal scanning) and to break up kidney stones (lithotripsy). It is preferred for foetal scanning as it is non-ionising unlike X-rays."
+  },
+  {
+    "id": "waves-frequency-calc-multipart",
+    "topic": "waves",
+    "difficulty": 4,
+    "image": null,
+    "template": "A microwave oven uses microwaves with a wavelength of {{lam}} m. The speed of light is 3\u00d710\u2078 m/s. Calculate (a) the frequency of the microwaves and (b) the period of the wave.",
+    "variables": {
+      "lam": {
+        "type": "float",
+        "min": 0.01,
+        "max": 0.15,
+        "dp": 3
+      },
+      "c": {
+        "type": "derived",
+        "expr": "3 * pow(10, 8)"
+      },
+      "f": {
+        "type": "derived",
+        "expr": "round(c / lam, 2)"
+      },
+      "T": {
+        "type": "derived",
+        "expr": "round(1 / f, 12)"
+      }
+    },
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        {
+          "label": "Frequency (Hz)",
+          "answer": "f",
+          "unit": "Hz"
+        },
+        {
+          "label": "Period (s)",
+          "answer": "T",
+          "unit": "s"
+        }
+      ]
+    },
+    "explanation": "(a) f = v/\u03bb = 3\u00d710\u2078 / {{lam}} = {{f}} Hz. (b) T = 1/f = 1/{{f}} = {{T}} s."
+  },
+  {
+    "id": "waves-wave-particle-duality",
+    "topic": "waves",
+    "difficulty": 5,
+    "image": null,
+    "template": "Explain what is meant by wave-particle duality and give one piece of evidence for the wave nature of light and one for the particle nature.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Wave-particle duality means light (and matter) can behave as both a wave and a particle depending on the experiment. Evidence for wave: diffraction/interference. Evidence for particle: photoelectric effect.",
+      "acceptedAnswers": [
+        "Light behaves as a wave (diffraction, interference) and as a particle (photon/photoelectric effect)"
+      ]
+    },
+    "explanation": "Wave-particle duality: light exhibits wave behaviour (diffraction, interference, polarisation) and particle behaviour (photoelectric effect \u2014 photons transfer discrete packets of energy). de Broglie proposed that matter also has wave properties."
+  },
+  {
+    "id": "electricity-ohms-law",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "A resistor has a resistance of {{R}} \u03a9 and a current of {{I}} A flows through it. Calculate the potential difference across the resistor.",
+    "variables": {
+      "R": {
+        "type": "int",
+        "min": 5,
+        "max": 200
+      },
+      "I": {
+        "type": "float",
+        "min": 0.1,
+        "max": 5.0,
+        "dp": 1
+      },
+      "V": {
+        "type": "derived",
+        "expr": "round(I * R, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "V",
+      "unit": "V"
+    },
+    "explanation": "V = IR = {{I}} \u00d7 {{R}} = {{V}} V."
+  },
+  {
+    "id": "electricity-power-iv",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "A device operates at {{V}} V with a current of {{I}} A. Calculate its power.",
+    "variables": {
+      "V": {
+        "type": "int",
+        "min": 6,
+        "max": 230
+      },
+      "I": {
+        "type": "float",
+        "min": 0.5,
+        "max": 10.0,
+        "dp": 1
+      },
+      "P": {
+        "type": "derived",
+        "expr": "round(V * I, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "P",
+      "unit": "W"
+    },
+    "explanation": "P = IV = {{I}} \u00d7 {{V}} = {{P}} W."
+  },
+  {
+    "id": "electricity-power-i2r",
+    "topic": "electricity",
+    "difficulty": 3,
+    "image": null,
+    "template": "A current of {{I}} A flows through a resistor of {{R}} \u03a9. Calculate the power dissipated.",
+    "variables": {
+      "I": {
+        "type": "float",
+        "min": 0.5,
+        "max": 8.0,
+        "dp": 1
+      },
+      "R": {
+        "type": "int",
+        "min": 5,
+        "max": 100
+      },
+      "P": {
+        "type": "derived",
+        "expr": "round(I * I * R, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "P",
+      "unit": "W"
+    },
+    "explanation": "P = I\u00b2R = {{I}}\u00b2 \u00d7 {{R}} = {{I*I}} \u00d7 {{R}} = {{P}} W."
+  },
+  {
+    "id": "electricity-energy-calc",
+    "topic": "electricity",
+    "difficulty": 3,
+    "image": null,
+    "template": "A {{P}} W appliance is used for {{t}} minutes. Calculate the energy transferred in joules.",
+    "variables": {
+      "P": {
+        "type": "int",
+        "min": 100,
+        "max": 3000
+      },
+      "t": {
+        "type": "int",
+        "min": 5,
+        "max": 60
+      },
+      "t_s": {
+        "type": "derived",
+        "expr": "t * 60"
+      },
+      "E": {
+        "type": "derived",
+        "expr": "P * t_s"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "E",
+      "unit": "J"
+    },
+    "explanation": "E = Pt = {{P}} \u00d7 ({{t}} \u00d7 60) = {{P}} \u00d7 {{t_s}} = {{E}} J. Remember to convert minutes to seconds."
+  },
+  {
+    "id": "electricity-charge-calc",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "A current of {{I}} A flows for {{t}} s. Calculate the charge that flows.",
+    "variables": {
+      "I": {
+        "type": "float",
+        "min": 0.5,
+        "max": 10.0,
+        "dp": 1
+      },
+      "t": {
+        "type": "int",
+        "min": 10,
+        "max": 300
+      },
+      "Q": {
+        "type": "derived",
+        "expr": "round(I * t, 1)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "Q",
+      "unit": "C"
+    },
+    "explanation": "Q = It = {{I}} \u00d7 {{t}} = {{Q}} C."
+  },
+  {
+    "id": "electricity-series-resistance",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "Two resistors, {{R1}} \u03a9 and {{R2}} \u03a9, are connected in series. Calculate the total resistance.",
+    "variables": {
+      "R1": {
+        "type": "int",
+        "min": 10,
+        "max": 100
+      },
+      "R2": {
+        "type": "int",
+        "min": 10,
+        "max": 100
+      },
+      "Rtotal": {
+        "type": "derived",
+        "expr": "R1 + R2"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "Rtotal",
+      "unit": "\u03a9"
+    },
+    "explanation": "In series: R_total = R\u2081 + R\u2082 = {{R1}} + {{R2}} = {{Rtotal}} \u03a9."
+  },
+  {
+    "id": "electricity-parallel-resistance",
+    "topic": "electricity",
+    "difficulty": 3,
+    "image": null,
+    "template": "Two resistors, {{R1}} \u03a9 and {{R2}} \u03a9, are connected in parallel. Calculate the total resistance.",
+    "variables": {
+      "R1": {
+        "type": "int",
+        "min": 10,
+        "max": 100
+      },
+      "R2": {
+        "type": "int",
+        "min": 10,
+        "max": 100
+      },
+      "Rtotal": {
+        "type": "derived",
+        "expr": "round((R1 * R2) / (R1 + R2), 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "Rtotal",
+      "unit": "\u03a9"
+    },
+    "explanation": "In parallel: 1/R_total = 1/R\u2081 + 1/R\u2082 = 1/{{R1}} + 1/{{R2}}. R_total = (R\u2081 \u00d7 R\u2082)/(R\u2081 + R\u2082) = ({{R1}} \u00d7 {{R2}}) / ({{R1}} + {{R2}}) = {{Rtotal}} \u03a9."
+  },
+  {
+    "id": "electricity-iv-characteristic",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which component has an I-V characteristic that is a straight line through the origin (at constant temperature)?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Filament lamp",
+        "Diode",
+        "Ohmic resistor",
+        "Thermistor"
+      ],
+      "answer": "Ohmic resistor"
+    },
+    "explanation": "An ohmic resistor obeys Ohm's Law: V = IR with constant R at constant temperature. Its I-V graph is a straight line through the origin. A filament lamp curves as resistance increases with temperature; a diode only conducts one way."
+  },
+  {
+    "id": "electricity-uk-plug",
+    "topic": "electricity",
+    "difficulty": 1,
+    "image": null,
+    "template": "In a UK mains plug, which wire is connected to the fuse?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Neutral (blue)",
+        "Earth (green/yellow)",
+        "Live (brown)",
+        "Any wire"
+      ],
+      "answer": "Live (brown)"
+    },
+    "explanation": "In a UK plug: Live (brown) \u2014 carries current at ~230 V and is connected to the fuse. Neutral (blue) \u2014 completes the circuit at ~0 V. Earth (green/yellow) \u2014 safety wire. The fuse is in the live wire to protect the appliance."
+  },
+  {
+    "id": "electricity-ac-dc",
+    "topic": "electricity",
+    "difficulty": 1,
+    "image": null,
+    "template": "The UK mains supply has a frequency of {{f}} Hz and a voltage of approximately {{V}} V. Is mains electricity AC or DC?",
+    "variables": {
+      "f": {
+        "type": "pick",
+        "options": [
+          50
+        ]
+      },
+      "V": {
+        "type": "pick",
+        "options": [
+          230
+        ]
+      }
+    },
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "AC (alternating current)",
+        "DC (direct current)",
+        "Both AC and DC",
+        "Neither"
+      ],
+      "answer": "AC (alternating current)"
+    },
+    "explanation": "Mains electricity in the UK is alternating current (AC) at 230 V and 50 Hz. The current direction reverses 50 times per second. Batteries supply DC (direct current) which flows in one direction."
+  },
+  {
+    "id": "electricity-circuit-multipart",
+    "topic": "electricity",
+    "difficulty": 4,
+    "image": null,
+    "template": "A circuit has a 12 V battery connected to a {{R1}} \u03a9 resistor and a {{R2}} \u03a9 resistor in series. Calculate (a) the total resistance, (b) the current in the circuit, and (c) the voltage across the {{R1}} \u03a9 resistor.",
+    "variables": {
+      "R1": {
+        "type": "int",
+        "min": 10,
+        "max": 40
+      },
+      "R2": {
+        "type": "int",
+        "min": 10,
+        "max": 40
+      },
+      "Rt": {
+        "type": "derived",
+        "expr": "R1 + R2"
+      },
+      "I": {
+        "type": "derived",
+        "expr": "round(12 / Rt, 3)"
+      },
+      "V1": {
+        "type": "derived",
+        "expr": "round(I * R1, 3)"
+      }
+    },
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        {
+          "label": "Total resistance (\u03a9)",
+          "answer": "Rt",
+          "unit": "\u03a9"
+        },
+        {
+          "label": "Current (A)",
+          "answer": "I",
+          "unit": "A"
+        },
+        {
+          "label": "Voltage across R1 (V)",
+          "answer": "V1",
+          "unit": "V"
+        }
+      ]
+    },
+    "explanation": "(a) R_total = {{R1}} + {{R2}} = {{Rt}} \u03a9. (b) I = V/R = 12 / {{Rt}} = {{I}} A. (c) V\u2081 = IR\u2081 = {{I}} \u00d7 {{R1}} = {{V1}} V."
+  },
+  {
+    "id": "electricity-ldr-thermistor",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "What happens to the resistance of a thermistor as temperature increases?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Stays the same",
+        "Increases then decreases"
+      ],
+      "answer": "Decreases"
+    },
+    "explanation": "A (NTC) thermistor decreases in resistance as temperature increases \u2014 more thermal energy frees more charge carriers. This makes thermistors useful in temperature sensors and thermostats."
+  },
+  {
+    "id": "electricity-static-charge",
+    "topic": "electricity",
+    "difficulty": 1,
+    "image": null,
+    "template": "When a polythene rod is rubbed with a cloth, it gains a negative charge. Explain why in terms of electron transfer.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Electrons are transferred from the cloth to the polythene rod, giving the rod extra electrons and a negative charge.",
+      "acceptedAnswers": [
+        "Electrons move from cloth to polythene",
+        "The rod gains electrons and becomes negatively charged"
+      ]
+    },
+    "explanation": "Rubbing transfers electrons from the cloth to the polythene rod. The rod gains electrons \u2192 becomes negatively charged. The cloth loses electrons \u2192 becomes positively charged. Protons do not move."
+  },
+  {
+    "id": "magnetism-field-patterns",
+    "topic": "magnetism",
+    "difficulty": 1,
+    "image": null,
+    "template": "Describe the magnetic field pattern around a bar magnet.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Field lines go from north pole to south pole outside the magnet, they are closest together (strongest) near the poles, and lines never cross.",
+      "acceptedAnswers": [
+        "Lines from N to S outside magnet, concentrated at poles, never cross",
+        "Closed loops from N to S, strongest at poles"
+      ]
+    },
+    "explanation": "Magnetic field lines emerge from the north pole and enter the south pole. They are most concentrated (field strongest) near the poles. Field lines never cross. Inside the magnet, they go from south to north."
+  },
+  {
+    "id": "magnetism-force-on-wire",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "A wire of length {{L}} m carrying a current of {{I}} A is placed perpendicular to a magnetic field of flux density {{B}} T. Calculate the force on the wire.",
+    "variables": {
+      "L": {
+        "type": "float",
+        "min": 0.05,
+        "max": 0.5,
+        "dp": 2
+      },
+      "I": {
+        "type": "float",
+        "min": 1.0,
+        "max": 10.0,
+        "dp": 1
+      },
+      "B": {
+        "type": "float",
+        "min": 0.05,
+        "max": 0.5,
+        "dp": 2
+      },
+      "F": {
+        "type": "derived",
+        "expr": "round(B * I * L, 4)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "F",
+      "unit": "N"
+    },
+    "explanation": "F = BIL = {{B}} \u00d7 {{I}} \u00d7 {{L}} = {{F}} N."
+  },
+  {
+    "id": "magnetism-flemings-left",
+    "topic": "magnetism",
+    "difficulty": 1,
+    "image": null,
+    "template": "What does Fleming's Left-Hand Rule predict?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The direction of induced EMF in a generator",
+        "The direction of force on a current-carrying conductor in a magnetic field",
+        "The direction of the magnetic field around a wire",
+        "The magnitude of the force on a charge"
+      ],
+      "answer": "The direction of force on a current-carrying conductor in a magnetic field"
+    },
+    "explanation": "Fleming's Left-Hand Rule is used for motors: the thuMb = Motion (force), First finger = Field, seCond finger = Current. It gives the direction of force on a current-carrying conductor in a magnetic field."
+  },
+  {
+    "id": "magnetism-transformer-voltage",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "A transformer has {{np}} primary turns and {{ns}} secondary turns. The primary voltage is {{Vp}} V. Calculate the secondary voltage.",
+    "variables": {
+      "np": {
+        "type": "int",
+        "min": 200,
+        "max": 1000
+      },
+      "ns": {
+        "type": "int",
+        "min": 50,
+        "max": 400
+      },
+      "Vp": {
+        "type": "pick",
+        "options": [
+          230,
+          240
+        ]
+      },
+      "Vs": {
+        "type": "derived",
+        "expr": "round((Vp * ns) / np, 1)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "Vs",
+      "unit": "V"
+    },
+    "explanation": "Vs/Vp = ns/np \u2192 Vs = Vp \u00d7 (ns/np) = {{Vp}} \u00d7 ({{ns}}/{{np}}) = {{Vs}} V. Since ns < np this is a step-down transformer."
+  },
+  {
+    "id": "magnetism-transformer-current",
+    "topic": "magnetism",
+    "difficulty": 4,
+    "image": null,
+    "template": "An ideal transformer has a primary voltage of {{Vp}} V and primary current of {{Ip}} A. The secondary voltage is {{Vs}} V. Calculate the secondary current.",
+    "variables": {
+      "Vp": {
+        "type": "int",
+        "min": 200,
+        "max": 400
+      },
+      "Ip": {
+        "type": "float",
+        "min": 1.0,
+        "max": 10.0,
+        "dp": 1
+      },
+      "Vs": {
+        "type": "int",
+        "min": 1000,
+        "max": 5000
+      },
+      "Is": {
+        "type": "derived",
+        "expr": "round((Vp * Ip) / Vs, 3)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "Is",
+      "unit": "A"
+    },
+    "explanation": "For an ideal transformer: Vp \u00d7 Ip = Vs \u00d7 Is. Is = (Vp \u00d7 Ip) / Vs = ({{Vp}} \u00d7 {{Ip}}) / {{Vs}} = {{Is}} A. Step-up in voltage \u2192 step-down in current."
+  },
+  {
+    "id": "magnetism-induced-emf",
+    "topic": "magnetism",
+    "difficulty": 2,
+    "image": null,
+    "template": "Faraday's law of electromagnetic induction states that the magnitude of the induced EMF depends on which of the following?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The resistance of the coil only",
+        "The rate of change of magnetic flux",
+        "The temperature of the magnet",
+        "The colour of the magnetic field lines"
+      ],
+      "answer": "The rate of change of magnetic flux"
+    },
+    "explanation": "Faraday's Law: the induced EMF is proportional to the rate of change of magnetic flux linkage. A faster movement of magnet or coil (or stronger magnet) induces a greater EMF."
+  },
+  {
+    "id": "magnetism-step-up-down",
+    "topic": "magnetism",
+    "difficulty": 2,
+    "image": null,
+    "template": "The National Grid uses step-up transformers at power stations. What is the purpose of this?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Step-up transformers increase the voltage for transmission, which reduces the current and therefore reduces the energy wasted as heat in the cables.",
+      "acceptedAnswers": [
+        "Increase voltage, reduce current, less energy wasted in cables",
+        "High voltage low current reduces P=I\u00b2R losses in cables"
+      ]
+    },
+    "explanation": "Step-up transformers increase the voltage (e.g. to 400 000 V). Since P = IV, the same power at higher voltage requires less current. With less current, P_lost = I\u00b2R is much smaller, making transmission more efficient."
+  },
+  {
+    "id": "magnetism-solenoid-field",
+    "topic": "magnetism",
+    "difficulty": 2,
+    "image": null,
+    "template": "State two ways to increase the strength of the magnetic field produced by a solenoid.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Increase the current",
+        "Decrease the number of turns",
+        "Insert a soft iron core",
+        "Decrease the current"
+      ],
+      "correctOptions": [
+        "Increase the current",
+        "Insert a soft iron core"
+      ]
+    },
+    "explanation": "The magnetic field of a solenoid can be strengthened by: increasing the current, increasing the number of turns, or inserting a soft iron core (which becomes magnetised and concentrates field lines)."
+  },
+  {
+    "id": "magnetism-motor-generator",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "A simple AC generator produces an output that varies sinusoidally. State two ways to increase the peak EMF output.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Rotate the coil faster",
+        "Reduce the number of turns on the coil",
+        "Use a stronger magnet",
+        "Reduce the area of the coil"
+      ],
+      "correctOptions": [
+        "Rotate the coil faster",
+        "Use a stronger magnet"
+      ]
+    },
+    "explanation": "Peak EMF increases if: the coil rotates faster (greater rate of flux change), a stronger magnet is used, more turns are added to the coil, or the coil area is increased."
+  },
+  {
+    "id": "magnetism-permanent-induced",
+    "topic": "magnetism",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is the difference between a permanent magnet and an induced magnet?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "A permanent magnet produces its own magnetic field at all times. An induced magnet only becomes magnetic when placed in a magnetic field and loses its magnetism when removed.",
+      "acceptedAnswers": [
+        "Permanent magnet always magnetic; induced magnet only magnetic in a field"
+      ]
+    },
+    "explanation": "A permanent magnet (e.g. steel) retains its magnetism. An induced magnet (e.g. soft iron) is only magnetised when in a magnetic field. Induced magnets are always attracted to both poles of a permanent magnet."
+  },
+  {
+    "id": "particle-atomic-structure",
+    "topic": "particle-physics",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each subatomic particle to its relative charge.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Proton",
+          "right": "+1"
+        },
+        {
+          "left": "Neutron",
+          "right": "0"
+        },
+        {
+          "left": "Electron",
+          "right": "-1"
+        }
+      ]
+    },
+    "explanation": "Proton: charge +1, mass 1 u. Neutron: charge 0, mass 1 u. Electron: charge \u22121, mass 1/1840 u (negligible). Protons and neutrons are in the nucleus; electrons orbit in shells."
+  },
+  {
+    "id": "particle-isotopes",
+    "topic": "particle-physics",
+    "difficulty": 1,
+    "image": null,
+    "template": "Carbon-12 and Carbon-14 are isotopes of carbon. What is the same and what is different about these two atoms?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        {
+          "label": "What is the same?",
+          "answer": "Number of protons (6) / atomic number"
+        },
+        {
+          "label": "What is different?",
+          "answer": "Number of neutrons (C-12 has 6, C-14 has 8) / mass number"
+        }
+      ]
+    },
+    "explanation": "Isotopes have the same number of protons (same element, same atomic number = 6) but different numbers of neutrons. C-12: 6 protons, 6 neutrons. C-14: 6 protons, 8 neutrons. Mass number = protons + neutrons."
+  },
+  {
+    "id": "particle-alpha-properties",
+    "topic": "particle-physics",
+    "difficulty": 1,
+    "image": null,
+    "template": "Which of the following correctly describes an alpha particle?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "A high-energy electron from the nucleus",
+        "A helium nucleus (2 protons, 2 neutrons)",
+        "An electromagnetic wave with no mass",
+        "A neutron emitted from the nucleus"
+      ],
+      "answer": "A helium nucleus (2 protons, 2 neutrons)"
+    },
+    "explanation": "An alpha particle (\u03b1) is identical to a helium-4 nucleus: 2 protons and 2 neutrons. It has charge +2, high ionising power, but low penetrating power (stopped by a few cm of air or a sheet of paper)."
+  },
+  {
+    "id": "particle-half-life-calc",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "A radioactive sample initially contains {{N0}} atoms. The half-life is {{t_half}} hours. How many atoms remain after {{n}} half-lives?",
+    "variables": {
+      "N0": {
+        "type": "pick",
+        "options": [
+          8000,
+          16000,
+          32000,
+          64000
+        ]
+      },
+      "t_half": {
+        "type": "int",
+        "min": 2,
+        "max": 12
+      },
+      "n": {
+        "type": "pick",
+        "options": [
+          2,
+          3,
+          4
+        ]
+      },
+      "N": {
+        "type": "derived",
+        "expr": "N0 / pow(2, n)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "N",
+      "unit": "atoms"
+    },
+    "explanation": "After each half-life the number of atoms halves. After {{n}} half-lives: N = N\u2080 / 2\u207f = {{N0}} / 2^{{n}} = {{N0}} / {{pow(2,n)}} = {{N}} atoms."
+  },
+  {
+    "id": "particle-half-life-time",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "A radioactive source has a half-life of {{t_half}} days. How long does it take for the activity to fall to 1/{{frac}} of its original value?",
+    "variables": {
+      "t_half": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      },
+      "n": {
+        "type": "pick",
+        "options": [
+          2,
+          3,
+          4
+        ]
+      },
+      "frac": {
+        "type": "derived",
+        "expr": "pow(2, n)"
+      },
+      "t_total": {
+        "type": "derived",
+        "expr": "t_half * n"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "t_total",
+      "unit": "days"
+    },
+    "explanation": "1/{{frac}} = 1/2\u207f where n = {{n}} half-lives. Time = {{n}} \u00d7 {{t_half}} = {{t_total}} days."
+  },
+  {
+    "id": "particle-nuclear-equation-alpha",
+    "topic": "particle-physics",
+    "difficulty": 4,
+    "image": null,
+    "template": "Uranium-238 (atomic number 92) decays by alpha emission. Write the mass number and atomic number of the daughter nucleus.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        {
+          "label": "Mass number of daughter",
+          "answer": "234"
+        },
+        {
+          "label": "Atomic number of daughter",
+          "answer": "90"
+        }
+      ]
+    },
+    "explanation": "Alpha decay: mass number decreases by 4, atomic number decreases by 2. \u00b2\u00b3\u2078\u2089\u2082U \u2192 \u00b2\u00b3\u2074\u2089\u2080Th + \u2074\u2082\u03b1. Daughter: mass number = 238 \u2212 4 = 234, atomic number = 92 \u2212 2 = 90 (Thorium)."
+  },
+  {
+    "id": "particle-nuclear-equation-beta",
+    "topic": "particle-physics",
+    "difficulty": 4,
+    "image": null,
+    "template": "Carbon-14 (atomic number 6, mass number 14) undergoes beta-minus decay. What is the atomic number of the daughter nucleus?",
+    "variables": {},
+    "answerConfig": {
+      "type": "number",
+      "answer": "7",
+      "unit": ""
+    },
+    "explanation": "Beta-minus decay: a neutron \u2192 proton + electron (beta particle). Mass number unchanged (14), atomic number increases by 1: 6 + 1 = 7 (Nitrogen-14). \u00b9\u2074\u2086C \u2192 \u00b9\u2074\u2087N + \u2070\u208b\u2081e."
+  },
+  {
+    "id": "particle-radiation-uses",
+    "topic": "particle-physics",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which type of radiation is most suitable for use in a medical tracer injected into the body and why?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Gamma radiation, because it is penetrating enough to be detected outside the body and has low ionising power so causes less damage to tissue.",
+      "acceptedAnswers": [
+        "Gamma \u2014 penetrating, detected outside body, less ionising than alpha/beta",
+        "Gamma emitter \u2014 can be detected through tissue, short half-life reduces dose"
+      ]
+    },
+    "explanation": "Gamma emitters are used as medical tracers (e.g. Technetium-99m). Gamma radiation is penetrating so it can be detected outside the body. It has low ionising power compared to alpha, minimising tissue damage. A short half-life is also preferred to minimise patient dose."
+  },
+  {
+    "id": "particle-fission-chain",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain what is meant by a nuclear chain reaction in nuclear fission.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "A neutron causes a fission nucleus to split, releasing more neutrons which cause further fissions, each releasing more neutrons, creating a self-sustaining chain reaction.",
+      "acceptedAnswers": [
+        "Each fission releases neutrons that cause more fissions, which release more neutrons, continuing the process"
+      ]
+    },
+    "explanation": "In nuclear fission (e.g. U-235), a neutron is absorbed by a large nucleus which becomes unstable and splits into two smaller nuclei, releasing 2\u20133 neutrons and energy. These neutrons can cause further fissions, creating a self-sustaining chain reaction."
+  },
+  {
+    "id": "particle-background-radiation",
+    "topic": "particle-physics",
+    "difficulty": 1,
+    "image": null,
+    "template": "State two natural sources of background radiation.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Radon gas from rocks",
+        "Nuclear power stations",
+        "Cosmic rays from space",
+        "Medical X-rays"
+      ],
+      "correctOptions": [
+        "Radon gas from rocks",
+        "Cosmic rays from space"
+      ]
+    },
+    "explanation": "Natural background radiation sources include: radon gas (from radioactive rocks such as granite), cosmic rays from space, radioactive materials in soil, and naturally occurring radioactive isotopes in food. Nuclear power stations and medical X-rays are artificial sources."
+  },
+  {
+    "id": "particle-fusion-definition",
+    "topic": "particle-physics",
+    "difficulty": 2,
+    "image": null,
+    "template": "State one difference and one similarity between nuclear fission and nuclear fusion.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        {
+          "label": "One difference",
+          "answer": "Fission splits heavy nuclei; fusion joins light nuclei"
+        },
+        {
+          "label": "One similarity",
+          "answer": "Both release large amounts of energy / both involve changes to the nucleus"
+        }
+      ]
+    },
+    "explanation": "Fission: a large nucleus (e.g. U-235) splits into two smaller nuclei + neutrons + energy. Fusion: two small nuclei (e.g. hydrogen isotopes) join to form a larger nucleus + energy. Both release energy from nuclear reactions; fusion releases more energy per kg of fuel."
+  },
+  {
+    "id": "particle-alpha-beta-gamma-compare",
+    "topic": "particle-physics",
+    "difficulty": 2,
+    "image": null,
+    "template": "Arrange alpha (\u03b1), beta (\u03b2), and gamma (\u03b3) radiation in order of increasing penetrating power.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Alpha (\u03b1)",
+        "Beta (\u03b2)",
+        "Gamma (\u03b3)"
+      ]
+    },
+    "explanation": "Penetrating power (least to most): \u03b1 (stopped by paper/few cm air) < \u03b2 (stopped by a few mm of aluminium) < \u03b3 (reduced by thick lead/concrete). Note: higher penetrating power = lower ionising power."
+  },
+  {
+    "id": "particle-photon-energy",
+    "topic": "particle-physics",
+    "difficulty": 4,
+    "image": null,
+    "template": "Calculate the energy of a photon with frequency {{f_exp}} \u00d7 10^{{f_pow}} Hz. (h = 6.63 \u00d7 10\u207b\u00b3\u2074 J s)",
+    "variables": {
+      "f_exp": {
+        "type": "float",
+        "min": 1.0,
+        "max": 9.9,
+        "dp": 1
+      },
+      "f_pow": {
+        "type": "pick",
+        "options": [
+          14,
+          15,
+          16
+        ]
+      },
+      "f_val": {
+        "type": "derived",
+        "expr": "f_exp * pow(10, f_pow)"
+      },
+      "h": {
+        "type": "derived",
+        "expr": "6.63 * pow(10, -34)"
+      },
+      "E": {
+        "type": "derived",
+        "expr": "round(h * f_val, 21)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "E",
+      "unit": "J"
+    },
+    "explanation": "E = hf = 6.63\u00d710\u207b\u00b3\u2074 \u00d7 {{f_exp}}\u00d710^{{f_pow}} = {{E}} J."
+  },
+  {
+    "id": "space-solar-system",
+    "topic": "space",
+    "difficulty": 1,
+    "image": null,
+    "template": "Which of the following correctly orders the planets from the Sun outwards?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune",
+        "Mercury, Earth, Venus, Mars, Saturn, Jupiter, Uranus, Neptune",
+        "Venus, Mercury, Earth, Mars, Jupiter, Saturn, Neptune, Uranus",
+        "Mercury, Venus, Earth, Jupiter, Mars, Saturn, Uranus, Neptune"
+      ],
+      "answer": "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune"
+    },
+    "explanation": "Mnemonic: My Very Energetic Mother Just Served Us Nachos. Mercury, Venus, Earth, Mars (inner/rocky planets), Jupiter, Saturn, Uranus, Neptune (outer/gas giants)."
+  },
+  {
+    "id": "space-orbital-gravity",
+    "topic": "space",
+    "difficulty": 2,
+    "image": null,
+    "template": "What provides the centripetal force that keeps a planet in orbit around the Sun?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Magnetic force",
+        "Gravitational force",
+        "Normal contact force",
+        "Tension"
+      ],
+      "answer": "Gravitational force"
+    },
+    "explanation": "Gravity from the Sun acts as the centripetal force keeping planets in (approximately circular) orbits. This force acts perpendicular to the planet's velocity, continuously changing its direction without changing its speed."
+  },
+  {
+    "id": "space-stellar-evolution-main",
+    "topic": "space",
+    "difficulty": 2,
+    "image": null,
+    "template": "Put the following stages of a Sun-like star's life cycle in the correct order.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Nebula",
+        "Protostar",
+        "Main sequence star",
+        "Red giant",
+        "White dwarf"
+      ]
+    },
+    "explanation": "Sun-like star: Nebula (gas and dust cloud) \u2192 Protostar (gravity pulls matter together) \u2192 Main sequence star (hydrogen fusion, stable for ~10 billion years) \u2192 Red giant (hydrogen depleted, outer layers expand) \u2192 White dwarf (outer layers shed, core remains)."
+  },
+  {
+    "id": "space-stellar-evolution-massive",
+    "topic": "space",
+    "difficulty": 3,
+    "image": null,
+    "template": "A massive star (much larger than the Sun) at the end of its main sequence will eventually become which of the following?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "White dwarf",
+        "Neutron star or black hole",
+        "Red dwarf",
+        "Planetary nebula"
+      ],
+      "answer": "Neutron star or black hole"
+    },
+    "explanation": "Massive stars: Main sequence \u2192 Red supergiant \u2192 Supernova \u2192 Neutron star (or black hole if very massive). Smaller stars (like the Sun): Red giant \u2192 planetary nebula \u2192 white dwarf."
+  },
+  {
+    "id": "space-redshift-bigbang",
+    "topic": "space",
+    "difficulty": 2,
+    "image": null,
+    "template": "What does the observation of red shift in light from distant galaxies tell us about the universe?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "The universe is expanding; distant galaxies are moving away from us. The further away a galaxy, the greater the red shift and the faster it is receding.",
+      "acceptedAnswers": [
+        "The universe is expanding",
+        "Galaxies are moving away, supporting the Big Bang theory"
+      ]
+    },
+    "explanation": "Red shift: light from distant galaxies is shifted to longer (redder) wavelengths, meaning galaxies are moving away (Doppler effect). More distant galaxies show greater red shift \u2192 faster recession. This is evidence that the universe is expanding and supports the Big Bang model."
+  },
+  {
+    "id": "space-cmb",
+    "topic": "space",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is cosmic microwave background (CMB) radiation, and why is it evidence for the Big Bang?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "CMB is microwave radiation coming from all directions in space. It is the remnant thermal radiation from the hot early universe after the Big Bang, cooled by the expansion of the universe.",
+      "acceptedAnswers": [
+        "Thermal radiation left over from the Big Bang, filling the universe uniformly"
+      ]
+    },
+    "explanation": "CMB is low-level microwave radiation arriving uniformly from all directions. It was predicted by the Big Bang model as residual radiation from the very hot, dense early universe (~380,000 years after the Big Bang), cooled by expansion to ~2.7 K. Its detection in 1965 strongly supports the Big Bang theory."
+  },
+  {
+    "id": "space-light-year",
+    "topic": "space",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is a light-year?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The time it takes light to travel from Earth to the Sun",
+        "The distance light travels in one year",
+        "A unit of time equal to one Earth year",
+        "The distance from Earth to the nearest star"
+      ],
+      "answer": "The distance light travels in one year"
+    },
+    "explanation": "A light-year is a unit of distance: the distance light travels in one year \u2248 9.46 \u00d7 10\u00b9\u2075 m. It is used for astronomical distances because space is so vast."
+  },
+  {
+    "id": "space-satellite-orbits",
+    "topic": "space",
+    "difficulty": 3,
+    "image": null,
+    "template": "State one use of a geostationary satellite and one use of a polar orbit satellite.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        {
+          "label": "Use of geostationary satellite",
+          "answer": "TV/communication satellite (stays above same point on Earth)"
+        },
+        {
+          "label": "Use of polar orbit satellite",
+          "answer": "Weather monitoring / Earth imaging (covers whole surface)"
+        }
+      ]
+    },
+    "explanation": "Geostationary satellites orbit above the equator at ~36,000 km with a 24-hour period, remaining fixed above one point \u2014 ideal for TV broadcasts and communications. Polar orbit satellites orbit at lower altitude (~800 km), passing over poles, allowing them to view the entire Earth's surface \u2014 used for weather monitoring and spy satellites."
+  },
+  {
+    "id": "space-gravity-distance",
+    "topic": "space",
+    "difficulty": 3,
+    "image": null,
+    "template": "As a satellite moves further from Earth, what happens to (a) the gravitational field strength it experiences and (b) its orbital speed?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        {
+          "label": "Gravitational field strength",
+          "answer": "decreases"
+        },
+        {
+          "label": "Orbital speed",
+          "answer": "decreases"
+        }
+      ]
+    },
+    "explanation": "Gravitational field strength g \u221d 1/r\u00b2, so g decreases as distance increases. For a circular orbit, gravitational force provides centripetal force: GMm/r\u00b2 = mv\u00b2/r \u2192 v = \u221a(GM/r). So orbital speed also decreases with distance."
+  },
+  {
+    "id": "space-hubble-law",
+    "topic": "space",
+    "difficulty": 4,
+    "image": null,
+    "template": "A galaxy has a recession velocity of {{v}} km/s. Using Hubble's constant H\u2080 = {{H}} km/s/Mpc, calculate the distance to the galaxy in Mpc.",
+    "variables": {
+      "H": {
+        "type": "pick",
+        "options": [
+          70,
+          68,
+          72
+        ]
+      },
+      "v": {
+        "type": "int",
+        "min": 1000,
+        "max": 70000
+      },
+      "d": {
+        "type": "derived",
+        "expr": "round(v / H, 1)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "d",
+      "unit": "Mpc"
+    },
+    "explanation": "Hubble's Law: v = H\u2080d \u2192 d = v / H\u2080 = {{v}} / {{H}} = {{d}} Mpc."
+  },
+  {
+    "id": "space-main-sequence-fusion",
+    "topic": "space",
+    "difficulty": 2,
+    "image": null,
+    "template": "What nuclear process powers a main sequence star like the Sun, and which element is the primary fuel?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        {
+          "label": "Nuclear process",
+          "answer": "Nuclear fusion"
+        },
+        {
+          "label": "Primary fuel",
+          "answer": "Hydrogen"
+        }
+      ]
+    },
+    "explanation": "Main sequence stars are powered by nuclear fusion in their cores. In the Sun, hydrogen nuclei (protons) fuse to form helium nuclei, releasing enormous amounts of energy. This energy creates an outward radiation pressure that balances the inward gravitational force, keeping the star stable."
+  },
+  {
+    "id": "space-age-universe",
+    "topic": "space",
+    "difficulty": 5,
+    "image": null,
+    "template": "Using H\u2080 = 70 km/s/Mpc and 1 Mpc = 3.09 \u00d7 10\u00b2\u00b2 m, estimate the age of the universe in seconds (age \u2248 1/H\u2080). Give your answer in standard form to 2 significant figures.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "4.4 \u00d7 10^17 s (approximately 14 billion years)",
+      "acceptedAnswers": [
+        "4.4e17 s",
+        "approximately 4.4 times 10 to the 17 seconds",
+        "~14 billion years"
+      ]
+    },
+    "explanation": "H\u2080 = 70 km/s/Mpc = 70 \u00d7 10\u00b3 m/s / (3.09 \u00d7 10\u00b2\u00b2 m) = 2.27 \u00d7 10\u207b\u00b9\u2078 s\u207b\u00b9. Age \u2248 1/H\u2080 = 1 / (2.27 \u00d7 10\u207b\u00b9\u2078) \u2248 4.4 \u00d7 10\u00b9\u2077 s (approximately 14 billion years). Note: this is an estimate \u2014 the actual age from the Big Bang is ~4.35 \u00d7 10\u00b9\u2077 s."
+  },
+  {
+    "id": "space-red-giant-white-dwarf",
+    "topic": "space",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why a main-sequence star like the Sun eventually becomes a red giant.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "When the hydrogen in the core is exhausted, fusion stops and the core contracts. This releases energy that causes the outer layers to expand and cool, forming a red giant.",
+      "acceptedAnswers": [
+        "Core runs out of hydrogen, contracts, outer layers expand and cool",
+        "Hydrogen fuel runs out, gravitational collapse of core, outer layers expand"
+      ]
+    },
+    "explanation": "When core hydrogen is depleted, outward radiation pressure from fusion decreases. Gravity causes the core to contract, releasing gravitational energy which heats the hydrogen shell around the core \u2014 this causes the outer layers to expand enormously and cool (red colour = lower surface temperature)."
+  },
+  {
+    "id": "magnetism-right-hand-rule",
+    "topic": "magnetism",
+    "difficulty": 2,
+    "image": null,
+    "template": "What does the right-hand rule (for a straight wire) allow you to determine?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The direction of force on a current-carrying wire",
+        "The direction of the magnetic field around a current-carrying wire",
+        "The magnitude of the induced EMF",
+        "The resistance of a wire"
+      ],
+      "answer": "The direction of the magnetic field around a current-carrying wire"
+    },
+    "explanation": "The right-hand rule: point the thumb of the right hand in the direction of conventional current flow; the curled fingers show the direction of the circular magnetic field lines around the wire."
+  },
+  {
+    "id": "magnetism-electric-motor-speed",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "State two ways to increase the speed of rotation of a simple DC electric motor.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Increase the current through the coil",
+        "Use a weaker magnet",
+        "Increase the number of turns on the coil",
+        "Reduce the area of the coil"
+      ],
+      "correctOptions": [
+        "Increase the current through the coil",
+        "Increase the number of turns on the coil"
+      ]
+    },
+    "explanation": "Increasing current (F = BIL) or increasing the number of turns both increase the turning force (torque) on the coil, increasing motor speed. A stronger magnet also increases speed. Reducing coil area decreases the force."
+  },
+  {
+    "id": "magnetism-transformer-efficiency",
+    "topic": "magnetism",
+    "difficulty": 4,
+    "image": null,
+    "template": "A transformer has a primary power input of {{Pin}} W and a secondary power output of {{Pout}} W. Calculate the efficiency of the transformer as a percentage.",
+    "variables": {
+      "Pin": {
+        "type": "int",
+        "min": 1000,
+        "max": 5000
+      },
+      "Pout": {
+        "type": "derived",
+        "expr": "round(Pin * 0.9, 0)"
+      },
+      "eff": {
+        "type": "derived",
+        "expr": "round((Pout / Pin) * 100, 1)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "eff",
+      "unit": "%"
+    },
+    "explanation": "Efficiency = (useful output power / total input power) \u00d7 100 = ({{Pout}} / {{Pin}}) \u00d7 100 = {{eff}}%. Energy losses in transformers include heat in coils (resistance) and eddy currents in the iron core."
+  },
+  {
+    "id": "magnetism-force-wire-multipart",
+    "topic": "magnetism",
+    "difficulty": 4,
+    "image": null,
+    "template": "A wire carrying a current of {{I}} A sits in a uniform magnetic field of flux density {{B}} T. The length of wire in the field is {{L}} m. (a) Calculate the force on the wire. (b) State what happens to the force if the current is doubled.",
+    "variables": {
+      "I": {
+        "type": "float",
+        "min": 2.0,
+        "max": 10.0,
+        "dp": 1
+      },
+      "B": {
+        "type": "float",
+        "min": 0.1,
+        "max": 0.8,
+        "dp": 2
+      },
+      "L": {
+        "type": "float",
+        "min": 0.1,
+        "max": 0.5,
+        "dp": 2
+      },
+      "F": {
+        "type": "derived",
+        "expr": "round(B * I * L, 3)"
+      },
+      "F2": {
+        "type": "derived",
+        "expr": "round(2 * B * I * L, 3)"
+      }
+    },
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        {
+          "label": "Force on wire (N)",
+          "answer": "F",
+          "unit": "N"
+        },
+        {
+          "label": "Force when current doubled (N)",
+          "answer": "F2",
+          "unit": "N"
+        }
+      ]
+    },
+    "explanation": "(a) F = BIL = {{B}} \u00d7 {{I}} \u00d7 {{L}} = {{F}} N. (b) F is directly proportional to I (F = BIL), so doubling I doubles the force to {{F2}} N."
+  },
+  {
+    "id": "magnetism-generator-vs-motor",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain the key difference between an electric motor and an electric generator in terms of energy conversion.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "A motor converts electrical energy into kinetic (mechanical) energy. A generator converts kinetic (mechanical) energy into electrical energy.",
+      "acceptedAnswers": [
+        "Motor: electrical to kinetic; Generator: kinetic to electrical",
+        "They are reverse processes of each other"
+      ]
+    },
+    "explanation": "Electric motor: electrical energy \u2192 kinetic energy (uses F = BIL). Electric generator: kinetic energy \u2192 electrical energy (uses electromagnetic induction / Faraday's Law). They are essentially the same device operated in reverse."
+  },
+  {
+    "id": "forces-newtons-first-law",
+    "topic": "forces",
+    "difficulty": 1,
+    "image": null,
+    "template": "State Newton's First Law of Motion.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "An object remains at rest or continues moving at constant velocity unless acted upon by a resultant (net) force.",
+      "acceptedAnswers": [
+        "Objects stay at rest or constant velocity unless a resultant force acts",
+        "No resultant force means no change in motion"
+      ]
+    },
+    "explanation": "Newton's First Law: an object will remain at rest or move at a constant velocity (in a straight line) unless acted upon by a resultant (unbalanced) force. This means zero resultant force = zero acceleration."
+  },
+  {
+    "id": "particle-specific-heat-particle-model",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "Using the particle model, explain why it takes more energy to raise the temperature of water (c = 4200 J/kg\u00b0C) than iron (c = 450 J/kg\u00b0C) by the same amount.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Water molecules have stronger intermolecular bonds and more complex molecular structure, requiring more energy to increase the average kinetic energy (temperature) of the particles by the same amount.",
+      "acceptedAnswers": [
+        "Water needs more energy per kg to increase particle kinetic energy by same amount due to stronger/more complex bonds",
+        "Water has a higher specific heat capacity \u2014 its particles need more energy to raise temperature"
+      ]
+    },
+    "explanation": "Specific heat capacity (SHC) is determined by the nature of the molecular bonds and structure. Water has hydrogen bonding and a complex structure, requiring more energy per kg per \u00b0C to increase average kinetic energy of its particles. Iron atoms are simpler metallic structure with lower SHC."
+  },
+  {
+    "id": "waves-diffraction-explain",
+    "topic": "waves",
+    "difficulty": 3,
+    "image": null,
+    "template": "A wave passes through a gap. When is diffraction most noticeable?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "When the gap is much larger than the wavelength",
+        "When the gap is much smaller than the wavelength",
+        "When the gap width is similar to the wavelength",
+        "Diffraction does not depend on gap size"
+      ],
+      "answer": "When the gap width is similar to the wavelength"
+    },
+    "explanation": "Diffraction is most significant when the gap (or obstacle) size is similar to the wavelength of the wave. If the gap is much larger than the wavelength, very little spreading occurs. This is why radio waves (long wavelength) diffract around hills, but light (short wavelength) does not."
+  },
+  {
+    "id": "energy-conduction-convection",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "Explain why metals are better thermal conductors than non-metals.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Metals have free (delocalised) electrons that can move through the material and transfer thermal energy quickly, in addition to vibration of the lattice ions.",
+      "acceptedAnswers": [
+        "Free electrons in metals transfer energy quickly",
+        "Delocalised electrons can carry thermal energy through the metal"
+      ]
+    },
+    "explanation": "In metals, delocalised electrons carry kinetic energy through the lattice rapidly. In non-metals, energy transfer relies only on lattice vibrations being passed from one atom to the next, which is slower. Hence metals have much higher thermal conductivity."
+  }
+]

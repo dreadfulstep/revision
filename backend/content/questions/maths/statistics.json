@@ -1,0 +1,162 @@
+[
+  {
+    "id": "stats-mean-list",
+    "topic": "statistics",
+    "difficulty": 2,
+    "type": "number",
+    "image": null,
+    "template": "Find the mean of: {{a}}, {{b}}, {{c}}, {{d}}, {{e}}",
+    "variables": {
+      "a": { "type": "int", "min": 1, "max": 20 },
+      "b": { "type": "int", "min": 1, "max": 20 },
+      "c": { "type": "int", "min": 1, "max": 20 },
+      "d": { "type": "int", "min": 1, "max": 20 },
+      "e": { "type": "int", "min": 1, "max": 20 }
+    },
+    "answer": "(a + b + c + d + e) / 5",
+    "tolerance": 0.01,
+    "dp": 2,
+    "explanation": "Mean = sum ÷ count = ({{a}} + {{b}} + {{c}} + {{d}} + {{e}}) ÷ 5 = {{a+b+c+d+e}} ÷ 5 = {{answer}}"
+  },
+  {
+    "id": "stats-median-five",
+    "topic": "statistics",
+    "difficulty": 2,
+    "type": "number",
+    "image": null,
+    "template": "Find the median of: {{a}}, {{b}}, {{c}}, {{d}}, {{e}}",
+    "variables": {
+      "a": { "type": "int", "min": 1, "max": 10 },
+      "b": { "type": "int", "min": 11, "max": 20 },
+      "c": { "type": "int", "min": 21, "max": 30 },
+      "d": { "type": "int", "min": 31, "max": 40 },
+      "e": { "type": "int", "min": 41, "max": 50 }
+    },
+    "answer": "c",
+    "explanation": "Sort the values: {{a}}, {{b}}, {{c}}, {{d}}, {{e}}. The middle value (3rd of 5) is {{answer}}"
+  },
+  {
+    "id": "stats-range",
+    "topic": "statistics",
+    "difficulty": 1,
+    "type": "number",
+    "image": null,
+    "template": "Find the range of: {{a}}, {{b}}, {{c}}, {{d}}, {{e}}",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 15 },
+      "b": { "type": "int", "min": 5, "max": 20 },
+      "c": { "type": "int", "min": 8, "max": 30 },
+      "d": { "type": "int", "min": 12, "max": 40 },
+      "e": { "type": "int", "min": 20, "max": 50 }
+    },
+    "answer": "e - a",
+    "explanation": "Range = largest − smallest = {{e}} − {{a}} = {{answer}}"
+  },
+  {
+    "id": "stats-mean-from-table",
+    "topic": "statistics",
+    "difficulty": 3,
+    "type": "number",
+    "image": null,
+    "template": "A dataset has values 1, 2, 3, 4, 5 with frequencies {{f1}}, {{f2}}, {{f3}}, {{f4}}, {{f5}}. Find the mean.",
+    "variables": {
+      "f1": { "type": "int", "min": 1, "max": 6 },
+      "f2": { "type": "int", "min": 1, "max": 6 },
+      "f3": { "type": "int", "min": 1, "max": 6 },
+      "f4": { "type": "int", "min": 1, "max": 6 },
+      "f5": { "type": "int", "min": 1, "max": 6 }
+    },
+    "answer": "(1*f1 + 2*f2 + 3*f3 + 4*f4 + 5*f5) / (f1+f2+f3+f4+f5)",
+    "tolerance": 0.01,
+    "dp": 2,
+    "explanation": "Mean = Σfx ÷ Σf = ({{1*f1+2*f2+3*f3+4*f4+5*f5}}) ÷ ({{f1+f2+f3+f4+f5}}) = {{answer}}"
+  },
+  {
+    "id": "stats-bar-chart-read",
+    "topic": "statistics",
+    "difficulty": 1,
+    "type": "number",
+    "image": { "type": "generated", "renderer": "bar-chart" },
+    "template": "What is the total frequency shown in the bar chart?",
+    "variables": {
+      "f1": { "type": "int", "min": 2, "max": 8 },
+      "f2": { "type": "int", "min": 2, "max": 8 },
+      "f3": { "type": "int", "min": 2, "max": 8 },
+      "f4": { "type": "int", "min": 2, "max": 8 },
+      "labels": { "type": "derived", "expr": "JSON.stringify(['Mon','Tue','Wed','Thu'])" },
+      "values": { "type": "derived", "expr": "JSON.stringify([f1, f2, f3, f4])" },
+      "y_label": { "type": "derived", "expr": "'Frequency'" }
+    },
+    "answer": "f1 + f2 + f3 + f4",
+    "explanation": "Add all bar heights: {{f1}} + {{f2}} + {{f3}} + {{f4}} = {{answer}}"
+  },
+  {
+    "id": "stats-bar-chart-missing",
+    "topic": "statistics",
+    "difficulty": 2,
+    "type": "number",
+    "image": { "type": "generated", "renderer": "bar-chart" },
+    "template": "The total frequency is {{total}}. What is the missing bar value (shown as ?).",
+    "variables": {
+      "f1": { "type": "int", "min": 2, "max": 8 },
+      "f2": { "type": "int", "min": 2, "max": 8 },
+      "f3": { "type": "int", "min": 2, "max": 8 },
+      "f4": { "type": "int", "min": 2, "max": 8 },
+      "total": { "type": "derived", "expr": "f1 + f2 + f3 + f4" },
+      "labels": { "type": "derived", "expr": "JSON.stringify(['Mon','Tue','Wed','Thu'])" },
+      "values": { "type": "derived", "expr": "JSON.stringify([f1, f2, f3, f4])" },
+      "hide_bar": { "type": "derived", "expr": "3" },
+      "y_label": { "type": "derived", "expr": "'Frequency'" }
+    },
+    "answer": "f4",
+    "explanation": "Missing value = total − other bars = {{total}} − {{f1}} − {{f2}} − {{f3}} = {{answer}}"
+  },
+  {
+    "id": "stats-probability-basic",
+    "topic": "statistics",
+    "difficulty": 2,
+    "type": "number",
+    "image": null,
+    "template": "A bag contains {{r}} red, {{b}} blue and {{g}} green counters. A counter is picked at random. What is the probability of picking a red counter? Give your answer as a decimal to 2 d.p.",
+    "variables": {
+      "r": { "type": "int", "min": 1, "max": 6 },
+      "b": { "type": "int", "min": 1, "max": 6 },
+      "g": { "type": "int", "min": 1, "max": 6 }
+    },
+    "answer": "r / (r + b + g)",
+    "tolerance": 0.01,
+    "dp": 2,
+    "explanation": "P(red) = number of red ÷ total = {{r}} ÷ ({{r}} + {{b}} + {{g}}) = {{r}} ÷ {{r+b+g}} = {{answer}}"
+  },
+  {
+    "id": "stats-probability-complement",
+    "topic": "statistics",
+    "difficulty": 2,
+    "type": "number",
+    "image": null,
+    "template": "The probability of an event happening is {{p}}/{{q}}. What is the probability it does NOT happen? Give your answer as a fraction — enter the numerator only (denominator is {{q}}).",
+    "variables": {
+      "q": { "type": "pick", "options": [4, 5, 6, 8, 10] },
+      "p": { "type": "int", "min": 1, "max": 4 }
+    },
+    "answer": "q - p",
+    "explanation": "P(not happening) = 1 − {{p}}/{{q}} = ({{q}} − {{p}})/{{q}} = {{answer}}/{{q}}"
+  },
+  {
+    "id": "stats-mode",
+    "topic": "statistics",
+    "difficulty": 1,
+    "type": "number",
+    "image": null,
+    "template": "Find the mode of: {{a}}, {{b}}, {{mode}}, {{c}}, {{mode}}, {{d}}, {{mode}}",
+    "variables": {
+      "mode": { "type": "int", "min": 1, "max": 15 },
+      "a": { "type": "int", "min": 1, "max": 20, "notEqualTo": "mode" },
+      "b": { "type": "int", "min": 1, "max": 20, "notEqualTo": "mode" },
+      "c": { "type": "int", "min": 1, "max": 20, "notEqualTo": "mode" },
+      "d": { "type": "int", "min": 1, "max": 20, "notEqualTo": "mode" }
+    },
+    "answer": "mode",
+    "explanation": "The mode is the most frequent value. {{mode}} appears 3 times, more than any other value."
+  }
+]

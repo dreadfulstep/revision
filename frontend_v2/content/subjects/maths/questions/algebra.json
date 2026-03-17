@@ -1,0 +1,1306 @@
+[
+  {
+    "id": "algebra-simplify-like-terms-001",
+    "topic": "algebra",
+    "difficulty": 1,
+    "image": null,
+    "template": "Simplify: {{a}}x + {{b}}x",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 9 },
+      "b": { "type": "int", "min": 2, "max": 9 },
+      "c": { "type": "derived", "expr": "a + b" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{c}}x",
+      "acceptedAnswers": ["{{c}}x"]
+    },
+    "explanation": "Collect like terms: {{a}}x + {{b}}x = ({{a}} + {{b}})x = {{c}}x."
+  },
+  {
+    "id": "algebra-simplify-mixed-terms-002",
+    "topic": "algebra",
+    "difficulty": 1,
+    "image": null,
+    "template": "Simplify: {{a}}x + {{b}} + {{c}}x + {{d}}",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 8 },
+      "b": { "type": "int", "min": 1, "max": 10 },
+      "c": { "type": "int", "min": 2, "max": 8 },
+      "d": { "type": "int", "min": 1, "max": 10 },
+      "xcoeff": { "type": "derived", "expr": "a + c" },
+      "const": { "type": "derived", "expr": "b + d" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{xcoeff}}x + {{const}}",
+      "acceptedAnswers": ["{{xcoeff}}x + {{const}}", "{{xcoeff}}x+{{const}}"]
+    },
+    "explanation": "Group like terms: ({{a}}x + {{c}}x) + ({{b}} + {{d}}) = {{xcoeff}}x + {{const}}."
+  },
+  {
+    "id": "algebra-expand-single-bracket-003",
+    "topic": "algebra",
+    "difficulty": 1,
+    "image": null,
+    "template": "Expand: {{a}}(x + {{b}})",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 9 },
+      "b": { "type": "int", "min": 1, "max": 10 },
+      "ab": { "type": "derived", "expr": "a * b" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{a}}x + {{ab}}",
+      "acceptedAnswers": ["{{a}}x + {{ab}}", "{{a}}x+{{ab}}"]
+    },
+    "explanation": "Multiply each term inside the bracket by {{a}}: {{a}} × x = {{a}}x, {{a}} × {{b}} = {{ab}}. Answer: {{a}}x + {{ab}}."
+  },
+  {
+    "id": "algebra-expand-single-bracket-subtract-004",
+    "topic": "algebra",
+    "difficulty": 1,
+    "image": null,
+    "template": "Expand: {{a}}(x − {{b}})",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 9 },
+      "b": { "type": "int", "min": 1, "max": 10 },
+      "ab": { "type": "derived", "expr": "a * b" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{a}}x − {{ab}}",
+      "acceptedAnswers": ["{{a}}x − {{ab}}", "{{a}}x - {{ab}}", "{{a}}x−{{ab}}", "{{a}}x-{{ab}}"]
+    },
+    "explanation": "Multiply each term: {{a}} × x = {{a}}x, {{a}} × (−{{b}}) = −{{ab}}. Answer: {{a}}x − {{ab}}."
+  },
+  {
+    "id": "algebra-factorise-common-factor-005",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "Factorise fully: {{ab}}x + {{ac}}",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 8 },
+      "b": { "type": "int", "min": 2, "max": 7 },
+      "c": { "type": "int", "min": 2, "max": 7 },
+      "ab": { "type": "derived", "expr": "a * b" },
+      "ac": { "type": "derived", "expr": "a * c" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{a}}({{b}}x + {{c}})",
+      "acceptedAnswers": ["{{a}}({{b}}x + {{c}})", "{{a}}({{b}}x+{{c}})"]
+    },
+    "explanation": "The HCF of {{ab}} and {{ac}} is {{a}}. Factor out {{a}}: {{a}}({{b}}x + {{c}})."
+  },
+  {
+    "id": "algebra-solve-linear-simple-006",
+    "topic": "algebra",
+    "difficulty": 1,
+    "image": null,
+    "template": "Solve: {{a}}x = {{b}}",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 9 },
+      "x": { "type": "int", "min": 1, "max": 10 },
+      "b": { "type": "derived", "expr": "a * x" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "x"
+    },
+    "explanation": "Divide both sides by {{a}}: x = {{b}} ÷ {{a}} = {{x}}."
+  },
+  {
+    "id": "algebra-solve-linear-add-007",
+    "topic": "algebra",
+    "difficulty": 1,
+    "image": null,
+    "template": "Solve: x + {{b}} = {{c}}",
+    "variables": {
+      "b": { "type": "int", "min": 2, "max": 15 },
+      "x": { "type": "int", "min": 1, "max": 20 },
+      "c": { "type": "derived", "expr": "x + b" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "x"
+    },
+    "explanation": "Subtract {{b}} from both sides: x = {{c}} − {{b}} = {{x}}."
+  },
+  {
+    "id": "algebra-solve-linear-two-step-008",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "Solve: {{a}}x + {{b}} = {{c}}",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 8 },
+      "b": { "type": "int", "min": 1, "max": 12 },
+      "x": { "type": "int", "min": 1, "max": 10 },
+      "c": { "type": "derived", "expr": "a * x + b" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "x"
+    },
+    "explanation": "Step 1: Subtract {{b}} from both sides: {{a}}x = {{c}} − {{b}} = {{c - b}}. Step 2: Divide by {{a}}: x = {{c - b}} ÷ {{a}} = {{x}}."
+  },
+  {
+    "id": "algebra-solve-linear-both-sides-009",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "Solve: {{a}}x + {{b}} = {{c}}x + {{d}}",
+    "variables": {
+      "a": { "type": "int", "min": 4, "max": 10 },
+      "c": { "type": "int", "min": 1, "max": 3 },
+      "b": { "type": "int", "min": 1, "max": 10 },
+      "x": { "type": "int", "min": 1, "max": 8 },
+      "d": { "type": "derived", "expr": "(a - c) * x + b" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "x"
+    },
+    "explanation": "Collect x terms: {{a}}x − {{c}}x = {{d}} − {{b}}, so {{a - c}}x = {{d - b}}. Divide: x = {{d - b}} ÷ {{a - c}} = {{x}}."
+  },
+  {
+    "id": "algebra-expand-double-bracket-010",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "Expand and simplify: (x + {{a}})(x + {{b}})",
+    "variables": {
+      "a": { "type": "int", "min": 1, "max": 8 },
+      "b": { "type": "int", "min": 1, "max": 8 },
+      "sum": { "type": "derived", "expr": "a + b" },
+      "prod": { "type": "derived", "expr": "a * b" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x² + {{sum}}x + {{prod}}",
+      "acceptedAnswers": ["x² + {{sum}}x + {{prod}}", "x^2 + {{sum}}x + {{prod}}", "x²+{{sum}}x+{{prod}}"]
+    },
+    "explanation": "Using FOIL: x × x = x², x × {{b}} = {{b}}x, {{a}} × x = {{a}}x, {{a}} × {{b}} = {{prod}}. Collect: x² + {{sum}}x + {{prod}}."
+  },
+  {
+    "id": "algebra-expand-double-bracket-neg-011",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "Expand and simplify: (x + {{a}})(x − {{b}})",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 9 },
+      "b": { "type": "int", "min": 2, "max": 9 },
+      "diff": { "type": "derived", "expr": "a - b" },
+      "prod": { "type": "derived", "expr": "a * b" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{diff >= 0 ? 'x² + ' + diff + 'x − ' + prod : 'x² − ' + abs(diff) + 'x − ' + prod}}",
+      "acceptedAnswers": [
+        "{{diff >= 0 ? 'x² + ' + diff + 'x − ' + prod : 'x² − ' + abs(diff) + 'x − ' + prod}}",
+        "{{diff >= 0 ? 'x^2 + ' + diff + 'x - ' + prod : 'x^2 - ' + abs(diff) + 'x - ' + prod}}"
+      ]
+    },
+    "explanation": "FOIL: x² − {{b}}x + {{a}}x − {{prod}} = x² + {{diff}}x − {{prod}}."
+  },
+  {
+    "id": "algebra-difference-of-squares-012",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "Expand: (x + {{a}})(x − {{a}})",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 10 },
+      "a2": { "type": "derived", "expr": "a * a" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x² − {{a2}}",
+      "acceptedAnswers": ["x² − {{a2}}", "x^2 − {{a2}}", "x²-{{a2}}", "x^2-{{a2}}"]
+    },
+    "explanation": "Difference of two squares: (x + a)(x − a) = x² − a². Here: (x + {{a}})(x − {{a}}) = x² − {{a}}² = x² − {{a2}}."
+  },
+  {
+    "id": "algebra-factorise-quadratic-013",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "Factorise: x² + {{sum}}x + {{prod}}",
+    "variables": {
+      "p": { "type": "int", "min": 1, "max": 7 },
+      "q": { "type": "int", "min": 1, "max": 7 },
+      "sum": { "type": "derived", "expr": "p + q" },
+      "prod": { "type": "derived", "expr": "p * q" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "(x + {{p}})(x + {{q}})",
+      "acceptedAnswers": [
+        "(x + {{p}})(x + {{q}})",
+        "(x + {{q}})(x + {{p}})",
+        "(x+{{p}})(x+{{q}})",
+        "(x+{{q}})(x+{{p}})"
+      ]
+    },
+    "explanation": "Find two numbers that multiply to {{prod}} and add to {{sum}}: those are {{p}} and {{q}}. So: (x + {{p}})(x + {{q}})."
+  },
+  {
+    "id": "algebra-factorise-quadratic-neg-014",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "Factorise: x² − {{sum}}x + {{prod}}",
+    "variables": {
+      "p": { "type": "int", "min": 2, "max": 7 },
+      "q": { "type": "int", "min": 2, "max": 7 },
+      "sum": { "type": "derived", "expr": "p + q" },
+      "prod": { "type": "derived", "expr": "p * q" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "(x − {{p}})(x − {{q}})",
+      "acceptedAnswers": [
+        "(x − {{p}})(x − {{q}})",
+        "(x − {{q}})(x − {{p}})",
+        "(x-{{p}})(x-{{q}})",
+        "(x-{{q}})(x-{{p}})"
+      ]
+    },
+    "explanation": "Need two numbers multiplying to +{{prod}} and adding to −{{sum}}: those are −{{p}} and −{{q}}. So: (x − {{p}})(x − {{q}})."
+  },
+  {
+    "id": "algebra-factorise-diff-squares-015",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "Factorise: x² − {{a2}}",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 10 },
+      "a2": { "type": "derived", "expr": "a * a" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "(x + {{a}})(x − {{a}})",
+      "acceptedAnswers": [
+        "(x + {{a}})(x − {{a}})",
+        "(x − {{a}})(x + {{a}})",
+        "(x+{{a}})(x-{{a}})",
+        "(x-{{a}})(x+{{a}})"
+      ]
+    },
+    "explanation": "This is a difference of two squares: x² − {{a2}} = x² − {{a}}² = (x + {{a}})(x − {{a}})."
+  },
+  {
+    "id": "algebra-solve-quadratic-factorised-016",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "Solve: x² + {{sum}}x + {{prod}} = 0",
+    "variables": {
+      "p": { "type": "int", "min": 1, "max": 6 },
+      "q": { "type": "int", "min": 1, "max": 6 },
+      "sum": { "type": "derived", "expr": "p + q" },
+      "prod": { "type": "derived", "expr": "p * q" },
+      "r1": { "type": "derived", "expr": "-p" },
+      "r2": { "type": "derived", "expr": "-q" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x = {{r1}} or x = {{r2}}",
+      "acceptedAnswers": [
+        "x = {{r1}} or x = {{r2}}",
+        "x = {{r2}} or x = {{r1}}",
+        "x={{r1}} or x={{r2}}",
+        "{{r1}}, {{r2}}"
+      ]
+    },
+    "explanation": "Factorise: (x + {{p}})(x + {{q}}) = 0. So x + {{p}} = 0 or x + {{q}} = 0, giving x = {{r1}} or x = {{r2}}."
+  },
+  {
+    "id": "algebra-quadratic-formula-017",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "Use the quadratic formula to solve x² + {{b}}x + {{c}} = 0. Give answers to 2 decimal places.",
+    "variables": {
+      "b": { "type": "int", "min": 2, "max": 6 },
+      "c": { "type": "pick", "options": [-10, -8, -6, -4, -3, -2] },
+      "disc": { "type": "derived", "expr": "b*b - 4*c" },
+      "x1": { "type": "derived", "expr": "round((-b + sqrt(disc)) / 2, 2)" },
+      "x2": { "type": "derived", "expr": "round((-b - sqrt(disc)) / 2, 2)" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x = {{x1}} or x = {{x2}}",
+      "acceptedAnswers": [
+        "x = {{x1}} or x = {{x2}}",
+        "x = {{x2}} or x = {{x1}}",
+        "{{x1}}, {{x2}}"
+      ]
+    },
+    "explanation": "Using x = (−b ± √(b² − 4ac)) / 2a with a=1, b={{b}}, c={{c}}: discriminant = {{b}}² − 4(1)({{c}}) = {{disc}}. x = (−{{b}} ± √{{disc}}) / 2. x₁ = (−{{b}} + √{{disc}}) / 2 ≈ {{x1}}, x₂ = (−{{b}} − √{{disc}}) / 2 ≈ {{x2}}."
+  },
+  {
+    "id": "algebra-complete-square-018",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "Write x² + {{b}}x + {{c}} in the form (x + p)² + q.",
+    "variables": {
+      "b": { "type": "pick", "options": [2, 4, 6, 8, 10] },
+      "c": { "type": "int", "min": 1, "max": 15 },
+      "p": { "type": "derived", "expr": "b / 2" },
+      "q": { "type": "derived", "expr": "c - (b/2)*(b/2)" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "(x + {{p}})² + {{q}}",
+      "acceptedAnswers": [
+        "(x + {{p}})² + {{q}}",
+        "(x + {{p}})^2 + {{q}}",
+        "(x+{{p}})²+{{q}}",
+        "(x+{{p}})^2+{{q}}"
+      ]
+    },
+    "explanation": "Halve the coefficient of x: b/2 = {{p}}. Then x² + {{b}}x + {{c}} = (x + {{p}})² − {{p}}² + {{c}} = (x + {{p}})² + {{c - p*p}} = (x + {{p}})² + {{q}}."
+  },
+  {
+    "id": "algebra-nth-term-arithmetic-019",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "Find the nth term of the arithmetic sequence: {{t1}}, {{t2}}, {{t3}}, {{t4}}, ...",
+    "variables": {
+      "a": { "type": "int", "min": 1, "max": 10 },
+      "d": { "type": "int", "min": 2, "max": 7 },
+      "t1": { "type": "derived", "expr": "a" },
+      "t2": { "type": "derived", "expr": "a + d" },
+      "t3": { "type": "derived", "expr": "a + 2*d" },
+      "t4": { "type": "derived", "expr": "a + 3*d" },
+      "b": { "type": "derived", "expr": "a - d" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{d}}n + {{b}}",
+      "acceptedAnswers": ["{{d}}n + {{b}}", "{{d}}n+{{b}}"]
+    },
+    "explanation": "Common difference d = {{d}}. First term a = {{t1}}. nth term = dn + (a − d) = {{d}}n + {{b}}. Check: when n=1, {{d}}(1) + {{b}} = {{t1}} ✓."
+  },
+  {
+    "id": "algebra-nth-term-find-term-020",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "The nth term of a sequence is {{d}}n + {{b}}. Find the {{n}}th term.",
+    "variables": {
+      "d": { "type": "int", "min": 2, "max": 8 },
+      "b": { "type": "int", "min": 1, "max": 10 },
+      "n": { "type": "int", "min": 5, "max": 15 },
+      "val": { "type": "derived", "expr": "d * n + b" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "val"
+    },
+    "explanation": "Substitute n = {{n}}: {{d}} × {{n}} + {{b}} = {{d*n}} + {{b}} = {{val}}."
+  },
+  {
+    "id": "algebra-is-in-sequence-021",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "The nth term of a sequence is {{d}}n + {{b}}. Is {{target}} a term in this sequence?",
+    "variables": {
+      "d": { "type": "int", "min": 2, "max": 6 },
+      "b": { "type": "int", "min": 1, "max": 8 },
+      "n": { "type": "int", "min": 5, "max": 20 },
+      "target": { "type": "derived", "expr": "d * n + b" }
+    },
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Set {{d}}n + {{b}} = {{target}}: {{d}}n = {{target - b}}, n = {{target - b}}/{{d}} = {{n}}. Since n = {{n}} is a positive integer, {{target}} IS in the sequence."
+  },
+  {
+    "id": "algebra-indices-multiply-022",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "Simplify: x^{{a}} × x^{{b}}",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 6 },
+      "b": { "type": "int", "min": 2, "max": 6 },
+      "c": { "type": "derived", "expr": "a + b" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x^{{c}}",
+      "acceptedAnswers": ["x^{{c}}", "x{{c}}"]
+    },
+    "explanation": "When multiplying powers with the same base, add the indices: x^{{a}} × x^{{b}} = x^({{a}}+{{b}}) = x^{{c}}."
+  },
+  {
+    "id": "algebra-indices-divide-023",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "Simplify: x^{{a}} ÷ x^{{b}}",
+    "variables": {
+      "a": { "type": "int", "min": 5, "max": 10 },
+      "b": { "type": "int", "min": 1, "max": 4 },
+      "c": { "type": "derived", "expr": "a - b" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x^{{c}}",
+      "acceptedAnswers": ["x^{{c}}", "x{{c}}"]
+    },
+    "explanation": "When dividing powers with the same base, subtract the indices: x^{{a}} ÷ x^{{b}} = x^({{a}}−{{b}}) = x^{{c}}."
+  },
+  {
+    "id": "algebra-indices-power-of-power-024",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "Simplify: (x^{{a}})^{{b}}",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 5 },
+      "b": { "type": "int", "min": 2, "max": 4 },
+      "c": { "type": "derived", "expr": "a * b" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x^{{c}}",
+      "acceptedAnswers": ["x^{{c}}", "x{{c}}"]
+    },
+    "explanation": "When raising a power to a power, multiply the indices: (x^{{a}})^{{b}} = x^({{a}}×{{b}}) = x^{{c}}."
+  },
+  {
+    "id": "algebra-indices-negative-025",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "Write x^(−{{n}}) without a negative index.",
+    "variables": {
+      "n": { "type": "int", "min": 1, "max": 5 }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "1/x^{{n}}",
+      "acceptedAnswers": ["1/x^{{n}}", "1/x{{n}}"]
+    },
+    "explanation": "A negative index means a reciprocal: x^(−n) = 1/x^n. So x^(−{{n}}) = 1/x^{{n}}."
+  },
+  {
+    "id": "algebra-indices-fractional-026",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "Evaluate: {{base}}^(1/{{n}})",
+    "variables": {
+      "n": { "type": "pick", "options": [2, 3] },
+      "root": { "type": "int", "min": 2, "max": 6 },
+      "base": { "type": "derived", "expr": "pow(root, n)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "root"
+    },
+    "explanation": "A fractional index of 1/n means the nth root. {{base}}^(1/{{n}}) = {{n}}√{{base}} = {{root}}."
+  },
+  {
+    "id": "algebra-substitute-expression-027",
+    "topic": "algebra",
+    "difficulty": 1,
+    "image": null,
+    "template": "If x = {{x}}, find the value of {{a}}x + {{b}}.",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 8 },
+      "b": { "type": "int", "min": 1, "max": 10 },
+      "x": { "type": "int", "min": 1, "max": 8 },
+      "val": { "type": "derived", "expr": "a * x + b" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "val"
+    },
+    "explanation": "Substitute x = {{x}}: {{a}} × {{x}} + {{b}} = {{a*x}} + {{b}} = {{val}}."
+  },
+  {
+    "id": "algebra-substitute-two-vars-028",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "If a = {{av}} and b = {{bv}}, find the value of {{p}}a + {{q}}b.",
+    "variables": {
+      "p": { "type": "int", "min": 2, "max": 6 },
+      "q": { "type": "int", "min": 2, "max": 6 },
+      "av": { "type": "int", "min": 2, "max": 8 },
+      "bv": { "type": "int", "min": 2, "max": 8 },
+      "val": { "type": "derived", "expr": "p * av + q * bv" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "val"
+    },
+    "explanation": "Substitute a = {{av}}, b = {{bv}}: {{p}} × {{av}} + {{q}} × {{bv}} = {{p*av}} + {{q*bv}} = {{val}}."
+  },
+  {
+    "id": "algebra-formula-rearrange-029",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "Make x the subject of: y = {{a}}x + {{b}}",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 8 },
+      "b": { "type": "int", "min": 1, "max": 10 }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x = (y − {{b}}) / {{a}}",
+      "acceptedAnswers": [
+        "x = (y − {{b}}) / {{a}}",
+        "x = (y - {{b}}) / {{a}}",
+        "x=(y-{{b}})/{{a}}",
+        "x=(y−{{b}})/{{a}}"
+      ]
+    },
+    "explanation": "Subtract {{b}}: y − {{b}} = {{a}}x. Divide by {{a}}: x = (y − {{b}}) / {{a}}."
+  },
+  {
+    "id": "algebra-formula-rearrange-square-030",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "Make r the subject of: A = π r²",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "r = √(A/π)",
+      "acceptedAnswers": ["r = √(A/π)", "r = sqrt(A/π)", "r=√(A/π)", "r=sqrt(A/pi)"]
+    },
+    "explanation": "Divide both sides by π: r² = A/π. Take the square root: r = √(A/π)."
+  },
+  {
+    "id": "algebra-simultaneous-elimination-031",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "Solve simultaneously: {{a}}x + {{b}}y = {{c}} and {{d}}x + {{e}}y = {{f}}",
+    "variables": {
+      "a": { "type": "int", "min": 1, "max": 4 },
+      "b": { "type": "int", "min": 1, "max": 4 },
+      "d": { "type": "int", "min": 1, "max": 4 },
+      "e": { "type": "int", "min": 1, "max": 4 },
+      "xv": { "type": "int", "min": 1, "max": 5 },
+      "yv": { "type": "int", "min": 1, "max": 5 },
+      "c": { "type": "derived", "expr": "a * xv + b * yv" },
+      "f": { "type": "derived", "expr": "d * xv + e * yv" }
+    },
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        { "label": "x", "answer": "xv" },
+        { "label": "y", "answer": "yv" }
+      ]
+    },
+    "explanation": "Multiply equations to match coefficients, then subtract to eliminate one variable. Solving gives x = {{xv}}, y = {{yv}}."
+  },
+  {
+    "id": "algebra-simultaneous-substitution-032",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "Solve simultaneously: y = {{m}}x + {{cc}} and y = {{n}}x + {{dd}}",
+    "variables": {
+      "m": { "type": "int", "min": 2, "max": 5 },
+      "cc": { "type": "int", "min": 1, "max": 8 },
+      "n": { "type": "pick", "options": [-1, -2, -3] },
+      "xv": { "type": "int", "min": 1, "max": 5 },
+      "dd": { "type": "derived", "expr": "(m - n) * xv + cc - (m - n)*xv + n*xv + cc - n*xv" },
+      "yv": { "type": "derived", "expr": "m * xv + cc" }
+    },
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        { "label": "x", "answer": "xv" },
+        { "label": "y", "answer": "yv" }
+      ]
+    },
+    "explanation": "Set equations equal: {{m}}x + {{cc}} = {{n}}x + {{dd}}. Rearrange: {{m - n}}x = {{dd - cc}}, so x = {{xv}}. Substitute back: y = {{m}}({{xv}}) + {{cc}} = {{yv}}."
+  },
+  {
+    "id": "algebra-inequality-solve-linear-033",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "Solve the inequality: {{a}}x + {{b}} < {{c}}",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 6 },
+      "b": { "type": "int", "min": 1, "max": 10 },
+      "x": { "type": "int", "min": 2, "max": 8 },
+      "c": { "type": "derived", "expr": "a * x + b" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x < {{x}}",
+      "acceptedAnswers": ["x < {{x}}"]
+    },
+    "explanation": "Subtract {{b}}: {{a}}x < {{c - b}}. Divide by {{a}}: x < {{x}}."
+  },
+  {
+    "id": "algebra-inequality-integer-values-034",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "List the integer values of x that satisfy: {{lo}} ≤ x < {{hi}}",
+    "variables": {
+      "lo": { "type": "int", "min": -4, "max": 1 },
+      "hi": { "type": "int", "min": 4, "max": 8 }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{lo}}, {{lo+1}}, {{lo+2}}, ...",
+      "acceptedAnswers": ["{{lo}}, {{lo+1}}, {{lo+2}}"]
+    },
+    "explanation": "All integers from {{lo}} up to (but not including) {{hi}}: {{lo}}, {{lo+1}}, ... , {{hi-1}}."
+  },
+  {
+    "id": "algebra-graph-identify-gradient-035",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": { "type": "generated", "renderer": "coordinate-grid", "vars": { "m": "{{m}}", "c": "{{c}}" } },
+    "template": "The line y = {{m}}x + {{c}} is drawn on a coordinate grid. What is the gradient?",
+    "variables": {
+      "m": { "type": "pick", "options": [1, 2, 3, -1, -2, -3] },
+      "c": { "type": "int", "min": -4, "max": 4 }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "m"
+    },
+    "explanation": "In y = mx + c, m is the gradient. Here m = {{m}}."
+  },
+  {
+    "id": "algebra-graph-identify-intercept-036",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": { "type": "generated", "renderer": "coordinate-grid", "vars": { "m": "{{m}}", "c": "{{c}}" } },
+    "template": "The line y = {{m}}x + {{c}} is drawn on a coordinate grid. What is the y-intercept?",
+    "variables": {
+      "m": { "type": "pick", "options": [1, 2, -1, -2] },
+      "c": { "type": "int", "min": -5, "max": 5 }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "c"
+    },
+    "explanation": "In y = mx + c, c is the y-intercept. Here c = {{c}}, so the line crosses the y-axis at (0, {{c}})."
+  },
+  {
+    "id": "algebra-quadratic-graph-roots-037",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": { "type": "generated", "renderer": "algebra-graph", "vars": { "graph_type": "quadratic", "a": 1, "b": "{{negSum}}", "c": "{{prod}}" } },
+    "template": "The graph of y = x² − {{sum}}x + {{prod}} is shown. Write down the x-intercepts.",
+    "variables": {
+      "p": { "type": "int", "min": 1, "max": 5 },
+      "q": { "type": "int", "min": 2, "max": 7 },
+      "sum": { "type": "derived", "expr": "p + q" },
+      "prod": { "type": "derived", "expr": "p * q" },
+      "negSum": { "type": "derived", "expr": "-(p + q)" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x = {{p}} and x = {{q}}",
+      "acceptedAnswers": [
+        "x = {{p}} and x = {{q}}",
+        "x = {{q}} and x = {{p}}",
+        "({{p}}, 0) and ({{q}}, 0)"
+      ]
+    },
+    "explanation": "Factorise: x² − {{sum}}x + {{prod}} = (x − {{p}})(x − {{q}}). Setting y = 0: x = {{p}} or x = {{q}}."
+  },
+  {
+    "id": "algebra-quadratic-turning-point-038",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "Find the coordinates of the turning point of y = x² + {{b}}x + {{c}}.",
+    "variables": {
+      "b": { "type": "pick", "options": [2, 4, 6, 8] },
+      "c": { "type": "int", "min": 1, "max": 12 },
+      "px": { "type": "derived", "expr": "-(b/2)" },
+      "py": { "type": "derived", "expr": "c - (b/2)*(b/2)" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "({{px}}, {{py}})",
+      "acceptedAnswers": ["({{px}}, {{py}})", "({{px}},{{py}})"]
+    },
+    "explanation": "Complete the square: (x + {{b/2}})² + {{py}}. The turning point is at ({{px}}, {{py}})."
+  },
+  {
+    "id": "algebra-exponential-graph-identify-039",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": { "type": "generated", "renderer": "algebra-graph", "vars": { "graph_type": "exponential", "a": 1, "b": "{{base}}", "c": 0 } },
+    "template": "The graph of y = {{base}}^x passes through the point (0, ___). Fill in the blank.",
+    "variables": {
+      "base": { "type": "pick", "options": [2, 3, 5] }
+    },
+    "answerConfig": {
+      "type": "fill_blank",
+      "answer": "1"
+    },
+    "explanation": "Any number raised to the power 0 equals 1. When x = 0: y = {{base}}^0 = 1. So the graph passes through (0, 1)."
+  },
+  {
+    "id": "algebra-reciprocal-graph-040",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": { "type": "generated", "renderer": "algebra-graph", "vars": { "graph_type": "reciprocal", "a": "{{k}}", "b": 0, "c": 0 } },
+    "template": "The graph of y = {{k}}/x is a reciprocal graph. What is the equation of its vertical asymptote?",
+    "variables": {
+      "k": { "type": "int", "min": 1, "max": 6 }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x = 0",
+      "acceptedAnswers": ["x = 0", "x=0"]
+    },
+    "explanation": "The graph y = k/x is undefined when x = 0, so the vertical asymptote is x = 0 (the y-axis)."
+  },
+  {
+    "id": "algebra-function-notation-041",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "f(x) = {{a}}x + {{b}}. Find f({{n}}).",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 7 },
+      "b": { "type": "int", "min": 1, "max": 10 },
+      "n": { "type": "int", "min": 1, "max": 8 },
+      "val": { "type": "derived", "expr": "a * n + b" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "val"
+    },
+    "explanation": "Substitute x = {{n}} into f(x): f({{n}}) = {{a}}({{n}}) + {{b}} = {{a*n}} + {{b}} = {{val}}."
+  },
+  {
+    "id": "algebra-inverse-function-042",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "f(x) = {{a}}x + {{b}}. Find f⁻¹(x).",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 7 },
+      "b": { "type": "int", "min": 1, "max": 10 }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "(x − {{b}}) / {{a}}",
+      "acceptedAnswers": [
+        "(x − {{b}}) / {{a}}",
+        "(x - {{b}}) / {{a}}",
+        "(x−{{b}})/{{a}}",
+        "(x-{{b}})/{{a}}"
+      ]
+    },
+    "explanation": "Let y = {{a}}x + {{b}}. Rearrange for x: y − {{b}} = {{a}}x, so x = (y − {{b}})/{{a}}. Swap x and y: f⁻¹(x) = (x − {{b}})/{{a}}."
+  },
+  {
+    "id": "algebra-composite-function-043",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "f(x) = {{a}}x + {{b}} and g(x) = x². Find fg({{n}}).",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 5 },
+      "b": { "type": "int", "min": 1, "max": 8 },
+      "n": { "type": "int", "min": 2, "max": 6 },
+      "n2": { "type": "derived", "expr": "n * n" },
+      "val": { "type": "derived", "expr": "a * n * n + b" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "val"
+    },
+    "explanation": "fg(x) means f applied after g. First find g({{n}}) = {{n}}² = {{n2}}. Then f({{n2}}) = {{a}}({{n2}}) + {{b}} = {{a*n2}} + {{b}} = {{val}}."
+  },
+  {
+    "id": "algebra-iteration-044",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "Use the iteration formula x_{n+1} = ({{k}} / x_n + x_n) / 2 starting with x_1 = {{x1}}. Find x_2 to 4 decimal places.",
+    "variables": {
+      "k": { "type": "pick", "options": [2, 3, 5, 7] },
+      "x1": { "type": "int", "min": 1, "max": 3 },
+      "x2": { "type": "derived", "expr": "round((k / x1 + x1) / 2, 4)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "x2"
+    },
+    "explanation": "Substitute x_1 = {{x1}}: x_2 = ({{k}}/{{x1}} + {{x1}}) / 2 = ({{round(k/x1, 4)}} + {{x1}}) / 2 = {{round(k/x1 + x1, 4)}} / 2 = {{x2}}."
+  },
+  {
+    "id": "algebra-proportion-direct-045",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "y is directly proportional to x. When x = {{x1}}, y = {{y1}}. Find y when x = {{x2}}.",
+    "variables": {
+      "k": { "type": "int", "min": 2, "max": 8 },
+      "x1": { "type": "int", "min": 2, "max": 6 },
+      "y1": { "type": "derived", "expr": "k * x1" },
+      "x2": { "type": "int", "min": 4, "max": 12 },
+      "y2": { "type": "derived", "expr": "k * x2" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "y2"
+    },
+    "explanation": "y ∝ x means y = kx. Using x = {{x1}}, y = {{y1}}: k = {{y1}}/{{x1}} = {{k}}. When x = {{x2}}: y = {{k}} × {{x2}} = {{y2}}."
+  },
+  {
+    "id": "algebra-proportion-inverse-046",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "y is inversely proportional to x. When x = {{x1}}, y = {{y1}}. Find y when x = {{x2}}.",
+    "variables": {
+      "k": { "type": "int", "min": 12, "max": 60 },
+      "x1": { "type": "int", "min": 2, "max": 6 },
+      "y1": { "type": "derived", "expr": "k / x1" },
+      "x2": { "type": "int", "min": 3, "max": 10 },
+      "y2": { "type": "derived", "expr": "k / x2" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "y2"
+    },
+    "explanation": "y ∝ 1/x means y = k/x. Using x = {{x1}}, y = {{y1}}: k = {{y1}} × {{x1}} = {{k}}. When x = {{x2}}: y = {{k}}/{{x2}} = {{y2}}."
+  },
+  {
+    "id": "algebra-proportion-squared-047",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "y is proportional to x². When x = {{x1}}, y = {{y1}}. Find y when x = {{x2}}.",
+    "variables": {
+      "k": { "type": "int", "min": 2, "max": 5 },
+      "x1": { "type": "int", "min": 2, "max": 4 },
+      "y1": { "type": "derived", "expr": "k * x1 * x1" },
+      "x2": { "type": "int", "min": 5, "max": 8 },
+      "y2": { "type": "derived", "expr": "k * x2 * x2" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "y2"
+    },
+    "explanation": "y ∝ x² means y = kx². Using x = {{x1}}, y = {{y1}}: k = {{y1}}/{{x1}}² = {{y1}}/{{x1*x1}} = {{k}}. When x = {{x2}}: y = {{k}} × {{x2}}² = {{k}} × {{x2*x2}} = {{y2}}."
+  },
+  {
+    "id": "algebra-linear-graph-draw-ordering-048",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "Put these steps in order to plot y = {{m}}x + {{c}}:",
+    "variables": {
+      "m": { "type": "pick", "options": [2, 3, -1, -2] },
+      "c": { "type": "int", "min": -3, "max": 5 }
+    },
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Mark the y-intercept at (0, {{c}})",
+        "Use the gradient {{m}} to find a second point",
+        "Draw a straight line through both points",
+        "Check a third point lies on the line"
+      ]
+    },
+    "explanation": "To plot y = {{m}}x + {{c}}: start at y-intercept (0, {{c}}), apply gradient {{m}} to get next point, draw line, verify with a third point."
+  },
+  {
+    "id": "algebra-expression-matching-049",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each expression to its simplified form.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "x² × x³", "right": "x⁵" },
+        { "left": "x⁶ ÷ x²", "right": "x⁴" },
+        { "left": "(x³)²", "right": "x⁶" },
+        { "left": "x⁰", "right": "1" }
+      ]
+    },
+    "explanation": "Multiply: add indices (2+3=5). Divide: subtract (6−2=4). Power of power: multiply (3×2=6). Any non-zero base to power 0 = 1."
+  },
+  {
+    "id": "algebra-factorise-grouping-050",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "Factorise: {{a}}x² + {{ax+bc}}x + {{bc}}",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 4 },
+      "b": { "type": "int", "min": 2, "max": 6 },
+      "c": { "type": "int", "min": 1, "max": 5 },
+      "ax": { "type": "derived", "expr": "a" },
+      "bc": { "type": "derived", "expr": "b * c" },
+      "ax_plus_bc": { "type": "derived", "expr": "a * c + b" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "({{a}}x + {{b}})(x + {{c}})",
+      "acceptedAnswers": [
+        "({{a}}x + {{b}})(x + {{c}})",
+        "(x + {{c}})({{a}}x + {{b}})",
+        "({{a}}x+{{b}})(x+{{c}})"
+      ]
+    },
+    "explanation": "The quadratic {{a}}x² + {{ax_plus_bc}}x + {{bc}} factorises as ({{a}}x + {{b}})(x + {{c}}). Verify: {{a}}x × x = {{a}}x², {{a}}x × {{c}} = {{a*c}}x, {{b}} × x = {{b}}x, {{b}} × {{c}} = {{bc}}. Middle term: {{a*c}}x + {{b}}x = {{ax_plus_bc}}x ✓."
+  },
+  {
+    "id": "algebra-algebraic-fractions-simplify-051",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "Simplify: (x² − {{a2}}) / (x + {{a}})",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 7 },
+      "a2": { "type": "derived", "expr": "a * a" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x − {{a}}",
+      "acceptedAnswers": ["x − {{a}}", "x - {{a}}"]
+    },
+    "explanation": "Factorise the numerator as a difference of squares: x² − {{a2}} = (x + {{a}})(x − {{a}}). Cancel (x + {{a}}): result = x − {{a}}."
+  },
+  {
+    "id": "algebra-quadratic-discriminant-052",
+    "topic": "algebra",
+    "difficulty": 5,
+    "image": null,
+    "template": "Find the discriminant of x² + {{b}}x + {{c}} and state the number of real roots.",
+    "variables": {
+      "b": { "type": "int", "min": 2, "max": 8 },
+      "c": { "type": "int", "min": 1, "max": 10 },
+      "disc": { "type": "derived", "expr": "b*b - 4*c" }
+    },
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        { "label": "Discriminant", "answer": "disc" },
+        { "label": "Number of real roots", "answer": "disc > 0 ? 2 : disc == 0 ? 1 : 0" }
+      ]
+    },
+    "explanation": "Discriminant = b² − 4ac = {{b}}² − 4(1)({{c}}) = {{b*b}} − {{4*c}} = {{disc}}. {{disc > 0 ? 'Since discriminant > 0, there are 2 distinct real roots.' : disc == 0 ? 'Since discriminant = 0, there is exactly 1 repeated real root.' : 'Since discriminant < 0, there are no real roots.'}}"
+  },
+  {
+    "id": "algebra-graph-transformation-translate-053",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "The graph of y = f(x) is translated by the vector (0, {{k}}). Write the equation of the new graph.",
+    "variables": {
+      "k": { "type": "int", "min": 1, "max": 8 }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "y = f(x) + {{k}}",
+      "acceptedAnswers": ["y = f(x) + {{k}}", "y=f(x)+{{k}}"]
+    },
+    "explanation": "A translation by (0, {{k}}) shifts the graph up by {{k}} units, giving y = f(x) + {{k}}."
+  },
+  {
+    "id": "algebra-graph-transformation-stretch-054",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "The graph of y = f(x) is stretched parallel to the y-axis with scale factor {{k}}. Write the equation of the new graph.",
+    "variables": {
+      "k": { "type": "int", "min": 2, "max": 5 }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "y = {{k}}f(x)",
+      "acceptedAnswers": ["y = {{k}}f(x)", "y={{k}}f(x)"]
+    },
+    "explanation": "A stretch parallel to the y-axis with scale factor {{k}} multiplies all y-values by {{k}}, giving y = {{k}}f(x)."
+  },
+  {
+    "id": "algebra-proof-even-odd-055",
+    "topic": "algebra",
+    "difficulty": 5,
+    "image": null,
+    "template": "Prove that the product of two consecutive even numbers is always divisible by {{n}}.",
+    "variables": {
+      "n": { "type": "pick", "options": [4, 8] }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "2k(2k+2) = 4k(k+1)",
+      "acceptedAnswers": [
+        "2k(2k+2) = 4k(k+1)",
+        "Let the numbers be 2k and 2k+2. Product = 4k(k+1)",
+        "4k(k+1)"
+      ]
+    },
+    "explanation": "Let the two consecutive even numbers be 2k and 2k+2. Their product = 2k(2k+2) = 4k(k+1). Since one of k or k+1 is always even, 4k(k+1) is always divisible by 8, and therefore by {{n}}."
+  },
+  {
+    "id": "algebra-expand-triple-bracket-056",
+    "topic": "algebra",
+    "difficulty": 5,
+    "image": null,
+    "template": "Expand and simplify: (x + {{a}})(x + {{b}})(x + {{c}})",
+    "variables": {
+      "a": { "type": "int", "min": 1, "max": 4 },
+      "b": { "type": "int", "min": 1, "max": 4 },
+      "c": { "type": "int", "min": 1, "max": 4 },
+      "ab": { "type": "derived", "expr": "a * b" },
+      "bc": { "type": "derived", "expr": "b * c" },
+      "ac": { "type": "derived", "expr": "a * c" },
+      "sum2": { "type": "derived", "expr": "a*b + b*c + a*c" },
+      "sumAll": { "type": "derived", "expr": "a + b + c" },
+      "prodAll": { "type": "derived", "expr": "a * b * c" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x³ + {{sumAll}}x² + {{sum2}}x + {{prodAll}}",
+      "acceptedAnswers": [
+        "x³ + {{sumAll}}x² + {{sum2}}x + {{prodAll}}",
+        "x^3 + {{sumAll}}x^2 + {{sum2}}x + {{prodAll}}"
+      ]
+    },
+    "explanation": "First expand (x + {{a}})(x + {{b}}) = x² + {{a+b}}x + {{ab}}. Then multiply by (x + {{c}}): x³ + {{a+b}}x² + {{ab}}x + {{c}}x² + {{c*(a+b)}}x + {{ab*c}} = x³ + {{sumAll}}x² + {{sum2}}x + {{prodAll}}."
+  },
+  {
+    "id": "algebra-surds-simplify-057",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "Simplify: √{{val}}",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 5 },
+      "b": { "type": "pick", "options": [2, 3, 5, 7] },
+      "val": { "type": "derived", "expr": "a * a * b" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{a}}√{{b}}",
+      "acceptedAnswers": ["{{a}}√{{b}}", "{{a}}sqrt({{b}})"]
+    },
+    "explanation": "√{{val}} = √({{a*a}} × {{b}}) = √{{a*a}} × √{{b}} = {{a}}√{{b}}."
+  },
+  {
+    "id": "algebra-surds-rationalise-058",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "Rationalise the denominator of {{p}} / √{{q}}. Simplify your answer.",
+    "variables": {
+      "p": { "type": "int", "min": 2, "max": 8 },
+      "q": { "type": "pick", "options": [2, 3, 5, 7] },
+      "pq": { "type": "derived", "expr": "p * q" },
+      "g": { "type": "derived", "expr": "gcd(p, q)" },
+      "num": { "type": "derived", "expr": "p / gcd(p, q)" },
+      "den": { "type": "derived", "expr": "q / gcd(p, q)" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{num}}√{{q}} / {{den}}",
+      "acceptedAnswers": [
+        "{{num}}√{{q}} / {{den}}",
+        "{{num}}√{{q}}/{{den}}",
+        "({{p}}√{{q}}) / {{q}}"
+      ]
+    },
+    "explanation": "Multiply numerator and denominator by √{{q}}: ({{p}} × √{{q}}) / (√{{q}} × √{{q}}) = {{p}}√{{q}} / {{q}}. Simplify by dividing by {{g}}: {{num}}√{{q}} / {{den}}."
+  },
+  {
+    "id": "algebra-arithmetic-sequence-is-term-059",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "The nth term of a sequence is {{d}}n + {{b}}. Is {{notval}} a term in this sequence?",
+    "variables": {
+      "d": { "type": "int", "min": 3, "max": 7 },
+      "b": { "type": "int", "min": 1, "max": 6 },
+      "notval": { "type": "derived", "expr": "d * 5 + b + 1" }
+    },
+    "answerConfig": {
+      "type": "true_false",
+      "answer": false
+    },
+    "explanation": "Set {{d}}n + {{b}} = {{notval}}: {{d}}n = {{notval - b}}, n = {{notval - b}}/{{d}} = {{round((notval-b)/d, 4)}}. Since this is not an integer, {{notval}} is NOT a term in the sequence."
+  },
+  {
+    "id": "algebra-expression-true-false-060",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "Is it true that (x + {{a}})² = x² + {{a2}}?",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 8 },
+      "a2": { "type": "derived", "expr": "a * a" }
+    },
+    "answerConfig": {
+      "type": "true_false",
+      "answer": false
+    },
+    "explanation": "(x + {{a}})² = x² + 2({{a}})x + {{a2}} = x² + {{2*a}}x + {{a2}}. The expression given is missing the middle term {{2*a}}x, so it is FALSE."
+  },
+  {
+    "id": "algebra-multi-select-linear-061",
+    "topic": "algebra",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which of the following are solutions to {{a}}x < {{b}}?",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 5 },
+      "b": { "type": "int", "min": 10, "max": 30 },
+      "thresh": { "type": "derived", "expr": "floor(b / a)" }
+    },
+    "answerConfig": {
+      "type": "multi_select",
+      "options": ["x = {{thresh - 1}}", "x = {{thresh}}", "x = {{thresh + 1}}", "x = {{thresh + 2}}"],
+      "correctOptions": ["x = {{thresh - 1}}", "x = {{thresh}}"]
+    },
+    "explanation": "Divide by {{a}}: x < {{b}}/{{a}} = {{round(b/a, 4)}}. Valid integers are those less than {{round(b/a,4)}}: x = {{thresh - 1}} and x = {{thresh}} satisfy this; {{thresh + 1}} and {{thresh + 2}} do not."
+  },
+  {
+    "id": "algebra-sequence-geometric-ratio-062",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "A geometric sequence starts {{t1}}, {{t2}}, {{t3}}, ... Find the common ratio.",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 8 },
+      "r": { "type": "pick", "options": [2, 3] },
+      "t1": { "type": "derived", "expr": "a" },
+      "t2": { "type": "derived", "expr": "a * r" },
+      "t3": { "type": "derived", "expr": "a * r * r" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "r"
+    },
+    "explanation": "Common ratio = second term ÷ first term = {{t2}} ÷ {{t1}} = {{r}}. Verify: {{t2}} × {{r}} = {{t3}} ✓."
+  },
+  {
+    "id": "algebra-sequence-geometric-nth-term-063",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "A geometric sequence has first term {{a}} and common ratio {{r}}. Find the {{n}}th term.",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 6 },
+      "r": { "type": "pick", "options": [2, 3] },
+      "n": { "type": "int", "min": 4, "max": 7 },
+      "nthval": { "type": "derived", "expr": "a * pow(r, n - 1)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "nthval"
+    },
+    "explanation": "nth term of a geometric sequence = a × r^(n−1) = {{a}} × {{r}}^({{n}}−1) = {{a}} × {{r}}^{{n-1}} = {{a}} × {{pow(r, n-1)}} = {{nthval}}."
+  },
+  {
+    "id": "algebra-solve-quadratic-complete-square-064",
+    "topic": "algebra",
+    "difficulty": 5,
+    "image": null,
+    "template": "Solve x² + {{b}}x + {{c}} = 0 by completing the square. Give exact answers.",
+    "variables": {
+      "b": { "type": "pick", "options": [2, 4, 6] },
+      "p": { "type": "derived", "expr": "b / 2" },
+      "disc": { "type": "pick", "options": [2, 3, 5, 7] },
+      "c": { "type": "derived", "expr": "p * p - disc" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "x = −{{p}} + √{{disc}} or x = −{{p}} − √{{disc}}",
+      "acceptedAnswers": [
+        "x = −{{p}} + √{{disc}} or x = −{{p}} − √{{disc}}",
+        "x = -{{p}} + √{{disc}} or x = -{{p}} - √{{disc}}",
+        "x = -{{p}} ± √{{disc}}"
+      ]
+    },
+    "explanation": "Complete the square: (x + {{p}})² − {{p}}² + {{c}} = 0, so (x + {{p}})² = {{p*p - c}} = {{disc}}. Thus x + {{p}} = ±√{{disc}}, giving x = −{{p}} ± √{{disc}}."
+  },
+  {
+    "id": "algebra-identity-proof-065",
+    "topic": "algebra",
+    "difficulty": 5,
+    "image": null,
+    "template": "Show that ({{a}}n + 1)² − ({{a}}n − 1)² = {{4a}}n for all values of n.",
+    "variables": {
+      "a": { "type": "int", "min": 1, "max": 4 },
+      "4a": { "type": "derived", "expr": "4 * a" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{4a*a}}n² + {{4a}}n + 1 − {{4a*a}}n² + {{4a}}n − 1 = {{8a}}n",
+      "acceptedAnswers": [
+        "{{4a*a}}n² + {{4a}}n + 1 - {{4a*a}}n² + {{4a}}n - 1",
+        "difference of squares: 4×{{a}}n×1 = {{4a}}n"
+      ]
+    },
+    "explanation": "LHS = ({{a}}n + 1)² − ({{a}}n − 1)² = ({{a*a}}n² + {{2*a}}n + 1) − ({{a*a}}n² − {{2*a}}n + 1) = {{4*a}}n = RHS."
+  },
+  {
+    "id": "algebra-write-formula-from-table-066",
+    "topic": "algebra",
+    "difficulty": 3,
+    "image": null,
+    "template": "A table of values shows x: 1, 2, 3, 4 and y: {{y1}}, {{y2}}, {{y3}}, {{y4}}. Write a formula for y in terms of x.",
+    "variables": {
+      "m": { "type": "int", "min": 2, "max": 6 },
+      "b": { "type": "int", "min": 1, "max": 8 },
+      "y1": { "type": "derived", "expr": "m * 1 + b" },
+      "y2": { "type": "derived", "expr": "m * 2 + b" },
+      "y3": { "type": "derived", "expr": "m * 3 + b" },
+      "y4": { "type": "derived", "expr": "m * 4 + b" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "y = {{m}}x + {{b}}",
+      "acceptedAnswers": ["y = {{m}}x + {{b}}", "y={{m}}x+{{b}}"]
+    },
+    "explanation": "The common difference is {{m}}, so the coefficient of x is {{m}}. When x = 1, y = {{y1}}: {{m}}(1) + b = {{y1}}, so b = {{b}}. Formula: y = {{m}}x + {{b}}."
+  },
+  {
+    "id": "algebra-simplify-algebraic-fraction-067",
+    "topic": "algebra",
+    "difficulty": 4,
+    "image": null,
+    "template": "Simplify: ({{ab}}x + {{ac}}) / {{a}}",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 6 },
+      "b": { "type": "int", "min": 2, "max": 7 },
+      "c": { "type": "int", "min": 2, "max": 7 },
+      "ab": { "type": "derived", "expr": "a * b" },
+      "ac": { "type": "derived", "expr": "a * c" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{b}}x + {{c}}",
+      "acceptedAnswers": ["{{b}}x + {{c}}", "{{b}}x+{{c}}"]
+    },
+    "explanation": "Factorise numerator: {{ab}}x + {{ac}} = {{a}}({{b}}x + {{c}}). Cancel the {{a}}: result = {{b}}x + {{c}}."
+  }
+]

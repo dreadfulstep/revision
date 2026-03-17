@@ -1,0 +1,139 @@
+{
+  "ocr": {
+    "computer-science": {
+      "paper-1": {
+        "name": "Computer Systems",
+        "date": "2026-05-13T09:00:00+01:00",
+        "durationMinutes": 90
+      },
+      "paper-2": {
+        "name": "Computational Thinking, Algorithms and Programming",
+        "date": "2026-05-19T09:00:00+01:00",
+        "durationMinutes": 90
+      }
+    }
+  },
+  "edexcel": {
+    "maths": {
+      "paper-1": {
+        "name": "Non-Calculator Paper",
+        "date": "2026-05-14T09:00:00+01:00",
+        "durationMinutes": 90
+      },
+      "paper-2": {
+        "name": "Calculator Paper",
+        "date": "2026-06-03T09:00:00+01:00",
+        "durationMinutes": 90
+      },
+      "paper-3": {
+        "name": "Calculator Paper",
+        "date": "2026-06-10T09:00:00+01:00",
+        "durationMinutes": 90
+      }
+    }
+  },
+  "combined-science": {
+    "biology-1": {
+      "name": "Biology Paper 1",
+      "date": "2026-05-12T13:00:00+01:00",
+      "durationMinutes": 70
+    },
+    "biology-2": {
+      "name": "Biology Paper 2",
+      "date": "2026-06-08T09:00:00+01:00",
+      "durationMinutes": 70
+    },
+    "chemistry-1": {
+      "name": "Chemistry Paper 1",
+      "date": "2026-05-18T09:00:00+01:00",
+      "durationMinutes": 70
+    },
+    "chemistry-2": {
+      "name": "Chemistry Paper 2",
+      "date": "2026-06-12T09:00:00+01:00",
+      "durationMinutes": 70
+    },
+    "physics-1": {
+      "name": "Physics Paper 1",
+      "date": "2026-06-02T09:00:00+01:00",
+      "durationMinutes": 70
+    },
+    "physics-2": {
+      "name": "Physics Paper 2",
+      "date": "2026-06-15T09:00:00+01:00",
+      "durationMinutes": 70
+    }
+  },
+  "aqa": {
+    "history": {
+      "paper-1": {
+        "name": "Understanding the Modern World",
+        "date": "2026-05-15T09:00:00+01:00",
+        "topics": [
+          "America, 1920–1973: Opportunity and Inequality",
+          "Conflict and Tension"
+        ],
+        "durationMinutes": 120
+      },
+      "paper-2": {
+        "name": "Shaping the Nation",
+        "date": "2026-06-04T09:00:00+01:00",
+        "topics": [
+          "Britain: Health and the People (Medicine)",
+          "Elizabethan England"
+        ],
+        "durationMinutes": 120
+      }
+    },
+    "english-language": {
+      "paper-1": {
+        "name": "Explorations in Creative Reading and Writing",
+        "date": "2026-05-21T09:00:00+01:00",
+        "durationMinutes": 105
+      },
+      "paper-2": {
+        "name": "Writers’ Viewpoints and Perspectives",
+        "date": "2026-06-05T09:00:00+01:00",
+        "durationMinutes": 105
+      }
+    },
+    "english-literature": {
+      "paper-1": {
+        "name": "Shakespeare and the 19th-century Novel",
+        "date": "2026-05-11T09:00:00+01:00",
+        "durationMinutes": 105
+      },
+      "paper-2": {
+        "name": "Modern Texts and Poetry",
+        "date": "2026-05-19T09:00:00+01:00",
+        "durationMinutes": 135
+      }
+    },
+    "spanish": {
+      "listening": {
+        "name": "Listening",
+        "date": "2026-06-09T09:00:00+01:00",
+        "durationMinutes": 35
+      },
+      "reading": {
+        "name": "Reading",
+        "date": "2026-06-09T09:00:00+01:00",
+        "durationMinutes": 45
+      },
+      "writing": {
+        "name": "Writing",
+        "date": "2026-06-16T09:00:00+01:00",
+        "durationMinutes": 75
+      }
+    }
+  },
+  "ocr-cambridge": {
+    "creative-imedia": {
+      "r093": {
+        "name": "Creative iMedia in the Media Industry",
+        "date": "2026-06-08T09:00:00+01:00",
+        "durationMinutes": 90
+      }
+    }
+  }
+}

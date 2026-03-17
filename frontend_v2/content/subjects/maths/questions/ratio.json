@@ -1,0 +1,1261 @@
+[
+  {
+    "id": "ratio-simplify-basic-001",
+    "topic": "ratio",
+    "difficulty": 1,
+    "image": null,
+    "template": "Simplify the ratio {{ra}} : {{rb}}.",
+    "variables": {
+      "g": { "type": "int", "min": 2, "max": 8 },
+      "p": { "type": "int", "min": 2, "max": 9 },
+      "q": { "type": "int", "min": 2, "max": 9 },
+      "ra": { "type": "derived", "expr": "g * p" },
+      "rb": { "type": "derived", "expr": "g * q" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{p}} : {{q}}",
+      "acceptedAnswers": ["{{p}} : {{q}}", "{{p}}:{{q}}"]
+    },
+    "explanation": "HCF of {{ra}} and {{rb}} is {{g}}. Divide both by {{g}}: {{p}} : {{q}}."
+  },
+  {
+    "id": "ratio-simplify-three-part-002",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "Simplify the ratio {{ra}} : {{rb}} : {{rc}}.",
+    "variables": {
+      "g": { "type": "int", "min": 2, "max": 6 },
+      "p": { "type": "int", "min": 2, "max": 7 },
+      "q": { "type": "int", "min": 2, "max": 7 },
+      "r": { "type": "int", "min": 2, "max": 7 },
+      "ra": { "type": "derived", "expr": "g * p" },
+      "rb": { "type": "derived", "expr": "g * q" },
+      "rc": { "type": "derived", "expr": "g * r" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{p}} : {{q}} : {{r}}",
+      "acceptedAnswers": ["{{p}} : {{q}} : {{r}}", "{{p}}:{{q}}:{{r}}"]
+    },
+    "explanation": "HCF of {{ra}}, {{rb}} and {{rc}} is {{g}}. Divide each by {{g}}: {{p}} : {{q}} : {{r}}."
+  },
+  {
+    "id": "ratio-share-two-parts-003",
+    "topic": "ratio",
+    "difficulty": 1,
+    "image": null,
+    "template": "Share £{{total}} in the ratio {{p}} : {{q}}. Find the larger share.",
+    "variables": {
+      "p": { "type": "int", "min": 3, "max": 7 },
+      "q": { "type": "int", "min": 1, "max": 3 },
+      "parts": { "type": "derived", "expr": "p + q" },
+      "unit": { "type": "int", "min": 5, "max": 20 },
+      "total": { "type": "derived", "expr": "(p + q) * unit" },
+      "larger": { "type": "derived", "expr": "p * unit" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "larger",
+      "unit": "£"
+    },
+    "explanation": "Total parts = {{p}} + {{q}} = {{parts}}. Each part = £{{total}} ÷ {{parts}} = £{{unit}}. Larger share ({{p}} parts) = {{p}} × £{{unit}} = £{{larger}}."
+  },
+  {
+    "id": "ratio-share-three-parts-004",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "Share £{{total}} in the ratio {{p}} : {{q}} : {{r}}. Find the smallest share.",
+    "variables": {
+      "p": { "type": "int", "min": 3, "max": 6 },
+      "q": { "type": "int", "min": 2, "max": 5 },
+      "r": { "type": "int", "min": 1, "max": 3 },
+      "parts": { "type": "derived", "expr": "p + q + r" },
+      "unit": { "type": "int", "min": 4, "max": 15 },
+      "total": { "type": "derived", "expr": "(p + q + r) * unit" },
+      "smallest": { "type": "derived", "expr": "r * unit" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "smallest",
+      "unit": "£"
+    },
+    "explanation": "Total parts = {{p}} + {{q}} + {{r}} = {{parts}}. Each part = £{{total}} ÷ {{parts}} = £{{unit}}. Smallest share ({{r}} parts) = {{r}} × £{{unit}} = £{{smallest}}."
+  },
+  {
+    "id": "ratio-find-total-from-share-005",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "Two people share money in the ratio {{p}} : {{q}}. The larger share is £{{larger}}. Find the total amount.",
+    "variables": {
+      "p": { "type": "int", "min": 3, "max": 7 },
+      "q": { "type": "int", "min": 1, "max": 3 },
+      "unit": { "type": "int", "min": 5, "max": 20 },
+      "larger": { "type": "derived", "expr": "p * unit" },
+      "total": { "type": "derived", "expr": "(p + q) * unit" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "total",
+      "unit": "£"
+    },
+    "explanation": "The larger share ({{p}} parts) = £{{larger}}, so each part = £{{larger}} ÷ {{p}} = £{{unit}}. Total = ({{p}} + {{q}}) × £{{unit}} = £{{total}}."
+  },
+  {
+    "id": "ratio-unitary-method-cost-006",
+    "topic": "ratio",
+    "difficulty": 1,
+    "image": null,
+    "template": "{{na}} items cost £{{costa}}. Find the cost of {{nb}} items.",
+    "variables": {
+      "unit": { "type": "int", "min": 2, "max": 12 },
+      "na": { "type": "int", "min": 3, "max": 8 },
+      "nb": { "type": "int", "min": 5, "max": 20 },
+      "costa": { "type": "derived", "expr": "unit * na" },
+      "costb": { "type": "derived", "expr": "unit * nb" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "costb",
+      "unit": "£"
+    },
+    "explanation": "Cost per item = £{{costa}} ÷ {{na}} = £{{unit}}. Cost of {{nb}} items = £{{unit}} × {{nb}} = £{{costb}}."
+  },
+  {
+    "id": "ratio-recipe-scale-up-007",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A recipe for {{na}} people uses {{g}} g of sugar. How much sugar is needed for {{nb}} people?",
+    "variables": {
+      "na": { "type": "pick", "options": [4, 6, 8] },
+      "g": { "type": "int", "min": 60, "max": 400 },
+      "nb": { "type": "int", "min": 10, "max": 24 },
+      "ans": { "type": "derived", "expr": "g * nb / na" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "ans",
+      "unit": "g"
+    },
+    "explanation": "Per person = {{g}} ÷ {{na}} = {{g/na}} g. For {{nb}} people: {{g/na}} × {{nb}} = {{ans}} g."
+  },
+  {
+    "id": "ratio-direct-proportion-define-008",
+    "topic": "ratio",
+    "difficulty": 1,
+    "image": null,
+    "template": "y is directly proportional to x. When x = {{x1}}, y = {{y1}}. Find the constant of proportionality k.",
+    "variables": {
+      "k": { "type": "int", "min": 2, "max": 10 },
+      "x1": { "type": "int", "min": 2, "max": 8 },
+      "y1": { "type": "derived", "expr": "k * x1" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "k"
+    },
+    "explanation": "y = kx, so k = y ÷ x = {{y1}} ÷ {{x1}} = {{k}}."
+  },
+  {
+    "id": "ratio-direct-proportion-find-y-009",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "y is directly proportional to x. When x = {{x1}}, y = {{y1}}. Find y when x = {{x2}}.",
+    "variables": {
+      "k": { "type": "int", "min": 2, "max": 8 },
+      "x1": { "type": "int", "min": 2, "max": 6 },
+      "y1": { "type": "derived", "expr": "k * x1" },
+      "x2": { "type": "int", "min": 5, "max": 15 },
+      "y2": { "type": "derived", "expr": "k * x2" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "y2"
+    },
+    "explanation": "y ∝ x means y = kx. k = {{y1}} ÷ {{x1}} = {{k}}. When x = {{x2}}: y = {{k}} × {{x2}} = {{y2}}."
+  },
+  {
+    "id": "ratio-inverse-proportion-find-y-010",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "y is inversely proportional to x. When x = {{x1}}, y = {{y1}}. Find y when x = {{x2}}.",
+    "variables": {
+      "k": { "type": "int", "min": 12, "max": 60 },
+      "x1": { "type": "int", "min": 2, "max": 6 },
+      "y1": { "type": "derived", "expr": "k / x1" },
+      "x2": { "type": "int", "min": 3, "max": 12 },
+      "y2": { "type": "derived", "expr": "k / x2" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "y2"
+    },
+    "explanation": "y ∝ 1/x means y = k/x. k = {{y1}} × {{x1}} = {{k}}. When x = {{x2}}: y = {{k}} ÷ {{x2}} = {{y2}}."
+  },
+  {
+    "id": "ratio-proportion-squared-011",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "y is proportional to x². When x = {{x1}}, y = {{y1}}. Find y when x = {{x2}}.",
+    "variables": {
+      "k": { "type": "int", "min": 2, "max": 5 },
+      "x1": { "type": "int", "min": 2, "max": 4 },
+      "y1": { "type": "derived", "expr": "k * x1 * x1" },
+      "x2": { "type": "int", "min": 5, "max": 9 },
+      "y2": { "type": "derived", "expr": "k * x2 * x2" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "y2"
+    },
+    "explanation": "y ∝ x² means y = kx². k = {{y1}} ÷ {{x1}}² = {{y1}} ÷ {{x1*x1}} = {{k}}. When x = {{x2}}: y = {{k}} × {{x2}}² = {{k}} × {{x2*x2}} = {{y2}}."
+  },
+  {
+    "id": "ratio-proportion-sqrt-012",
+    "topic": "ratio",
+    "difficulty": 4,
+    "image": null,
+    "template": "y is proportional to √x. When x = {{x1}}, y = {{y1}}. Find y when x = {{x2}}.",
+    "variables": {
+      "k": { "type": "int", "min": 2, "max": 6 },
+      "root1": { "type": "int", "min": 2, "max": 5 },
+      "x1": { "type": "derived", "expr": "root1 * root1" },
+      "y1": { "type": "derived", "expr": "k * root1" },
+      "root2": { "type": "int", "min": 3, "max": 8 },
+      "x2": { "type": "derived", "expr": "root2 * root2" },
+      "y2": { "type": "derived", "expr": "k * root2" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "y2"
+    },
+    "explanation": "y ∝ √x means y = k√x. k = {{y1}} ÷ √{{x1}} = {{y1}} ÷ {{root1}} = {{k}}. When x = {{x2}}: y = {{k}} × √{{x2}} = {{k}} × {{root2}} = {{y2}}."
+  },
+  {
+    "id": "ratio-proportion-inverse-squared-013",
+    "topic": "ratio",
+    "difficulty": 4,
+    "image": null,
+    "template": "y is inversely proportional to x². When x = {{x1}}, y = {{y1}}. Find y when x = {{x2}}.",
+    "variables": {
+      "k": { "type": "int", "min": 12, "max": 100 },
+      "x1": { "type": "int", "min": 2, "max": 4 },
+      "y1": { "type": "derived", "expr": "k / (x1 * x1)" },
+      "x2": { "type": "int", "min": 5, "max": 10 },
+      "y2": { "type": "derived", "expr": "k / (x2 * x2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "y2"
+    },
+    "explanation": "y ∝ 1/x² means y = k/x². k = {{y1}} × {{x1}}² = {{y1}} × {{x1*x1}} = {{k}}. When x = {{x2}}: y = {{k}} ÷ {{x2}}² = {{k}} ÷ {{x2*x2}} = {{y2}}."
+  },
+  {
+    "id": "ratio-percentage-increase-multiplier-014",
+    "topic": "ratio",
+    "difficulty": 1,
+    "image": null,
+    "template": "What single decimal multiplier increases an amount by {{pct}}%?",
+    "variables": {
+      "pct": { "type": "pick", "options": [5, 10, 15, 20, 25, 30, 40, 50] },
+      "mult": { "type": "derived", "expr": "(100 + pct) / 100" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "mult"
+    },
+    "explanation": "To increase by {{pct}}%, multiply by (100 + {{pct}}) ÷ 100 = {{mult}}."
+  },
+  {
+    "id": "ratio-percentage-decrease-multiplier-015",
+    "topic": "ratio",
+    "difficulty": 1,
+    "image": null,
+    "template": "What single decimal multiplier decreases an amount by {{pct}}%?",
+    "variables": {
+      "pct": { "type": "pick", "options": [5, 10, 15, 20, 25, 30, 40] },
+      "mult": { "type": "derived", "expr": "(100 - pct) / 100" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "mult"
+    },
+    "explanation": "To decrease by {{pct}}%, multiply by (100 − {{pct}}) ÷ 100 = {{mult}}."
+  },
+  {
+    "id": "ratio-percentage-change-find-016",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A value increases from {{orig}} to {{newv}}. Find the percentage increase.",
+    "variables": {
+      "orig": { "type": "int", "min": 40, "max": 200 },
+      "pct": { "type": "pick", "options": [10, 20, 25, 30, 40, 50] },
+      "newv": { "type": "derived", "expr": "orig * (100 + pct) / 100" },
+      "ans": { "type": "derived", "expr": "pct" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "ans",
+      "unit": "%"
+    },
+    "explanation": "Percentage increase = (change / original) × 100 = ({{newv - orig}} / {{orig}}) × 100 = {{ans}}%."
+  },
+  {
+    "id": "ratio-percentage-decrease-find-017",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A value decreases from {{orig}} to {{newv}}. Find the percentage decrease.",
+    "variables": {
+      "orig": { "type": "int", "min": 50, "max": 300 },
+      "pct": { "type": "pick", "options": [10, 20, 25, 30, 40] },
+      "newv": { "type": "derived", "expr": "orig * (100 - pct) / 100" },
+      "ans": { "type": "derived", "expr": "pct" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "ans",
+      "unit": "%"
+    },
+    "explanation": "Percentage decrease = (change / original) × 100 = ({{orig - newv}} / {{orig}}) × 100 = {{ans}}%."
+  },
+  {
+    "id": "ratio-reverse-percentage-increase-018",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "After a {{pct}}% increase, a price is £{{newp}}. Find the original price.",
+    "variables": {
+      "pct": { "type": "pick", "options": [10, 20, 25, 50] },
+      "orig": { "type": "int", "min": 40, "max": 200 },
+      "newp": { "type": "derived", "expr": "orig * (100 + pct) / 100" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "orig",
+      "unit": "£"
+    },
+    "explanation": "The multiplier was {{(100+pct)/100}}. Divide to reverse: £{{newp}} ÷ {{(100+pct)/100}} = £{{orig}}."
+  },
+  {
+    "id": "ratio-reverse-percentage-decrease-019",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "After a {{pct}}% decrease, a price is £{{newp}}. Find the original price.",
+    "variables": {
+      "pct": { "type": "pick", "options": [10, 20, 25, 30, 40] },
+      "orig": { "type": "int", "min": 50, "max": 400 },
+      "newp": { "type": "derived", "expr": "orig * (100 - pct) / 100" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "orig",
+      "unit": "£"
+    },
+    "explanation": "The multiplier was {{(100-pct)/100}}. Divide to reverse: £{{newp}} ÷ {{(100-pct)/100}} = £{{orig}}."
+  },
+  {
+    "id": "ratio-compound-interest-020",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "£{{P}} is invested at {{r}}% compound interest per annum. Find the total after {{t}} years.",
+    "variables": {
+      "P": { "type": "int", "min": 500, "max": 5000 },
+      "r": { "type": "pick", "options": [2, 3, 4, 5] },
+      "t": { "type": "int", "min": 2, "max": 5 },
+      "ans": { "type": "derived", "expr": "round(compound(P, r/100, t), 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "ans",
+      "unit": "£"
+    },
+    "explanation": "A = P(1 + r/100)^t = {{P}} × (1.{{r < 10 ? '0' + r : r}})^{{t}} ≈ £{{ans}}."
+  },
+  {
+    "id": "ratio-depreciation-021",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "A car costs £{{P}} and depreciates at {{r}}% per year. Find its value after {{t}} years.",
+    "variables": {
+      "P": { "type": "int", "min": 6000, "max": 20000 },
+      "r": { "type": "pick", "options": [10, 15, 20] },
+      "t": { "type": "int", "min": 2, "max": 4 },
+      "ans": { "type": "derived", "expr": "round(P * pow((100 - r) / 100, t), 0)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "ans",
+      "unit": "£"
+    },
+    "explanation": "Value = P × (1 − r/100)^t = {{P}} × ({{(100-r)/100}})^{{t}} ≈ £{{ans}}."
+  },
+  {
+    "id": "ratio-growth-decay-identify-022",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A quantity follows the formula A = {{P}} × {{mult}}^t. Is this growth or decay?",
+    "variables": {
+      "P": { "type": "int", "min": 100, "max": 1000 },
+      "mult": { "type": "pick", "options": [0.8, 0.9, 0.85, 0.75] }
+    },
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Growth", "Decay", "Neither — it stays constant", "Cannot tell"],
+      "answer": "Decay"
+    },
+    "explanation": "The multiplier {{mult}} is less than 1, so the quantity decreases over time. This is exponential decay."
+  },
+  {
+    "id": "ratio-speed-distance-time-find-speed-023",
+    "topic": "ratio",
+    "difficulty": 1,
+    "image": null,
+    "template": "A car travels {{dist}} km in {{time}} hours. Find the average speed.",
+    "variables": {
+      "speed": { "type": "int", "min": 40, "max": 120 },
+      "time": { "type": "int", "min": 1, "max": 5 },
+      "dist": { "type": "derived", "expr": "speed * time" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "speed",
+      "unit": "km/h"
+    },
+    "explanation": "Speed = distance ÷ time = {{dist}} ÷ {{time}} = {{speed}} km/h."
+  },
+  {
+    "id": "ratio-speed-distance-time-find-distance-024",
+    "topic": "ratio",
+    "difficulty": 1,
+    "image": null,
+    "template": "A train travels at {{speed}} km/h for {{time}} hours. How far does it travel?",
+    "variables": {
+      "speed": { "type": "int", "min": 50, "max": 200 },
+      "time": { "type": "int", "min": 1, "max": 6 },
+      "dist": { "type": "derived", "expr": "speed * time" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "dist",
+      "unit": "km"
+    },
+    "explanation": "Distance = speed × time = {{speed}} × {{time}} = {{dist}} km."
+  },
+  {
+    "id": "ratio-speed-distance-time-find-time-025",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A car travels {{dist}} km at {{speed}} km/h. How long does the journey take? Give your answer in hours.",
+    "variables": {
+      "speed": { "type": "int", "min": 40, "max": 100 },
+      "time": { "type": "int", "min": 1, "max": 5 },
+      "dist": { "type": "derived", "expr": "speed * time" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "time",
+      "unit": "hours"
+    },
+    "explanation": "Time = distance ÷ speed = {{dist}} ÷ {{speed}} = {{time}} hours."
+  },
+  {
+    "id": "ratio-speed-convert-units-026",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "Convert {{ms}} m/s to km/h.",
+    "variables": {
+      "ms": { "type": "int", "min": 5, "max": 40 },
+      "kmh": { "type": "derived", "expr": "ms * 3.6" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "kmh",
+      "unit": "km/h"
+    },
+    "explanation": "Multiply by 3.6 (since 1 m/s = 3.6 km/h): {{ms}} × 3.6 = {{kmh}} km/h."
+  },
+  {
+    "id": "ratio-average-speed-two-legs-027",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "A journey has two legs: {{d1}} km at {{s1}} km/h, then {{d2}} km at {{s2}} km/h. Find the average speed for the whole journey.",
+    "variables": {
+      "s1": { "type": "int", "min": 40, "max": 80 },
+      "d1": { "type": "int", "min": 40, "max": 120 },
+      "s2": { "type": "int", "min": 60, "max": 120 },
+      "d2": { "type": "int", "min": 60, "max": 180 },
+      "t1": { "type": "derived", "expr": "d1 / s1" },
+      "t2": { "type": "derived", "expr": "d2 / s2" },
+      "totalD": { "type": "derived", "expr": "d1 + d2" },
+      "totalT": { "type": "derived", "expr": "d1/s1 + d2/s2" },
+      "avgS": { "type": "derived", "expr": "round((d1 + d2) / (d1/s1 + d2/s2), 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "avgS",
+      "unit": "km/h"
+    },
+    "explanation": "Total distance = {{d1}} + {{d2}} = {{totalD}} km. Time 1 = {{d1}}/{{s1}} = {{round(t1,3)}} h. Time 2 = {{d2}}/{{s2}} = {{round(t2,3)}} h. Average speed = {{totalD}} ÷ {{round(totalT,4)}} ≈ {{avgS}} km/h."
+  },
+  {
+    "id": "ratio-density-find-028",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A block has mass {{m}} g and volume {{v}} cm³. Find its density.",
+    "variables": {
+      "dens": { "type": "int", "min": 2, "max": 11 },
+      "v": { "type": "int", "min": 10, "max": 50 },
+      "m": { "type": "derived", "expr": "dens * v" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "dens",
+      "unit": "g/cm³"
+    },
+    "explanation": "Density = mass ÷ volume = {{m}} ÷ {{v}} = {{dens}} g/cm³."
+  },
+  {
+    "id": "ratio-density-find-mass-029",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A material has density {{dens}} g/cm³. Find the mass of {{v}} cm³.",
+    "variables": {
+      "dens": { "type": "int", "min": 2, "max": 10 },
+      "v": { "type": "int", "min": 5, "max": 40 },
+      "m": { "type": "derived", "expr": "dens * v" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "m",
+      "unit": "g"
+    },
+    "explanation": "Mass = density × volume = {{dens}} × {{v}} = {{m}} g."
+  },
+  {
+    "id": "ratio-density-find-volume-030",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A material has density {{dens}} g/cm³ and mass {{m}} g. Find its volume.",
+    "variables": {
+      "dens": { "type": "int", "min": 2, "max": 8 },
+      "v": { "type": "int", "min": 5, "max": 30 },
+      "m": { "type": "derived", "expr": "dens * v" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "v",
+      "unit": "cm³"
+    },
+    "explanation": "Volume = mass ÷ density = {{m}} ÷ {{dens}} = {{v}} cm³."
+  },
+  {
+    "id": "ratio-pressure-find-031",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A force of {{f}} N acts on an area of {{a}} m². Find the pressure.",
+    "variables": {
+      "pres": { "type": "int", "min": 5, "max": 40 },
+      "a": { "type": "int", "min": 2, "max": 15 },
+      "f": { "type": "derived", "expr": "pres * a" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "pres",
+      "unit": "N/m²"
+    },
+    "explanation": "Pressure = force ÷ area = {{f}} ÷ {{a}} = {{pres}} N/m²."
+  },
+  {
+    "id": "ratio-pressure-find-force-032",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A pressure of {{pres}} N/m² acts over an area of {{a}} m². Find the force.",
+    "variables": {
+      "pres": { "type": "int", "min": 5, "max": 30 },
+      "a": { "type": "int", "min": 3, "max": 15 },
+      "f": { "type": "derived", "expr": "pres * a" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "f",
+      "unit": "N"
+    },
+    "explanation": "Force = pressure × area = {{pres}} × {{a}} = {{f}} N."
+  },
+  {
+    "id": "ratio-exchange-rate-to-foreign-033",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "The exchange rate is £1 = ${{rate}}. Convert £{{gbp}} to dollars.",
+    "variables": {
+      "rate": { "type": "float", "min": 1.20, "max": 1.50, "dp": 2 },
+      "gbp": { "type": "int", "min": 50, "max": 600 },
+      "usd": { "type": "derived", "expr": "round(gbp * rate, 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "usd",
+      "unit": "$"
+    },
+    "explanation": "Multiply by the exchange rate: £{{gbp}} × {{rate}} = ${{usd}}."
+  },
+  {
+    "id": "ratio-exchange-rate-to-pounds-034",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "The exchange rate is £1 = €{{rate}}. Convert €{{eur}} to pounds.",
+    "variables": {
+      "rate": { "type": "float", "min": 1.05, "max": 1.35, "dp": 2 },
+      "gbp": { "type": "int", "min": 50, "max": 500 },
+      "eur": { "type": "derived", "expr": "round(gbp * rate, 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "gbp",
+      "unit": "£"
+    },
+    "explanation": "Divide by the rate to convert back to pounds: €{{eur}} ÷ {{rate}} = £{{gbp}}."
+  },
+  {
+    "id": "ratio-best-value-compare-035",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A {{sA}} ml bottle costs £{{pA}}. A {{sB}} ml bottle costs £{{pB}}. Which is better value?",
+    "variables": {
+      "sA": { "type": "int", "min": 250, "max": 500 },
+      "pA": { "type": "float", "min": 0.80, "max": 2.00, "dp": 2 },
+      "sB": { "type": "derived", "expr": "sA * 2" },
+      "pB": { "type": "derived", "expr": "round(pA * 1.75, 2)" },
+      "ppA": { "type": "derived", "expr": "round(pA / sA * 100, 4)" },
+      "ppB": { "type": "derived", "expr": "round(pB / sB * 100, 4)" }
+    },
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["{{sA}} ml bottle", "{{sB}} ml bottle", "Same value"],
+      "answer": "{{sB}} ml bottle"
+    },
+    "explanation": "Cost per 100 ml: small = {{ppA}}p, large = {{ppB}}p. The {{sB}} ml bottle is cheaper per ml — better value."
+  },
+  {
+    "id": "ratio-tax-vat-036",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A TV costs £{{net}} before VAT. VAT is charged at 20%. Find the total price including VAT.",
+    "variables": {
+      "net": { "type": "int", "min": 200, "max": 1200 },
+      "total": { "type": "derived", "expr": "net * 1.2" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "total",
+      "unit": "£"
+    },
+    "explanation": "VAT = 20%, so multiply by 1.20: £{{net}} × 1.20 = £{{total}}."
+  },
+  {
+    "id": "ratio-profit-percentage-037",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "A trader buys an item for £{{cost}} and sells it for £{{sell}}. Find the percentage profit.",
+    "variables": {
+      "cost": { "type": "int", "min": 20, "max": 200 },
+      "pct": { "type": "pick", "options": [10, 20, 25, 30, 40, 50] },
+      "sell": { "type": "derived", "expr": "cost * (100 + pct) / 100" },
+      "profit": { "type": "derived", "expr": "pct" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "profit",
+      "unit": "%"
+    },
+    "explanation": "Profit = £{{sell}} − £{{cost}} = £{{sell - cost}}. % profit = ({{sell-cost}}/{{cost}}) × 100 = {{profit}}%."
+  },
+  {
+    "id": "ratio-interest-rate-find-038",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "£{{P}} grows to £{{A}} after 1 year of compound interest. Find the annual interest rate.",
+    "variables": {
+      "P": { "type": "int", "min": 500, "max": 2000 },
+      "r": { "type": "pick", "options": [5, 10, 20, 25] },
+      "A": { "type": "derived", "expr": "P * (100 + r) / 100" },
+      "ans": { "type": "derived", "expr": "r" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "ans",
+      "unit": "%"
+    },
+    "explanation": "Rate = (A/P − 1) × 100 = ({{A}}/{{P}} − 1) × 100 = ({{round(A/P - 1, 4)}}) × 100 = {{ans}}%."
+  },
+  {
+    "id": "ratio-proportion-graph-identify-039",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A graph of y against x passes through the origin and is a straight line. What does this show?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "y is directly proportional to x",
+        "y is inversely proportional to x",
+        "y is proportional to x²",
+        "y is not related to x"
+      ],
+      "answer": "y is directly proportional to x"
+    },
+    "explanation": "A straight line through the origin means y = kx for some constant k — this is direct proportion."
+  },
+  {
+    "id": "ratio-proportion-symbol-040",
+    "topic": "ratio",
+    "difficulty": 1,
+    "image": null,
+    "template": "y is directly proportional to x. Which equation correctly represents this?",
+    "variables": {
+      "k": { "type": "int", "min": 2, "max": 9 }
+    },
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["y = {{k}}x", "y = {{k}}/x", "y = {{k}}x²", "y = x + {{k}}"],
+      "answer": "y = {{k}}x"
+    },
+    "explanation": "Direct proportion is written y ∝ x, which means y = kx for some constant k. The correct form is y = {{k}}x."
+  },
+  {
+    "id": "ratio-map-scale-find-real-041",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A map has scale 1 : {{scale}}. A distance on the map is {{mapd}} cm. Find the real distance in km.",
+    "variables": {
+      "scale": { "type": "pick", "options": [25000, 50000, 100000] },
+      "mapd": { "type": "int", "min": 2, "max": 10 },
+      "reald": { "type": "derived", "expr": "mapd * scale / 100000" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "reald",
+      "unit": "km"
+    },
+    "explanation": "Real distance = map distance × scale = {{mapd}} cm × {{scale}} = {{mapd * scale}} cm = {{mapd * scale / 100000}} km."
+  },
+  {
+    "id": "ratio-map-scale-find-map-042",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A map has scale 1 : {{scale}}. A real distance is {{reald}} km. Find the map distance in cm.",
+    "variables": {
+      "scale": { "type": "pick", "options": [25000, 50000, 100000] },
+      "reald": { "type": "int", "min": 2, "max": 10 },
+      "mapd": { "type": "derived", "expr": "reald * 100000 / scale" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "mapd",
+      "unit": "cm"
+    },
+    "explanation": "Map distance = real distance ÷ scale = {{reald}} km = {{reald * 100000}} cm. Map distance = {{reald * 100000}} ÷ {{scale}} = {{mapd}} cm."
+  },
+  {
+    "id": "ratio-gradient-rate-of-change-043",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": { "type": "generated", "renderer": "coordinate-grid", "vars": { "m": "{{m}}", "c": 0 } },
+    "template": "A distance–time graph has gradient {{m}}. What does this represent?",
+    "variables": {
+      "m": { "type": "int", "min": 20, "max": 80 }
+    },
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Speed of {{m}} km/h",
+        "Distance of {{m}} km",
+        "Acceleration of {{m}} km/h²",
+        "Time of {{m}} hours"
+      ],
+      "answer": "Speed of {{m}} km/h"
+    },
+    "explanation": "The gradient of a distance–time graph represents speed. A gradient of {{m}} means the speed is {{m}} km/h."
+  },
+  {
+    "id": "ratio-gradient-velocity-time-044",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": { "type": "generated", "renderer": "coordinate-grid", "vars": { "m": "{{m}}", "c": 0 } },
+    "template": "A velocity–time graph has gradient {{m}} m/s². What does this represent?",
+    "variables": {
+      "m": { "type": "int", "min": 2, "max": 15 }
+    },
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Acceleration of {{m}} m/s²",
+        "Speed of {{m}} m/s",
+        "Distance of {{m}} m",
+        "Deceleration of {{m}} m/s²"
+      ],
+      "answer": "Acceleration of {{m}} m/s²"
+    },
+    "explanation": "The gradient of a velocity–time graph represents acceleration. A positive gradient of {{m}} m/s² means acceleration of {{m}} m/s²."
+  },
+  {
+    "id": "ratio-area-under-vt-graph-045",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "A velocity–time graph shows a constant velocity of {{v}} m/s for {{t}} seconds. Find the distance travelled.",
+    "variables": {
+      "v": { "type": "int", "min": 5, "max": 30 },
+      "t": { "type": "int", "min": 5, "max": 20 },
+      "dist": { "type": "derived", "expr": "v * t" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "dist",
+      "unit": "m"
+    },
+    "explanation": "The area under a velocity–time graph gives distance. Area = rectangle = {{v}} × {{t}} = {{dist}} m."
+  },
+  {
+    "id": "ratio-area-under-vt-trapezium-046",
+    "topic": "ratio",
+    "difficulty": 4,
+    "image": null,
+    "template": "A velocity–time graph forms a trapezium with parallel sides of {{v1}} m/s and {{v2}} m/s, and a width of {{t}} seconds. Find the distance travelled.",
+    "variables": {
+      "v1": { "type": "int", "min": 5, "max": 20 },
+      "v2": { "type": "int", "min": 25, "max": 50 },
+      "t": { "type": "int", "min": 4, "max": 15 },
+      "dist": { "type": "derived", "expr": "0.5 * (v1 + v2) * t" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "dist",
+      "unit": "m"
+    },
+    "explanation": "Area of trapezium = ½(a + b) × h = ½({{v1}} + {{v2}}) × {{t}} = ½ × {{v1+v2}} × {{t}} = {{dist}} m."
+  },
+  {
+    "id": "ratio-ratio-ratio-link-047",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "A:B = {{p}}:{{q}} and B:C = {{r}}:{{s}}. Find the ratio A:B:C.",
+    "variables": {
+      "p": { "type": "int", "min": 2, "max": 5 },
+      "q": { "type": "int", "min": 2, "max": 5 },
+      "r": { "type": "int", "min": 2, "max": 5 },
+      "s": { "type": "int", "min": 2, "max": 5 },
+      "A": { "type": "derived", "expr": "p * r" },
+      "B": { "type": "derived", "expr": "q * r" },
+      "C": { "type": "derived", "expr": "q * s" },
+      "g": { "type": "derived", "expr": "gcd(gcd(p*r, q*r), q*s)" },
+      "Ar": { "type": "derived", "expr": "(p*r) / gcd(gcd(p*r, q*r), q*s)" },
+      "Br": { "type": "derived", "expr": "(q*r) / gcd(gcd(p*r, q*r), q*s)" },
+      "Cr": { "type": "derived", "expr": "(q*s) / gcd(gcd(p*r, q*r), q*s)" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "{{Ar}} : {{Br}} : {{Cr}}",
+      "acceptedAnswers": ["{{Ar}} : {{Br}} : {{Cr}}", "{{Ar}}:{{Br}}:{{Cr}}"]
+    },
+    "explanation": "Make B the same in both ratios. A:B = {{p}}:{{q}}, so ×{{r}}: {{p*r}}:{{q*r}}. B:C = {{r}}:{{s}}, so ×{{q}}: {{q*r}}:{{q*s}}. Combined: {{A}}:{{B}}:{{C}}. Simplify by dividing by {{g}}: {{Ar}}:{{Br}}:{{Cr}}."
+  },
+  {
+    "id": "ratio-divide-given-difference-048",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "Two amounts are in the ratio {{p}} : {{q}}. They differ by £{{diff}}. Find the larger amount.",
+    "variables": {
+      "p": { "type": "int", "min": 3, "max": 7 },
+      "q": { "type": "int", "min": 1, "max": 3 },
+      "unit": { "type": "int", "min": 5, "max": 20 },
+      "diff": { "type": "derived", "expr": "(p - q) * unit" },
+      "larger": { "type": "derived", "expr": "p * unit" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "larger",
+      "unit": "£"
+    },
+    "explanation": "Difference in parts = {{p}} − {{q}} = {{p-q}} parts = £{{diff}}. Each part = £{{diff}} ÷ {{p-q}} = £{{unit}}. Larger share = {{p}} × £{{unit}} = £{{larger}}."
+  },
+  {
+    "id": "ratio-percentage-repeated-change-049",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "A population of {{P}} increases by {{r}}% each year for {{t}} years. Find the population after {{t}} years.",
+    "variables": {
+      "P": { "type": "int", "min": 1000, "max": 10000 },
+      "r": { "type": "pick", "options": [5, 10, 20] },
+      "t": { "type": "int", "min": 2, "max": 4 },
+      "ans": { "type": "derived", "expr": "round(P * pow((100 + r) / 100, t), 0)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "ans"
+    },
+    "explanation": "Population = P × (1 + r/100)^t = {{P}} × ({{(100+r)/100}})^{{t}} ≈ {{ans}}."
+  },
+  {
+    "id": "ratio-time-to-double-compare-050",
+    "topic": "ratio",
+    "difficulty": 4,
+    "image": null,
+    "template": "Account A: £{{Pa}} at {{ra}}% compound interest per year. Account B: £{{Pb}} at {{rb}}% compound interest per year. After {{t}} years, which account has more money?",
+    "variables": {
+      "Pa": { "type": "int", "min": 1000, "max": 3000 },
+      "ra": { "type": "pick", "options": [3, 4, 5] },
+      "Pb": { "type": "int", "min": 800, "max": 2000 },
+      "rb": { "type": "pick", "options": [6, 7, 8] },
+      "t": { "type": "int", "min": 3, "max": 6 },
+      "Va": { "type": "derived", "expr": "round(compound(Pa, ra/100, t), 2)" },
+      "Vb": { "type": "derived", "expr": "round(compound(Pb, rb/100, t), 2)" }
+    },
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Account A (£{{Va}})", "Account B (£{{Vb}})", "They are equal"],
+      "answer": "{{Va >= Vb ? 'Account A (£' + Va + ')' : 'Account B (£' + Vb + ')'}}"
+    },
+    "explanation": "Account A: £{{Pa}} × (1.{{ra < 10 ? '0' + ra : ra}})^{{t}} = £{{Va}}. Account B: £{{Pb}} × (1.{{rb < 10 ? '0' + rb : rb}})^{{t}} = £{{Vb}}. {{Va >= Vb ? 'Account A has more.' : 'Account B has more.'}}"
+  },
+  {
+    "id": "ratio-proportion-write-equation-051",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "y is inversely proportional to x. When x = {{x1}}, y = {{y1}}. Write an equation for y in terms of x.",
+    "variables": {
+      "k": { "type": "int", "min": 12, "max": 60 },
+      "x1": { "type": "int", "min": 2, "max": 6 },
+      "y1": { "type": "derived", "expr": "k / x1" }
+    },
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "y = {{k}}/x",
+      "acceptedAnswers": ["y = {{k}}/x", "y={{k}}/x"]
+    },
+    "explanation": "y ∝ 1/x means y = k/x. Substituting x = {{x1}}, y = {{y1}}: k = {{y1}} × {{x1}} = {{k}}. Equation: y = {{k}}/x."
+  },
+  {
+    "id": "ratio-ordering-proportion-types-052",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order these proportion relationships from the one that increases fastest to slowest as x doubles from 1 to 2:",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "y ∝ x³ (increases by factor 8)",
+        "y ∝ x² (increases by factor 4)",
+        "y ∝ x (increases by factor 2)",
+        "y ∝ √x (increases by factor √2 ≈ 1.41)"
+      ]
+    },
+    "explanation": "When x doubles: y ∝ x³ multiplies by 8, y ∝ x² by 4, y ∝ x by 2, y ∝ √x by √2 ≈ 1.41. Fastest to slowest: x³, x², x, √x."
+  },
+  {
+    "id": "ratio-true-false-direct-proportion-053",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "y = {{a}}x + {{b}}. Is y directly proportional to x?",
+    "variables": {
+      "a": { "type": "int", "min": 2, "max": 8 },
+      "b": { "type": "int", "min": 1, "max": 10 }
+    },
+    "answerConfig": {
+      "type": "true_false",
+      "answer": false
+    },
+    "explanation": "Direct proportion requires y = kx (straight line through the origin). y = {{a}}x + {{b}} does NOT pass through the origin (when x=0, y={{b}} ≠ 0), so it is NOT direct proportion."
+  },
+  {
+    "id": "ratio-true-false-inverse-proportion-054",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "If y is inversely proportional to x, then doubling x will halve y. Is this true?",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "y = k/x. If x → 2x, then y = k/(2x) = (k/x)/2, so y halves. TRUE."
+  },
+  {
+    "id": "ratio-multi-select-rates-055",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which of the following are examples of a rate?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": ["50 miles per hour", "£3.50 per kg", "A temperature of 20°C", "12 metres"],
+      "correctOptions": ["50 miles per hour", "£3.50 per kg"]
+    },
+    "explanation": "A rate compares two different quantities using 'per'. '50 miles per hour' and '£3.50 per kg' are rates. A temperature or a length alone is not a rate."
+  },
+  {
+    "id": "ratio-gradient-non-linear-056",
+    "topic": "ratio",
+    "difficulty": 4,
+    "image": null,
+    "template": "A curve passes through ({{x1}}, {{y1}}) and ({{x2}}, {{y2}}). Find the average rate of change between these two points.",
+    "variables": {
+      "x1": { "type": "int", "min": 1, "max": 4 },
+      "y1": { "type": "int", "min": 2, "max": 10 },
+      "x2": { "type": "int", "min": 6, "max": 10 },
+      "y2": { "type": "int", "min": 15, "max": 40 },
+      "roc": { "type": "derived", "expr": "round((y2 - y1) / (x2 - x1), 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "roc"
+    },
+    "explanation": "Average rate of change = (y₂ − y₁)/(x₂ − x₁) = ({{y2}} − {{y1}})/({{x2}} − {{x1}}) = {{y2-y1}}/{{x2-x1}} = {{roc}}."
+  },
+  {
+    "id": "ratio-fill-blank-proportion-formula-057",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "y ∝ x² and y = {{y1}} when x = {{x1}}. The equation connecting y and x is y = ___.",
+    "variables": {
+      "k": { "type": "int", "min": 2, "max": 6 },
+      "x1": { "type": "int", "min": 2, "max": 5 },
+      "y1": { "type": "derived", "expr": "k * x1 * x1" }
+    },
+    "answerConfig": {
+      "type": "fill_blank",
+      "answer": "{{k}}x²"
+    },
+    "explanation": "y = kx². Substituting: {{y1}} = k × {{x1}}² = k × {{x1*x1}}, so k = {{y1}}/{{x1*x1}} = {{k}}. Equation: y = {{k}}x²."
+  },
+  {
+    "id": "ratio-matching-proportion-types-058",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each proportion type to its graph shape.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "y ∝ x", "right": "Straight line through origin" },
+        { "left": "y ∝ 1/x", "right": "Reciprocal curve (hyperbola)" },
+        { "left": "y ∝ x²", "right": "Upward-curving parabola through origin" },
+        { "left": "y ∝ √x", "right": "Curve increasing but flattening out" }
+      ]
+    },
+    "explanation": "y = kx is linear; y = k/x is a hyperbola; y = kx² is a parabola; y = k√x increases but gets flatter."
+  },
+  {
+    "id": "ratio-acceleration-from-vt-059",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": null,
+    "template": "A car accelerates from {{v1}} m/s to {{v2}} m/s in {{t}} seconds. Find the acceleration.",
+    "variables": {
+      "v1": { "type": "int", "min": 0, "max": 15 },
+      "v2": { "type": "int", "min": 20, "max": 50 },
+      "t": { "type": "int", "min": 4, "max": 15 },
+      "acc": { "type": "derived", "expr": "round((v2 - v1) / t, 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "acc",
+      "unit": "m/s²"
+    },
+    "explanation": "Acceleration = (change in velocity) ÷ time = ({{v2}} − {{v1}}) ÷ {{t}} = {{v2-v1}} ÷ {{t}} = {{acc}} m/s²."
+  },
+  {
+    "id": "ratio-unit-rate-per-item-060",
+    "topic": "ratio",
+    "difficulty": 1,
+    "image": null,
+    "template": "A worker earns £{{total}} for {{hours}} hours of work. Find the hourly rate of pay.",
+    "variables": {
+      "rate": { "type": "int", "min": 9, "max": 25 },
+      "hours": { "type": "int", "min": 4, "max": 10 },
+      "total": { "type": "derived", "expr": "rate * hours" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "rate",
+      "unit": "£/h"
+    },
+    "explanation": "Hourly rate = total pay ÷ hours = £{{total}} ÷ {{hours}} = £{{rate}}/h."
+  },
+  {
+    "id": "ratio-population-density-061",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A region has population {{pop}} and area {{area}} km². Find the population density.",
+    "variables": {
+      "dens": { "type": "int", "min": 50, "max": 500 },
+      "area": { "type": "int", "min": 10, "max": 100 },
+      "pop": { "type": "derived", "expr": "dens * area" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "dens",
+      "unit": "people/km²"
+    },
+    "explanation": "Population density = population ÷ area = {{pop}} ÷ {{area}} = {{dens}} people/km²."
+  },
+  {
+    "id": "ratio-proportion-scaling-similar-062",
+    "topic": "ratio",
+    "difficulty": 3,
+    "image": { "type": "generated", "renderer": "similar-triangles", "vars": { "a1": "{{a1}}", "b1": "{{b1}}", "a2": "{{a2}}", "unknown": "b2" } },
+    "template": "Two similar shapes have a length scale factor of {{k}}. A side of the smaller shape is {{a1}} cm. Find the corresponding side in the larger shape.",
+    "variables": {
+      "a1": { "type": "int", "min": 3, "max": 10 },
+      "k": { "type": "pick", "options": [2, 3, 4] },
+      "a2": { "type": "derived", "expr": "a1 * k" },
+      "b1": { "type": "int", "min": 4, "max": 12 }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "a2",
+      "unit": "cm"
+    },
+    "explanation": "All lengths are multiplied by the scale factor {{k}}. Corresponding side = {{a1}} × {{k}} = {{a2}} cm."
+  },
+  {
+    "id": "ratio-proportion-area-scale-factor-063",
+    "topic": "ratio",
+    "difficulty": 4,
+    "image": null,
+    "template": "Two similar shapes have lengths in the ratio {{p}} : {{q}}. The area of the smaller shape is {{aSmall}} cm². Find the area of the larger shape.",
+    "variables": {
+      "p": { "type": "int", "min": 1, "max": 4 },
+      "q": { "type": "int", "min": 3, "max": 7 },
+      "aSmall": { "type": "int", "min": 4, "max": 30 },
+      "aLarge": { "type": "derived", "expr": "aSmall * q * q / (p * p)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "aLarge",
+      "unit": "cm²"
+    },
+    "explanation": "Area scale factor = (length scale factor)² = ({{q}}/{{p}})² = {{q*q}}/{{p*p}}. Area of larger = {{aSmall}} × {{q*q}}/{{p*p}} = {{aLarge}} cm²."
+  },
+  {
+    "id": "ratio-proportion-volume-scale-factor-064",
+    "topic": "ratio",
+    "difficulty": 5,
+    "image": null,
+    "template": "Two similar solids have lengths in the ratio {{p}} : {{q}}. The volume of the smaller solid is {{vSmall}} cm³. Find the volume of the larger solid.",
+    "variables": {
+      "p": { "type": "int", "min": 1, "max": 3 },
+      "q": { "type": "int", "min": 2, "max": 5 },
+      "vSmall": { "type": "int", "min": 4, "max": 24 },
+      "vLarge": { "type": "derived", "expr": "vSmall * q * q * q / (p * p * p)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "vLarge",
+      "unit": "cm³"
+    },
+    "explanation": "Volume scale factor = (length scale factor)³ = ({{q}}/{{p}})³ = {{q*q*q}}/{{p*p*p}}. Volume of larger = {{vSmall}} × {{q*q*q}}/{{p*p*p}} = {{vLarge}} cm³."
+  },
+  {
+    "id": "ratio-compare-unit-prices-065",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "Cheese costs £{{p1}} for {{w1}} g or £{{p2}} for {{w2}} g. Find the cost per 100 g for each and state which is cheaper.",
+    "variables": {
+      "pp1": { "type": "int", "min": 40, "max": 80 },
+      "pp2": { "type": "int", "min": 30, "max": 55 },
+      "w1": { "type": "pick", "options": [200, 250, 400] },
+      "w2": { "type": "pick", "options": [500, 750, 1000] },
+      "p1": { "type": "derived", "expr": "round(pp1 * w1 / 100, 2)" },
+      "p2": { "type": "derived", "expr": "round(pp2 * w2 / 100, 2)" }
+    },
+    "answerConfig": {
+      "type": "multi_part",
+      "parts": [
+        { "label": "Cost per 100 g — pack 1 (p)", "answer": "pp1" },
+        { "label": "Cost per 100 g — pack 2 (p)", "answer": "pp2" }
+      ]
+    },
+    "explanation": "Pack 1: £{{p1}} ÷ {{w1}} g × 100 = {{pp1}}p per 100 g. Pack 2: £{{p2}} ÷ {{w2}} g × 100 = {{pp2}}p per 100 g. {{pp1 < pp2 ? 'Pack 1 is cheaper.' : 'Pack 2 is cheaper.'}}"
+  },
+  {
+    "id": "ratio-find-n-compound-066",
+    "topic": "ratio",
+    "difficulty": 5,
+    "image": null,
+    "template": "£{{P}} is invested at {{r}}% compound interest per year. After how many complete years will the investment first exceed £{{target}}?",
+    "variables": {
+      "P": { "type": "int", "min": 1000, "max": 2000 },
+      "r": { "type": "pick", "options": [5, 10, 20] },
+      "mult": { "type": "derived", "expr": "(100 + r) / 100" },
+      "target": { "type": "derived", "expr": "round(P * pow((100+r)/100, 4), 0)" },
+      "n": { "type": "derived", "expr": "4" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "n",
+      "unit": "years"
+    },
+    "explanation": "Need P × ({{mult}})^n > {{target}}. Check: after 3 years: £{{round(compound(P, r/100, 3), 2)}}; after 4 years: £{{round(compound(P, r/100, 4), 2)}}. First exceeds £{{target}} after {{n}} complete years."
+  },
+  {
+    "id": "ratio-sdt-convert-minutes-067",
+    "topic": "ratio",
+    "difficulty": 2,
+    "image": null,
+    "template": "A cyclist travels {{dist}} km at an average speed of {{speed}} km/h. How long does this take? Give your answer in minutes.",
+    "variables": {
+      "speed": { "type": "int", "min": 10, "max": 30 },
+      "mins": { "type": "pick", "options": [15, 20, 30, 40, 45, 60, 90] },
+      "dist": { "type": "derived", "expr": "round(speed * mins / 60, 2)" },
+      "ans": { "type": "derived", "expr": "mins" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "ans",
+      "unit": "minutes"
+    },
+    "explanation": "Time = distance ÷ speed = {{dist}} ÷ {{speed}} = {{round(dist/speed, 4)}} hours = {{round(dist/speed, 4)}} × 60 = {{ans}} minutes."
+  }
+]

@@ -1,0 +1,1982 @@
+[
+  {
+    "id": "cell-biology-prokaryotic-features-001",
+    "topic": "cell-biology",
+    "difficulty": 1,
+    "image": null,
+    "template": "Which of the following features is found in prokaryotic cells but NOT in eukaryotic cells?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Plasmid DNA",
+        "Mitochondria",
+        "Cell membrane",
+        "Ribosomes"
+      ],
+      "answer": "Plasmid DNA"
+    },
+    "explanation": "Prokaryotic cells contain small circular loops of DNA called plasmids, in addition to their main circular chromosome. Eukaryotic cells have linear chromosomes in a nucleus and do not contain plasmids. Both cell types have cell membranes and ribosomes. Mitochondria are only in eukaryotic cells."
+  },
+  {
+    "id": "cell-biology-eukaryotic-organelles-002",
+    "topic": "cell-biology",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each organelle to its correct function.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Mitochondria",
+          "right": "Site of aerobic respiration"
+        },
+        {
+          "left": "Ribosome",
+          "right": "Site of protein synthesis"
+        },
+        {
+          "left": "Cell membrane",
+          "right": "Controls what enters and leaves the cell"
+        },
+        {
+          "left": "Nucleus",
+          "right": "Contains genetic material (DNA)"
+        }
+      ]
+    },
+    "explanation": "Mitochondria produce ATP via aerobic respiration. Ribosomes translate mRNA into proteins. The cell membrane is selectively permeable, regulating transport. The nucleus houses the cell's chromosomal DNA."
+  },
+  {
+    "id": "cell-biology-magnification-calc-003",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "A cell is {{actual}} μm long. When viewed under a microscope, the image is {{image}} mm long. Calculate the magnification.",
+    "variables": {
+      "actual": {
+        "type": "pick",
+        "options": [
+          20,
+          25,
+          40,
+          50,
+          100
+        ]
+      },
+      "mag": {
+        "type": "pick",
+        "options": [
+          100,
+          200,
+          400,
+          500,
+          1000
+        ]
+      },
+      "image": {
+        "type": "derived",
+        "expr": "actual * mag / 1000"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "mag"
+    },
+    "explanation": "Magnification = image size ÷ actual size. Convert units first: actual = {{actual}} μm = {{actual / 1000}} mm. Image = {{image}} mm. Magnification = {{image}} ÷ {{actual / 1000}} = ×{{mag}}."
+  },
+  {
+    "id": "cell-biology-actual-size-calc-004",
+    "topic": "cell-biology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Under a microscope at ×{{mag}} magnification, an organelle measures {{image}} mm in the image. Calculate the actual size in micrometres (μm).",
+    "variables": {
+      "mag": {
+        "type": "pick",
+        "options": [
+          100,
+          200,
+          400,
+          1000
+        ]
+      },
+      "actual_um": {
+        "type": "pick",
+        "options": [
+          5,
+          10,
+          20,
+          25,
+          50
+        ]
+      },
+      "image": {
+        "type": "derived",
+        "expr": "round(actual_um * mag / 1000, 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "actual_um",
+      "unit": "μm"
+    },
+    "explanation": "Actual size = image size ÷ magnification. Image = {{image}} mm. Actual = {{image}} ÷ {{mag}} = {{round(image/mag, 6)}} mm. Convert to μm: multiply by 1000 = {{actual_um}} μm."
+  },
+  {
+    "id": "cell-biology-mitosis-order-005",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the stages of mitosis from first to last.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Prophase — chromosomes condense and become visible",
+        "Metaphase — chromosomes align at the cell equator",
+        "Anaphase — sister chromatids are pulled to opposite poles",
+        "Telophase — nuclear envelopes reform around each set of chromosomes",
+        "Cytokinesis — cytoplasm divides to form two daughter cells"
+      ]
+    },
+    "explanation": "Mitosis produces two genetically identical daughter cells: Prophase → Metaphase → Anaphase → Telophase → Cytokinesis. A useful mnemonic is PMAT (plus cytokinesis)."
+  },
+  {
+    "id": "cell-biology-diffusion-definition-006",
+    "topic": "cell-biology",
+    "difficulty": 1,
+    "image": null,
+    "template": "Diffusion is the net movement of particles from a region of ___ concentration to a region of ___ concentration.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answer": "high — low"
+    },
+    "explanation": "Diffusion is the random net movement of particles down a concentration gradient (from high to low concentration). No energy is required — it is a passive process."
+  },
+  {
+    "id": "cell-biology-osmosis-definition-007",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "A plant cell is placed in a solution with a higher solute concentration than the cell's cytoplasm. Which direction will water move by osmosis?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Out of the cell into the solution",
+        "Into the cell from the solution",
+        "No net movement occurs",
+        "Into the nucleus"
+      ],
+      "answer": "Out of the cell into the solution"
+    },
+    "explanation": "Osmosis is the movement of water through a partially permeable membrane from a dilute solution (high water potential) to a concentrated solution (low water potential). The external solution has a higher solute concentration (lower water potential), so water moves OUT of the cell. This causes the cell to become plasmolysed."
+  },
+  {
+    "id": "cell-biology-active-transport-008",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select all statements that correctly describe active transport.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "It requires energy (ATP)",
+        "It moves particles against a concentration gradient",
+        "It moves particles from high to low concentration",
+        "It requires carrier proteins"
+      ],
+      "correctOptions": [
+        "It requires energy (ATP)",
+        "It moves particles against a concentration gradient",
+        "It requires carrier proteins"
+      ]
+    },
+    "explanation": "Active transport uses ATP energy and carrier proteins to move substances against their concentration gradient (low to high). This is how root hair cells absorb mineral ions from the soil even when the soil concentration is lower than inside the root."
+  },
+  {
+    "id": "cell-biology-stem-cells-009",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the difference between embryonic stem cells and adult stem cells in terms of differentiation potential?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Embryonic stem cells are pluripotent; adult stem cells are more limited",
+        "Adult stem cells are pluripotent; embryonic stem cells are more limited",
+        "Both can differentiate into any cell type",
+        "Neither type can differentiate once removed from the body"
+      ],
+      "answer": "Embryonic stem cells are pluripotent; adult stem cells are more limited"
+    },
+    "explanation": "Embryonic stem cells are pluripotent — they can differentiate into almost any cell type in the body. Adult stem cells (e.g. in bone marrow) are multipotent — they can only differentiate into a limited range of cell types related to their tissue of origin."
+  },
+  {
+    "id": "cell-biology-cancer-mitosis-010",
+    "topic": "cell-biology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how uncontrolled mitosis leads to the formation of a tumour.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Mutations in genes controlling cell division cause cells to divide uncontrollably, forming a mass of cells called a tumour.",
+      "acceptedAnswers": [
+        "Mutations in genes controlling cell division cause cells to divide uncontrollably, forming a mass of cells called a tumour.",
+        "Uncontrolled cell division forms a tumour",
+        "Mutations cause uncontrolled mitosis forming a tumour"
+      ]
+    },
+    "explanation": "Normally, genes called tumour-suppressor genes and proto-oncogenes regulate cell division. Mutations to these genes (e.g. from UV radiation, carcinogens) can cause cells to bypass normal controls, dividing uncontrollably. This forms a mass of abnormal cells — a tumour. Malignant tumours can spread (metastasise) to other parts of the body."
+  },
+  {
+    "id": "cell-biology-prokaryote-vs-eukaryote-011",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which of the following statements about prokaryotic cells is TRUE?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "They have a cell wall made of peptidoglycan and no membrane-bound nucleus",
+        "They have a membrane-bound nucleus and mitochondria",
+        "They are generally larger than eukaryotic cells",
+        "They contain 80S ribosomes, the same size as eukaryotic ribosomes"
+      ],
+      "answer": "They have a cell wall made of peptidoglycan and no membrane-bound nucleus"
+    },
+    "explanation": "Prokaryotic cells have a peptidoglycan cell wall and no membrane-bound nucleus — their DNA floats freely in the cytoplasm. They are typically 1–10 μm, smaller than eukaryotic cells (10–100 μm). They have smaller 70S ribosomes (eukaryotes have 80S)."
+  },
+  {
+    "id": "cell-biology-surface-area-volume-012",
+    "topic": "cell-biology",
+    "difficulty": 4,
+    "image": null,
+    "template": "A cube-shaped cell has a side length of {{l}} μm. Calculate the surface area to volume ratio.",
+    "variables": {
+      "l": {
+        "type": "pick",
+        "options": [
+          2,
+          4,
+          5,
+          10
+        ]
+      },
+      "sa": {
+        "type": "derived",
+        "expr": "6 * l * l"
+      },
+      "vol": {
+        "type": "derived",
+        "expr": "l * l * l"
+      },
+      "ratio": {
+        "type": "derived",
+        "expr": "round(6 * l * l / (l * l * l), 2)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "ratio",
+      "unit": ":1"
+    },
+    "explanation": "Surface area = 6 × l² = 6 × {{l}}² = {{sa}} μm². Volume = l³ = {{l}}³ = {{vol}} μm³. SA:V ratio = {{sa}} ÷ {{vol}} = {{ratio}}:1. Smaller cells have a larger SA:V ratio, allowing faster diffusion of substances into and out of the cell."
+  },
+  {
+    "id": "cell-biology-specialised-cells-013",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each specialised cell to its adaptation.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Red blood cell",
+          "right": "Biconcave shape and no nucleus to carry maximum haemoglobin"
+        },
+        {
+          "left": "Sperm cell",
+          "right": "Has a tail (flagellum) and many mitochondria for energy"
+        },
+        {
+          "left": "Root hair cell",
+          "right": "Long extension increases surface area for water and ion absorption"
+        },
+        {
+          "left": "Ciliated epithelial cell",
+          "right": "Has cilia to sweep mucus and trapped particles up the trachea"
+        }
+      ]
+    },
+    "explanation": "Each cell is adapted for its function: red blood cells maximise oxygen transport; sperm cells are built for motility; root hair cells maximise absorption; ciliated cells keep airways clear."
+  },
+  {
+    "id": "cell-biology-cell-cycle-checkpoints-014",
+    "topic": "cell-biology",
+    "difficulty": 4,
+    "image": null,
+    "template": "A scientist treats cells with a drug that blocks DNA replication. At which stage of the cell cycle would cells arrest?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "S phase (DNA synthesis phase) of interphase",
+        "Prophase",
+        "Anaphase",
+        "Telophase"
+      ],
+      "answer": "S phase (DNA synthesis phase) of interphase"
+    },
+    "explanation": "The cell cycle includes interphase (G1 → S → G2) and mitosis. DNA replication occurs during S phase (synthesis phase) of interphase. Blocking DNA replication would arrest the cell in S phase before the cell can enter mitosis."
+  },
+  {
+    "id": "organisation-enzyme-ph-001",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each digestive enzyme to its optimum pH and location.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Salivary amylase",
+          "right": "pH ~7, mouth"
+        },
+        {
+          "left": "Pepsin",
+          "right": "pH ~2, stomach"
+        },
+        {
+          "left": "Pancreatic lipase",
+          "right": "pH ~7.5–8, small intestine"
+        },
+        {
+          "left": "Intestinal protease (trypsin)",
+          "right": "pH ~8, small intestine"
+        }
+      ]
+    },
+    "explanation": "Each enzyme works best at the pH of its location. Pepsin is secreted into the acidic stomach (pH ~2). Salivary amylase works in the neutral mouth. Pancreatic enzymes work in the alkaline small intestine (bile raises pH from stomach acid to ~7.5–8)."
+  },
+  {
+    "id": "organisation-heart-structure-002",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select all correct statements about the structure of the heart.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "The left ventricle has a thicker wall than the right ventricle",
+        "The pulmonary artery carries oxygenated blood",
+        "The atrioventricular valves prevent backflow of blood",
+        "The heart is supplied with blood by the coronary arteries"
+      ],
+      "correctOptions": [
+        "The left ventricle has a thicker wall than the right ventricle",
+        "The atrioventricular valves prevent backflow of blood",
+        "The heart is supplied with blood by the coronary arteries"
+      ]
+    },
+    "explanation": "The left ventricle pumps blood around the entire systemic (body) circulation, so it has a much thicker muscular wall than the right ventricle. The pulmonary artery carries deoxygenated blood to the lungs (arteries carry blood AWAY from the heart). Atrioventricular valves (mitral and tricuspid) prevent backflow from ventricles to atria. The coronary arteries supply the heart muscle itself with oxygen and glucose."
+  },
+  {
+    "id": "organisation-blood-vessel-comparison-003",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the blood vessels from highest to lowest blood pressure.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Aorta (largest artery leaving the heart)",
+        "Medium artery",
+        "Arteriole",
+        "Capillary",
+        "Venule",
+        "Vena cava (large vein returning to heart)"
+      ]
+    },
+    "explanation": "Blood pressure is highest in the aorta immediately after leaving the heart, and decreases progressively through arteries → arterioles → capillaries → venules → veins. The vena cava has the lowest pressure of these vessels."
+  },
+  {
+    "id": "organisation-gas-exchange-004",
+    "topic": "organisation",
+    "difficulty": 3,
+    "image": null,
+    "template": "List THREE structural features of alveoli that make them efficient for gas exchange.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Large surface area, thin walls (one cell thick), rich blood supply/capillary network",
+      "acceptedAnswers": [
+        "Large surface area, thin walls (one cell thick), rich blood supply/capillary network",
+        "large surface area, thin walls, good blood supply",
+        "many alveoli increase surface area, thin epithelium, capillary network"
+      ]
+    },
+    "explanation": "Alveoli are efficient for gas exchange because: (1) There are ~700 million alveoli giving a huge surface area (~70 m²); (2) Walls are one cell thick, giving a short diffusion pathway; (3) They are surrounded by a dense capillary network maintaining a steep concentration gradient; (4) The walls are moist, allowing gases to dissolve."
+  },
+  {
+    "id": "organisation-transpiration-calc-005",
+    "topic": "organisation",
+    "difficulty": 3,
+    "image": null,
+    "template": "A plant loses {{mass_loss}} g of water by transpiration over {{time}} hours. Calculate the rate of transpiration in g/h.",
+    "variables": {
+      "rate": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      },
+      "time": {
+        "type": "int",
+        "min": 2,
+        "max": 6
+      },
+      "mass_loss": {
+        "type": "derived",
+        "expr": "rate * time"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "rate",
+      "unit": "g/h"
+    },
+    "explanation": "Rate of transpiration = mass of water lost ÷ time = {{mass_loss}} g ÷ {{time}} h = {{rate}} g/h. Factors that increase transpiration rate include higher temperature, lower humidity, increased light intensity (opens stomata), and increased wind speed."
+  },
+  {
+    "id": "organisation-xylem-phloem-006",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each tissue to its correct description.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Xylem",
+          "right": "Transports water and mineral ions upward; made of dead cells"
+        },
+        {
+          "left": "Phloem",
+          "right": "Transports sugars (sucrose) up and down; made of living cells"
+        }
+      ]
+    },
+    "explanation": "Xylem transports water and dissolved minerals from roots to leaves via the transpiration stream. Xylem cells are dead at maturity, forming hollow tubes with lignified walls. Phloem transports sugars (mainly sucrose) produced by photosynthesis to all parts of the plant — this process is called translocation. Phloem cells are living and include sieve tube elements and companion cells."
+  },
+  {
+    "id": "organisation-food-tests-007",
+    "topic": "organisation",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each food test to the substance it detects and the positive result.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Benedict's test",
+          "right": "Reducing sugars — brick red/orange precipitate"
+        },
+        {
+          "left": "Iodine test",
+          "right": "Starch — blue-black colour"
+        },
+        {
+          "left": "Biuret test",
+          "right": "Proteins — purple/violet colour"
+        },
+        {
+          "left": "Emulsion test",
+          "right": "Lipids — white milky emulsion forms"
+        }
+      ]
+    },
+    "explanation": "These are standard food tests: Benedict's for reducing sugars (e.g. glucose); iodine solution for starch; Biuret reagent (NaOH + CuSO₄) for proteins; emulsion test (dissolve in ethanol, add water) for lipids."
+  },
+  {
+    "id": "organisation-digestive-organs-008",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the structures a food molecule passes through during digestion and absorption.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Mouth — mechanical and chemical digestion begins",
+        "Oesophagus — food is moved by peristalsis",
+        "Stomach — acid and protease enzymes digest proteins",
+        "Small intestine — enzymes from pancreas complete digestion; villi absorb nutrients",
+        "Large intestine — water is absorbed from undigested material",
+        "Rectum and anus — faeces are stored and egested"
+      ]
+    },
+    "explanation": "Food passes: mouth → oesophagus → stomach → small intestine (duodenum then ileum) → large intestine (colon) → rectum → anus. Most enzymatic digestion and nutrient absorption occurs in the small intestine."
+  },
+  {
+    "id": "organisation-coronary-heart-disease-009",
+    "topic": "organisation",
+    "difficulty": 3,
+    "image": null,
+    "template": "A patient has coronary heart disease where a coronary artery is 70% blocked by fatty deposits. Explain how this increases the risk of a heart attack.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Fatty deposits (atheroma) narrow the coronary artery, reducing blood flow to heart muscle. Less oxygen and glucose reach cardiac muscle cells, so they cannot respire aerobically. If blood flow is blocked entirely (by a clot), heart muscle cells die causing a heart attack.",
+      "acceptedAnswers": [
+        "Fatty deposits (atheroma) narrow the coronary artery, reducing blood flow to heart muscle. Less oxygen and glucose reach cardiac muscle cells, so they cannot respire aerobically. If blood flow is blocked entirely (by a clot), heart muscle cells die causing a heart attack.",
+        "The blockage reduces blood/oxygen supply to heart muscle which can cause cells to die",
+        "Reduced blood flow means heart muscle gets less oxygen and may die"
+      ]
+    },
+    "explanation": "Fatty plaques (atheroma) build up in the walls of coronary arteries in a process called atherosclerosis. This narrows the lumen, reducing blood flow to cardiac muscle. Blood clots (thrombi) can form on the rough plaques, potentially blocking the artery completely. Without oxygen/glucose, the cardiac muscle cells cannot respire and die — causing a myocardial infarction (heart attack)."
+  },
+  {
+    "id": "organisation-bile-function-010",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "What are the TWO roles of bile in digestion?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Emulsifies fats into smaller droplets",
+        "Neutralises stomach acid in the small intestine",
+        "Directly digests proteins into amino acids",
+        "Produces hydrochloric acid"
+      ],
+      "correctOptions": [
+        "Emulsifies fats into smaller droplets",
+        "Neutralises stomach acid in the small intestine"
+      ]
+    },
+    "explanation": "Bile is produced in the liver and stored in the gall bladder. It serves two purposes: (1) It emulsifies fats — breaking large fat globules into tiny droplets, increasing the surface area for lipase to work on; (2) It neutralises the acidic chyme from the stomach, creating the alkaline conditions needed for intestinal and pancreatic enzymes to work optimally."
+  },
+  {
+    "id": "organisation-heart-rate-calc-011",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "A person's heart beats {{beats}} times in {{time}} minutes. Calculate their heart rate in beats per minute (bpm).",
+    "variables": {
+      "hr": {
+        "type": "pick",
+        "options": [
+          60,
+          70,
+          72,
+          75,
+          80,
+          90,
+          100
+        ]
+      },
+      "time": {
+        "type": "int",
+        "min": 2,
+        "max": 5
+      },
+      "beats": {
+        "type": "derived",
+        "expr": "hr * time"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "hr",
+      "unit": "bpm"
+    },
+    "explanation": "Heart rate = number of beats ÷ time in minutes = {{beats}} ÷ {{time}} = {{hr}} bpm. A resting heart rate of 60–100 bpm is considered normal for adults."
+  },
+  {
+    "id": "organisation-villus-adaptations-012",
+    "topic": "organisation",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why the small intestine is well adapted for absorption.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Villi and microvilli (brush border) greatly increase surface area. Villi have a single layer of epithelium for a short diffusion distance. They have a good blood supply (capillaries and lacteals) to maintain concentration gradients.",
+      "acceptedAnswers": [
+        "Villi and microvilli (brush border) greatly increase surface area. Villi have a single layer of epithelium for a short diffusion distance. They have a good blood supply (capillaries and lacteals) to maintain concentration gradients.",
+        "large surface area due to villi and microvilli, thin walls, good blood supply",
+        "villi increase surface area, thin epithelium, dense capillary network"
+      ]
+    },
+    "explanation": "The small intestine is adapted for absorption by: (1) Villi — finger-like projections that massively increase surface area; (2) Microvilli on each villus cell (brush border) — further increase surface area; (3) Single-cell-thick epithelium — short diffusion distance; (4) Dense capillary network in each villus — rapidly removes absorbed nutrients maintaining steep concentration gradient; (5) Lacteals — absorb fatty acids and glycerol into the lymphatic system."
+  },
+  {
+    "id": "organisation-blood-components-013",
+    "topic": "organisation",
+    "difficulty": 1,
+    "image": null,
+    "template": "Which blood component is responsible for clotting?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Platelets",
+        "Red blood cells",
+        "White blood cells",
+        "Plasma"
+      ],
+      "answer": "Platelets"
+    },
+    "explanation": "Platelets (thrombocytes) are small cell fragments that initiate blood clotting (coagulation) when a blood vessel is damaged. They clump together and release chemicals that trigger a cascade forming a fibrin mesh — the clot. Plasma is the liquid component that transports dissolved substances. Red blood cells carry oxygen. White blood cells are involved in immunity."
+  },
+  {
+    "id": "infection-response-pathogen-types-001",
+    "topic": "infection-response",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each disease to the type of pathogen that causes it.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Malaria",
+          "right": "Protist (Plasmodium)"
+        },
+        {
+          "left": "Tuberculosis (TB)",
+          "right": "Bacterium (Mycobacterium tuberculosis)"
+        },
+        {
+          "left": "Influenza",
+          "right": "Virus"
+        },
+        {
+          "left": "Athlete's foot",
+          "right": "Fungus (Tinea)"
+        }
+      ]
+    },
+    "explanation": "Malaria is caused by the protist Plasmodium, spread by Anopheles mosquitoes (vectors). TB is a bacterial infection spread by airborne droplets. Influenza is a viral infection. Athlete's foot is a fungal infection of the skin between the toes."
+  },
+  {
+    "id": "infection-response-viral-reproduction-002",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "Why are antibiotics ineffective against viral infections such as influenza?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Viruses have no cell wall or metabolism for antibiotics to target",
+        "Viruses are too large for antibiotics to enter",
+        "Viruses produce enzymes that break down antibiotics",
+        "The immune system destroys antibiotics before they reach viruses"
+      ],
+      "answer": "Viruses have no cell wall or metabolism for antibiotics to target"
+    },
+    "explanation": "Antibiotics work by targeting bacterial structures (e.g. cell walls, ribosomes) or processes (e.g. DNA replication) that bacteria have but human cells do not. Viruses are acellular — they have no cell wall, no metabolism of their own, and replicate using host cell machinery. There is nothing for antibiotics to target in a virus."
+  },
+  {
+    "id": "infection-response-antibody-action-003",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how antibodies help the immune system destroy pathogens.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Antibodies bind to specific antigens on pathogen surfaces. This can neutralise pathogens, agglutinate them, or mark them for destruction by phagocytes.",
+      "acceptedAnswers": [
+        "Antibodies bind to specific antigens on pathogen surfaces. This can neutralise pathogens, agglutinate them, or mark them for destruction by phagocytes.",
+        "Antibodies bind to antigens on pathogens, neutralising them or marking them for phagocytosis",
+        "Antibodies have complementary shape to antigens on pathogens; binding leads to pathogen destruction"
+      ]
+    },
+    "explanation": "Each antibody has a specific binding site complementary to a particular antigen. When antibodies bind to pathogen antigens they can: (1) Neutralise toxins produced by bacteria; (2) Agglutinate (clump) pathogens together, preventing them spreading; (3) Act as opsonins — marking pathogens for destruction by phagocytes (white blood cells that engulf and digest pathogens by phagocytosis)."
+  },
+  {
+    "id": "infection-response-vaccination-004",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the events that occur following vaccination.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "A dead/weakened pathogen or its antigens are injected",
+        "The immune system detects the foreign antigens",
+        "B lymphocytes produce specific antibodies against the antigens",
+        "Memory cells are produced that remain in the body long term",
+        "If the real pathogen is encountered later, memory cells rapidly produce large amounts of antibody"
+      ]
+    },
+    "explanation": "Vaccination creates immunological memory without causing disease. The rapid secondary immune response from memory cells means the pathogen is destroyed before symptoms develop. Herd immunity occurs when enough of a population is immune that spread of disease is prevented."
+  },
+  {
+    "id": "infection-response-drug-development-005",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "In a clinical trial, a new antibiotic is tested in three phases. Which phase first tests the drug on a large group of patients to assess efficacy?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Phase 3",
+        "Phase 1",
+        "Phase 2",
+        "Pre-clinical testing"
+      ],
+      "answer": "Phase 3"
+    },
+    "explanation": "Clinical trial phases: Pre-clinical — tested on cells and animals. Phase 1 — small group of healthy volunteers (safety, dosage). Phase 2 — small group of patients (efficacy, side effects). Phase 3 — large group of patients, often randomised controlled trial (double-blind) comparing drug to placebo. Phase 3 provides robust evidence of efficacy. After phase 3, the drug may be licensed."
+  },
+  {
+    "id": "infection-response-antibiotic-resistance-006",
+    "topic": "infection-response",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain, using natural selection, how antibiotic-resistant bacteria develop in a population.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Random mutations in bacteria occasionally produce resistance. When antibiotics are used, non-resistant bacteria are killed but resistant ones survive and reproduce, passing the resistance gene on. Over many generations the proportion of resistant bacteria increases.",
+      "acceptedAnswers": [
+        "Random mutations in bacteria occasionally produce resistance. When antibiotics are used, non-resistant bacteria are killed but resistant ones survive and reproduce, passing the resistance gene on. Over many generations the proportion of resistant bacteria increases.",
+        "Mutation creates resistant variants; antibiotic acts as selection pressure; resistant bacteria survive and reproduce; resistance spreads",
+        "Natural selection: random mutation gives some bacteria resistance; selective pressure of antibiotic kills non-resistant; resistant survive and reproduce"
+      ]
+    },
+    "explanation": "This is evolution by natural selection: (1) Random mutations in bacteria can produce alleles conferring antibiotic resistance; (2) Antibiotic use creates a selection pressure — non-resistant bacteria are killed; (3) Resistant bacteria survive, reproduce and pass on resistance genes; (4) Over generations, resistant alleles become more frequent. Overuse of antibiotics accelerates this. MRSA (methicillin-resistant Staphylococcus aureus) is a key example."
+  },
+  {
+    "id": "infection-response-disease-spread-007",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select all correct methods by which pathogens can be spread.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Direct contact (touching infected surfaces or people)",
+        "Droplet transmission in air (coughing and sneezing)",
+        "Contaminated food and water",
+        "Being within 10 metres of an infected person"
+      ],
+      "correctOptions": [
+        "Direct contact (touching infected surfaces or people)",
+        "Droplet transmission in air (coughing and sneezing)",
+        "Contaminated food and water"
+      ]
+    },
+    "explanation": "Pathogens spread by: direct contact (skin-to-skin, or touching contaminated surfaces — fomites); droplet transmission (respiratory droplets from coughing/sneezing carry viruses and bacteria); contaminated food and water (e.g. cholera, salmonella); vectors (e.g. mosquitoes spreading malaria). Simply being within 10 metres is not a specific transmission route."
+  },
+  {
+    "id": "infection-response-monoclonal-antibodies-008",
+    "topic": "infection-response",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain ONE medical use of monoclonal antibodies.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Monoclonal antibodies can be used in cancer treatment — they are targeted to cancer cell antigens and can carry toxic drugs directly to cancer cells, reducing side effects on healthy tissue.",
+      "acceptedAnswers": [
+        "Monoclonal antibodies can be used in cancer treatment — they are targeted to cancer cell antigens and can carry toxic drugs directly to cancer cells, reducing side effects on healthy tissue.",
+        "Used in pregnancy tests to detect HCG hormone",
+        "Used to target cancer cells specifically",
+        "Used in diagnostic tests to detect specific antigens"
+      ]
+    },
+    "explanation": "Monoclonal antibodies are identical antibodies produced by a single clone of B cells, all with the same antigen-binding site. Medical uses include: (1) Cancer treatment — antibodies targeted to cancer cell antigens can carry drugs/radioactive markers directly to tumour cells (magic bullet therapy); (2) Diagnosis — pregnancy tests detect the hormone HCG; (3) Research — used to detect and measure specific molecules."
+  },
+  {
+    "id": "infection-response-infection-control-009",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which of the following is NOT a way to reduce the spread of communicable diseases?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Eating a balanced diet",
+        "Vaccination programmes",
+        "Isolating infected individuals",
+        "Improving hygiene and sanitation"
+      ],
+      "answer": "Eating a balanced diet"
+    },
+    "explanation": "Measures to reduce disease spread include: vaccination (creates herd immunity); isolation of infected individuals (reduces transmission); improved hygiene (handwashing, clean water); vector control (e.g. mosquito nets for malaria). Eating a balanced diet strengthens the immune system but does not directly reduce transmission of communicable diseases."
+  },
+  {
+    "id": "infection-response-phagocytosis-010",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the stages of phagocytosis.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Phagocyte detects chemical signals from pathogens and moves towards them",
+        "Phagocyte engulfs the pathogen by surrounding it with its cell membrane",
+        "A phagosome (vacuole) forms containing the pathogen",
+        "Lysosomes fuse with the phagosome",
+        "Digestive enzymes break down and destroy the pathogen"
+      ]
+    },
+    "explanation": "Phagocytosis (literally 'cell eating') is part of the non-specific immune response. Phagocytes (neutrophils and macrophages) destroy pathogens regardless of their type. After digesting pathogens, phagocytes may present antigens on their surface, activating the specific immune response."
+  },
+  {
+    "id": "infection-response-vaccine-components-011",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "A vaccine contains weakened Mycobacterium bovis (BCG vaccine) to protect against tuberculosis. Why might this still trigger an immune response?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The bacteria still carry antigens that the immune system recognises as foreign",
+        "The weakened bacteria can replicate normally in the body",
+        "The vaccine contains antibodies from healthy donors",
+        "The bacteria release antibiotics that stimulate white blood cells"
+      ],
+      "answer": "The bacteria still carry antigens that the immune system recognises as foreign"
+    },
+    "explanation": "Even though the bacteria are attenuated (weakened/killed), they still carry surface antigens that the immune system recognises as non-self (foreign). B lymphocytes produce antibodies against these antigens, and memory cells are formed. If the person is later exposed to active TB, the memory cells mount a rapid response."
+  },
+  {
+    "id": "infection-response-double-blind-trial-012",
+    "topic": "infection-response",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain why double-blind clinical trials are used when testing new drugs.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "In a double-blind trial, neither patients nor doctors know who receives the drug or placebo. This eliminates placebo effect and observer bias, making results more reliable and valid.",
+      "acceptedAnswers": [
+        "In a double-blind trial, neither patients nor doctors know who receives the drug or placebo. This eliminates placebo effect and observer bias, making results more reliable and valid.",
+        "Neither patient nor researcher knows who has the drug; prevents placebo effect and bias",
+        "Removes bias — patients don't know if they have drug or placebo, and researchers don't know either"
+      ]
+    },
+    "explanation": "In a double-blind trial: patients don't know if they're taking the drug or a placebo (inert treatment) — this prevents the placebo effect; doctors/researchers don't know which patients are in which group — this prevents observer bias in recording symptoms. An independent statistician holds the coding. This design produces the most reliable evidence of a drug's true efficacy."
+  },
+  {
+    "id": "bioenergetics-photosynthesis-equation-001",
+    "topic": "bioenergetics",
+    "difficulty": 1,
+    "image": null,
+    "template": "Write the word equation for photosynthesis.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answer": "carbon dioxide + water → glucose + oxygen"
+    },
+    "explanation": "Photosynthesis: carbon dioxide + water → glucose + oxygen. Light energy and chlorophyll are required. The symbol equation is: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂. Glucose is used for respiration, growth, or converted to starch for storage."
+  },
+  {
+    "id": "bioenergetics-limiting-factors-002",
+    "topic": "bioenergetics",
+    "difficulty": 3,
+    "image": null,
+    "template": "A farmer increases the CO₂ concentration in a greenhouse from 0.04% to 0.1%, but the rate of photosynthesis does not increase. Explain why.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Another factor (e.g. light intensity or temperature) is now the limiting factor",
+        "CO₂ is now too concentrated and inhibits photosynthesis",
+        "The plants have all the CO₂ they need at 0.04%",
+        "Increasing CO₂ always increases the rate of photosynthesis"
+      ],
+      "answer": "Another factor (e.g. light intensity or temperature) is now the limiting factor"
+    },
+    "explanation": "A limiting factor is the factor present in the lowest amount that restricts the rate of a process. When CO₂ is increased but rate doesn't increase, another factor has become limiting — typically light intensity or temperature. At high CO₂ levels, the enzymes involved in the Calvin cycle may be working at maximum rate, so only increasing temperature (more kinetic energy) or light (more energy for light-dependent reactions) would further increase rate."
+  },
+  {
+    "id": "bioenergetics-rate-photosynthesis-calc-003",
+    "topic": "bioenergetics",
+    "difficulty": 3,
+    "image": null,
+    "template": "In an experiment, a water plant produces {{bubbles}} oxygen bubbles in {{time}} minutes. Calculate the rate of photosynthesis in bubbles per minute.",
+    "variables": {
+      "rate": {
+        "type": "int",
+        "min": 5,
+        "max": 20
+      },
+      "time": {
+        "type": "int",
+        "min": 2,
+        "max": 6
+      },
+      "bubbles": {
+        "type": "derived",
+        "expr": "rate * time"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "rate",
+      "unit": "bubbles/min"
+    },
+    "explanation": "Rate = number of bubbles ÷ time = {{bubbles}} ÷ {{time}} = {{rate}} bubbles/min. In experiments with aquatic plants (e.g. Elodea), counting oxygen bubbles is a way to measure the rate of photosynthesis, though volume of gas collected is more accurate."
+  },
+  {
+    "id": "bioenergetics-aerobic-respiration-004",
+    "topic": "bioenergetics",
+    "difficulty": 1,
+    "image": null,
+    "template": "Write the word equation for aerobic respiration.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answer": "glucose + oxygen → carbon dioxide + water"
+    },
+    "explanation": "Aerobic respiration: glucose + oxygen → carbon dioxide + water (+ATP energy). This occurs in the mitochondria. The symbol equation is: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O. It releases much more ATP than anaerobic respiration (~36–38 ATP per glucose)."
+  },
+  {
+    "id": "bioenergetics-anaerobic-respiration-005",
+    "topic": "bioenergetics",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each organism to its anaerobic respiration product.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Human muscle cells (during intense exercise)",
+          "right": "Lactic acid"
+        },
+        {
+          "left": "Yeast cells (in absence of oxygen)",
+          "right": "Ethanol and carbon dioxide"
+        }
+      ]
+    },
+    "explanation": "Anaerobic respiration in humans: glucose → lactic acid (+ small amount of ATP). This occurs when oxygen demand exceeds supply during intense exercise. Anaerobic respiration in yeast (fermentation): glucose → ethanol + carbon dioxide. This is used in brewing and bread-making."
+  },
+  {
+    "id": "bioenergetics-rq-calculation-006",
+    "topic": "bioenergetics",
+    "difficulty": 4,
+    "image": null,
+    "template": "An organism produces {{co2}} cm³ of CO₂ and consumes {{o2}} cm³ of O₂ per minute. Calculate the respiratory quotient (RQ).",
+    "variables": {
+      "rq_x10": {
+        "type": "pick",
+        "options": [
+          7,
+          8,
+          10,
+          12,
+          14
+        ]
+      },
+      "o2": {
+        "type": "int",
+        "min": 10,
+        "max": 20
+      },
+      "co2": {
+        "type": "derived",
+        "expr": "round(o2 * rq_x10 / 10, 0)"
+      },
+      "rq": {
+        "type": "derived",
+        "expr": "round(rq_x10 / 10, 1)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "rq"
+    },
+    "explanation": "RQ = CO₂ produced ÷ O₂ consumed = {{co2}} ÷ {{o2}} = {{rq}}. RQ for carbohydrates = 1.0 (equal volumes of CO₂ and O₂). RQ for fats ≈ 0.7 (less CO₂ produced per O₂ used). RQ for proteins ≈ 0.8–0.9. An RQ > 1 indicates anaerobic respiration is also occurring."
+  },
+  {
+    "id": "bioenergetics-atp-role-007",
+    "topic": "bioenergetics",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the role of ATP in cells?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "It is the immediate energy currency of the cell, released when hydrolysed",
+        "It stores genetic information for protein synthesis",
+        "It transports oxygen from lungs to tissues",
+        "It is the main structural component of cell membranes"
+      ],
+      "answer": "It is the immediate energy currency of the cell, released when hydrolysed"
+    },
+    "explanation": "ATP (adenosine triphosphate) is the universal energy currency. When ATP is hydrolysed to ADP + inorganic phosphate, energy is released for cellular processes (active transport, muscle contraction, protein synthesis, cell division). ATP is produced by respiration and used directly at the site of energy need. It cannot be stored in large quantities — it is regenerated continuously from ADP."
+  },
+  {
+    "id": "bioenergetics-chlorophyll-light-008",
+    "topic": "bioenergetics",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select all correct statements about the role of chlorophyll in photosynthesis.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "It absorbs light energy and transfers it to chemical reactions",
+        "It is found in the thylakoid membranes of chloroplasts",
+        "It is most effective at absorbing green light",
+        "It is the only pigment involved in light absorption in plants"
+      ],
+      "correctOptions": [
+        "It absorbs light energy and transfers it to chemical reactions",
+        "It is found in the thylakoid membranes of chloroplasts"
+      ]
+    },
+    "explanation": "Chlorophyll is located in thylakoid membranes of chloroplasts and absorbs light energy, converting it to chemical energy used in photosynthesis. Chlorophyll mainly absorbs red and blue light — it REFLECTS green light (which is why plants appear green). Plants also contain other photosynthetic pigments (e.g. carotenoids) that absorb different wavelengths."
+  },
+  {
+    "id": "bioenergetics-photosynthesis-conditions-009",
+    "topic": "bioenergetics",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order these conditions from the one that would most increase the rate of photosynthesis in a shaded plant at 15°C to the one that would least increase it.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Increase light intensity significantly — this is the main limiting factor in a shaded plant",
+        "Increase temperature to 25°C — increases enzyme activity and reaction rates",
+        "Increase CO₂ concentration — provides more substrate for the Calvin cycle",
+        "Add more water — water is rarely limiting outdoors and is abundant for most plants"
+      ]
+    },
+    "explanation": "For a shaded plant at 15°C, increasing light intensity would have the greatest effect as light is the primary limiting factor. Temperature increase would help enzyme activity. CO₂ increase would also help. Water is rarely limiting for terrestrial plants in normal conditions."
+  },
+  {
+    "id": "bioenergetics-percentage-change-photosynthesis-010",
+    "topic": "bioenergetics",
+    "difficulty": 3,
+    "image": null,
+    "template": "A plant produces {{r1}} bubbles/min at 20°C. At 30°C, it produces {{r2}} bubbles/min. Calculate the percentage change in rate.",
+    "variables": {
+      "r1": {
+        "type": "int",
+        "min": 10,
+        "max": 20
+      },
+      "extra": {
+        "type": "int",
+        "min": 4,
+        "max": 10
+      },
+      "r2": {
+        "type": "derived",
+        "expr": "r1 + extra"
+      },
+      "pct": {
+        "type": "derived",
+        "expr": "round(extra * 100 / r1, 1)"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "pct",
+      "unit": "%"
+    },
+    "explanation": "Percentage change = (change ÷ original) × 100 = ({{r2}} − {{r1}}) ÷ {{r1}} × 100 = {{extra}} ÷ {{r1}} × 100 = {{pct}}%. A positive value means an increase. Between 20°C and 30°C, increasing temperature increases enzyme activity, raising the photosynthesis rate."
+  },
+  {
+    "id": "bioenergetics-oxygen-debt-011",
+    "topic": "bioenergetics",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is 'oxygen debt' and how is it repaid after exercise?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Oxygen debt is the extra oxygen needed after exercise to oxidise lactic acid (produced during anaerobic respiration) back to CO₂ and water. It is repaid by continued heavy breathing after exercise stops.",
+      "acceptedAnswers": [
+        "Oxygen debt is the extra oxygen needed after exercise to oxidise lactic acid (produced during anaerobic respiration) back to CO₂ and water. It is repaid by continued heavy breathing after exercise stops.",
+        "Extra oxygen needed to break down lactic acid accumulated during anaerobic respiration; repaid by increased breathing rate after exercise",
+        "Lactic acid must be removed; oxygen debt is repaid by oxidising lactic acid to CO2 and water while breathing remains elevated"
+      ]
+    },
+    "explanation": "During intense exercise, muscles respire anaerobically and produce lactic acid, which builds up causing muscle fatigue. After exercise, the body continues to breathe heavily (elevated heart and breathing rate) to supply extra oxygen to the liver, which converts lactic acid back to glucose or oxidises it to CO₂ and water. The 'oxygen debt' (EPOC — excess post-exercise oxygen consumption) is the extra oxygen needed to clear this lactic acid."
+  },
+  {
+    "id": "homeostasis-nervous-system-overview-001",
+    "topic": "homeostasis",
+    "difficulty": 1,
+    "image": null,
+    "template": "What are the THREE components of the nervous system pathway that produces a coordinated response?",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Receptor — detects a stimulus",
+        "Coordinator (CNS — brain and spinal cord) — processes information",
+        "Effector — produces a response (muscle or gland)"
+      ]
+    },
+    "explanation": "Stimulus → Receptor → Sensory neurone → CNS (Coordinator) → Motor neurone → Effector → Response. Receptors convert stimuli into electrical impulses. The CNS processes information and sends instructions. Effectors (muscles or glands) produce the response."
+  },
+  {
+    "id": "homeostasis-reflex-arc-002",
+    "topic": "homeostasis",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the components of a reflex arc in the correct sequence.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Stimulus detected by receptor",
+        "Sensory neurone carries impulse to spinal cord",
+        "Relay neurone in spinal cord connects sensory to motor neurone",
+        "Motor neurone carries impulse to effector",
+        "Effector (muscle/gland) produces response"
+      ]
+    },
+    "explanation": "A reflex arc is an automatic, rapid response that bypasses conscious thought. The pathway is: receptor → sensory neurone → relay neurone (spinal cord) → motor neurone → effector. Examples: withdrawing from pain, knee-jerk, pupil dilation. Reflexes protect the body."
+  },
+  {
+    "id": "homeostasis-hormones-vs-nervous-003",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Compare the nervous system and endocrine system as methods of communication in the body.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Nervous system",
+          "right": "Fast, electrical signals, short-lived, specific targets"
+        },
+        {
+          "left": "Endocrine system",
+          "right": "Slower, chemical signals (hormones) in blood, longer-lasting, widespread targets"
+        }
+      ]
+    },
+    "explanation": "Nervous system: fast electrical impulses along neurones, response in milliseconds, short-lived effects, affects specific target cells via synapses. Endocrine system: hormones released by glands into the bloodstream, slower (seconds to minutes), longer-lasting effects, can affect multiple organs simultaneously. Both systems work together to maintain homeostasis."
+  },
+  {
+    "id": "homeostasis-blood-glucose-004",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the events that occur when blood glucose concentration rises after a meal.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Blood glucose rises above normal level after eating carbohydrates",
+        "Pancreatic beta cells detect the rise in blood glucose",
+        "Beta cells secrete insulin into the blood",
+        "Insulin causes liver and muscle cells to absorb glucose and convert it to glycogen",
+        "Blood glucose concentration returns to normal level"
+      ]
+    },
+    "explanation": "This is negative feedback regulation. Insulin is produced by beta cells in the islets of Langerhans in the pancreas. It causes: uptake of glucose by liver/muscle cells; conversion to glycogen (glycogenesis); inhibition of glucose production in the liver. Glucagon (from alpha cells) has the opposite effect when glucose falls too low."
+  },
+  {
+    "id": "homeostasis-diabetes-comparison-005",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each type of diabetes to its correct description.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Type 1 diabetes",
+          "right": "Autoimmune: pancreas destroys its own beta cells; requires insulin injections; often develops in childhood"
+        },
+        {
+          "left": "Type 2 diabetes",
+          "right": "Body cells become resistant to insulin; managed by diet, exercise and medication; linked to obesity"
+        }
+      ]
+    },
+    "explanation": "Type 1: The immune system destroys beta cells in the pancreas, so no insulin is produced. Must be treated with insulin injections or pump therapy. Type 2: Cells become unresponsive to insulin (insulin resistance). Initially managed with diet and exercise; may require medication (e.g. metformin). Strongly linked to obesity and physical inactivity. Type 2 is the more common form."
+  },
+  {
+    "id": "homeostasis-kidney-filtration-006",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "A patient's blood sample contains urea at a concentration of {{blood_urea}} mmol/L. After kidney filtration, the urine contains urea at {{urine_urea}} mmol/L. Calculate the concentration factor.",
+    "variables": {
+      "factor": {
+        "type": "int",
+        "min": 20,
+        "max": 60
+      },
+      "blood_urea": {
+        "type": "int",
+        "min": 3,
+        "max": 8
+      },
+      "urine_urea": {
+        "type": "derived",
+        "expr": "blood_urea * factor"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "factor",
+      "unit": "×"
+    },
+    "explanation": "Concentration factor = urine concentration ÷ blood concentration = {{urine_urea}} ÷ {{blood_urea}} = {{factor}}×. The kidneys concentrate urea in urine so the body can excrete it without losing too much water. Urea is a waste product of protein metabolism, formed in the liver from excess amino acids."
+  },
+  {
+    "id": "homeostasis-adh-007",
+    "topic": "homeostasis",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how ADH (antidiuretic hormone) regulates water content in the body when blood water concentration is low.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Low blood water concentration is detected by osmoreceptors in the hypothalamus. ADH is released from the pituitary gland. ADH makes the collecting duct walls more permeable to water. More water is reabsorbed by osmosis into the blood. A small volume of concentrated urine is produced.",
+      "acceptedAnswers": [
+        "Low blood water concentration is detected by osmoreceptors in the hypothalamus. ADH is released from the pituitary gland. ADH makes the collecting duct walls more permeable to water. More water is reabsorbed by osmosis into the blood. A small volume of concentrated urine is produced.",
+        "Hypothalamus detects low water potential in blood; pituitary releases more ADH; kidney collecting ducts become more permeable; more water reabsorbed; less urine produced",
+        "ADH increases permeability of kidney tubules so more water is reabsorbed, producing concentrated urine"
+      ]
+    },
+    "explanation": "This is negative feedback for osmoregulation: (1) Osmoreceptors in the hypothalamus detect low water potential (dehydration); (2) Pituitary gland releases more ADH into blood; (3) ADH binds to receptors on collecting duct cells, increasing aquaporin channels; (4) Water moves by osmosis from tubule back into blood; (5) Small volume of concentrated urine produced; blood water potential returns to normal. Alcohol inhibits ADH release, causing dilute, frequent urination."
+  },
+  {
+    "id": "homeostasis-plant-hormones-008",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "A seedling is illuminated from one side. Explain how auxin causes it to bend towards the light.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Auxin is produced at the shoot tip and migrates to the shaded side. Higher auxin concentration on the shaded side causes those cells to elongate more. The shaded side grows faster than the lit side, causing the shoot to bend towards the light.",
+      "acceptedAnswers": [
+        "Auxin is produced at the shoot tip and migrates to the shaded side. Higher auxin concentration on the shaded side causes those cells to elongate more. The shaded side grows faster than the lit side, causing the shoot to bend towards the light.",
+        "Auxin moves to the dark side; more cell elongation on dark side; shoot bends towards light (phototropism)",
+        "Uneven auxin distribution causes unequal growth; more elongation on shaded side bends shoot toward light"
+      ]
+    },
+    "explanation": "Phototropism is the response of a plant to light. Auxin (indoleacetic acid, IAA) is produced in the apical meristem. In unidirectional light, auxin redistributes to the shaded side. At shoot concentrations, auxin promotes cell elongation. Greater elongation on the shaded side causes the shoot to curve towards the light (positive phototropism). In roots, the same uneven auxin distribution causes negative phototropism (roots grow away from light)."
+  },
+  {
+    "id": "homeostasis-reproductive-hormones-009",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each reproductive hormone to its correct role in the menstrual cycle.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "FSH (follicle-stimulating hormone)",
+          "right": "Causes egg to mature in ovary; stimulates oestrogen production"
+        },
+        {
+          "left": "Oestrogen",
+          "right": "Repairs and thickens uterus lining; inhibits FSH; triggers LH surge"
+        },
+        {
+          "left": "LH (luteinising hormone)",
+          "right": "Triggers ovulation (release of egg) at day 14"
+        },
+        {
+          "left": "Progesterone",
+          "right": "Maintains thick uterus lining in second half of cycle; inhibits FSH and LH"
+        }
+      ]
+    },
+    "explanation": "The menstrual cycle is controlled by the interplay of four hormones from the pituitary (FSH, LH) and ovaries (oestrogen, progesterone). FSH → follicle maturation → oestrogen rises → LH surge → ovulation → corpus luteum forms → progesterone maintains lining. If no fertilisation, progesterone falls → lining breaks down → menstruation."
+  },
+  {
+    "id": "homeostasis-thermoregulation-010",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select all correct responses the body makes when core body temperature RISES above 37°C.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Vasodilation — blood vessels near skin surface widen",
+        "Vasoconstriction — blood vessels near skin surface narrow",
+        "Increased sweating — sweat evaporates cooling the skin",
+        "Shivering — rapid muscle contractions generate heat"
+      ],
+      "correctOptions": [
+        "Vasodilation — blood vessels near skin surface widen",
+        "Increased sweating — sweat evaporates cooling the skin"
+      ]
+    },
+    "explanation": "When body temperature rises (detected by thermoreceptors in skin and hypothalamus): vasodilation brings more blood to the skin surface, allowing heat to radiate away; increased sweating — evaporation of sweat removes latent heat from skin. When temperature falls: vasoconstriction reduces blood flow to skin surface; shivering generates metabolic heat. The hypothalamus acts as the thermostat."
+  },
+  {
+    "id": "homeostasis-contraception-hormonal-011",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how the combined oral contraceptive pill prevents pregnancy.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "The pill contains synthetic oestrogen and progesterone. These maintain high hormone levels, inhibiting FSH production by negative feedback. Without FSH, follicles do not mature and no egg is released (ovulation is prevented).",
+      "acceptedAnswers": [
+        "The pill contains synthetic oestrogen and progesterone. These maintain high hormone levels, inhibiting FSH production by negative feedback. Without FSH, follicles do not mature and no egg is released (ovulation is prevented).",
+        "Contains oestrogen/progesterone that inhibit FSH by negative feedback, preventing ovulation",
+        "Synthetic hormones prevent FSH release, so no egg matures or is released"
+      ]
+    },
+    "explanation": "The combined pill works by negative feedback: high oestrogen/progesterone levels signal the pituitary to reduce FSH and LH secretion. Without FSH, no follicle matures; without an LH surge, ovulation cannot occur. The progesterone component also thickens cervical mucus (preventing sperm reaching the egg) and thins the uterine lining."
+  },
+  {
+    "id": "homeostasis-gibberellin-012",
+    "topic": "homeostasis",
+    "difficulty": 4,
+    "image": null,
+    "template": "Describe ONE commercial use of gibberellins in horticulture.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Inducing seed germination in barley for brewing industry",
+        "Preventing root growth so plants stay compact",
+        "Causing leaves to drop in autumn",
+        "Inhibiting fruit ripening during transport"
+      ],
+      "answer": "Inducing seed germination in barley for brewing industry"
+    },
+    "explanation": "Commercial uses of gibberellins include: (1) Inducing seed germination — important in the brewing industry where barley seeds are treated to break dormancy and start starch conversion (malting); (2) Promoting stem elongation — used to increase fruit size (e.g. grapes) or stem length of cut flowers; (3) Delaying senescence in citrus fruit — keeps fruit on trees longer. Ethene (not gibberellin) is used to ripen fruit during transport."
+  },
+  {
+    "id": "inheritance-dna-structure-001",
+    "topic": "inheritance",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each DNA component to its correct description.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Nucleotide",
+          "right": "The monomer of DNA: a phosphate, deoxyribose sugar and nitrogenous base"
+        },
+        {
+          "left": "Gene",
+          "right": "A sequence of DNA bases that codes for a specific protein"
+        },
+        {
+          "left": "Chromosome",
+          "right": "Highly coiled DNA associated with histone proteins"
+        },
+        {
+          "left": "Genome",
+          "right": "The complete set of genetic material of an organism"
+        }
+      ]
+    },
+    "explanation": "DNA is a double-stranded helix. Each strand is a polymer of nucleotides held together by base pairing: A-T and C-G. Genes are specific sequences of base triplets (codons) that code for amino acids in a protein. Human cells have 46 chromosomes (23 pairs). The human genome contains approximately 20,000–25,000 protein-coding genes."
+  },
+  {
+    "id": "inheritance-transcription-translation-002",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the stages of gene expression from DNA to protein.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Transcription: DNA unzips in the nucleus; complementary mRNA strand is produced",
+        "mRNA leaves the nucleus through nuclear pores",
+        "mRNA attaches to a ribosome in the cytoplasm",
+        "Translation: tRNA molecules carry amino acids to the ribosome, matching anticodons to mRNA codons",
+        "Amino acids are joined by peptide bonds to form a polypeptide chain"
+      ]
+    },
+    "explanation": "Gene expression = transcription (DNA → mRNA in nucleus) + translation (mRNA → protein at ribosome). Each triplet of mRNA bases (codon) codes for one amino acid. There are 64 possible codons for 20 amino acids — the genetic code is degenerate (multiple codons per amino acid) and near-universal (same code in virtually all organisms)."
+  },
+  {
+    "id": "inheritance-monohybrid-cross-003",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "In pea plants, tall (T) is dominant over dwarf (t). Two heterozygous tall plants (Tt × Tt) are crossed. What is the probability of producing a dwarf plant?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "1 in 4 (25%)",
+        "1 in 2 (50%)",
+        "3 in 4 (75%)",
+        "0 (impossible)"
+      ],
+      "answer": "1 in 4 (25%)"
+    },
+    "explanation": "Punnett square for Tt × Tt: TT (1): Tt (2): tt (1). Genotype ratio 1:2:1. Phenotype ratio 3 tall : 1 dwarf. Probability of tt (dwarf) = 1/4 = 25%. This is Mendel's law of segregation."
+  },
+  {
+    "id": "inheritance-sex-determination-004",
+    "topic": "inheritance",
+    "difficulty": 2,
+    "image": null,
+    "template": "A man (XY) and woman (XX) have a child. What is the probability that the child is male?",
+    "variables": {},
+    "answerConfig": {
+      "type": "number",
+      "answer": "50",
+      "unit": "%"
+    },
+    "explanation": "Sex is determined by the sex chromosomes. Females are XX, males are XY. The mother always contributes an X chromosome. The father contributes either X or Y (50:50). If the sperm carries Y, the child is male (XY); if X, the child is female (XX). Therefore probability of male = 50%."
+  },
+  {
+    "id": "inheritance-variation-types-005",
+    "topic": "inheritance",
+    "difficulty": 2,
+    "image": null,
+    "template": "Classify each characteristic as continuous or discontinuous variation.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Human height",
+          "right": "Continuous — range of values between extremes"
+        },
+        {
+          "left": "Blood group (A, B, AB, O)",
+          "right": "Discontinuous — distinct categories, no intermediate values"
+        },
+        {
+          "left": "Human foot size",
+          "right": "Continuous — range of values between extremes"
+        },
+        {
+          "left": "Tongue rolling ability",
+          "right": "Discontinuous — distinct categories (can or cannot roll)"
+        }
+      ]
+    },
+    "explanation": "Continuous variation shows a normal distribution curve with a range of values (controlled by many genes and environment — polygenic). Discontinuous variation shows distinct categories with no intermediates (usually controlled by one or a few genes, little environmental influence)."
+  },
+  {
+    "id": "inheritance-natural-selection-006",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the steps of natural selection.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Within a population, individuals show genetic variation due to random mutations",
+        "Competition for resources (food, mates, territory) means not all individuals survive",
+        "Individuals better adapted to their environment are more likely to survive and reproduce",
+        "Favourable alleles are passed on to offspring (inherited)",
+        "Over many generations, the frequency of favourable alleles increases in the population"
+      ]
+    },
+    "explanation": "Darwin's natural selection: Variation → Struggle for survival → Survival of the fittest (differential reproduction) → Inheritance of favourable traits → Evolution of the population over time. Key point: natural selection acts on phenotype but what is inherited is the genotype (alleles)."
+  },
+  {
+    "id": "inheritance-genetic-engineering-007",
+    "topic": "inheritance",
+    "difficulty": 4,
+    "image": null,
+    "template": "Order the main steps in producing human insulin using genetically engineered bacteria.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "The human insulin gene is identified and isolated using restriction enzymes",
+        "A bacterial plasmid is cut open with the same restriction enzymes",
+        "The insulin gene is inserted into the plasmid using DNA ligase to form recombinant DNA",
+        "The recombinant plasmid is inserted into bacterial host cells",
+        "Bacteria are cultured in fermenters and produce human insulin protein"
+      ]
+    },
+    "explanation": "Genetic engineering uses restriction enzymes to cut DNA at specific sequences, producing sticky ends. DNA ligase joins the gene to the plasmid vector. Transformed bacteria express the human gene and produce human insulin. This replaced insulin extracted from pig/cow pancreases and is now the main source of therapeutic insulin."
+  },
+  {
+    "id": "inheritance-speciation-008",
+    "topic": "inheritance",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how geographical isolation can lead to speciation.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Geographical barriers separate populations, preventing interbreeding. Each isolated population accumulates different mutations and is subject to different selection pressures. Over time, genetic differences increase until the populations can no longer interbreed even if reunited — they have become separate species.",
+      "acceptedAnswers": [
+        "Geographical barriers separate populations, preventing interbreeding. Each isolated population accumulates different mutations and is subject to different selection pressures. Over time, genetic differences increase until the populations can no longer interbreed even if reunited — they have become separate species.",
+        "Isolation prevents gene flow; different mutations accumulate; different natural selection; populations diverge genetically until they cannot interbreed — new species",
+        "Populations separated; gene flow stops; different adaptations evolve; eventually reproductively isolated; new species"
+      ]
+    },
+    "explanation": "Allopatric (geographical) speciation: (1) Physical barrier (mountain, river, sea) separates a population; (2) No gene flow between the populations; (3) Each population experiences different mutations and different selection pressures; (4) Allele frequencies diverge; (5) Eventually, reproductive isolation — the populations are so genetically different they cannot produce fertile offspring even if they meet again. They are now classified as separate species."
+  },
+  {
+    "id": "inheritance-genetic-diagram-carrier-009",
+    "topic": "inheritance",
+    "difficulty": 4,
+    "image": null,
+    "template": "Cystic fibrosis is caused by a recessive allele (f). Both parents are carriers (Ff). Calculate the probability their child will have cystic fibrosis.",
+    "variables": {},
+    "answerConfig": {
+      "type": "number",
+      "answer": "25",
+      "unit": "%"
+    },
+    "explanation": "Punnett square for Ff × Ff: FF (normal, 1/4), Ff (carrier, 2/4), ff (cystic fibrosis, 1/4). Probability of ff = 1/4 = 25%. Carriers are phenotypically unaffected but can pass the recessive allele to their children."
+  },
+  {
+    "id": "inheritance-selective-breeding-010",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select all correct statements about selective breeding.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "It involves selecting individuals with desirable traits and breeding them together",
+        "It can reduce genetic variation within a species over many generations",
+        "It is the same process as natural selection but directed by humans",
+        "It can never cause health problems in the selected organisms"
+      ],
+      "correctOptions": [
+        "It involves selecting individuals with desirable traits and breeding them together",
+        "It can reduce genetic variation within a species over many generations",
+        "It is the same process as natural selection but directed by humans"
+      ]
+    },
+    "explanation": "Selective breeding (artificial selection) is directed by humans rather than the environment. Repeated selection reduces the gene pool — fewer alleles in the population. This increases the risk of inbreeding and recessive genetic disorders. For example, many pedigree dog breeds have health problems resulting from extreme selective breeding (e.g. bulldogs with breathing difficulties)."
+  },
+  {
+    "id": "inheritance-antibiotic-resistance-calc-011",
+    "topic": "inheritance",
+    "difficulty": 4,
+    "image": null,
+    "template": "In a population of {{pop}} bacteria, {{resistant}} are resistant to an antibiotic. After treatment, only resistant bacteria survive. Calculate the percentage that are resistant after treatment.",
+    "variables": {
+      "pop": {
+        "type": "pick",
+        "options": [
+          10000,
+          50000,
+          100000
+        ]
+      },
+      "pct_before": {
+        "type": "pick",
+        "options": [
+          1,
+          2,
+          5
+        ]
+      },
+      "resistant": {
+        "type": "derived",
+        "expr": "pop * pct_before / 100"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "100",
+      "unit": "%"
+    },
+    "explanation": "Before treatment: {{resistant}} out of {{pop}} bacteria ({{pct_before}}%) are resistant. After antibiotic treatment kills all non-resistant bacteria, 100% of the surviving population is resistant. This demonstrates how antibiotic use selects for resistance — the resistant gene frequency goes from {{pct_before}}% to 100% in one generation of selection."
+  },
+  {
+    "id": "inheritance-extinction-factors-012",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which combination of factors is most likely to cause a species to become extinct?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Small population, highly specialised diet, limited geographic range, habitat destruction",
+        "Large population, broad diet, wide geographic range, some habitat destruction",
+        "Small population, broad diet, wide geographic range, hunting pressure",
+        "Large population, specialised diet, limited geographic range, climate change"
+      ],
+      "answer": "Small population, highly specialised diet, limited geographic range, habitat destruction"
+    },
+    "explanation": "Extinction risk is highest when multiple factors combine: small population (little genetic diversity, vulnerable to disease and inbreeding); specialised diet (can't switch food sources if prey disappears); limited range (total habitat can be destroyed); habitat destruction removes the only suitable environment. The dodo is a classic example: limited range (Mauritius), flightlessness, and hunting led to extinction."
+  },
+  {
+    "id": "ecology-food-chain-001",
+    "topic": "ecology",
+    "difficulty": 1,
+    "image": null,
+    "template": "In the food chain: grass → rabbit → fox, what term describes the grass?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Producer",
+        "Primary consumer",
+        "Secondary consumer",
+        "Decomposer"
+      ],
+      "answer": "Producer"
+    },
+    "explanation": "Producers (plants/algae) make organic molecules from inorganic molecules using light energy (photosynthesis). Primary consumers are herbivores that eat producers. Secondary consumers eat primary consumers. Decomposers (bacteria and fungi) break down dead organic matter. In any food chain, the organism that produces energy from the sun is always the producer."
+  },
+  {
+    "id": "ecology-biomass-transfer-calc-002",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Grass has a biomass of {{producer_kg}} kg. Only 10% of biomass is transferred at each trophic level. Calculate the biomass available to tertiary consumers (3 levels up from producers).",
+    "variables": {
+      "producer_kg": {
+        "type": "pick",
+        "options": [
+          10000,
+          50000,
+          100000
+        ]
+      },
+      "primary": {
+        "type": "derived",
+        "expr": "producer_kg * 0.1"
+      },
+      "secondary": {
+        "type": "derived",
+        "expr": "producer_kg * 0.01"
+      },
+      "tertiary": {
+        "type": "derived",
+        "expr": "producer_kg * 0.001"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "tertiary",
+      "unit": "kg"
+    },
+    "explanation": "At each trophic level, only 10% of biomass is transferred. Primary consumers: {{producer_kg}} × 0.1 = {{primary}} kg. Secondary consumers: {{primary}} × 0.1 = {{secondary}} kg. Tertiary consumers: {{secondary}} × 0.1 = {{tertiary}} kg. The other 90% is lost as heat (respiration), egestion (faeces), and excretion. This is why food chains rarely have more than 4–5 links."
+  },
+  {
+    "id": "ecology-carbon-cycle-003",
+    "topic": "ecology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each process to its role in the carbon cycle.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Photosynthesis",
+          "right": "Removes CO₂ from atmosphere; incorporates carbon into organic molecules"
+        },
+        {
+          "left": "Respiration",
+          "right": "Returns CO₂ to atmosphere as organisms release energy from glucose"
+        },
+        {
+          "left": "Decomposition",
+          "right": "Bacteria and fungi break down dead organic matter, releasing CO₂"
+        },
+        {
+          "left": "Combustion",
+          "right": "Burning fossil fuels or wood releases stored carbon as CO₂"
+        }
+      ]
+    },
+    "explanation": "The carbon cycle maintains the balance of carbon in ecosystems. Carbon is fixed from CO₂ by photosynthesis. It is returned by respiration (all organisms), decomposition (decomposers), and combustion (burning). Fossil fuels (coal, oil, gas) are ancient carbon stores — burning them releases carbon that was sequestered millions of years ago, increasing atmospheric CO₂."
+  },
+  {
+    "id": "ecology-nitrogen-cycle-004",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select all the correct processes that are part of the nitrogen cycle.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Nitrogen fixation by bacteria in root nodules of legumes",
+        "Nitrification — converting ammonium ions to nitrate by bacteria in soil",
+        "Denitrification — converting nitrates back to nitrogen gas",
+        "Photosynthesis — plants using sunlight to absorb atmospheric nitrogen"
+      ],
+      "correctOptions": [
+        "Nitrogen fixation by bacteria in root nodules of legumes",
+        "Nitrification — converting ammonium ions to nitrate by bacteria in soil",
+        "Denitrification — converting nitrates back to nitrogen gas"
+      ]
+    },
+    "explanation": "The nitrogen cycle: Nitrogen fixation (Rhizobium bacteria in root nodules convert N₂ → ammonium) → Nitrification (Nitrosomonas/Nitrobacter bacteria convert NH₄⁺ → NO₂⁻ → NO₃⁻) → Plants absorb NO₃⁻ → Animals eat plants → Decomposers return NH₄⁺ to soil → Denitrification (bacteria convert NO₃⁻ → N₂). Plants cannot use atmospheric N₂ directly."
+  },
+  {
+    "id": "ecology-biodiversity-005",
+    "topic": "ecology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Why is maintaining high biodiversity important for ecosystems?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Greater biodiversity increases ecosystem stability and resilience to change",
+        "Greater biodiversity makes it easier for humans to farm the land",
+        "Fewer species means more resources for each remaining species",
+        "Biodiversity has no practical effect on ecosystem function"
+      ],
+      "answer": "Greater biodiversity increases ecosystem stability and resilience to change"
+    },
+    "explanation": "Biodiversity refers to the variety of species in an ecosystem and the genetic variation within species. High biodiversity increases ecosystem stability: if one species is lost, others can fill its role (redundancy). It also provides ecosystem services (pollination, clean water, medicines, food security) and supports complex food webs. Reductions in biodiversity (e.g. from deforestation) make ecosystems more vulnerable to collapse."
+  },
+  {
+    "id": "ecology-global-warming-006",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how deforestation contributes to global warming.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Trees absorb CO₂ by photosynthesis. Deforestation removes trees, reducing CO₂ absorption. Burning or decomposing trees releases stored carbon as CO₂. Higher atmospheric CO₂ enhances the greenhouse effect, trapping more heat in the atmosphere.",
+      "acceptedAnswers": [
+        "Trees absorb CO₂ by photosynthesis. Deforestation removes trees, reducing CO₂ absorption. Burning or decomposing trees releases stored carbon as CO₂. Higher atmospheric CO₂ enhances the greenhouse effect, trapping more heat in the atmosphere.",
+        "Less photosynthesis reduces CO₂ absorption; burning trees releases carbon; more CO₂ in atmosphere increases greenhouse effect",
+        "Fewer trees means less CO₂ removed from air; burning/decay releases more CO₂; greenhouse effect intensified"
+      ]
+    },
+    "explanation": "Deforestation contributes to global warming in two ways: (1) Reduction in CO₂ removal — fewer trees means less photosynthesis, so less CO₂ absorbed from the atmosphere; (2) Release of stored carbon — burning trees for land clearance directly releases CO₂; decomposition of remaining vegetation also releases CO₂ and methane. The combined effect increases atmospheric greenhouse gas concentrations, enhancing the greenhouse effect and raising global average temperatures."
+  },
+  {
+    "id": "ecology-sampling-quadrats-007",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "A student counts daisies in {{n}} quadrats (each 0.5 m²) and finds a mean of {{mean_per_q}} daisies per quadrat. Estimate the daisy population in a field of {{field_area}} m².",
+    "variables": {
+      "n": {
+        "type": "int",
+        "min": 5,
+        "max": 15
+      },
+      "mean_per_q": {
+        "type": "int",
+        "min": 3,
+        "max": 12
+      },
+      "field_area": {
+        "type": "pick",
+        "options": [
+          100,
+          200,
+          250,
+          500
+        ]
+      },
+      "density": {
+        "type": "derived",
+        "expr": "mean_per_q / 0.5"
+      },
+      "population": {
+        "type": "derived",
+        "expr": "mean_per_q / 0.5 * field_area"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "population"
+    },
+    "explanation": "Population density = mean per quadrat ÷ quadrat area = {{mean_per_q}} ÷ 0.5 = {{density}} daisies/m². Estimated population = density × field area = {{density}} × {{field_area}} = {{population}} daisies. Quadrats should be placed randomly (e.g. using random coordinates) to avoid bias."
+  },
+  {
+    "id": "ecology-water-cycle-008",
+    "topic": "ecology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the stages of the water cycle.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Evaporation — water evaporates from oceans, lakes and rivers using solar energy",
+        "Transpiration — plants release water vapour from leaves",
+        "Condensation — water vapour rises, cools and condenses to form clouds",
+        "Precipitation — water falls as rain, snow or hail",
+        "Surface runoff or infiltration — water returns to rivers, lakes and groundwater"
+      ]
+    },
+    "explanation": "The water cycle transfers water between the atmosphere, land and oceans: evaporation + transpiration (evapotranspiration) → condensation (cloud formation) → precipitation → runoff/infiltration back to water bodies. Transpiration from plants is a significant part of the cycle, particularly in tropical rainforests."
+  },
+  {
+    "id": "ecology-rewilding-009",
+    "topic": "ecology",
+    "difficulty": 4,
+    "image": null,
+    "template": "When wolves were reintroduced to Yellowstone National Park, the deer population decreased and vegetation recovered. This is an example of which ecological concept?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Trophic cascade",
+        "Competitive exclusion",
+        "Primary succession",
+        "Eutrophication"
+      ],
+      "answer": "Trophic cascade"
+    },
+    "explanation": "A trophic cascade occurs when a change at one trophic level ripples through the food web. Reintroducing wolves (apex predator) decreased deer numbers AND changed deer behaviour (fear of predation stopped them overgrazing riverbanks). This allowed vegetation to recover, stabilising riverbanks, changing river courses, and increasing biodiversity. This is a classic example showing how apex predators regulate entire ecosystems — the basis for rewilding programmes."
+  },
+  {
+    "id": "ecology-percentage-biomass-transfer-calc-010",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Primary producers have a biomass of {{prod}} kg. Primary consumers have a biomass of {{pc}} kg. Calculate the percentage of biomass transferred from producers to primary consumers.",
+    "variables": {
+      "prod": {
+        "type": "pick",
+        "options": [
+          1000,
+          5000,
+          10000
+        ]
+      },
+      "pct": {
+        "type": "int",
+        "min": 5,
+        "max": 15
+      },
+      "pc": {
+        "type": "derived",
+        "expr": "prod * pct / 100"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "pct",
+      "unit": "%"
+    },
+    "explanation": "Percentage transfer = (biomass of consumers ÷ biomass of producers) × 100 = ({{pc}} ÷ {{prod}}) × 100 = {{pct}}%. Typically only ~10% of biomass transfers between trophic levels. The rest is lost as heat (respiration), faeces (undigested material), or excretion. This inefficiency limits food chain length."
+  },
+  {
+    "id": "ecology-decomposition-conditions-011",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select all conditions that INCREASE the rate of decomposition.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Warm temperatures (optimal enzyme activity for decomposers)",
+        "Moist conditions (water needed for decomposer metabolism)",
+        "Aerobic conditions (oxygen allows aerobic respiration by decomposers)",
+        "Freezing temperatures (ice crystals damage decomposer cells)"
+      ],
+      "correctOptions": [
+        "Warm temperatures (optimal enzyme activity for decomposers)",
+        "Moist conditions (water needed for decomposer metabolism)",
+        "Aerobic conditions (oxygen allows aerobic respiration by decomposers)"
+      ]
+    },
+    "explanation": "Decomposers (bacteria and fungi) break down dead organic matter by secreting enzymes. Optimal conditions: warm temperatures (faster enzyme activity, typically 25–35°C); moist conditions (enzymes and metabolites need water to function); aerobic conditions (more ATP from aerobic respiration fuels faster metabolism). Freezing, drying or waterlogging slows decomposition — hence food is refrigerated or freeze-dried for preservation."
+  },
+  {
+    "id": "ecology-eutrophication-012",
+    "topic": "ecology",
+    "difficulty": 4,
+    "image": null,
+    "template": "Order the events that lead to eutrophication of a lake after fertiliser runoff.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Fertilisers (nitrates and phosphates) wash from farmland into the lake",
+        "Algae and surface plants grow rapidly (algal bloom), blocking sunlight",
+        "Aquatic plants below the surface die due to lack of light",
+        "Decomposing bacteria multiply rapidly, consuming large amounts of oxygen",
+        "Fish and other aquatic organisms die due to oxygen depletion (deoxygenation)"
+      ]
+    },
+    "explanation": "Eutrophication: Nutrient enrichment → algal bloom → light blocked → plants die → decomposers multiply → O₂ depleted → fish die. This creates a dead zone. Prevention includes: reducing fertiliser use, creating buffer strips, treating wastewater before discharge. This is a major cause of aquatic ecosystem damage worldwide."
+  },
+  {
+    "id": "ecology-transects-method-013",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "A student uses a belt transect to investigate how plant species change with distance from a pond. What is the advantage of a transect over randomly placed quadrats for this investigation?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "It shows how species distribution changes along an environmental gradient",
+        "It is faster to carry out than using multiple quadrats",
+        "It eliminates all sampling bias",
+        "It counts every individual plant in the study area"
+      ],
+      "answer": "It shows how species distribution changes along an environmental gradient"
+    },
+    "explanation": "A transect is a line or belt across an area of interest, with quadrats placed at regular intervals along it. It is used when there is a clear environmental gradient (e.g. distance from water, altitude, soil pH) and the investigator wants to show how communities change along that gradient (zonation). Random quadrats would be better for estimating overall population density, but transects reveal systematic patterns of change."
+  },
+  {
+    "id": "homeostasis-glucose-insulin-calc-013",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "A diabetic patient's blood glucose is {{high}} mmol/L. The normal range is 4–7 mmol/L. By how many mmol/L is the patient's blood glucose above the upper normal limit?",
+    "variables": {
+      "above": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      },
+      "high": {
+        "type": "derived",
+        "expr": "7 + above"
+      }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "above",
+      "unit": "mmol/L"
+    },
+    "explanation": "Normal upper limit = 7 mmol/L. Patient's level = {{high}} mmol/L. Excess = {{high}} − 7 = {{above}} mmol/L above normal. Persistent hyperglycaemia (high blood glucose) in unmanaged diabetes can damage blood vessels and nerves, causing complications such as kidney disease, blindness and cardiovascular disease."
+  }
+]

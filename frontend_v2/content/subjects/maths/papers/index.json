@@ -1,0 +1,31 @@
+{
+  "papers": [
+    {
+      "number": 1,
+      "title": "Paper 1 — Non-Calculator (Higher)",
+      "filename": "paper-1.json",
+      "tier": "higher",
+      "totalMarks": 80,
+      "timeMinutes": 90,
+      "calculator": false
+    },
+    {
+      "number": 2,
+      "title": "Paper 2 — Calculator (Higher)",
+      "filename": "paper-2.json",
+      "tier": "higher",
+      "totalMarks": 80,
+      "timeMinutes": 90,
+      "calculator": true
+    },
+    {
+      "number": 3,
+      "title": "Paper 3 — Calculator (Higher)",
+      "filename": "paper-3.json",
+      "tier": "higher",
+      "totalMarks": 80,
+      "timeMinutes": 90,
+      "calculator": true
+    }
+  ]
+}

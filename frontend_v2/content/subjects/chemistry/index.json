@@ -1,0 +1,18 @@
+{
+  "id": "chemistry",
+  "name": "Chemistry",
+  "exam_board": "Edexcel",
+  "colour": "#f59e0b",
+  "papers": ["1", "2"],
+  "topics": [
+    { "id": "atomic-structure",  "name": "Atomic Structure & Periodic Table" },
+    { "id": "bonding",           "name": "Bonding, Structure & Properties" },
+    { "id": "quantitative",      "name": "Quantitative Chemistry" },
+    { "id": "chemical-changes",  "name": "Chemical Changes" },
+    { "id": "energy-changes",    "name": "Energy Changes" },
+    { "id": "rates-equilibrium", "name": "Rates & Equilibrium" },
+    { "id": "organic",           "name": "Organic Chemistry" },
+    { "id": "analysis",          "name": "Chemical Analysis" },
+    { "id": "atmosphere",        "name": "Earth's Atmosphere & Resources" }
+  ]
+}
