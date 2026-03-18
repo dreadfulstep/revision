@@ -14,27 +14,35 @@ export type QuestionVariable =
   | { type: "derived"; expr: string };
 
 export type NumberAnswer = { type: "number"; answer: string; unit?: string };
+
 export type TextAnswer = {
   type: "text";
   textAnswer: string;
   acceptedAnswers?: string[];
 };
+
 export type MultipleChoiceAnswer = {
+
   type: "multiple_choice";
   options: string[];
   answer: string;
 };
+
 export type TrueFalseAnswer = { type: "true_false"; answer: boolean };
+
 export type MatchingAnswer = {
   type: "matching";
   pairs: { left: string; right: string }[];
 };
+
 export type OrderingAnswer = { type: "ordering"; items: string[] };
+
 export type FillBlankAnswer = {
   type: "fill_blank";
-  answer: string;
-  acceptedAnswers?: string[];
+  answers: string[][];
+  acceptedAnswers?: string[][];
 };
+
 export type MultiSelectAnswer = {
   type: "multi_select";
   options: string[];

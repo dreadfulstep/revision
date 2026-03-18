@@ -93,10 +93,17 @@ export function resolveAnswer(question: Question, vars: ResolvedVars): string {
       return String(evalExpr(cfg.answer, vars));
 
     case "text":
-      return resolveTemplate(cfg.textAnswer, vars);
+      return resolveTemplate(
+        cfg.textAnswer ?? (cfg as { answer?: string }).answer ?? "",
+        vars,
+      );
 
     case "fill_blank":
-      return resolveTemplate(cfg.answer, vars);
+      return JSON.stringify(
+        cfg.answers.map((blank) =>
+          blank.map((ans) => resolveTemplate(ans, vars)),
+        ),
+      );
 
     case "true_false":
       return String(cfg.answer);

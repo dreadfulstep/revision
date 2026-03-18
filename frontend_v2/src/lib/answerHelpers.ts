@@ -1,5 +1,10 @@
-export const norm = (s: string) => s.trim().toLowerCase().replace(/\s+/g, "");
-
+export function norm(str: string): string {
+  return str
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s]/g, "")
+    .replace(/\s+/g, " ");
+}
 const SUPER_MAP: Record<string, number> = {
   "²": 2,
   "³": 3,
@@ -126,6 +131,34 @@ export function checkMultiPart(submitted: string, correct: string): boolean {
   }
 }
 
+export function checkFillBlank(submitted: string, correct: string): boolean {
+  try {
+    const sub: string[] = JSON.parse(submitted);
+    const cor: string[][] = JSON.parse(correct);
+
+    if (!Array.isArray(sub) || !Array.isArray(cor)) return false;
+    if (sub.length !== cor.length) return false;
+
+    let correctCount = 0;
+
+    for (let i = 0; i < cor.length; i++) {
+      const user = norm(sub[i] ?? "");
+      const accepted = cor[i].map(norm);
+
+      if (accepted.includes(user) || isCloseMatch(user, accepted)) {
+        correctCount++;
+      }
+    }
+
+    return correctCount === cor.length;
+
+    // 🔁 OPTIONAL: allow partial marking later
+    // return correctCount / cor.length >= 0.8;
+  } catch {
+    return false;
+  }
+}
+
 export function checkAnswer(
   type: string,
   submitted: string,
@@ -137,7 +170,7 @@ export function checkAnswer(
     case "text":
       return checkText(submitted, correct);
     case "fill_blank":
-      return checkText(submitted, correct);
+      return checkFillBlank(submitted, correct);
     case "true_false":
       return norm(submitted) === norm(correct);
     case "multiple_choice":
@@ -171,4 +204,36 @@ export function getMatchingResults(
   } catch {
     return null;
   }
+}
+
+function isCloseMatch(user: string, accepted: string[]): boolean {
+  return accepted.some((ans) => {
+    const dist = levenshtein(user, ans);
+    return dist <= 1;
+  });
+}
+
+function levenshtein(a: string, b: string): number {
+  const matrix = Array.from({ length: b.length + 1 }, () =>
+    Array(a.length + 1).fill(0),
+  );
+
+  for (let i = 0; i <= a.length; i++) matrix[0][i] = i;
+  for (let j = 0; j <= b.length; j++) matrix[j][0] = j;
+
+  for (let j = 1; j <= b.length; j++) {
+    for (let i = 1; i <= a.length; i++) {
+      if (a[i - 1] === b[j - 1]) {
+        matrix[j][i] = matrix[j - 1][i - 1];
+      } else {
+        matrix[j][i] = Math.min(
+          matrix[j - 1][i - 1] + 1,
+          matrix[j][i - 1] + 1,
+          matrix[j - 1][i] + 1,
+        );
+      }
+    }
+  }
+
+  return matrix[b.length][a.length];
 }

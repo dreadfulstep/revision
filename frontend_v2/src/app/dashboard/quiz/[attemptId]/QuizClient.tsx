@@ -14,6 +14,7 @@ import Matching from "@/components/quiz/answers/Matching";
 import Ordering from "@/components/quiz/answers/Ordering";
 import MultiPart from "@/components/quiz/answers/MultiPart";
 import QuestionImage from "@/components/quiz/QuizImage";
+import FillBlank from "@/components/quiz/answers/FillBlank";
 
 export type DisplayConfig =
   | { type: "number"; unit?: string }
@@ -161,9 +162,11 @@ export default function QuizClient({
             <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-primary/60">
               Question {index + 1}
             </p>
-            <h1 className="text-2xl font-bold leading-tight tracking-tight">
-              {question.template}
-            </h1>
+            {cfg.type != "fill_blank" && (
+              <h1 className="text-2xl font-bold leading-tight tracking-tight">
+                {question.template}
+              </h1>
+            )}
           </div>
 
           <div
@@ -190,9 +193,7 @@ export default function QuizClient({
                 disabled={loading}
               />
             )}
-            {(cfg.type === "number" ||
-              cfg.type === "text" ||
-              cfg.type === "fill_blank") && (
+            {(cfg.type === "number" || cfg.type === "text") && (
               <TextNumber
                 value={answer}
                 onChange={setAnswer}
@@ -231,6 +232,14 @@ export default function QuizClient({
                 parts={cfg.parts}
                 value={multiPartAnswer}
                 onChange={setMultiPartAnswer}
+                disabled={loading}
+              />
+            )}
+            {cfg.type === "fill_blank" && (
+              <FillBlank
+                template={question.template}
+                values={multiAnswer}
+                onChange={setMultiAnswer}
                 disabled={loading}
               />
             )}

@@ -63,12 +63,11 @@ export async function POST(
   const answerType = question.answerConfig.type;
 
   const acceptedAnswers: string[] = [correctAnswer];
-  if (
-    "acceptedAnswers" in question.answerConfig &&
-    question.answerConfig.acceptedAnswers
-  ) {
-    for (const a of question.answerConfig.acceptedAnswers) {
-      acceptedAnswers.push(resolveTemplate(a, resolvedVars));
+  if (question.answerConfig.type === "text") {
+    if (question.answerConfig.acceptedAnswers) {
+      for (const a of question.answerConfig.acceptedAnswers) {
+        acceptedAnswers.push(resolveTemplate(a, resolvedVars));
+      }
     }
   }
 
