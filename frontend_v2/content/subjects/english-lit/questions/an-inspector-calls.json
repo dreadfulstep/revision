@@ -1,0 +1,444 @@
+[
+  {
+    "id": "aic-context-1912-1945-gap",
+    "topic": "an-inspector-calls",
+    "difficulty": 3,
+    "image": null,
+    "template": "An Inspector Calls was written in [[blank0]] but set in [[blank1]]. This allows Priestley to use dramatic irony to critique the characters' views.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["1945"], ["1912"]]
+    },
+    "explanation": "Setting the play in 1912 (pre-WWI) while writing for a 1945 audience (post-WWII) allows Priestley to show how wrong the Birlings' capitalist and complacent views were."
+  },
+  {
+    "id": "aic-birling-dramatic-irony",
+    "topic": "an-inspector-calls",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which of Arthur Birling's predictions in Act 1 is an example of dramatic irony?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "That the Titanic is 'unsinkable, absolutely unsinkable'",
+        "That Eric will become a successful businessman",
+        "That Sheila and Gerald will have a happy marriage",
+        "That the Inspector is a 'crank'"
+      ],
+      "answer": "That the Titanic is 'unsinkable, absolutely unsinkable'"
+    },
+    "explanation": "The audience in 1945 knows the Titanic sank in 1912. By having Birling call it 'unsinkable', Priestley immediately undermines Birling's 'hard-headed' judgement."
+  },
+  {
+    "id": "aic-quote-id-one-body",
+    "topic": "an-inspector-calls",
+    "difficulty": 1,
+    "image": null,
+    "template": "Who says the famous line: 'We are members of one body. We are responsible for each other'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Inspector Goole",
+      "acceptedAnswers": ["The Inspector", "Inspector"]
+    },
+    "explanation": "This is the core of the Inspector's (and Priestley's) socialist message, delivered in his final speech before leaving the Birlings."
+  },
+  {
+    "id": "aic-matching-character-role",
+    "topic": "an-inspector-calls",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each character to their role in the death of Eva Smith.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Arthur Birling",
+          "right": "Sacked her for striking for higher wages"
+        },
+        {
+          "left": "Sheila Birling",
+          "right": "Had her fired from Milwards out of jealousy"
+        },
+        {
+          "left": "Gerald Croft",
+          "right": "Kept her as a mistress then discarded her"
+        },
+        {
+          "left": "Sybil Birling",
+          "right": "Refused her help from a charitable society"
+        }
+      ]
+    },
+    "explanation": "Each character represents a different way the middle and upper classes exploit or neglect the working class."
+  },
+  {
+    "id": "aic-inspector-nature",
+    "topic": "an-inspector-calls",
+    "difficulty": 4,
+    "image": null,
+    "template": "Which of these features suggests the Inspector might be a supernatural or symbolic figure rather than a real policeman?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "His name 'Goole' sounds like 'ghoul'",
+        "He seems to know what the characters will say before they say it",
+        "He arrives in a police car with sirens",
+        "He is unaffected by Birling's social status",
+        "He is found to be not on the force at the end of the play"
+      ],
+      "correctOptions": [
+        "His name 'Goole' sounds like 'ghoul'",
+        "He seems to know what the characters will say before they say it",
+        "He is found to be not on the force at the end of the play"
+      ]
+    },
+    "explanation": "Goole's omniscience and the pun on his name suggest he is a 'moral messenger' or a manifestation of their collective conscience."
+  },
+  {
+    "id": "aic-quote-fire-blood-anguish",
+    "topic": "an-inspector-calls",
+    "difficulty": 3,
+    "image": null,
+    "template": "The Inspector warns that if people do not learn their lesson, they will be taught it in 'fire and blood and [[blank0]]'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "anguish",
+      "acceptedAnswers": ["anguish"]
+    },
+    "explanation": "This line is widely interpreted as a reference to the two World Wars that would soon follow the 1912 setting, serving as a warning to the audience about social collapse."
+  },
+  {
+    "id": "aic-ordering-plot-revelations",
+    "topic": "an-inspector-calls",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the revelations made by the characters during the Inspector's interrogation.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Birling admits to sacking Eva Smith over 22 shillings and 6 pence.",
+        "Sheila admits she complained about Eva at Milwards.",
+        "Gerald admits to his affair with Daisy Renton at the County Hotel.",
+        "Eric admits to stealing money and fathering Eva's child."
+      ]
+    },
+    "explanation": "The play follows a structure where the Inspector moves through the characters one by one, usually following the chronological order of their involvement with Eva."
+  },
+  {
+    "id": "aic-context-socialism-priestley",
+    "topic": "an-inspector-calls",
+    "difficulty": 4,
+    "image": null,
+    "template": "Which political ideology was Priestley advocating for through the character of the Inspector?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Socialism",
+        "Laissez-faire Capitalism",
+        "Totalitarianism",
+        "Conservatism"
+      ],
+      "answer": "Socialism"
+    },
+    "explanation": "Priestley was a staunch socialist and a founding member of the Common Wealth Party. The Inspector acts as a mouthpiece for his views on collective responsibility."
+  },
+  {
+    "id": "aic-character-sheila-change",
+    "topic": "an-inspector-calls",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or False: By the end of Act 3, Sheila and Eric represent the 'younger generation' who have learned the Inspector's lesson of social responsibility.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Sheila and Eric are the only characters who remain remorseful even after discovering the Inspector might have been a 'fake', contrasting with their parents' relief."
+  },
+  {
+    "id": "aic-quote-girls-of-that-class",
+    "topic": "an-inspector-calls",
+    "difficulty": 3,
+    "image": null,
+    "template": "When Mrs Birling says 'Girls of that class—', what does it reveal about her character?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Her deep-seated class prejudice and lack of empathy",
+        "Her extensive knowledge of working-class struggles",
+        "Her desire to improve the lives of young women",
+        "Her fear of the Inspector's police authority"
+      ],
+      "answer": "Her deep-seated class prejudice and lack of empathy"
+    },
+    "explanation": "The phrase 'that class' shows Sybil Birling's dehumanizing view of the poor, seeing them as a separate, inferior group rather than individuals."
+  },
+  {
+    "id": "aic-stagecraft-lighting",
+    "topic": "an-inspector-calls",
+    "difficulty": 3,
+    "image": null,
+    "template": "At the start of the play, the lighting is 'pink and intimate'. How does it change when the Inspector arrives?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "It becomes 'brighter and harder'",
+        "It becomes 'dim and gloomy'",
+        "It becomes 'red and angry'",
+        "It stays the same to show the Inspector's calm"
+      ],
+      "answer": "It becomes 'brighter and harder'"
+    },
+    "explanation": "The 'pink' lighting represents the Birlings' 'rose-tinted' view of life. The shift to 'brighter and harder' suggests a metaphorical interrogation lamp or the shining of a light on the truth."
+  },
+  {
+    "id": "aic-character-gerald-morality",
+    "topic": "an-inspector-calls",
+    "difficulty": 4,
+    "image": null,
+    "template": "Gerald Croft is often seen as a 'bridge' between the generations. Why?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "He is young like Sheila, but holds the same capitalist views as Mr Birling",
+        "He is older than Eric but younger than Arthur Birling",
+        "He agrees with the Inspector but refuses to change his behavior",
+        "He is the one who discovers the Inspector is a fraud"
+      ],
+      "answer": "He is young like Sheila, but holds the same capitalist views as Mr Birling"
+    },
+    "explanation": "Despite his youth, Gerald is aligned with the older Birlings' desire to protect their reputation and social standing, eventually leading the search to 'disprove' the Inspector."
+  },
+  {
+    "id": "aic-long-form-generational-divide",
+    "topic": "an-inspector-calls",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how Priestley presents the generational divide between the Birlings in Act 3.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Identifies Sheila and Eric as the 'younger generation' who accept responsibility (1) / 2. Identifies Arthur and Sybil as the 'older generation' who only care about social status/scandal (1) / 3. Contrasts their reactions to the news the Inspector was a fake (younger remain guilty, older are relieved) (1) / 4. Links this to Priestley's hope that the youth of 1945 would build a better society (1).",
+      "minWords": 40
+    },
+    "explanation": "The conflict in the final act highlights that while the older generation is 'set in their ways', the younger generation is 'more impressionable' and capable of moral growth."
+  },
+  {
+    "id": "aic-structure-cyclical",
+    "topic": "an-inspector-calls",
+    "difficulty": 3,
+    "image": null,
+    "template": "The play ends with a phone call announcing that a girl has died and an Inspector is on his way. What is the name for this structural device?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "cyclical structure",
+      "acceptedAnswers": [
+        "cyclical",
+        "a cycle",
+        "circular structure",
+        "repetition"
+      ]
+    },
+    "explanation": "The ending forces the characters (and the audience) to face the situation again, suggesting that if they don't learn the first time, they are doomed to repeat their mistakes."
+  },
+  {
+    "id": "aic-quote-id-hard-headed",
+    "topic": "an-inspector-calls",
+    "difficulty": 2,
+    "image": null,
+    "template": "Mr Birling repeatedly describes himself as a 'hard-headed, practical man of [[blank0]]'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "business",
+      "acceptedAnswers": ["business"]
+    },
+    "explanation": "Birling uses this phrase to justify his lack of sentimentality and his focus on profit, which Priestley uses to characterize the ruthlessness of capitalism."
+  },
+  {
+    "id": "aic-context-1912-society",
+    "topic": "an-inspector-calls",
+    "difficulty": 2,
+    "image": null,
+    "template": "In 1912, there was no [[blank0]], meaning working-class people like Eva Smith had no financial safety net if they lost their jobs.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [
+        [
+          "welfare state",
+          "benefits system",
+          "social security",
+          "national health service",
+          "NHS"
+        ]
+      ]
+    },
+    "explanation": "The lack of a welfare state in 1912 meant that losing a job often led directly to starvation or the workhouse, making the Birlings' actions fatal."
+  },
+  {
+    "id": "aic-matching-symbols",
+    "topic": "an-inspector-calls",
+    "difficulty": 4,
+    "image": null,
+    "template": "Match the symbol/motif to its meaning in the play.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "The Inspector",
+          "right": "Socialist conscience / God-like figure"
+        },
+        { "left": "Eva Smith", "right": "The silent, invisible working class" },
+        {
+          "left": "The disinfectant",
+          "right": "A brutal 'cleansing' of the sins"
+        },
+        {
+          "left": "The engagement ring",
+          "right": "Capitalist alliance between businesses"
+        }
+      ]
+    },
+    "explanation": "Symbols like Eva Smith represent the millions of 'Eva Smiths and John Smiths' whose lives are intertwined with those of the wealthy."
+  },
+  {
+    "id": "aic-quote-responsibilities-privileges",
+    "topic": "an-inspector-calls",
+    "difficulty": 3,
+    "image": null,
+    "template": "The Inspector tells Birling: 'Public men, Mr Birling, have [[blank0]] as well as privileges.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "responsibilities",
+      "acceptedAnswers": ["responsibilities"]
+    },
+    "explanation": "This quote directly challenges Birling's view that his high social status exempts him from worrying about others."
+  },
+  {
+    "id": "aic-character-eric-problem",
+    "topic": "an-inspector-calls",
+    "difficulty": 3,
+    "image": null,
+    "template": "Eric Birling's problems with [[blank0]] and stolen money highlight the hidden cracks in the Birlings' respectable middle-class facade.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["alcohol", "drinking", "drink"]]
+    },
+    "explanation": "Eric's drinking problem is an 'open secret' that the family ignores until the Inspector forces them to confront it."
+  },
+  {
+    "id": "aic-long-form-eva-smith-symbol",
+    "topic": "an-inspector-calls",
+    "difficulty": 5,
+    "image": null,
+    "template": "Why does Priestley choose to never show Eva Smith on stage?",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. She represents the 'voiceless' working class (1) / 2. It keeps the focus on the Birlings' actions and their internal guilt (1) / 3. It allows her to be a universal symbol ('millions of Eva Smiths') (1) / 4. It maintains the mystery of whether she was one person or several (1).",
+      "minWords": 40
+    },
+    "explanation": "By keeping Eva off-stage, she remains a symbol of the millions of working-class people who were exploited by the wealthy in 1912."
+  },
+  {
+    "id": "aic-true-false-gerald-honesty",
+    "topic": "an-inspector-calls",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or False: Gerald Croft is the character who realizes that the Inspector might not be a real police officer by checking with a sergeant he knows.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Gerald's investigation into the Inspector's identity allows the older Birlings to believe they are 'off the hook', revealing their lack of true repentance."
+  },
+  {
+    "id": "aic-multi-select-sheila-growth",
+    "topic": "an-inspector-calls",
+    "difficulty": 3,
+    "image": null,
+    "template": "In what ways does Sheila show character growth during the play? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "She returns Gerald's engagement ring",
+        "She challenges her parents' dismissive attitudes",
+        "She tries to hide her involvement from the Inspector",
+        "She realizes that 'these girls aren't just cheap labour - they're people'"
+      ],
+      "correctOptions": [
+        "She returns Gerald's engagement ring",
+        "She challenges her parents' dismissive attitudes",
+        "She realizes that 'these girls aren't just cheap labour - they're people'"
+      ]
+    },
+    "explanation": "Sheila transforms from a childish, flighty character to a socially conscious woman who understands the weight of her actions."
+  },
+  {
+    "id": "aic-context-morality-play",
+    "topic": "an-inspector-calls",
+    "difficulty": 4,
+    "image": null,
+    "template": "Which traditional genre of drama does An Inspector Calls most closely resemble in its focus on sin, repentance, and punishment?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "morality play",
+      "acceptedAnswers": [
+        "morality",
+        "a morality play",
+        "medieval morality play"
+      ]
+    },
+    "explanation": "Like medieval morality plays, the characters represent different vices (Pride, Greed, etc.) and the Inspector acts as a divine or moral judge."
+  },
+  {
+    "id": "aic-quote-mind-own-business",
+    "topic": "an-inspector-calls",
+    "difficulty": 3,
+    "image": null,
+    "template": "Just before the Inspector arrives, Mr Birling is telling Eric and Gerald that 'a man has to mind his own [[blank0]] and look after himself'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "business",
+      "acceptedAnswers": ["business"]
+    },
+    "explanation": "The Inspector's entrance immediately after this line is a dramatic device (the 'sharp ring' of the doorbell) used to interrupt and challenge Birling's individualistic ideology."
+  },
+  {
+    "id": "aic-long-form-inspector-final-speech",
+    "topic": "an-inspector-calls",
+    "difficulty": 5,
+    "image": null,
+    "template": "Analyse the significance of the Inspector's final speech in Act 3.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "1. Mentions the inclusive 'we' and 'us' representing social unity (1) / 2. Identifies the 'millions and millions of Eva Smiths' as a universal symbol (1) / 3. Analyzes the 'fire and blood and anguish' as prophetic imagery of WWI/II (1) / 4. Explains the socialist message of 'members of one body' (1) / 5. Notes the authoritative, sermon-like tone of the speech (1) / 6. Connects the speech to Priestley's direct address to the 1945 audience (1).",
+      "minWords": 50
+    },
+    "explanation": "The final speech is the climax of the play's political message, moving from the specific case of Eva Smith to a general warning about the future of humanity."
+  }
+]

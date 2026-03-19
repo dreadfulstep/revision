@@ -1,0 +1,470 @@
+[
+  {
+    "id": "macbeth-plot-chronology",
+    "topic": "macbeth",
+    "difficulty": 2,
+    "image": null,
+    "template": "Arrange these key events from Macbeth in the correct chronological order as they appear in the play.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "The Witches prophesy that Macbeth will be King.",
+        "Macbeth murders King Duncan in his sleep.",
+        "Banquo's ghost appears at the royal banquet.",
+        "Macbeth returns to the Witches for more prophecies.",
+        "Lady Macbeth dies and Macduff kills Macbeth."
+      ]
+    },
+    "explanation": "The play follows a linear tragic structure: the inciting prophecy, the regicide, the peak of Macbeth's paranoia (Banquo), the false security of the second prophecies, and finally the inevitable downfall."
+  },
+  {
+    "id": "macbeth-quote-id-fairfoul",
+    "topic": "macbeth",
+    "difficulty": 1,
+    "image": null,
+    "template": "Which characters speak the famous paradox, 'Fair is foul, and foul is fair' in Act 1, Scene 1?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The Three Witches",
+        "Macbeth and Banquo",
+        "Lady Macbeth",
+        "King Duncan"
+      ],
+      "answer": "The Three Witches"
+    },
+    "explanation": "This line is spoken in unison by the Three Witches at the very start of the play, establishing the theme of appearance vs. reality and moral confusion."
+  },
+  {
+    "id": "macbeth-context-james-i",
+    "topic": "macbeth",
+    "difficulty": 3,
+    "image": null,
+    "template": "Shakespeare included the character of [[blank0]] and the theme of [[blank1]] to appeal specifically to King James I, who claimed to be a descendant of this character.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [
+        ["Banquo"],
+        ["witchcraft", "the supernatural", "divine right"]
+      ]
+    },
+    "explanation": "James I was a patron of Shakespeare's acting company (The King's Men). He believed he was descended from Banquo and wrote 'Daemonologie' about the dangers of witchcraft."
+  },
+  {
+    "id": "macbeth-matching-techniques",
+    "topic": "macbeth",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match the literary technique used in Macbeth to its specific example from the text.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Soliloquy",
+          "right": "Is this a dagger which I see before me"
+        },
+        {
+          "left": "Metaphor",
+          "right": "Life's but a walking shadow"
+        },
+        {
+          "left": "Imperative verbs",
+          "right": "Come, you spirits / That tend on mortal thoughts"
+        },
+        {
+          "left": "Pathetic Fallacy",
+          "right": "The night has been unruly... lamentings heard i' the air"
+        }
+      ]
+    },
+    "explanation": "Soliloquies reveal inner thoughts; metaphors compare life to shadows; imperatives show Lady Macbeth's attempt to command the supernatural; pathetic fallacy links the weather to Duncan's murder."
+  },
+  {
+    "id": "macbeth-character-ladym-guilt",
+    "topic": "macbeth",
+    "difficulty": 2,
+    "image": null,
+    "template": "In Act 5, Scene 1, what does Lady Macbeth's repetitive hand-washing motion symbolize?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "guilt",
+      "acceptedAnswers": [
+        "her guilt",
+        "remorse",
+        "mental instability",
+        "blood on her hands"
+      ]
+    },
+    "explanation": "The 'damned spot' she tries to wash away is a physical manifestation of her psychological guilt and the blood of the victims she helped murder."
+  },
+  {
+    "id": "macbeth-quote-analysis-stars",
+    "topic": "macbeth",
+    "difficulty": 4,
+    "image": null,
+    "template": "When Macbeth says, 'Stars, hide your fires; / Let not light see my black and deep desires', what is he primarily trying to hide?",
+    "variables": {
+      "desire": {
+        "type": "pick",
+        "options": [
+          "his ambition to kill Duncan",
+          "his fear of the witches",
+          "his love for Lady Macbeth",
+          "his hatred for Banquo"
+        ]
+      }
+    },
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "his ambition to kill Duncan",
+        "his fear of the witches",
+        "his love for Lady Macbeth",
+        "his hatred for Banquo"
+      ],
+      "answer": "his ambition to kill Duncan"
+    },
+    "explanation": "Macbeth uses the personification of 'stars' and the contrast between 'light' and 'black' to express his need to conceal his murderous ambition from God and the world."
+  },
+  {
+    "id": "macbeth-context-divine-right",
+    "topic": "macbeth",
+    "difficulty": 3,
+    "image": null,
+    "template": "True or False: In Jacobean England, regicide (killing a king) was considered a crime against God because of the 'Divine Right of Kings'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "The Divine Right of Kings held that the monarch was chosen by God. Killing the king was therefore seen as an act of blasphemy that would upset the 'Great Chain of Being'."
+  },
+  {
+    "id": "macbeth-multi-themes",
+    "topic": "macbeth",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which of the following are central themes explored by Shakespeare in Macbeth? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Ambition and its corrupting influence",
+        "The conflict between fate and free will",
+        "The importance of romantic courtly love",
+        "Guilt and the effects of conscience",
+        "The benefits of a democratic government"
+      ],
+      "correctOptions": [
+        "Ambition and its corrupting influence",
+        "The conflict between fate and free will",
+        "Guilt and the effects of conscience"
+      ]
+    },
+    "explanation": "The play focuses on the psychological and political fallout of Macbeth's ambition, the role of the witches' prophecies (fate), and the resulting guilt."
+  },
+  {
+    "id": "macbeth-quote-unsex-analysis",
+    "topic": "macbeth",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how Shakespeare uses language in the quote 'unsex me here' to present Lady Macbeth's character at the start of the play.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Identifies 'unsex' as a powerful imperative/verb showing her rejection of traditional femininity (1) / 2. Explains she wants to be stripped of 'nurturing' female traits to commit violence (1) / 3. Links to the theme of gender/power in Jacobean society (1) / 4. Analysis of the association with the supernatural/spirits (1).",
+      "minWords": 30
+    },
+    "explanation": "By asking to be 'unsexed', Lady Macbeth seeks to remove the 'milk' of human kindness and replace it with 'gall', showing her ruthless ambition and rejection of gender norms."
+  },
+  {
+    "id": "macbeth-character-banquo-foil",
+    "topic": "macbeth",
+    "difficulty": 3,
+    "image": null,
+    "template": "Why is Banquo often described as a 'foil' to Macbeth?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "He reacts to the prophecies with caution and logic rather than blind ambition",
+        "He is the one who eventually kills Macbeth in the final battle",
+        "He is more ambitious than Macbeth but less successful",
+        "He is the only character who does not believe in the witches"
+      ],
+      "answer": "He reacts to the prophecies with caution and logic rather than blind ambition"
+    },
+    "explanation": "A 'foil' is a character who contrasts with another. Banquo warns that the 'instruments of darkness' often tell truths to win us to our harm, highlighting Macbeth's lack of moral restraint."
+  },
+  {
+    "id": "macbeth-quote-id-blood",
+    "topic": "macbeth",
+    "difficulty": 2,
+    "image": null,
+    "template": "Identify the speaker of the line: 'I am in blood / Stepped in so far that, should I wade no more, / Returning were as tedious as go o'er.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Macbeth",
+      "acceptedAnswers": ["Lord Macbeth", "King Macbeth"]
+    },
+    "explanation": "Macbeth says this in Act 3 after seeing Banquo's ghost, realizing that he has committed so many crimes that it is easier to continue his violence than to seek redemption."
+  },
+  {
+    "id": "macbeth-structure-hamartia",
+    "topic": "macbeth",
+    "difficulty": 3,
+    "image": null,
+    "template": "In the context of Aristotelian tragedy, what is Macbeth’s 'hamartia' (fatal flaw)?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "vaulting ambition",
+      "acceptedAnswers": ["ambition", "unchecked ambition", "his ambition"]
+    },
+    "explanation": "Macbeth himself identifies his 'vaulting ambition' as his only motivation for the murder of Duncan, which eventually leads to his tragic downfall."
+  },
+  {
+    "id": "macbeth-quote-tomorrow-technique",
+    "topic": "macbeth",
+    "difficulty": 3,
+    "image": null,
+    "template": "In Macbeth's 'Tomorrow, and tomorrow, and tomorrow' speech, he describes life as a 'brief [[blank0]]' and a 'walking [[blank1]]'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["candle"], ["shadow"]]
+    },
+    "explanation": "These metaphors emphasize Macbeth's ultimate nihilism and despair, suggesting that life is fragile, temporary, and ultimately meaningless."
+  },
+  {
+    "id": "macbeth-matching-symbols",
+    "topic": "macbeth",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match the recurring symbol in Macbeth to what it represents in the play.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Blood",
+          "right": "Inescapable guilt"
+        },
+        {
+          "left": "Sleep",
+          "right": "Peace and innocence"
+        },
+        {
+          "left": "Light/Dark",
+          "right": "Good vs. Evil"
+        },
+        {
+          "left": "The Dagger",
+          "right": "Mental disintegration"
+        }
+      ]
+    },
+    "explanation": "Blood symbolizes the stain of guilt; sleep is lost by the guilty; light/darkness represent the moral landscape; the dagger shows Macbeth's fracturing mind."
+  },
+  {
+    "id": "macbeth-ordering-act-titles",
+    "topic": "macbeth",
+    "difficulty": 4,
+    "image": null,
+    "template": "Order these structural shifts in Macbeth's character from the start to the end of the play.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Valiant warrior and 'worthy gentleman'",
+        "Hesitant murderer plagued by conscience",
+        "Paranoid tyrant ordering the death of Macduff's family",
+        "Cynical nihilist who views life as a 'tale told by an idiot'"
+      ]
+    },
+    "explanation": "Macbeth's character arc is a steady decline from nobility to moral vacuum and despair."
+  },
+  {
+    "id": "macbeth-quote-undone",
+    "topic": "macbeth",
+    "difficulty": 2,
+    "image": null,
+    "template": "Complete the quote from Lady Macbeth in Act 5: 'What's done cannot be [[blank0]].'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "undone",
+      "acceptedAnswers": ["undone"]
+    },
+    "explanation": "This is a direct reversal of her earlier confident line, 'What's done is done'. It shows her realization that the consequences of their actions are permanent."
+  },
+  {
+    "id": "macbeth-multi-supernatural",
+    "topic": "macbeth",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which of the following elements are used by Shakespeare to create a sense of the 'supernatural'? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "The use of trochaic tetrameter for the witches' speech",
+        "The appearance of the ghost of Banquo",
+        "The realistic descriptions of the Scottish landscape",
+        "The floating 'air-drawn' dagger",
+        "The introduction of the Porter"
+      ],
+      "correctOptions": [
+        "The use of trochaic tetrameter for the witches' speech",
+        "The appearance of the ghost of Banquo",
+        "The floating 'air-drawn' dagger"
+      ]
+    },
+    "explanation": "The witches speak in a different meter (trochaic tetrameter) than the nobles (iambic pentameter) to sound incantatory and 'other'. The ghost and dagger are visual symbols of the supernatural or psychological disturbance."
+  },
+  {
+    "id": "macbeth-context-gunpowder",
+    "topic": "macbeth",
+    "difficulty": 4,
+    "image": null,
+    "template": "The 'equivocator' mentioned by the Porter in Act 2 is widely considered to be an allusion to which historical event in 1605?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The Gunpowder Plot",
+        "The Coronation of King James",
+        "The Spanish Armada",
+        "The Great Fire of London"
+      ],
+      "answer": "The Gunpowder Plot"
+    },
+    "explanation": "Equivocation (telling half-truths) was a defense used by the Jesuit Father Henry Garnet during his trial for the Gunpowder Plot. Shakespeare uses the Witches to embody this 'equivocation'."
+  },
+  {
+    "id": "macbeth-character-duncan",
+    "topic": "macbeth",
+    "difficulty": 2,
+    "image": null,
+    "template": "How is King Duncan primarily presented at the beginning of the play?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "A benevolent and virtuous leader",
+        "A weak and indecisive king",
+        "A cruel and vengeful tyrant",
+        "A warrior king who enjoys battle"
+      ],
+      "answer": "A benevolent and virtuous leader"
+    },
+    "explanation": "Duncan is presented as a 'gracious' and holy king. This makes Macbeth's crime even more heinous, as there is no political justification for the murder."
+  },
+  {
+    "id": "macbeth-quote-double-trouble",
+    "topic": "macbeth",
+    "difficulty": 1,
+    "image": null,
+    "template": "Finish the rhyme: 'Double, double toil and trouble; Fire burn and caldron [[blank0]].'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "bubble",
+      "acceptedAnswers": ["bubble"]
+    },
+    "explanation": "This famous incantation is spoken by the Witches in Act 4 as they prepare a potion to summon the apparitions for Macbeth."
+  },
+  {
+    "id": "macbeth-quote-blood-will-blood",
+    "topic": "macbeth",
+    "difficulty": 3,
+    "image": null,
+    "template": "What does Macbeth mean by the line 'Blood will have blood'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "One murder will inevitably lead to more violence and revenge",
+        "Blood is required to satisfy the witches' hunger",
+        "He needs a blood transfusion to survive the battle",
+        "He is related by blood to King Duncan"
+      ],
+      "answer": "One murder will inevitably lead to more violence and revenge"
+    },
+    "explanation": "The line suggests the cyclical nature of violence. Macbeth realizes that killing creates a debt of blood that must be repaid by the killer."
+  },
+  {
+    "id": "macbeth-true-false-hecate",
+    "topic": "macbeth",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or False: Hecate is the name of the goddess of witchcraft who appears to reprimand the three witches.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Hecate appears in Act 3, Scene 5 (though many scholars believe this scene was added later by Thomas Middleton) to scold the witches for dealing with Macbeth without her."
+  },
+  {
+    "id": "macbeth-long-form-witches",
+    "topic": "macbeth",
+    "difficulty": 5,
+    "image": null,
+    "template": "Explain the significance of the Witches' 'equivocation' and how it leads to Macbeth's downfall.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "1. Definition of equivocation as using ambiguous language to hide the truth (1) / 2. Example of 'none of woman born' or 'Birnam Wood' prophecies (1) / 3. Explains how these truths lead Macbeth into a false sense of security/hubris (1) / 4. Analysis of how the 'half-truths' encourage his evil impulses without forcing them (1) / 5. Link to the theme of appearance vs reality (1) / 6. Evaluation of whether the witches or Macbeth's own choices are responsible (1).",
+      "minWords": 50
+    },
+    "explanation": "The Witches use 'paltering in a double sense' to trick Macbeth. They tell him things that are technically true but misleading, causing him to believe he is invincible when he is actually doomed."
+  },
+  {
+    "id": "macbeth-multi-macduff",
+    "topic": "macbeth",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which of the following are true about Macduff? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "He was 'untimely ripped' from his mother's womb",
+        "He is the one who discovers Duncan's body",
+        "He remains loyal to Macbeth until the very end",
+        "He flees to England to join Malcolm",
+        "He is the character who kills Banquo"
+      ],
+      "correctOptions": [
+        "He was 'untimely ripped' from his mother's womb",
+        "He is the one who discovers Duncan's body",
+        "He flees to England to join Malcolm"
+      ]
+    },
+    "explanation": "Macduff is the ultimate antagonist to Macbeth’s tyranny. Because he was born via Cesarean section, he fulfills the prophecy that 'none of woman born' shall harm Macbeth."
+  },
+  {
+    "id": "macbeth-long-form-kingship",
+    "topic": "macbeth",
+    "difficulty": 4,
+    "image": null,
+    "template": "Compare the presentation of Duncan's kingship with Macbeth's kingship.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Duncan is presented as the 'ideal' king, associated with health and nature (1) / 2. Macbeth is presented as a 'tyrant', associated with darkness and disease (1) / 3. Reference to the Great Chain of Being: Duncan preserves order, Macbeth destroys it (1) / 4. Use of vocabulary such as 'benevolent' for Duncan vs 'fruitless crown' for Macbeth (1).",
+      "minWords": 40
+    },
+    "explanation": "Shakespeare uses the contrast between Duncan’s legitimate, God-given rule and Macbeth’s stolen, bloody reign to explore the qualities of a good leader versus a tyrant."
+  }
+]

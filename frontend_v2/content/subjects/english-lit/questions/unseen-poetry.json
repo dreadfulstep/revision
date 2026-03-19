@@ -1,0 +1,422 @@
+[
+  {
+    "id": "unseen-poetry-reading-method",
+    "topic": "unseen-poetry",
+    "difficulty": 2,
+    "image": null,
+    "template": "When first reading an unseen poem, which three elements should you identify to understand the 'S.M.I.L.E.' of the poem?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Structure",
+        "Meaning",
+        "Imagery",
+        "Iambic Pentameter",
+        "Soliloquy"
+      ],
+      "correctOptions": ["Structure", "Meaning", "Imagery"]
+    },
+    "explanation": "S.M.I.L.E. is a common mnemonic for Structure, Meaning, Imagery, Language, and Effect. These help ensure you cover all AOs in your analysis."
+  },
+  {
+    "id": "unseen-poetry-terminology-volta",
+    "topic": "unseen-poetry",
+    "difficulty": 3,
+    "image": null,
+    "template": "A sudden shift in tone, argument, or perspective within a poem is known as a [[blank0]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "volta",
+      "acceptedAnswers": ["turning point", "shift"]
+    },
+    "explanation": "The volta is most commonly found in sonnets but can appear in any poem to signal a change in the speaker's emotions or thoughts."
+  },
+  {
+    "id": "unseen-poetry-structure-enjambment",
+    "topic": "unseen-poetry",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the term for a line of poetry that continues into the next line without any terminal punctuation?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Enjambment", "Caesura", "End-stopping", "Stanza"],
+      "answer": "Enjambment"
+    },
+    "explanation": "Enjambment often creates a sense of flow, urgency, or chaos, depending on the poem's context."
+  },
+  {
+    "id": "unseen-poetry-matching-sound-devices",
+    "topic": "unseen-poetry",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match the sound device to its correct definition.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Sibilance",
+          "right": "Repetition of 's' or 'sh' sounds"
+        },
+        {
+          "left": "Plosives",
+          "right": "Harsh sounds like 'p', 'b', or 't'"
+        },
+        {
+          "left": "Assonance",
+          "right": "Repetition of vowel sounds"
+        },
+        {
+          "left": "Onomatopoeia",
+          "right": "Words that mimic the sound they describe"
+        }
+      ]
+    },
+    "explanation": "Identifying sound devices helps you analyze how the poem would 'sound' aloud, which impacts the mood (e.g., sibilance can be soothing or sinister)."
+  },
+  {
+    "id": "unseen-poetry-caesura-effect",
+    "topic": "unseen-poetry",
+    "difficulty": 4,
+    "image": null,
+    "template": "True or False: A caesura is a break or pause in the middle of a line, often used to create a jarring effect or to reflect a speaker's hesitation.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Caesuras are powerful structural tools. For example, a full stop in the middle of a line can represent a sudden death or a sharp realization."
+  },
+  {
+    "id": "unseen-poetry-form-free-verse",
+    "topic": "unseen-poetry",
+    "difficulty": 3,
+    "image": null,
+    "template": "Poetry that does not use a consistent meter or rhyme scheme is called [[blank0]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "free verse",
+      "acceptedAnswers": ["vers libre"]
+    },
+    "explanation": "Free verse is often used in modern poetry to make the speaker's voice sound more natural and conversational."
+  },
+  {
+    "id": "unseen-poetry-anthology-comparison-link",
+    "topic": "unseen-poetry",
+    "difficulty": 5,
+    "image": null,
+    "template": "In the AQA GCSE English Literature Paper 2, how many marks is the second part of the Unseen Poetry section worth (the comparison part)?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["8 marks", "24 marks", "12 marks", "4 marks"],
+      "answer": "8 marks"
+    },
+    "explanation": "The first unseen question is worth 24 marks (analysis of one poem), and the second is worth 8 marks (comparing the first to a new, shorter poem)."
+  },
+  {
+    "id": "unseen-poetry-ordering-analysis",
+    "topic": "unseen-poetry",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the steps you should take when approaching an unseen poem in an exam.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Read the title and the introductory sentence",
+        "Read the whole poem through once for a general sense of meaning",
+        "Annotate key language features and structural shifts",
+        "Identify the speaker's perspective and tone",
+        "Begin writing your response using PEEL or PETAL paragraphs"
+      ]
+    },
+    "explanation": "Starting with the title and an initial read prevents you from getting bogged down in individual words before you understand the overall 'message'."
+  },
+  {
+    "id": "unseen-poetry-term-personification",
+    "topic": "unseen-poetry",
+    "difficulty": 1,
+    "image": null,
+    "template": "What technique is used in the line: 'The wind whispered through the shivering trees'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "personification",
+      "acceptedAnswers": ["anthropomorphism", "pathetic fallacy"]
+    },
+    "explanation": "Giving human qualities (whispering, shivering) to non-human things (wind, trees) is personification."
+  },
+  {
+    "id": "unseen-poetry-matching-form",
+    "topic": "unseen-poetry",
+    "difficulty": 4,
+    "image": null,
+    "template": "Match the poetic form to its structural characteristics.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Sonnet",
+          "right": "14 lines, usually about love or philosophy"
+        },
+        {
+          "left": "Ballad",
+          "right": "Narrative poem often in 4-line stanzas (quatrains)"
+        },
+        {
+          "left": "Elegy",
+          "right": "A poem of serious reflection, typically a lament for the dead"
+        },
+        {
+          "left": "Ode",
+          "right": "A lyrical poem addressed to a particular subject"
+        }
+      ]
+    },
+    "explanation": "Recognizing form helps you predict the poem's intent (e.g., an Elegy will likely be somber and mournful)."
+  },
+  {
+    "id": "unseen-poetry-multi-select-mood",
+    "topic": "unseen-poetry",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which of these are effective adjectives to describe the 'tone' or 'atmosphere' of a poem? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Melancholic",
+        "Nostalgic",
+        "Metaphorical",
+        "Cynical",
+        "Enjambed"
+      ],
+      "correctOptions": ["Melancholic", "Nostalgic", "Cynical"]
+    },
+    "explanation": "'Metaphorical' and 'Enjambed' describe techniques, not tone. Tone describes the speaker's attitude (e.g., sad, longing, or critical)."
+  },
+  {
+    "id": "unseen-poetry-speaker-vs-poet",
+    "topic": "unseen-poetry",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or False: In your essay, you should always refer to the person 'talking' in the poem as 'the speaker' rather than 'the poet'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Unless the poem is explicitly autobiographical, the poet has created a character (a 'persona' or 'speaker') to deliver the lines."
+  },
+  {
+    "id": "unseen-poetry-semantic-field",
+    "topic": "unseen-poetry",
+    "difficulty": 4,
+    "image": null,
+    "template": "If a poem contains words like 'grenade', 'barbed wire', and 'artillery', it uses a [[blank0]] of [[blank1]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [
+        ["semantic field", "lexical field"],
+        ["war", "conflict", "military"]
+      ]
+    },
+    "explanation": "A semantic field is a group of words that are related in meaning or theme, helping to build a consistent atmosphere."
+  },
+  {
+    "id": "unseen-poetry-stanza-types",
+    "topic": "unseen-poetry",
+    "difficulty": 3,
+    "image": null,
+    "template": "A stanza consisting of exactly four lines is called a [[blank0]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "quatrain",
+      "acceptedAnswers": ["a quatrain"]
+    },
+    "explanation": "Quatrains are the most common stanza form in English poetry, often used in ballads and sonnets."
+  },
+  {
+    "id": "unseen-poetry-allegory-definition",
+    "topic": "unseen-poetry",
+    "difficulty": 5,
+    "image": null,
+    "template": "What is the term for a poem that can be interpreted to reveal a hidden political or moral meaning?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Allegory", "Alliteration", "Hyperbole", "Oxymoron"],
+      "answer": "Allegory"
+    },
+    "explanation": "An allegory uses the literal story of the poem to comment on a wider, often real-world, issue."
+  },
+  {
+    "id": "unseen-poetry-rhyme-slanted",
+    "topic": "unseen-poetry",
+    "difficulty": 4,
+    "image": null,
+    "template": "Words like 'bridge' and 'grudge' represent which type of rhyme?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Half rhyme", "Full rhyme", "Eye rhyme", "Internal rhyme"],
+      "answer": "Half rhyme"
+    },
+    "explanation": "Half rhyme (or slant rhyme) involves words that sound similar but don't perfectly rhyme. Poets often use this to create a sense of unease or 'wrongness'."
+  },
+  {
+    "id": "unseen-poetry-long-form-structure",
+    "topic": "unseen-poetry",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how a poet might use structure to reflect a speaker's growing panic.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Identifies the use of shortened line lengths or fragmented stanzas (1) / 2. Discusses the use of enjambment to speed up the pace of reading (1) / 3. Mentions the use of frequent caesuras or ellipses to show a broken thought process (1) / 4. Explains how a lack of regular rhyme or meter creates a sense of instability (1).",
+      "minWords": 40
+    },
+    "explanation": "Structural choices often mimic the physical or mental state of the speaker. Rapid, unbroken lines (enjambment) can feel breathless and panicky."
+  },
+  {
+    "id": "unseen-poetry-metaphor-extended",
+    "topic": "unseen-poetry",
+    "difficulty": 3,
+    "image": null,
+    "template": "When a poet develops a single metaphor over several lines or throughout an entire poem, it is called an [[blank0]] [[blank1]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["extended"], ["metaphor"]]
+    },
+    "explanation": "Extended metaphors allow the poet to explore a complex idea in depth by comparing it to something simpler."
+  },
+  {
+    "id": "unseen-poetry-oxymoron-id",
+    "topic": "unseen-poetry",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which of these is an example of an oxymoron?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Deafening silence",
+        "Busy as a bee",
+        "The sky was blue",
+        "He ran like the wind"
+      ],
+      "answer": "Deafening silence"
+    },
+    "explanation": "An oxymoron places two contradictory terms side-by-side to create a new, often paradoxical, meaning."
+  },
+  {
+    "id": "unseen-poetry-matching-stanzas",
+    "topic": "unseen-poetry",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match the number of lines to the correct technical name for a stanza.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "2 lines",
+          "right": "Couplet"
+        },
+        {
+          "left": "3 lines",
+          "right": "Tercet"
+        },
+        {
+          "left": "6 lines",
+          "right": "Sestet"
+        },
+        {
+          "left": "8 lines",
+          "right": "Octave"
+        }
+      ]
+    },
+    "explanation": "These terms are particularly useful when analyzing sonnets, which are often divided into an octave and a sestet."
+  },
+  {
+    "id": "unseen-poetry-ambiguity-effect",
+    "topic": "unseen-poetry",
+    "difficulty": 5,
+    "image": null,
+    "template": "If a poet uses a word or phrase that can be interpreted in more than one way, they are using [[blank0]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "ambiguity",
+      "acceptedAnswers": ["ambiguous language", "polysemy"]
+    },
+    "explanation": "Ambiguity is common in unseen poetry to keep the reader thinking or to reflect a speaker's confusion."
+  },
+  {
+    "id": "unseen-poetry-long-form-comparison",
+    "topic": "unseen-poetry",
+    "difficulty": 5,
+    "image": null,
+    "template": "In the 8-mark comparison question, how should you structure your response to ensure you get the highest marks?",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "1. Uses comparative connectives (e.g. 'similarly', 'in contrast') (1) / 2. Focuses directly on the methods used in both poems (1) / 3. Links the similarities/differences back to the question's specific theme (1) / 4. Analyzes the effect of at least one structural method in each poem (1) / 5. Analyzes the effect of at least one language method in each poem (1) / 6. Provides short, embedded quotations from both poems (1).",
+      "minWords": 50
+    },
+    "explanation": "The 8-mark question is purely about comparing *methods* (how the poets achieve their effects). Don't just list what happens in the poems; explain *how* they are written differently or similarly."
+  },
+  {
+    "id": "unseen-poetry-symbolism-id",
+    "topic": "unseen-poetry",
+    "difficulty": 2,
+    "image": null,
+    "template": "If a poet uses a 'red rose' to represent love, the rose is acting as a [[blank0]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "symbol",
+      "acceptedAnswers": ["motif", "metaphor"]
+    },
+    "explanation": "Symbolism is when an object represents an abstract idea."
+  },
+  {
+    "id": "unseen-poetry-iambic-pentameter",
+    "topic": "unseen-poetry",
+    "difficulty": 5,
+    "image": null,
+    "template": "A line of poetry with five 'feet', each consisting of one unstressed syllable followed by one stressed syllable, is written in [[blank0]] [[blank1]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["iambic"], ["pentameter"]]
+    },
+    "explanation": "Iambic pentameter is the 'da-DUM da-DUM da-DUM da-DUM da-DUM' rhythm, often used to sound like a natural human heartbeat."
+  },
+  {
+    "id": "unseen-poetry-irony-purpose",
+    "topic": "unseen-poetry",
+    "difficulty": 4,
+    "image": null,
+    "template": "When a poet says the opposite of what is actually meant, usually for humorous or emphatic effect, they are using [[blank0]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "irony",
+      "acceptedAnswers": ["verbal irony", "sarcasm"]
+    },
+    "explanation": "Irony can be used to mock a character or to highlight a tragic situation."
+  }
+]

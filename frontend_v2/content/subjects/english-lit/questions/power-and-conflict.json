@@ -1,0 +1,453 @@
+[
+  {
+    "id": "power-conflict-intro-chronology",
+    "topic": "power-conflict",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order these poems from the Power and Conflict anthology by their original publication date, from earliest to latest.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "London (William Blake)",
+        "Ozymandias (Percy Bysshe Shelley)",
+        "My Last Duchess (Robert Browning)",
+        "The Charge of the Light Brigade (Alfred Lord Tennyson)",
+        "War Photographer (Carol Ann Duffy)"
+      ]
+    },
+    "explanation": "London was published in 1794; Ozymandias in 1818; My Last Duchess in 1842; The Charge of the Light Brigade in 1854; and War Photographer in 1985."
+  },
+  {
+    "id": "power-conflict-ozymandias-form",
+    "topic": "power-conflict",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is the primary poetic form of Shelley's 'Ozymandias'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Sonnet", "Ballad", "Dramatic Monologue", "Villanelle"],
+      "answer": "Sonnet"
+    },
+    "explanation": "Ozymandias is a 14-line sonnet. Interestingly, it blends the Petrarchan and Shakespearean sonnet structures, perhaps symbolizing how even the 'rules' of power and art can be broken or decayed."
+  },
+  {
+    "id": "power-conflict-matching-quotes-poems",
+    "topic": "power-conflict",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each famous quotation to the poem it is taken from.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "The chartered Thames does flow", "right": "London" },
+        { "left": "Tosses his guts back into his body", "right": "Remains" },
+        {
+          "left": "Our brains ache, in the merciless iced east winds",
+          "right": "Exposure"
+        },
+        {
+          "left": "Spools of suffering set out in ordered rows",
+          "right": "War Photographer"
+        }
+      ]
+    },
+    "explanation": "These quotes capture key imagery: Blake's critique of urban control, Armitage's visceral war trauma, Owen's personification of nature as an enemy, and Duffy's clinical approach to tragedy."
+  },
+  {
+    "id": "power-conflict-context-blake",
+    "topic": "power-conflict",
+    "difficulty": 3,
+    "image": null,
+    "template": "In the poem 'London', Blake repeats the word [[blank0]] to emphasize how every aspect of the city is owned or controlled by authority. He also describes the '[[blank1]] manacles' to show how people are trapped by their own beliefs and society.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["chartered"], ["mind-forg'd", "mind forged", "mind-forged"]]
+    },
+    "explanation": "'Chartered' refers to land being legally owned and restricted. The 'mind-forg'd manacles' is a powerful metaphor suggesting that the prisoners of poverty are held back by societal structures and their own internalised despair."
+  },
+  {
+    "id": "power-conflict-comparison-nature",
+    "topic": "power-conflict",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which of these poems primary themes include the overwhelming and often frightening 'Power of Nature'? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "The Prelude: Stealing the Boat",
+        "Storm on the Island",
+        "Exposure",
+        "My Last Duchess",
+        "Checking Out Me History"
+      ],
+      "correctOptions": [
+        "The Prelude: Stealing the Boat",
+        "Storm on the Island",
+        "Exposure"
+      ]
+    },
+    "explanation": "The Prelude shows nature as a moral, haunting force; Storm on the Island depicts it as a military-like attacker; Exposure presents it as a cold, indifferent killer in the trenches."
+  },
+  {
+    "id": "power-conflict-remains-technique",
+    "topic": "power-conflict",
+    "difficulty": 2,
+    "image": null,
+    "template": "In 'Remains', Simon Armitage uses the phrase 'probably armed, possibly not'. What does this repetition suggest about the speaker's state of mind?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The speaker's overwhelming guilt and doubt",
+        "The speaker's lack of training in the army",
+        "The speaker's anger towards the looter",
+        "The speaker's relief that the conflict is over"
+      ],
+      "answer": "The speaker's overwhelming guilt and doubt"
+    },
+    "explanation": "The repetition highlights the uncertainty that haunts the soldier; the doubt over whether the killing was justified leads to his Post-Traumatic Stress Disorder (PTSD)."
+  },
+  {
+    "id": "power-conflict-kamikaze-context",
+    "topic": "power-conflict",
+    "difficulty": 4,
+    "image": null,
+    "template": "In Beatrice Garland's 'Kamikaze', the pilot's decision to return home resulted in him being treated as if he were [[blank0]] by his family, reflecting the Japanese concept of [[blank1]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [
+        ["dead", "invisible", "gone"],
+        ["honour", "shame", "cultural duty"]
+      ]
+    },
+    "explanation": "Because he failed his suicide mission, he brought perceived shame upon his family. They treated him as dead, which Garland presents as a different kind of 'dying' than the one he avoided in the cockpit."
+  },
+  {
+    "id": "power-conflict-matching-techniques-effects",
+    "topic": "power-conflict",
+    "difficulty": 4,
+    "image": null,
+    "template": "Match the poetic technique to its specific effect in the anthology poems.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Enjambment in 'Bayonet Charge'",
+          "right": "Creates a sense of frantic, breathless movement"
+        },
+        {
+          "left": "Sibilance in 'Exposure'",
+          "right": "Mimics the whistling sound of bullets or wind"
+        },
+        {
+          "left": "Caesura in 'Out, damned spot'",
+          "right": "Breaks the rhythm to show mental instability"
+        },
+        {
+          "left": "Italicized text in 'Checking Out Me History'",
+          "right": "Distinguishes the hidden black history from the taught white history"
+        }
+      ]
+    },
+    "explanation": "Enjambment speeds up the pace in Hughes' poem, sibilance creates an auditory atmosphere in Owen's, and Agard uses different fonts/styles to represent the dual nature of his education."
+  },
+  {
+    "id": "power-conflict-charge-light-brigade-rhythm",
+    "topic": "power-conflict",
+    "difficulty": 3,
+    "image": null,
+    "template": "The 'dactylic dimeter' (half-a-league, half-a-league) rhythm in 'The Charge of the Light Brigade' is intended to mimic what?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The sound of horses' hooves galloping",
+        "The sound of cannons firing",
+        "The heartbeat of a dying soldier",
+        "The ticking of a clock"
+      ],
+      "answer": "The sound of horses' hooves galloping"
+    },
+    "explanation": "The 'falling' rhythm of a stressed syllable followed by two unstressed syllables creates a relentless, driving pace that echoes the physical movement of the cavalry charge."
+  },
+  {
+    "id": "power-conflict-comarison-war-effects",
+    "topic": "power-conflict",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which poems explore the 'lasting psychological effects' of war on those who survive it? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Remains",
+        "War Photographer",
+        "The Charge of the Light Brigade",
+        "Poppies",
+        "Bayonet Charge"
+      ],
+      "correctOptions": ["Remains", "War Photographer", "Poppies"]
+    },
+    "explanation": "Remains focuses on PTSD; War Photographer on the isolation of the observer; Poppies on the grief of those left behind. The Charge of the Light Brigade and Bayonet Charge focus more on the immediate action of conflict."
+  },
+  {
+    "id": "power-conflict-my-last-duchess-context",
+    "topic": "power-conflict",
+    "difficulty": 4,
+    "image": null,
+    "template": "In 'My Last Duchess', the Duke's obsession with the painting of his late wife and the sculpture of 'Neptune taming a sea-horse' symbolizes his desire for what?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "control",
+      "acceptedAnswers": ["total control", "power", "domination", "possession"]
+    },
+    "explanation": "The Duke values art because he can control it. He couldn't control his wife's smiles or personality while she was alive, so he reduced her to a painting behind a curtain that only he can pull."
+  },
+  {
+    "id": "power-conflict-prelude-volta",
+    "topic": "power-conflict",
+    "difficulty": 3,
+    "image": null,
+    "template": "In 'The Prelude', the 'volta' or turning point occurs when the speaker sees 'a huge peak, black and huge'. How does the tone change after this point?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "From arrogant confidence to troubled fear",
+        "From deep sadness to joyful discovery",
+        "From peaceful calm to violent anger",
+        "From religious devotion to scientific doubt"
+      ],
+      "answer": "From arrogant confidence to troubled fear"
+    },
+    "explanation": "The 'huge peak' represents the sublime power of nature that dwarfs the boy's ego, leading to a 'dim and undetermined sense of unknown modes of being'."
+  },
+  {
+    "id": "power-conflict-tissue-extended-metaphor",
+    "topic": "power-conflict",
+    "difficulty": 4,
+    "image": null,
+    "template": "In the poem 'Tissue', Dharker uses 'paper' as an extended metaphor for what?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The fragility and complexity of human life and power",
+        "The importance of keeping accurate historical records",
+        "The destruction of the environment for industrial gain",
+        "The difficulty of communication in the modern world"
+      ],
+      "answer": "The fragility and complexity of human life and power"
+    },
+    "explanation": "Paper represents everything from maps and receipts to the Quran and even human skin, suggesting that while human structures seem solid, they are actually as fragile as tissue."
+  },
+  {
+    "id": "power-conflict-checking-history-identity",
+    "topic": "power-conflict",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or False: In 'Checking Out Me History', Agard uses non-standard phonetic spelling to represent his Caribbean voice and reject the 'proper' English forced upon him.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Agard uses his own dialect ('Dem tell me / Wha dem want to tell me') to assert his identity and challenge the Eurocentric history he was taught."
+  },
+  {
+    "id": "power-conflict-longform-exposure-nature",
+    "topic": "power-conflict",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how Wilfred Owen presents nature as an enemy in 'Exposure'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Mentions the personification of the wind ('merciless iced east winds that knive us') (1) / 2. Explains that nature is more dangerous than the human enemy ('Less deadly than the air that shudders black with snow') (1) / 3. Discusses the use of sibilance/onomatopoeia to create a hostile atmosphere (1) / 4. Connects nature's hostility to the soldiers' loss of faith or hope (1).",
+      "minWords": 40
+    },
+    "explanation": "Owen uses personification and vivid imagery to show that the cold and the environment are more consistent killers in the trenches than the actual German army."
+  },
+  {
+    "id": "aic-comparison-identity",
+    "topic": "power-conflict",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which of these poems focus on the theme of 'Identity and Place'? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "The Emigree",
+        "Checking Out Me History",
+        "Kamikaze",
+        "Storm on the Island",
+        "Bayonet Charge"
+      ],
+      "correctOptions": ["The Emigree", "Checking Out Me History", "Kamikaze"]
+    },
+    "explanation": "The Emigree deals with the memory of a lost home; Checking Out Me History with cultural roots; Kamikaze with a pilot's identity within his society after his return."
+  },
+  {
+    "id": "power-conflict-war-photographer-structure",
+    "topic": "power-conflict",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is the significance of the rigid structure (four stanzas of six lines each, regular rhyme scheme) in Duffy's 'War Photographer'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "It reflects the photographer's attempt to impose order on the chaos of war",
+        "It shows that the photographer is bored with his job",
+        "It mimics the sound of a camera shutter clicking",
+        "It is meant to make the poem feel like a traditional song"
+      ],
+      "answer": "It reflects the photographer's attempt to impose order on the chaos of war"
+    },
+    "explanation": "The 'ordered rows' of the stanzas mimic the photographer's 'ordered rows' of film, showing his psychological need to contain and organize the horrors he witnesses."
+  },
+  {
+    "id": "power-conflict-bayonet-charge-opening",
+    "topic": "power-conflict",
+    "difficulty": 2,
+    "image": null,
+    "template": "In 'Bayonet Charge', the poem begins 'in media res'. What does this term mean?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "in the middle of things",
+      "acceptedAnswers": [
+        "in the middle of the action",
+        "in the middle of a story",
+        "starting in the middle"
+      ]
+    },
+    "explanation": "Starting 'Suddenly he awoke' thrusts the reader immediately into the panic and confusion of the soldier, mirroring his own disorientation."
+  },
+  {
+    "id": "power-conflict-matching-poets-context",
+    "topic": "power-conflict",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match the poet to the historical context that influenced their poem.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Alfred Lord Tennyson", "right": "The Crimean War" },
+        { "left": "Wilfred Owen", "right": "World War I Trench Warfare" },
+        { "left": "Ted Hughes", "right": "His father's experiences in WWI" },
+        { "left": "Percy Bysshe Shelley", "right": "The reign of Ramses II" }
+      ]
+    },
+    "explanation": "Tennyson wrote as Poet Laureate about a specific blunder; Owen wrote from the front lines; Hughes wrote about the impact of war on his father; Shelley wrote about an ancient Egyptian pharaoh."
+  },
+  {
+    "id": "power-conflict-poppies-symbolism",
+    "topic": "power-conflict",
+    "difficulty": 3,
+    "image": null,
+    "template": "In 'Poppies', the imagery of the 'yellow bias binding' and 'pleats' suggests the mother's attempt to [[blank0]] her son, while the 'single dove' at the end symbolizes [[blank1]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [
+        ["protect", "mend", "stay close to"],
+        ["peace", "release", "mourning", "her son's soul"]
+      ]
+    },
+    "explanation": "The domestic sewing imagery shows her trying to maintain a physical connection. The dove is a traditional symbol of peace but also suggests her letting go of her grief or her son's spirit."
+  },
+  {
+    "id": "power-conflict-storm-island-pun",
+    "topic": "power-conflict",
+    "difficulty": 4,
+    "image": null,
+    "template": "The first eight letters of the title 'Storm on the Island' spell out 'STORMONT'. Why is this significant in the context of Heaney's poem?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "It refers to the seat of the Northern Ireland government",
+        "It is the name of the mountain Heaney lived on",
+        "It was the name of a ship that sank nearby",
+        "It is a Gaelic word meaning 'strong wind'"
+      ],
+      "answer": "It refers to the seat of the Northern Ireland government"
+    },
+    "explanation": "This hidden reference suggests the poem is an allegory for the political 'Troubles' in Northern Ireland, where the 'storm' represents the civil conflict and violence."
+  },
+  {
+    "id": "power-conflict-longform-ozymandias-irony",
+    "topic": "power-conflict",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain the use of irony in Shelley's 'Ozymandias'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Identifies the contrast between the boastful inscription ('King of Kings') and the ruined state of the statue (1) / 2. Explains that the 'colossal wreck' shows that time and nature have outlasted political power (1) / 3. Discusses how the sculptor's art has survived while the King's empire has not (1) / 4. Analyzes the 'lone and level sands' as a symbol of the ultimate insignificance of human pride (1).",
+      "minWords": 40
+    },
+    "explanation": "The ultimate irony is that Ozymandias commanded people to 'despair' at his greatness, but they now 'despair' because his greatness has completely disappeared into the sand."
+  },
+  {
+    "id": "power-conflict-emigree-light",
+    "topic": "power-conflict",
+    "difficulty": 3,
+    "image": null,
+    "template": "In 'The Emigree', Rumens repeats the word [[blank0]] at the end of every stanza to emphasize the speaker's positive, idealized memory of her home.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "sunlight",
+      "acceptedAnswers": ["sunlight"]
+    },
+    "explanation": "Despite the news of 'war' and 'tyrants', the speaker's memory is 'branded by an impression of sunlight', showing the power of memory over political reality."
+  },
+  {
+    "id": "power-conflict-comparison-common-themes",
+    "topic": "power-conflict",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which pair of poems would be most effective to compare when discussing 'The Loss of Individual Identity in War'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Bayonet Charge and Exposure",
+        "Ozymandias and My Last Duchess",
+        "London and Tissue",
+        "Poppies and War Photographer"
+      ],
+      "answer": "Bayonet Charge and Exposure"
+    },
+    "explanation": "Both poems show soldiers becoming parts of a machine (Hughes) or becoming numb and ghost-like (Owen), losing their sense of self to the requirements of the conflict."
+  },
+  {
+    "id": "power-conflict-longform-charge-comparison",
+    "topic": "power-conflict",
+    "difficulty": 5,
+    "image": null,
+    "template": "Compare how Tennyson and Owen differently present the 'glory' of war in 'The Charge of the Light Brigade' and 'Exposure'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "1. Contrasts Tennyson’s use of heroic language ('Honour the charge!') with Owen's depiction of misery ('But nothing happens') (1) / 2. Explains Tennyson's rhythm mimics a horse's gallop (action/excitement) vs Owen's stagnant, dull rhythm (boredom/suffering) (1) / 3. Mentions that Tennyson was a Poet Laureate (official/public view) while Owen was a soldier (private/realistic view) (1) / 4. Analyzes the presentation of the 'enemy' in both (Tennyson: 'jaws of Death', Owen: the weather) (1) / 5. Discusses the ending of both (Tennyson: 'Noble six hundred!', Owen: 'For love of God seems dying') (1) / 6. Concludes on the differing purposes of the poets (nationalistic pride vs anti-war protest) (1).",
+      "minWords": 60
+    },
+    "explanation": "Tennyson seeks to immortalize the bravery of the soldiers despite the 'blunder', while Owen seeks to strip away the 'lie' of war's glory by showing the reality of freezing to death in a ditch."
+  }
+]

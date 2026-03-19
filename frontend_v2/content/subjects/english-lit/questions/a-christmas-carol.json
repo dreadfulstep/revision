@@ -1,0 +1,434 @@
+[
+  {
+    "id": "acc-character-scrooge-simile",
+    "topic": "a-christmas-carol",
+    "difficulty": 1,
+    "image": null,
+    "template": "Which famous simile is used in Stave 1 to describe Scrooge's isolated nature?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Solitary as an oyster",
+        "Hard and sharp as flint",
+        "Dead as a doornail",
+        "Light as a feather"
+      ],
+      "answer": "Solitary as an oyster"
+    },
+    "explanation": "Dickens uses 'Solitary as an oyster' to suggest that while Scrooge is currently closed off and hard on the outside, there might be a 'pearl' of goodness buried deep within him."
+  },
+  {
+    "id": "acc-context-malthus",
+    "topic": "a-christmas-carol",
+    "difficulty": 3,
+    "image": null,
+    "template": "When Scrooge mentions the 'surplus population', he is echoing the economic theories of which Victorian figure?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Thomas Malthus",
+      "acceptedAnswers": ["Malthus", "Thomas Robert Malthus"]
+    },
+    "explanation": "Thomas Malthus argued that population growth would outpace food supply and that the poor should not be helped, as it only encouraged more 'surplus' people. Dickens used Scrooge to critique these cold, heartless views."
+  },
+  {
+    "id": "acc-plot-stave-order",
+    "topic": "a-christmas-carol",
+    "difficulty": 2,
+    "image": null,
+    "template": "Place these visits to Scrooge in the correct chronological order as they occur in the novella.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Jacob Marley's Ghost",
+        "The Ghost of Christmas Past",
+        "The Ghost of Christmas Present",
+        "The Ghost of Christmas Yet to Come"
+      ]
+    },
+    "explanation": "The structure of the novella is circular and chronological: Marley provides the warning, followed by the three spirits representing the passage of time."
+  },
+  {
+    "id": "acc-quote-marley-business",
+    "topic": "a-christmas-carol",
+    "difficulty": 2,
+    "image": null,
+    "template": "Complete the famous quote from Marley's Ghost: 'Mankind was my [[blank0]].'",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["business"]]
+    },
+    "explanation": "Marley regrets that he focused only on financial 'business' in life, realizing too late that his true responsibility was to his fellow human beings."
+  },
+  {
+    "id": "acc-theme-symbolism-chains",
+    "topic": "a-christmas-carol",
+    "difficulty": 3,
+    "image": null,
+    "template": "What do the chains worn by Marley's Ghost primarily symbolize?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The obsession with money and neglect of others in life",
+        "The literal crimes he committed as a younger man",
+        "The heavy winter clothing worn by Victorians",
+        "His eternal connection to his business partner, Scrooge"
+      ],
+      "answer": "The obsession with money and neglect of others in life"
+    },
+    "explanation": "Marley explains, 'I wear the chain I forged in life,' made of cash-boxes, keys, and padlocks, symbolizing how his greed in life has become his imprisonment in death."
+  },
+  {
+    "id": "acc-context-poor-law",
+    "topic": "a-christmas-carol",
+    "difficulty": 2,
+    "image": null,
+    "template": "Scrooge asks the charity collectors if the [[blank0]] and the [[blank1]] are still in operation, referencing the 1834 Poor Law Amendment Act.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["prisons"], ["workhouses", "Union workhouses"]]
+    },
+    "explanation": "Scrooge's reliance on prisons and workhouses reflects the harsh Victorian attitude that poverty was a moral failing rather than a social misfortune."
+  },
+  {
+    "id": "acc-matching-ghosts-features",
+    "topic": "a-christmas-carol",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each Ghost to its distinctive physical description or attribute.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Christmas Past",
+          "right": "A bright jet of light springing from its head"
+        },
+        {
+          "left": "Christmas Present",
+          "right": "A majestic giant clad in a green robe"
+        },
+        {
+          "left": "Christmas Yet to Come",
+          "right": "A draped and hooded figure that does not speak"
+        },
+        {
+          "left": "Jacob Marley",
+          "right": "Wrapped in a chain made of cash-boxes and ledgers"
+        }
+      ]
+    },
+    "explanation": "Each ghost’s appearance is symbolic: light represents memory, the green robe represents plenty/nature, and the silence of the final ghost represents the uncertainty of the future."
+  },
+  {
+    "id": "acc-quote-id-clutching",
+    "topic": "a-christmas-carol",
+    "difficulty": 2,
+    "image": null,
+    "template": "Dickens describes Scrooge as 'a squeezing, wrenching, grasping, scraping, clutching, covetous old sinner'. Which linguistic technique is most prominent here?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Asyndetic listing of verbs",
+        "Pathetic fallacy",
+        "Personification of the seasons",
+        "Biblical allusion"
+      ],
+      "answer": "Asyndetic listing of verbs"
+    },
+    "explanation": "The rapid list of aggressive, 'hand-related' verbs emphasizes Scrooge's active greed and how tightly he holds onto his money."
+  },
+  {
+    "id": "acc-character-fred-purpose",
+    "topic": "a-christmas-carol",
+    "difficulty": 3,
+    "image": null,
+    "template": "True or False: Fred is presented as a 'foil' to Scrooge because his warmth and generosity highlight Scrooge's coldness.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Fred embodies the 'Christmas Spirit'. His physical warmth ('all in a glow') contrasts directly with Scrooge's icy atmosphere in Stave 1."
+  },
+  {
+    "id": "acc-theme-ignorance-want",
+    "topic": "a-christmas-carol",
+    "difficulty": 4,
+    "image": null,
+    "template": "Under the robe of the Ghost of Christmas Present are two children: Ignorance and Want. Which one does the Ghost say is 'most' to be dreaded?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Ignorance",
+      "acceptedAnswers": ["The boy", "Ignorance"]
+    },
+    "explanation": "The Ghost warns, 'Most of all beware this boy, for on his brow I see that written which is Doom.' Dickens believed that the lack of education (Ignorance) for the poor was the root cause of crime and social collapse."
+  },
+  {
+    "id": "acc-multi-select-cratchit",
+    "topic": "a-christmas-carol",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which of these details are true regarding Bob Cratchit's life and conditions? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "He works in a dismal little 'cell' of an office",
+        "He earns only fifteen 'bob' (shillings) a week",
+        "He hates Scrooge and speaks ill of him at Christmas dinner",
+        "He is the father of Tiny Tim"
+      ],
+      "correctOptions": [
+        "He works in a dismal little 'cell' of an office",
+        "He earns only fifteen 'bob' (shillings) a week",
+        "He is the father of Tiny Tim"
+      ]
+    },
+    "explanation": "Bob is remarkably patient and even toasts Scrooge as the 'Founder of the Feast', despite his terrible working conditions and low pay."
+  },
+  {
+    "id": "acc-long-form-stave-1-cold",
+    "topic": "a-christmas-carol",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how Dickens uses pathetic fallacy in Stave 1 to reflect Scrooge's character.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Identifies the use of fog and biting cold as a reflection of Scrooge's personality (1) / 2. Explains that the external cold has no effect on Scrooge because he carries his own 'low temperature' within him (1) / 3. Analyzes how the thickening fog symbolizes Scrooge's moral blindness or isolation (1) / 4. Links the weather to the 'frozen' state of his heart before his transformation (1).",
+      "minWords": 40
+    },
+    "explanation": "Dickens writes that 'no warmth could warm, no wintry weather chill him,' suggesting Scrooge's internal coldness is more powerful than the elements."
+  },
+  {
+    "id": "acc-character-scrooge-change",
+    "topic": "a-christmas-carol",
+    "difficulty": 3,
+    "image": null,
+    "template": "In Stave 5, Scrooge describes himself using several similes. Which of these does he NOT use?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "I am as light as a feather",
+        "I am as happy as an angel",
+        "I am as merry as a schoolboy",
+        "I am as rich as a king"
+      ],
+      "answer": "I am as rich as a king"
+    },
+    "explanation": "Scrooge focuses on his emotional and spiritual lightness, not his financial wealth. He uses 'feather', 'angel', 'schoolboy', and 'drunken man'."
+  },
+  {
+    "id": "acc-quote-id-tinytim",
+    "topic": "a-christmas-carol",
+    "difficulty": 1,
+    "image": null,
+    "template": "Who speaks the final line of the novella: 'God bless us, every one!'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Tiny Tim",
+      "acceptedAnswers": ["Tim Cratchit", "Little Tim"]
+    },
+    "explanation": "The novella ends with Tiny Tim's words, symbolizing the triumph of hope and Christian charity."
+  },
+  {
+    "id": "acc-matching-staves-titles",
+    "topic": "a-christmas-carol",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match the Stave number to the key event that occurs within it.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Stave 1",
+          "right": "Scrooge refuses to donate to charity"
+        },
+        {
+          "left": "Stave 2",
+          "right": "Scrooge sees his childhood at school"
+        },
+        {
+          "left": "Stave 3",
+          "right": "The Cratchit family Christmas dinner"
+        },
+        {
+          "left": "Stave 4",
+          "right": "The thieves divide Scrooge's belongings"
+        }
+      ]
+    },
+    "explanation": "Stave 1 sets the scene; Stave 2 focuses on memory; Stave 3 on the present state of the poor; and Stave 4 on the grim consequences of an unrepentant life."
+  },
+  {
+    "id": "acc-context-dickens-bio",
+    "topic": "a-christmas-carol",
+    "difficulty": 4,
+    "image": null,
+    "template": "Dickens's inspiration for the 'surplus population' dialogue and the focus on child labour was partly fueled by his 1843 visit to the [[blank0]] schools in London.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Ragged",
+      "acceptedAnswers": ["Ragged Schools", "Field Lane Ragged School"]
+    },
+    "explanation": "The Ragged Schools provided free education to the most destitute children. Dickens was horrified by the conditions and wrote the novella to 'strike a sledgehammer blow' on behalf of the poor."
+  },
+  {
+    "id": "acc-multi-select-redemption",
+    "topic": "a-christmas-carol",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which of these actions does Scrooge take in Stave 5 to demonstrate his redemption? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Sends a giant turkey to the Cratchit family",
+        "Gives a large sum of money to the charity collectors",
+        "Goes to Fred's house for Christmas dinner",
+        "Sells his business to Bob Cratchit"
+      ],
+      "correctOptions": [
+        "Sends a giant turkey to the Cratchit family",
+        "Gives a large sum of money to the charity collectors",
+        "Goes to Fred's house for Christmas dinner"
+      ]
+    },
+    "explanation": "Scrooge becomes a 'second father' to Tiny Tim and a good friend to the city, but he remains a man of business—now a generous one who raises Bob's salary."
+  },
+  {
+    "id": "acc-quote-belle-idol",
+    "topic": "a-christmas-carol",
+    "difficulty": 4,
+    "image": null,
+    "template": "In Stave 2, Belle tells Scrooge: 'Another [[blank0]] has displaced me.' What is she referring to?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "idol",
+      "acceptedAnswers": ["idol", "golden idol"]
+    },
+    "explanation": "The 'golden idol' is money. This moment marks the turning point where Scrooge chooses greed over love, leading to his lonely life."
+  },
+  {
+    "id": "acc-theme-fire-light",
+    "topic": "a-christmas-carol",
+    "difficulty": 3,
+    "image": null,
+    "template": "In the novella, the symbol of 'fire' and 'light' usually represents what?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Emotional warmth and the spirit of generosity",
+        "The danger of the Industrial Revolution",
+        "The hellfire waiting for sinners like Scrooge",
+        "The luxury and waste of the upper classes"
+      ],
+      "answer": "Emotional warmth and the spirit of generosity"
+    },
+    "explanation": "Scrooge keeps a very small fire in Stave 1, while the Ghost of Christmas Present and Fred are associated with bright light and roaring fires, symbolizing their capacity for joy and love."
+  },
+  {
+    "id": "acc-long-form-transformation",
+    "topic": "a-christmas-carol",
+    "difficulty": 5,
+    "image": null,
+    "template": "How does Dickens use the structural device of the 'Five Staves' to present Scrooge's transformation?",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "1. Notes the title 'A Christmas Carol' and 'Staves' links the novella to a musical structure (1) / 2. Explains Stave 1 establishes the 'exposition' of Scrooge's miserly nature (1) / 3. Discusses how Staves 2-4 serve as the psychological 'rising action' through memory, empathy, and fear (1) / 4. Analyzes the climax in Stave 4 (the gravestone) as the catalyst for change (1) / 5. Explains Stave 5 as the 'resolution' or joyful conclusion (1) / 6. Connects the structure to Dickens's purpose of leading the reader through a similar moral journey (1).",
+      "minWords": 50
+    },
+    "explanation": "By using the structure of a carol, Dickens suggests that his story is meant to be shared and repeated to spread the message of social harmony."
+  },
+  {
+    "id": "acc-true-false-fezziwig",
+    "topic": "a-christmas-carol",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or False: Fezziwig was Scrooge's first employer who treated his apprentices with great kindness and hosted a Christmas party.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Fezziwig is the antithesis of the employer Scrooge becomes. He shows that you can be a successful man of business while still being generous and joyful."
+  },
+  {
+    "id": "acc-ordering-stave-4-vision",
+    "topic": "a-christmas-carol",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order these events from the Ghost of Christmas Yet to Come's visit from first to last.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Businessmen joke about a funeral",
+        "Old Joe's shop: thieves sell stolen bed-curtains",
+        "A young couple feels relief at a man's death",
+        "Scrooge sees his own name on a neglected grave"
+      ]
+    },
+    "explanation": "Scrooge first observes the cold reactions of the public before finally realizing that the 'wretched man' everyone is talking about is himself."
+  },
+  {
+    "id": "acc-character-marley-warning",
+    "topic": "a-christmas-carol",
+    "difficulty": 3,
+    "image": null,
+    "template": "Jacob Marley has been dead for how many years when the story begins?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Seven years", "Ten years", "One year", "Twelve years"],
+      "answer": "Seven years"
+    },
+    "explanation": "Marley died on Christmas Eve seven years prior. The number seven often carries biblical significance related to completion or spiritual cycles."
+  },
+  {
+    "id": "acc-quote-id-regret",
+    "topic": "a-christmas-carol",
+    "difficulty": 4,
+    "image": null,
+    "template": "Which character says: 'No space of regret can make amends for one life's opportunity misused'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Jacob Marley",
+      "acceptedAnswers": ["Marley", "Marley's Ghost", "Jacob Marley's Ghost"]
+    },
+    "explanation": "Marley's ghost delivers this warning to Scrooge, emphasizing that regret after death is useless; change must happen while one is still alive."
+  },
+  {
+    "id": "acc-long-form-social-responsibility",
+    "topic": "a-christmas-carol",
+    "difficulty": 5,
+    "image": null,
+    "template": "Evaluate the importance of the theme of 'social responsibility' in A Christmas Carol.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 5,
+      "markScheme": "1. States that social responsibility is the core moral message of the novella (1) / 2. Contrasts Scrooge’s early 'solipsism' (only caring for self) with his later philanthropy (1) / 3. Mentions the Cratchits as the face of the 'deserving poor' whom society should help (1) / 4. Connects the theme to Dickens's critique of Malthusian views or the Poor Law (1) / 5. Analyzes the warning of Ignorance and Want as the consequence of neglecting social responsibility (1).",
+      "minWords": 45
+    },
+    "explanation": "Dickens argues that we are all 'fellow-passengers to the grave' and have a duty to care for the less fortunate, as shown through Scrooge’s transformation from a miser to a benefactor."
+  }
+]

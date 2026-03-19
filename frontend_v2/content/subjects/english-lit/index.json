@@ -1,0 +1,14 @@
+{
+  "id": "english-literature",
+  "name": "English literature",
+  "exam_board": "AQA",
+  "colour": "#A020F0",
+  "papers": ["1", "2"],
+  "topics": [
+    { "id": "macbeth", "name": "Macbeth" },
+    { "id": "a-christmas-carol", "name": "A Christmas Carol" },
+    { "id": "an-inspector-calls", "name": "An Inspector Calls" },
+    { "id": "power-and-conflict", "name": "Power and Conflict" },
+    { "id": "unseen-poetry", "name": "Unseen Poetry" }
+  ]
+}
