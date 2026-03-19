@@ -436,7 +436,7 @@
       "type": "long_form",
       "marks": 6,
       "markScheme": "Negative impacts (max 3): deforestation destroys habitats reducing species (1) / pollution damages ecosystems (1) / overfishing reduces fish populations (1) / climate change alters habitats (1) / introduction of invasive species (1). Reducing impacts (max 3): protected areas/nature reserves (1) / sustainable farming/fishing (1) / reducing carbon emissions (1) / reforestation/rewilding (1) / international agreements e.g. CITES (1). Conclusion required for full marks (1).",
-      "minWords": 50
+      "minWords": 35
     },
     "explanation": "Human activities reduce biodiversity through habitat destruction, pollution, overexploitation, and climate change. Impacts can be reduced through conservation, sustainable resource use, pollution control, and international cooperation."
   },

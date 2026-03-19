@@ -313,7 +313,7 @@
       "type": "long_form",
       "marks": 3,
       "markScheme": "1. Green flame test indicates copper ions (Cu²⁺) (1) / 2. Blue precipitate with NaOH is Cu(OH)₂ — confirms copper(II) ions (1) / 3. Both tests agree — the ion is Cu²⁺ / copper(II) (1)",
-      "minWords": 25
+      "minWords": 15
     },
     "explanation": "Green flame test → copper. NaOH blue precipitate (Cu(OH)₂) → Cu²⁺ confirmed. Both tests independently identify the same ion. The ion is Cu²⁺ (copper(II))."
   },

@@ -1,0 +1,359 @@
+[
+  {
+    "id": "elec-ohms-law-calc",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "A resistor has resistance {{r}} Ω and a current of {{i}} A flows through it. Calculate the voltage across it.",
+    "variables": {
+      "r": { "type": "pick", "options": [5, 10, 20, 25, 50, 100, 200] },
+      "i": { "type": "pick", "options": [0.1, 0.2, 0.5, 1, 1.5, 2, 2.5, 3] },
+      "ans": { "type": "derived", "expr": "round(r * i, 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(r * i, 2)",
+      "unit": "V"
+    },
+    "explanation": "V = IR = {{r}} × {{i}} = {{ans}} V. Ohm's law applies to resistors at constant temperature — a linear relationship between V and I."
+  },
+  {
+    "id": "elec-series-parallel-rules",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each circuit type to the correct rule.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Series — current",
+          "right": "Same everywhere in the circuit"
+        },
+        {
+          "left": "Series — voltage",
+          "right": "Shared between components — adds up to supply voltage"
+        },
+        {
+          "left": "Parallel — current",
+          "right": "Splits at junctions — total = sum of branch currents"
+        },
+        { "left": "Parallel — voltage", "right": "Same across all branches" }
+      ]
+    },
+    "explanation": "Series: current same throughout; voltage shared (V₁+V₂+...= Vs); resistances add (R_total = R₁+R₂). Parallel: voltage same across each branch; current splits; 1/R_total = 1/R₁ + 1/R₂ (total resistance less than smallest)."
+  },
+  {
+    "id": "elec-series-resistance",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "Two resistors of {{r1}} Ω and {{r2}} Ω are connected in series. Calculate the total resistance.",
+    "variables": {
+      "r1": { "type": "pick", "options": [5, 10, 15, 20, 25, 30, 40] },
+      "r2": { "type": "pick", "options": [5, 10, 15, 20, 25, 30, 40] },
+      "ans": { "type": "derived", "expr": "r1 + r2" }
+    },
+    "answerConfig": { "type": "number", "answer": "r1 + r2", "unit": "Ω" },
+    "explanation": "In series: R_total = R₁ + R₂ = {{r1}} + {{r2}} = {{ans}} Ω."
+  },
+  {
+    "id": "elec-parallel-resistance",
+    "topic": "electricity",
+    "difficulty": 4,
+    "image": null,
+    "template": "Two resistors of {{r1}} Ω and {{r2}} Ω are connected in parallel. Calculate the total resistance.",
+    "variables": {
+      "r1": { "type": "pick", "options": [4, 6, 8, 10, 12, 20] },
+      "r2": { "type": "pick", "options": [4, 6, 8, 10, 12, 20] },
+      "ans": { "type": "derived", "expr": "round((r1 * r2) / (r1 + r2), 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round((r1 * r2) / (r1 + r2), 2)",
+      "unit": "Ω"
+    },
+    "explanation": "1/R_total = 1/R₁ + 1/R₂ = 1/{{r1}} + 1/{{r2}}. R_total = (R₁ × R₂) ÷ (R₁ + R₂) = ({{r1}} × {{r2}}) ÷ ({{r1}} + {{r2}}) = {{r1*r2}} ÷ {{r1+r2}} = {{ans}} Ω. Always less than the smallest individual resistance."
+  },
+  {
+    "id": "elec-power-calc",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "A device operates at {{v}} V with a current of {{i}} A. Calculate its power.",
+    "variables": {
+      "v": { "type": "pick", "options": [6, 12, 24, 120, 230, 240] },
+      "i": { "type": "pick", "options": [0.5, 1, 1.5, 2, 3, 4, 5, 10] },
+      "ans": { "type": "derived", "expr": "v * i" }
+    },
+    "answerConfig": { "type": "number", "answer": "v * i", "unit": "W" },
+    "explanation": "P = IV = {{i}} × {{v}} = {{ans}} W."
+  },
+  {
+    "id": "elec-power-i-squared-r",
+    "topic": "electricity",
+    "difficulty": 3,
+    "image": null,
+    "template": "A resistor of {{r}} Ω carries a current of {{i}} A. Calculate the power dissipated.",
+    "variables": {
+      "r": { "type": "pick", "options": [5, 8, 10, 20, 25, 50, 100] },
+      "i": { "type": "pick", "options": [0.5, 1, 1.5, 2, 2.5, 3] },
+      "ans": { "type": "derived", "expr": "round(i * i * r, 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(i * i * r, 2)",
+      "unit": "W"
+    },
+    "explanation": "P = I²R = {{i}}² × {{r}} = {{i*i}} × {{r}} = {{ans}} W."
+  },
+  {
+    "id": "elec-energy-calc",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "A {{p}} W appliance is used for {{t}} seconds. Calculate the energy transferred.",
+    "variables": {
+      "p": {
+        "type": "pick",
+        "options": [100, 200, 500, 800, 1000, 2000, 3000]
+      },
+      "t": {
+        "type": "pick",
+        "options": [10, 30, 60, 120, 300, 600, 1800, 3600]
+      },
+      "ans": { "type": "derived", "expr": "p * t" }
+    },
+    "answerConfig": { "type": "number", "answer": "p * t", "unit": "J" },
+    "explanation": "E = Pt = {{p}} × {{t}} = {{ans}} J."
+  },
+  {
+    "id": "elec-charge-calc",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "A current of {{i}} A flows for {{t}} seconds. Calculate the charge that passes.",
+    "variables": {
+      "i": { "type": "pick", "options": [0.5, 1, 1.5, 2, 2.5, 3, 4, 5] },
+      "t": { "type": "pick", "options": [10, 20, 30, 40, 50, 60, 120] },
+      "ans": { "type": "derived", "expr": "i * t" }
+    },
+    "answerConfig": { "type": "number", "answer": "i * t", "unit": "C" },
+    "explanation": "Q = It = {{i}} × {{t}} = {{ans}} C. Charge is measured in coulombs. 1 coulomb = 1 ampere × 1 second."
+  },
+  {
+    "id": "elec-iv-characteristics",
+    "topic": "electricity",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each component to the shape of its I-V characteristic graph.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Resistor (at constant temperature)",
+          "right": "Straight line through origin — Ohmic"
+        },
+        {
+          "left": "Filament bulb",
+          "right": "Curved — resistance increases as it heats up"
+        },
+        {
+          "left": "Diode",
+          "right": "Only conducts in forward direction — negligible reverse current"
+        }
+      ]
+    },
+    "explanation": "Resistor: straight line (I proportional to V — Ohmic). Filament bulb: curve (as current increases, temperature rises, resistance increases, so gradient decreases — non-Ohmic). Diode: sharp threshold ~0.6V forward, then conducts freely; almost zero current in reverse."
+  },
+  {
+    "id": "elec-ldr-thermistor",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each sensor to what causes its resistance to decrease.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "LDR (Light Dependent Resistor)",
+          "right": "Increasing light intensity"
+        },
+        { "left": "Thermistor (NTC type)", "right": "Increasing temperature" }
+      ]
+    },
+    "explanation": "LDR: resistance decreases as light intensity increases (more photons release charge carriers). NTC thermistor: resistance decreases as temperature increases (more thermal energy releases charge carriers). Both are used in circuits to respond automatically to environmental changes."
+  },
+  {
+    "id": "elec-static-electricity",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "Explain how a plastic rod becomes negatively charged when rubbed with a cloth.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "electrons transfer from the cloth to the rod giving the rod a negative charge and leaving the cloth with a positive charge",
+      "acceptedAnswers": [
+        "the rod gains electrons during rubbing so has more electrons than protons — negatively charged",
+        "friction causes electron transfer from cloth to rod"
+      ]
+    },
+    "explanation": "Static charge is created by friction transferring electrons. Electrons (negatively charged) transfer from the cloth to the rod. The rod has more electrons than protons — net negative charge. The cloth loses electrons — net positive charge. Protons do not move in solids."
+  },
+  {
+    "id": "elec-ac-dc",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each type of current to its correct description.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Direct current (DC)",
+          "right": "Current flows in one direction only — from batteries"
+        },
+        {
+          "left": "Alternating current (AC)",
+          "right": "Current direction reverses repeatedly — mains supply"
+        }
+      ]
+    },
+    "explanation": "DC: current flows in one constant direction. Source: batteries, solar cells. AC: current direction alternates back and forth at a set frequency. UK mains: 230V, 50Hz (reverses direction 50 times per second). AC is used for mains supply because it can be transformed to different voltages easily."
+  },
+  {
+    "id": "elec-uk-plug-wiring",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each wire in a UK plug to its correct colour and function.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Live wire",
+          "right": "Brown — carries alternating high voltage"
+        },
+        {
+          "left": "Neutral wire",
+          "right": "Blue — completes the circuit at ~0V"
+        },
+        {
+          "left": "Earth wire",
+          "right": "Green and yellow — safety wire connected to metal casing"
+        }
+      ]
+    },
+    "explanation": "UK plug: Live (brown) — dangerous, carries 230V AC. Neutral (blue) — returns current, at earth potential (~0V). Earth (green/yellow) — safety connection to metal appliance casings. If a fault makes the casing live, current flows through earth wire, blowing the fuse and breaking the circuit."
+  },
+  {
+    "id": "elec-fuse-earthing",
+    "topic": "electricity",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how a fuse and earth wire together protect a person using a faulty metal-cased appliance.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "if a fault connects the live wire to the metal casing the earth wire provides a low resistance path for current which surges melting the fuse and breaking the circuit before anyone can be electrocuted",
+      "acceptedAnswers": [
+        "faulty live wire touches case — earth wire carries large current — fuse blows — circuit broken — casing no longer dangerous",
+        "earth wire gives large fault current path to ground — fuse blows protecting user"
+      ]
+    },
+    "explanation": "If the live wire touches the metal casing (fault): current flows from live → casing → earth wire → ground. This large surge current melts the fuse (or trips the circuit breaker), breaking the circuit. The casing is no longer at 230V — no electrocution risk."
+  },
+  {
+    "id": "elec-resistance-factors",
+    "topic": "electricity",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL factors that increase the resistance of a wire.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Increasing length",
+        "Decreasing cross-sectional area (thinner wire)",
+        "Increasing temperature (for metals)",
+        "Using a more conductive material",
+        "Increasing cross-sectional area"
+      ],
+      "correctOptions": [
+        "Increasing length",
+        "Decreasing cross-sectional area (thinner wire)",
+        "Increasing temperature (for metals)"
+      ]
+    },
+    "explanation": "Resistance increases with: longer wire (more collisions for electrons), thinner wire (fewer paths for electrons), higher temperature (more vibration of metal ions — more collisions). More conductive material and larger cross-section DECREASE resistance."
+  },
+  {
+    "id": "elec-energy-from-charge",
+    "topic": "electricity",
+    "difficulty": 3,
+    "image": null,
+    "template": "Calculate the energy transferred when a charge of {{q}} C passes through a potential difference of {{v}} V.",
+    "variables": {
+      "q": { "type": "pick", "options": [5, 10, 20, 25, 50, 100] },
+      "v": { "type": "pick", "options": [3, 6, 12, 24, 120, 230] },
+      "ans": { "type": "derived", "expr": "q * v" }
+    },
+    "answerConfig": { "type": "number", "answer": "q * v", "unit": "J" },
+    "explanation": "E = QV = {{q}} × {{v}} = {{ans}} J. Voltage is defined as energy transferred per unit charge: V = E/Q, so E = QV."
+  },
+  {
+    "id": "elec-electric-field",
+    "topic": "electricity",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is an electric field?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a region around a charged object where another charged object experiences a force",
+      "acceptedAnswers": [
+        "area of space where a charge experiences a force",
+        "field of force surrounding a charged object"
+      ]
+    },
+    "explanation": "An electric field is the region around a charged object in which another charged object experiences an electrostatic force. Field lines point in the direction a positive test charge would move (away from positive, towards negative charges). Electric fields cause charges to accelerate."
+  },
+  {
+    "id": "elec-circuit-breaker-vs-fuse",
+    "topic": "electricity",
+    "difficulty": 2,
+    "image": null,
+    "template": "Give ONE advantage of a circuit breaker over a fuse.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a circuit breaker can be reset after it trips whereas a fuse must be replaced",
+      "acceptedAnswers": [
+        "can be reset — does not need replacing like a blown fuse",
+        "reusable — just flick back after it trips"
+      ]
+    },
+    "explanation": "Circuit breakers and fuses both protect circuits from excess current. Advantage of circuit breaker: it can be reset by pressing a switch or flipping a lever — a blown fuse must be replaced. Circuit breakers also respond faster to fault currents."
+  },
+  {
+    "id": "elec-evaluate-parallel-series",
+    "topic": "electricity",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain why household appliances are connected in parallel rather than in series.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Each appliance receives the full mains voltage (230V) in parallel (1) / 2. In series, voltage would be shared — appliances would not work at correct voltage (1) / 3. Each appliance can be switched on/off independently (1) / 4. If one appliance fails, others continue to work (1) / 5. Total resistance decreases as more appliances added in parallel (1) — max 4",
+      "minWords": 10
+    },
+    "explanation": "Parallel connection ensures each appliance gets the full 230V (they need their rated voltage to work). In series the voltage would be shared. Independent switching is possible. Failure of one device doesn't affect others. The total resistance decreases as more parallel paths are added."
+  }
+]

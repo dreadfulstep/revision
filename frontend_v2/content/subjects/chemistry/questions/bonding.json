@@ -363,7 +363,7 @@
       "type": "long_form",
       "marks": 4,
       "markScheme": "Benefits (max 2): enhanced UV protection in sunscreen due to large SA:V (1) / antibacterial properties more effective than bulk material (1) / targeted drug delivery possible (1). Risks (max 2): long-term health effects unknown — may penetrate cells/organs (1) / environmental impact of nanoparticle release not fully understood (1) / regulation is limited (1). Balanced conclusion for full marks.",
-      "minWords": 50
+      "minWords": 25
     },
     "explanation": "Nanoparticles offer enhanced performance in sunscreen (better UV absorption), antibacterial coatings, and drug delivery. However, their small size means they can penetrate biological membranes and their long-term toxicity is poorly understood — cautious use is recommended."
   },

@@ -356,7 +356,7 @@
       "type": "long_form",
       "marks": 6,
       "markScheme": "Evidence (max 3): rising CO₂ levels correlate with industrial activity (1) / global average temperature increase records (1) / ice core data shows CO₂ and temperature linked historically (1) / scientific consensus from multiple independent lines of evidence (1). Challenges (max 3): economic cost of switching from fossil fuels (1) / developing nations need energy to grow (1) / international agreements difficult to enforce (1) / scientific uncertainty about timescale/magnitude (1). Conclusion for full marks (1).",
-      "minWords": 80
+      "minWords": 30
     },
     "explanation": "Evidence strongly supports human-caused climate change: CO₂ levels at highest in 800,000 years, temperature records show clear warming trend, multiple independent data sources agree. Challenges: cost, global inequality, enforcement of agreements, some scientific uncertainty about magnitude of effects."
   },

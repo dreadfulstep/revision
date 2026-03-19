@@ -425,7 +425,7 @@
       "type": "long_form",
       "marks": 4,
       "markScheme": "1. Most alpha particles passed straight through — atom is mostly empty space (1) / 2. Some were deflected — positive charge concentrated in a region (1) / 3. A few bounced back — nucleus is small and dense (1) / 4. This disproved the plum pudding model (positive charge was not spread out) (1) / 5. New nuclear model proposed — small dense positive nucleus with electrons orbiting around it (1) — max 4",
-      "minWords": 50
+      "minWords": 25
     },
     "explanation": "Rutherford's results: most particles through (empty space), some deflected (concentrated positive charge), tiny fraction bounced back (small dense nucleus). This disproved Thomson's model and led to the nuclear model with a small central nucleus and electrons orbiting at a distance."
   }

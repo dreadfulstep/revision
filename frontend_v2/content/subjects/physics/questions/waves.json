@@ -1,0 +1,421 @@
+[
+  {
+    "id": "waves-transverse-longitudinal",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each wave type to the correct description of particle motion.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Transverse wave",
+          "right": "Particles oscillate perpendicular to direction of energy transfer"
+        },
+        {
+          "left": "Longitudinal wave",
+          "right": "Particles oscillate parallel to direction of energy transfer"
+        }
+      ]
+    },
+    "explanation": "Transverse: oscillations are at right angles (perpendicular) to wave travel direction. Examples: light, all EM waves, water waves, S-waves. Longitudinal: oscillations are along (parallel to) wave travel direction with compressions and rarefactions. Examples: sound, P-waves."
+  },
+  {
+    "id": "waves-properties-definitions",
+    "topic": "waves",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each wave property to its definition.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Amplitude",
+          "right": "Maximum displacement from rest position"
+        },
+        {
+          "left": "Wavelength",
+          "right": "Distance between two successive identical points"
+        },
+        {
+          "left": "Frequency",
+          "right": "Number of waves passing a point per second"
+        },
+        {
+          "left": "Period",
+          "right": "Time for one complete wave to pass a point"
+        }
+      ]
+    },
+    "explanation": "Amplitude: peak displacement (larger = more energy). Wavelength (λ): e.g. crest to crest. Frequency (f): measured in Hz (cycles per second). Period (T): measured in seconds. Relationship: T = 1/f."
+  },
+  {
+    "id": "waves-wave-equation-calc",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "A wave has frequency {{f}} Hz and wavelength {{lam}} m. Calculate its wave speed.",
+    "variables": {
+      "f": { "type": "pick", "options": [5, 10, 20, 50, 100, 200, 440] },
+      "lam": { "type": "pick", "options": [0.5, 1, 2, 4, 5, 10] },
+      "ans": { "type": "derived", "expr": "f * lam" }
+    },
+    "answerConfig": { "type": "number", "answer": "f * lam", "unit": "m/s" },
+    "explanation": "v = fλ = {{f}} × {{lam}} = {{ans}} m/s."
+  },
+  {
+    "id": "waves-period-frequency-calc",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "A wave has a frequency of {{f}} Hz. Calculate its period.",
+    "variables": {
+      "f": { "type": "pick", "options": [2, 4, 5, 8, 10, 20, 25, 50, 100] },
+      "ans": { "type": "derived", "expr": "round(1 / f, 4)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(1 / f, 4)",
+      "unit": "s"
+    },
+    "explanation": "T = 1/f = 1 ÷ {{f}} = {{ans}} s."
+  },
+  {
+    "id": "waves-em-spectrum-order",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the electromagnetic spectrum from longest to shortest wavelength.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Radio waves (longest wavelength, lowest frequency)",
+        "Microwaves",
+        "Infrared",
+        "Visible light",
+        "Ultraviolet",
+        "X-rays",
+        "Gamma rays (shortest wavelength, highest frequency)"
+      ]
+    },
+    "explanation": "EM spectrum from longest λ (lowest f, least energy) to shortest λ (highest f, most energy): radio → microwave → infrared → visible → UV → X-ray → gamma. All travel at the speed of light (3×10⁸ m/s) in a vacuum."
+  },
+  {
+    "id": "waves-em-uses-dangers",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each EM wave to a use or danger.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Radio waves",
+          "right": "Broadcasting — television and radio"
+        },
+        {
+          "left": "Microwaves",
+          "right": "Cooking food and satellite communications"
+        },
+        { "left": "Infrared", "right": "Remote controls and thermal imaging" },
+        { "left": "Ultraviolet", "right": "Causes skin cancer and sunburn" },
+        { "left": "X-rays", "right": "Medical imaging of bones" },
+        { "left": "Gamma rays", "right": "Killing cancer cells (radiotherapy)" }
+      ]
+    },
+    "explanation": "Uses/dangers: radio (broadcasts), microwaves (cooking, comms), IR (remotes, night vision, heat), UV (fluorescent lamps, causes skin cancer/eye damage), X-rays (medical imaging but ionising — cell damage), gamma (sterilisation, cancer treatment but most ionising — high cancer risk)."
+  },
+  {
+    "id": "waves-reflection-law",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "State the law of reflection.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the angle of incidence equals the angle of reflection",
+      "acceptedAnswers": [
+        "angle of incidence = angle of reflection (measured from the normal)",
+        "incident angle equals reflected angle measured from the normal to the surface"
+      ]
+    },
+    "explanation": "Law of reflection: angle of incidence = angle of reflection, both measured from the normal (perpendicular) to the surface at the point of incidence. This applies to all waves, not just light."
+  },
+  {
+    "id": "waves-refraction-explanation",
+    "topic": "waves",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why light bends when it passes from air into glass.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "light slows down when entering the denser medium causing it to change direction — it bends towards the normal",
+      "acceptedAnswers": [
+        "change in speed as light enters denser medium causes change in direction",
+        "light slows in glass — bends towards normal on entering"
+      ]
+    },
+    "explanation": "Refraction occurs because light travels slower in denser media (glass than air). When a wave slows down, it changes direction. Entering a denser medium: light bends towards the normal. Leaving a denser medium: light speeds up and bends away from the normal."
+  },
+  {
+    "id": "waves-tir-conditions",
+    "topic": "waves",
+    "difficulty": 3,
+    "image": null,
+    "template": "What TWO conditions are needed for total internal reflection to occur?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Light must be travelling from a denser to a less dense medium",
+        "Angle of incidence must exceed the critical angle",
+        "Light must be travelling from less dense to denser medium",
+        "The surface must be perfectly smooth",
+        "Angle of incidence must be less than the critical angle"
+      ],
+      "correctOptions": [
+        "Light must be travelling from a denser to a less dense medium",
+        "Angle of incidence must exceed the critical angle"
+      ]
+    },
+    "explanation": "Total internal reflection requires: (1) light travelling from denser medium to less dense medium (e.g. glass to air, not air to glass); (2) angle of incidence greater than the critical angle. The critical angle is where the refracted ray would be at 90° to the normal."
+  },
+  {
+    "id": "waves-optical-fibres",
+    "topic": "waves",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how optical fibres use total internal reflection to transmit data.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "light enters the glass fibre and strikes the boundary at an angle greater than the critical angle so it is totally internally reflected repeatedly along the fibre",
+      "acceptedAnswers": [
+        "light undergoes repeated total internal reflection at the glass-cladding boundary travelling along the fibre",
+        "TIR keeps light inside fibre as it bounces along to the other end"
+      ]
+    },
+    "explanation": "Optical fibres are thin glass strands. Light enters one end and strikes the glass-air (or glass-cladding) boundary at an angle exceeding the critical angle. Total internal reflection occurs repeatedly, keeping the light inside the fibre until it exits the other end — carrying data as pulses of light."
+  },
+  {
+    "id": "waves-sound-medium",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or false: Sound waves can travel through a vacuum.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": false },
+    "explanation": "False. Sound is a mechanical wave — it requires particles to vibrate and pass energy on. In a vacuum there are no particles to vibrate, so sound cannot travel. This is why space is silent. Light and other EM waves can travel through a vacuum because they are not mechanical waves."
+  },
+  {
+    "id": "waves-sound-speed-media",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the media from slowest to fastest speed of sound.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Air (~340 m/s)",
+        "Water (~1500 m/s)",
+        "Steel (fastest — ~5000 m/s)"
+      ]
+    },
+    "explanation": "Sound travels faster in denser/more elastic materials because particles are closer together and can pass vibrations more quickly. Speed of sound: air ~340 m/s, water ~1500 m/s, steel ~5000 m/s. The denser the medium (with stronger intermolecular forces), the faster sound travels."
+  },
+  {
+    "id": "waves-ultrasound-uses",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL correct uses of ultrasound.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Medical imaging of soft tissue and foetuses",
+        "SONAR — measuring distance underwater",
+        "Broadcasting TV signals",
+        "Cleaning delicate equipment",
+        "Treating kidney stones"
+      ],
+      "correctOptions": [
+        "Medical imaging of soft tissue and foetuses",
+        "SONAR — measuring distance underwater",
+        "Cleaning delicate equipment",
+        "Treating kidney stones"
+      ]
+    },
+    "explanation": "Ultrasound (>20 000 Hz, inaudible) uses: medical scanning (foetal imaging, soft tissue that X-rays miss), SONAR (echo timing to measure depth/distance), industrial cleaning (high-frequency vibrations), breaking up kidney stones (focused beams). TV uses radio waves, not ultrasound."
+  },
+  {
+    "id": "waves-seismic-p-s",
+    "topic": "waves",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each type of seismic wave to its properties.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "P-waves (Primary)",
+          "right": "Longitudinal — travel through solids and liquids"
+        },
+        {
+          "left": "S-waves (Secondary)",
+          "right": "Transverse — travel through solids only"
+        }
+      ]
+    },
+    "explanation": "P-waves (Primary): longitudinal, fastest, travel through all media (solid, liquid, gas). S-waves (Secondary): transverse, slower, only travel through solid materials. The fact that S-waves don't pass through Earth's outer core proves it is liquid. P-waves do pass through, bending due to refraction."
+  },
+  {
+    "id": "waves-wavelength-from-speed",
+    "topic": "waves",
+    "difficulty": 3,
+    "image": null,
+    "template": "A sound wave travels at 340 m/s with a frequency of {{f}} Hz. Calculate its wavelength.",
+    "variables": {
+      "f": { "type": "pick", "options": [34, 68, 85, 170, 340, 680] },
+      "ans": { "type": "derived", "expr": "round(340 / f, 3)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(340 / f, 3)",
+      "unit": "m"
+    },
+    "explanation": "v = fλ → λ = v ÷ f = 340 ÷ {{f}} = {{ans}} m."
+  },
+  {
+    "id": "waves-diffraction",
+    "topic": "waves",
+    "difficulty": 3,
+    "image": null,
+    "template": "When is diffraction most noticeable?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "when the gap or obstacle is similar in size to the wavelength of the wave",
+      "acceptedAnswers": [
+        "gap width approximately equal to wavelength produces maximum diffraction",
+        "diffraction greatest when wavelength is close to the size of the gap"
+      ]
+    },
+    "explanation": "Diffraction (spreading of waves through gaps/around obstacles) is most significant when the gap size is approximately equal to the wavelength. Very large gaps produce little spreading; very small gaps barely let the wave through. This is why radio waves (long wavelength) diffract around hills but light (short wavelength) doesn't."
+  },
+  {
+    "id": "waves-em-all-same-speed",
+    "topic": "waves",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the speed of all electromagnetic waves in a vacuum?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "3 × 10⁸ m/s",
+      "acceptedAnswers": [
+        "3×10⁸ m/s",
+        "300 000 000 m/s",
+        "3 × 10^8 m/s",
+        "3×10^8"
+      ]
+    },
+    "explanation": "All electromagnetic waves travel at the speed of light in a vacuum: c = 3 × 10⁸ m/s (300,000,000 m/s). They slow down when passing through materials. Different EM waves have different frequencies and wavelengths but the same speed in a vacuum."
+  },
+  {
+    "id": "waves-ionising-radiation",
+    "topic": "waves",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which EM waves are ionising? Select ALL that apply.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Radio waves",
+        "Infrared",
+        "Ultraviolet",
+        "X-rays",
+        "Gamma rays"
+      ],
+      "correctOptions": ["Ultraviolet", "X-rays", "Gamma rays"]
+    },
+    "explanation": "Ionising radiation has enough energy to remove electrons from atoms, potentially damaging DNA and causing cancer. UV, X-rays, and gamma rays are ionising. Radio waves, microwaves, and infrared are non-ionising (may cause heating effects but not ionisation)."
+  },
+  {
+    "id": "waves-snells-law-calc",
+    "topic": "waves",
+    "difficulty": 4,
+    "image": null,
+    "template": "Light passes from air into glass. The angle of incidence is {{i}}°. The refractive index of glass is 1.5. Calculate the angle of refraction.",
+    "variables": {
+      "i": { "type": "pick", "options": [30, 45, 60] },
+      "ans": { "type": "derived", "expr": "round(asinDeg(sinDeg(i) / 1.5), 1)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(asinDeg(sinDeg(i) / 1.5), 1)",
+      "unit": "°"
+    },
+    "explanation": "Snell's law: n₁ sin θ₁ = n₂ sin θ₂. Air (n=1): sin{{i}}° = 1.5 × sin r. sin r = sin{{i}}° ÷ 1.5. r = arcsin(sin{{i}}° ÷ 1.5) = {{ans}}°. The angle of refraction is smaller than the angle of incidence — light bends towards the normal entering denser medium."
+  },
+  {
+    "id": "waves-converging-lens",
+    "topic": "waves",
+    "difficulty": 3,
+    "image": null,
+    "template": "What does a converging lens do to parallel rays of light?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "it refracts them so they converge to meet at the focal point",
+      "acceptedAnswers": [
+        "brings parallel rays together at the focal point",
+        "focuses parallel rays to a single point (the focus)"
+      ]
+    },
+    "explanation": "A converging (convex) lens refracts light, bending parallel rays inward to meet at the focal point. The distance from the lens to the focal point is the focal length. Used in cameras, eyeglasses for long-sightedness, and magnifying glasses."
+  },
+  {
+    "id": "waves-echo-sonar-calc",
+    "topic": "waves",
+    "difficulty": 3,
+    "image": null,
+    "template": "A SONAR pulse takes {{t}} seconds to return to a ship. The speed of sound in water is 1500 m/s. Calculate the depth of the ocean floor.",
+    "variables": {
+      "t": { "type": "pick", "options": [0.4, 0.6, 0.8, 1.0, 1.2, 1.6, 2.0] },
+      "ans": { "type": "derived", "expr": "round(1500 * t / 2, 0)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(1500 * t / 2, 0)",
+      "unit": "m"
+    },
+    "explanation": "The pulse travels to the ocean floor and back — total distance = 1500 × {{t}} = {{1500*t}} m. But this is there and back, so depth = {{1500*t}} ÷ 2 = {{ans}} m. Always divide by 2 for echo/reflection distance calculations."
+  },
+  {
+    "id": "waves-wave-particle-duality",
+    "topic": "waves",
+    "difficulty": 4,
+    "image": null,
+    "template": "What is wave-particle duality?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the concept that light and other quantum objects behave as both waves and particles depending on the experiment",
+      "acceptedAnswers": [
+        "EM radiation shows both wave properties (diffraction/interference) and particle properties (photoelectric effect)",
+        "light acts as a wave in some situations and as a particle (photon) in others"
+      ]
+    },
+    "explanation": "Wave-particle duality: quantum objects like light exhibit both wave behaviour (diffraction, interference) and particle behaviour (photoelectric effect, absorption/emission as discrete photons). Which behaviour is observed depends on the experimental conditions. This is a fundamental feature of quantum mechanics."
+  }
+]

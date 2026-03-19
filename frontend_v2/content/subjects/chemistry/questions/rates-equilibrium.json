@@ -279,7 +279,7 @@
       "type": "long_form",
       "marks": 4,
       "markScheme": "Conditions: 450°C, ~1 atm (atmospheric), V₂O₅ catalyst (1 mark for any two correct). Pressure reasoning: there are 3 moles of gas on left and 2 on right so high pressure would shift equilibrium right increasing yield (1) / however SO₃ conversion is already ~99.5% at 1 atm (1) / cost and safety of high-pressure equipment not justified when yield is already very high (1) — max 4",
-      "minWords": 40
+      "minWords": 20
     },
     "explanation": "Contact process: 450°C (compromise temperature), ~1 atm, V₂O₅ catalyst. Although higher pressure would increase yield (3 moles → 2 moles gas), the equilibrium position at 1 atm already gives ~99.5% conversion. High-pressure equipment is expensive and dangerous — not economically justified for marginal yield gain."
   },

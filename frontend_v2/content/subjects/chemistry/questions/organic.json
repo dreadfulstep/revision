@@ -370,7 +370,7 @@
       "type": "long_form",
       "marks": 6,
       "markScheme": "Crude oil advantages (max 2): high energy density (1) / existing infrastructure (1) / reliable and abundant currently (1). Disadvantages (max 2): non-renewable — finite resource (1) / combustion produces CO₂ contributing to climate change (1) / oil spills/environmental damage (1). Alternative fuels (max 2): bioethanol — renewable, carbon neutral in theory (1) / hydrogen fuel cells — only water product (1) / limitations: cost, infrastructure, production issues (1). Conclusion for full marks (1).",
-      "minWords": 80
+      "minWords": 30
     },
     "explanation": "Crude oil is energy-dense and has existing infrastructure but is non-renewable and contributes to climate change. Alternatives like bioethanol (renewable, but land use issues) and hydrogen (clean but storage/production challenges) are being developed. A transition away from crude oil is essential for sustainability."
   }

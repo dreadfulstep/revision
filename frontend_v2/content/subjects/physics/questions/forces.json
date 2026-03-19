@@ -1,0 +1,430 @@
+[
+  {
+    "id": "forces-scalar-vector-matching",
+    "topic": "forces",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each quantity to whether it is a scalar or a vector.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Distance", "right": "Scalar" },
+        { "left": "Displacement", "right": "Vector" },
+        { "left": "Speed", "right": "Scalar" },
+        { "left": "Velocity", "right": "Vector" },
+        { "left": "Mass", "right": "Scalar" },
+        { "left": "Force", "right": "Vector" }
+      ]
+    },
+    "explanation": "Scalars have magnitude only: distance, speed, mass, time, temperature. Vectors have both magnitude and direction: displacement, velocity, acceleration, force, momentum. The key difference is direction — vectors must specify which way as well as how much."
+  },
+  {
+    "id": "forces-weight-calc",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "Calculate the weight of an object with mass {{m}} kg. (g = 10 N/kg)",
+    "variables": {
+      "m": { "type": "pick", "options": [2, 5, 8, 10, 15, 20, 25, 50] },
+      "ans": { "type": "derived", "expr": "m * 10" }
+    },
+    "answerConfig": { "type": "number", "answer": "m * 10", "unit": "N" },
+    "explanation": "W = mg = {{m}} × 10 = {{ans}} N. Weight is a force (measured in newtons) caused by gravity acting on mass. On Earth, g = 10 N/kg."
+  },
+  {
+    "id": "forces-fma-calc",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "A resultant force of {{f}} N acts on an object of mass {{m}} kg. Calculate the acceleration.",
+    "variables": {
+      "f": { "type": "pick", "options": [10, 20, 30, 40, 50, 60, 80, 100] },
+      "m": { "type": "pick", "options": [2, 4, 5, 8, 10, 20] },
+      "ans": { "type": "derived", "expr": "f / m" }
+    },
+    "answerConfig": { "type": "number", "answer": "f / m", "unit": "m/s²" },
+    "explanation": "F = ma → a = F ÷ m = {{f}} ÷ {{m}} = {{ans}} m/s²."
+  },
+  {
+    "id": "forces-newton-first-law",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "State Newton's first law of motion.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "an object remains at rest or moves at constant velocity unless acted upon by a resultant force",
+      "acceptedAnswers": [
+        "objects continue at rest or constant speed in a straight line unless a net force acts",
+        "no resultant force means no change in motion"
+      ]
+    },
+    "explanation": "Newton's first law: an object will remain stationary or continue moving at constant velocity (same speed and direction) unless acted on by a resultant (unbalanced) force. This is also known as the law of inertia."
+  },
+  {
+    "id": "forces-newton-third-law",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "State Newton's third law of motion.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "for every action there is an equal and opposite reaction",
+      "acceptedAnswers": [
+        "when object A exerts a force on object B, object B exerts an equal and opposite force on object A",
+        "forces always occur in equal and opposite pairs acting on different objects"
+      ]
+    },
+    "explanation": "Newton's third law: when object A exerts a force on object B, object B exerts an equal and opposite force on object A. These forces are equal in magnitude, opposite in direction, and act on different objects — they never cancel each other."
+  },
+  {
+    "id": "forces-resultant-force-balanced",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or false: If the resultant force on an object is zero, the object must be stationary.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": false },
+    "explanation": "False. If the resultant force is zero, the object could be stationary OR moving at constant velocity (constant speed in a straight line). Zero resultant force means no acceleration — the velocity (which could be zero or non-zero) does not change."
+  },
+  {
+    "id": "forces-suvat-v-equals-u-plus-at",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "A car accelerates from {{u}} m/s at {{a}} m/s² for {{t}} seconds. Calculate its final velocity.",
+    "variables": {
+      "u": { "type": "pick", "options": [0, 5, 10, 15, 20] },
+      "a": { "type": "pick", "options": [2, 3, 4, 5] },
+      "t": { "type": "pick", "options": [3, 4, 5, 6, 8, 10] },
+      "ans": { "type": "derived", "expr": "u + a * t" }
+    },
+    "answerConfig": { "type": "number", "answer": "u + a * t", "unit": "m/s" },
+    "explanation": "v = u + at = {{u}} + {{a}} × {{t}} = {{ans}} m/s."
+  },
+  {
+    "id": "forces-suvat-distance",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "A car accelerates from rest at {{a}} m/s² for {{t}} seconds. Calculate the distance travelled.",
+    "variables": {
+      "a": { "type": "pick", "options": [2, 3, 4, 5] },
+      "t": { "type": "pick", "options": [4, 5, 6, 8, 10] },
+      "ans": { "type": "derived", "expr": "0.5 * a * t * t" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "0.5 * a * t * t",
+      "unit": "m"
+    },
+    "explanation": "Starting from rest (u=0): s = ut + ½at² = 0 + ½ × {{a}} × {{t}}² = 0.5 × {{a}} × {{t*t}} = {{ans}} m."
+  },
+  {
+    "id": "forces-suvat-v-squared",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "A car travelling at {{u}} m/s brakes with deceleration {{a}} m/s². It stops after travelling {{s}} m. Verify using v² = u² + 2as.",
+    "variables": {
+      "u": { "type": "pick", "options": [10, 15, 20, 25, 30] },
+      "a": { "type": "pick", "options": [2, 4, 5] },
+      "s": { "type": "derived", "expr": "round(u * u / (2 * a), 1)" }
+    },
+    "answerConfig": { "type": "number", "answer": "0", "unit": "m/s" },
+    "explanation": "v² = u² + 2as = {{u}}² + 2×(−{{a}})×{{s}} = {{u*u}} − {{2*a*s}} = 0. So v = 0 m/s — the car stops. The deceleration is negative (opposing motion)."
+  },
+  {
+    "id": "forces-momentum-calc",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "Calculate the momentum of a {{m}} kg object moving at {{v}} m/s.",
+    "variables": {
+      "m": { "type": "pick", "options": [2, 5, 10, 20, 50, 70, 80, 100] },
+      "v": { "type": "pick", "options": [3, 4, 5, 8, 10, 15, 20] },
+      "ans": { "type": "derived", "expr": "m * v" }
+    },
+    "answerConfig": { "type": "number", "answer": "m * v", "unit": "kg m/s" },
+    "explanation": "p = mv = {{m}} × {{v}} = {{ans}} kg m/s. Momentum is a vector quantity (same direction as velocity)."
+  },
+  {
+    "id": "forces-conservation-momentum",
+    "topic": "forces",
+    "difficulty": 4,
+    "image": null,
+    "template": "A {{m1}} kg trolley moving at {{v1}} m/s collides with a stationary {{m2}} kg trolley and they stick together. Calculate their combined velocity after collision.",
+    "variables": {
+      "m1": { "type": "pick", "options": [2, 3, 4, 5] },
+      "v1": { "type": "pick", "options": [4, 5, 6, 8, 10] },
+      "m2": { "type": "pick", "options": [1, 2, 3, 4, 5] },
+      "ans": { "type": "derived", "expr": "round(m1 * v1 / (m1 + m2), 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(m1 * v1 / (m1 + m2), 2)",
+      "unit": "m/s"
+    },
+    "explanation": "Conservation of momentum: total momentum before = total momentum after. Before: p = {{m1}} × {{v1}} + {{m2}} × 0 = {{m1*v1}} kg m/s. After: p = ({{m1}} + {{m2}}) × v. So v = {{m1*v1}} ÷ {{m1+m2}} = {{ans}} m/s."
+  },
+  {
+    "id": "forces-impulse-calc",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "A force of {{f}} N acts on an object for {{t}} seconds. Calculate the impulse.",
+    "variables": {
+      "f": { "type": "pick", "options": [10, 20, 30, 40, 50, 100] },
+      "t": { "type": "pick", "options": [2, 3, 4, 5, 8, 10] },
+      "ans": { "type": "derived", "expr": "f * t" }
+    },
+    "answerConfig": { "type": "number", "answer": "f * t", "unit": "N s" },
+    "explanation": "Impulse = F × Δt = {{f}} × {{t}} = {{ans}} N s. Impulse equals the change in momentum: FΔt = Δp = mΔv."
+  },
+  {
+    "id": "forces-stopping-distance-factors",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL factors that increase a vehicle's braking distance.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Worn brake pads",
+        "Higher initial speed",
+        "Wet/icy road surface",
+        "Tiredness of driver",
+        "Bald tyres"
+      ],
+      "correctOptions": [
+        "Worn brake pads",
+        "Higher initial speed",
+        "Wet/icy road surface",
+        "Bald tyres"
+      ]
+    },
+    "explanation": "Braking distance increases with: worn brakes (less friction force), higher speed (more KE to dissipate), wet/icy roads (less tyre-road friction), bald tyres (less friction). Tiredness affects THINKING distance (reaction time), not braking distance."
+  },
+  {
+    "id": "forces-thinking-distance-factors",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL factors that increase a driver's thinking distance.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Higher speed",
+        "Alcohol consumption",
+        "Tiredness",
+        "Wet road surface",
+        "Using a mobile phone while driving"
+      ],
+      "correctOptions": [
+        "Higher speed",
+        "Alcohol consumption",
+        "Tiredness",
+        "Using a mobile phone while driving"
+      ]
+    },
+    "explanation": "Thinking distance = speed × reaction time. Anything increasing reaction time increases thinking distance: alcohol, tiredness, distractions (phone). Higher speed increases thinking distance even with the same reaction time (more distance covered per second). Wet roads affect braking distance, not thinking distance."
+  },
+  {
+    "id": "forces-hookes-law-calc",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "A spring has spring constant {{k}} N/m. Calculate the extension when a force of {{f}} N is applied.",
+    "variables": {
+      "k": { "type": "pick", "options": [20, 25, 40, 50, 100] },
+      "f": { "type": "pick", "options": [5, 10, 15, 20, 25, 40, 50] },
+      "ans": { "type": "derived", "expr": "round(f / k, 3)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(f / k, 3)",
+      "unit": "m"
+    },
+    "explanation": "F = ke → e = F ÷ k = {{f}} ÷ {{k}} = {{ans}} m. Hooke's law applies up to the elastic limit — beyond this the extension is no longer proportional to force."
+  },
+  {
+    "id": "forces-elastic-limit",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is meant by the elastic limit of a spring?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the maximum force beyond which the spring does not return to its original length when the force is removed",
+      "acceptedAnswers": [
+        "the point beyond which deformation becomes permanent — spring does not return to original shape",
+        "maximum extension where Hooke's law still applies — beyond this deformation is inelastic"
+      ]
+    },
+    "explanation": "The elastic limit is the maximum force (or extension) beyond which a material undergoes permanent (inelastic) deformation. Below the elastic limit, removing the force allows the material to return to its original shape. Beyond it, the material is permanently deformed."
+  },
+  {
+    "id": "forces-moment-calc",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "A force of {{f}} N is applied at a perpendicular distance of {{d}} m from a pivot. Calculate the moment.",
+    "variables": {
+      "f": { "type": "pick", "options": [5, 10, 15, 20, 25, 30, 40, 50] },
+      "d": {
+        "type": "pick",
+        "options": [0.2, 0.3, 0.4, 0.5, 0.8, 1.0, 1.5, 2.0]
+      },
+      "ans": { "type": "derived", "expr": "round(f * d, 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(f * d, 2)",
+      "unit": "N m"
+    },
+    "explanation": "Moment = force × perpendicular distance from pivot = {{f}} × {{d}} = {{ans}} N m. A moment is a turning force. The principle of moments: sum of clockwise moments = sum of anticlockwise moments (for equilibrium)."
+  },
+  {
+    "id": "forces-principle-of-moments",
+    "topic": "forces",
+    "difficulty": 4,
+    "image": null,
+    "template": "A seesaw is balanced. A {{m1}} kg child sits {{d1}} m from the pivot. How far from the pivot must a {{m2}} kg child sit on the other side to balance it? (g = 10 N/kg)",
+    "variables": {
+      "m1": { "type": "pick", "options": [30, 40, 50, 60] },
+      "d1": { "type": "pick", "options": [1.0, 1.5, 2.0, 2.5] },
+      "m2": { "type": "pick", "options": [20, 25, 40, 50, 75] },
+      "ans": { "type": "derived", "expr": "round(m1 * d1 / m2, 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(m1 * d1 / m2, 2)",
+      "unit": "m"
+    },
+    "explanation": "Principle of moments: clockwise moment = anticlockwise moment. W₁ × d₁ = W₂ × d₂. ({{m1}} × 10) × {{d1}} = ({{m2}} × 10) × d₂. d₂ = ({{m1}} × {{d1}}) ÷ {{m2}} = {{ans}} m."
+  },
+  {
+    "id": "forces-pressure-calc",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "A force of {{f}} N acts over an area of {{a}} m². Calculate the pressure.",
+    "variables": {
+      "f": { "type": "pick", "options": [100, 200, 300, 400, 500, 1000] },
+      "a": { "type": "pick", "options": [0.5, 1.0, 2.0, 2.5, 4.0, 5.0] },
+      "ans": { "type": "derived", "expr": "f / a" }
+    },
+    "answerConfig": { "type": "number", "answer": "f / a", "unit": "Pa" },
+    "explanation": "p = F ÷ A = {{f}} ÷ {{a}} = {{ans}} Pa. Pressure is measured in Pascals (Pa = N/m²). Smaller area → greater pressure for the same force (e.g. sharp knife vs blunt)."
+  },
+  {
+    "id": "forces-density-calc",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "An object has mass {{m}} kg and volume {{v}} m³. Calculate its density.",
+    "variables": {
+      "m": { "type": "pick", "options": [10, 20, 40, 50, 80, 100, 200] },
+      "v": {
+        "type": "pick",
+        "options": [0.01, 0.02, 0.04, 0.05, 0.08, 0.1, 0.2]
+      },
+      "ans": { "type": "derived", "expr": "m / v" }
+    },
+    "answerConfig": { "type": "number", "answer": "m / v", "unit": "kg/m³" },
+    "explanation": "ρ = m ÷ V = {{m}} ÷ {{v}} = {{ans}} kg/m³. Density tells us how much mass is packed into a given volume. Water has density ~1000 kg/m³; objects less dense than water float."
+  },
+  {
+    "id": "forces-boyles-law-calc",
+    "topic": "forces",
+    "difficulty": 4,
+    "image": null,
+    "template": "A gas has pressure {{p1}} Pa and volume {{v1}} m³. The volume is changed to {{v2}} m³ at constant temperature. Calculate the new pressure.",
+    "variables": {
+      "p1": { "type": "pick", "options": [100000, 150000, 200000, 250000] },
+      "v1": { "type": "pick", "options": [0.002, 0.004, 0.005, 0.008, 0.01] },
+      "v2": { "type": "pick", "options": [0.001, 0.002, 0.004, 0.005] },
+      "ans": { "type": "derived", "expr": "round(p1 * v1 / v2, 0)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(p1 * v1 / v2, 0)",
+      "unit": "Pa"
+    },
+    "explanation": "Boyle's law: p₁V₁ = p₂V₂ (at constant temperature). p₂ = p₁V₁ ÷ V₂ = {{p1}} × {{v1}} ÷ {{v2}} = {{ans}} Pa."
+  },
+  {
+    "id": "forces-upthrust-float",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why a ship made of steel can float even though steel is denser than water.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the ship's shape means it displaces a large volume of water creating an upthrust equal to its weight so it floats",
+      "acceptedAnswers": [
+        "the hull shape displaces enough water that upthrust equals the weight of the ship",
+        "large hollow shape increases volume and reduces average density below that of water"
+      ]
+    },
+    "explanation": "A ship floats because its large hollow shape displaces a volume of water whose weight equals the ship's weight (Archimedes' principle). The upthrust (weight of displaced water) balances gravity. The average density of ship + air inside is less than water's density."
+  },
+  {
+    "id": "forces-inertia",
+    "topic": "forces",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is inertia?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the tendency of an object to remain at rest or continue moving at constant velocity unless acted on by a force",
+      "acceptedAnswers": [
+        "resistance to change in motion — more mass means more inertia",
+        "property of matter that resists changes in velocity"
+      ]
+    },
+    "explanation": "Inertia is the tendency of an object to resist changes in its state of motion. An object at rest tends to stay at rest; one moving tends to keep moving. The greater the mass, the greater the inertia. Newton's first law describes inertia."
+  },
+  {
+    "id": "forces-free-body-diagram-concepts",
+    "topic": "forces",
+    "difficulty": 3,
+    "image": null,
+    "template": "A skydiver reaches terminal velocity. Which statement correctly describes the forces acting on them?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Weight is greater than air resistance",
+        "Air resistance is greater than weight",
+        "Weight equals air resistance",
+        "There are no forces acting"
+      ],
+      "answer": "Weight equals air resistance"
+    },
+    "explanation": "At terminal velocity, acceleration = 0 (constant velocity). By Newton's first law, this means zero resultant force. Weight (downward) = air resistance (upward). The forces are balanced — the skydiver is not accelerating despite being in freefall."
+  },
+  {
+    "id": "forces-evaluate-crumple-zones",
+    "topic": "forces",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how crumple zones in cars protect passengers using ideas about momentum and force.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. In a collision, the change in momentum (impulse) is fixed — determined by initial speed and mass (1) / 2. Impulse = F × Δt (1) / 3. Crumple zones increase the time of the collision (1) / 4. If time increases and impulse stays constant, force decreases (1) / 5. Smaller force means less injury to passengers (1) — max 4",
+      "minWords": 10
+    },
+    "explanation": "Impulse = FΔt = Δp (change in momentum). In a crash, the change in momentum is fixed (car goes from speed to zero). Crumple zones deform, increasing the collision time Δt. Since FΔt is constant, a larger Δt means a smaller F — reduced force on passengers means less injury."
+  }
+]

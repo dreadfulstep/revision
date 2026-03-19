@@ -1,0 +1,394 @@
+[
+  {
+    "id": "pp-atomic-structure-charges",
+    "topic": "particle-physics",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each subatomic particle to its charge and location.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Proton", "right": "+1 charge, in nucleus" },
+        { "left": "Neutron", "right": "0 charge, in nucleus" },
+        { "left": "Electron", "right": "-1 charge, orbits nucleus in shells" }
+      ]
+    },
+    "explanation": "Protons (+1) and neutrons (0) are in the nucleus. Electrons (−1) orbit in shells. Proton and neutron mass ≈ 1 atomic mass unit; electron mass negligible. In a neutral atom: number of protons = number of electrons."
+  },
+  {
+    "id": "pp-radioactive-decay-types",
+    "topic": "particle-physics",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each type of radiation to its correct description.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Alpha (α)",
+          "right": "2 protons + 2 neutrons (helium nucleus) — least penetrating, most ionising"
+        },
+        {
+          "left": "Beta (β)",
+          "right": "High-energy electron — moderate penetrating power"
+        },
+        {
+          "left": "Gamma (γ)",
+          "right": "High-frequency EM wave — most penetrating, least ionising"
+        }
+      ]
+    },
+    "explanation": "Alpha: helium-4 nucleus (2p+2n), charge +2, stopped by paper/few cm air, highly ionising. Beta: fast electron, charge −1, stopped by aluminium ~5mm, moderately ionising. Gamma: EM radiation, no charge, reduced by thick lead/concrete, weakly ionising."
+  },
+  {
+    "id": "pp-penetrating-power-order",
+    "topic": "particle-physics",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the types of radiation from least to most penetrating.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Alpha — stopped by paper or a few cm of air",
+        "Beta — stopped by a few mm of aluminium",
+        "Gamma — only significantly reduced by thick lead or concrete"
+      ]
+    },
+    "explanation": "Penetrating power: α < β < γ. Alpha is the least penetrating (but most ionising). Gamma is the most penetrating (but least ionising per unit path length). The more ionising, the more energy is transferred to matter and the sooner it stops."
+  },
+  {
+    "id": "pp-alpha-decay-equation",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "In alpha decay, what happens to the proton number and mass number of the nucleus?",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Mass number", "right": "Decreases by 4" },
+        { "left": "Proton number", "right": "Decreases by 2" }
+      ]
+    },
+    "explanation": "Alpha decay: the nucleus emits an alpha particle (⁴₂He — 2 protons, 2 neutrons). Mass number (A) decreases by 4; proton number (Z) decreases by 2. The element changes (different number of protons = different element)."
+  },
+  {
+    "id": "pp-beta-decay-equation",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "In beta decay, what happens to the proton number and mass number of the nucleus?",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Mass number", "right": "Unchanged" },
+        { "left": "Proton number", "right": "Increases by 1" }
+      ]
+    },
+    "explanation": "Beta decay: a neutron in the nucleus converts to a proton + beta particle (electron emitted at high speed). Proton number increases by 1 (new element); mass number unchanged (total nucleons same). A (anti)neutrino is also emitted — not required at GCSE."
+  },
+  {
+    "id": "pp-half-life-definition",
+    "topic": "particle-physics",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is half-life?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the time taken for half the radioactive nuclei in a sample to decay",
+      "acceptedAnswers": [
+        "time for activity of a radioactive source to halve",
+        "time for half the unstable atoms to decay"
+      ]
+    },
+    "explanation": "Half-life is the time for the number of unstable (radioactive) nuclei to decrease by half, or equivalently the time for the activity (rate of decay) to halve. It is constant for a given isotope and cannot be changed by temperature, pressure, or chemical state."
+  },
+  {
+    "id": "pp-half-life-calc",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "A radioactive sample has an initial count rate of {{initial}} counts/min. After {{halves}} half-lives, what is the count rate?",
+    "variables": {
+      "initial": { "type": "pick", "options": [80, 160, 320, 640, 1000, 1280] },
+      "halves": { "type": "pick", "options": [1, 2, 3, 4] },
+      "ans": { "type": "derived", "expr": "initial / pow(2, halves)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "initial / pow(2, halves)",
+      "unit": "counts/min"
+    },
+    "explanation": "After {{halves}} half-lives: count rate = initial ÷ 2^{{halves}} = {{initial}} ÷ {{pow(2,halves)}} = {{ans}} counts/min."
+  },
+  {
+    "id": "pp-half-life-time-calc",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "A sample has a half-life of {{hl}} days. The initial activity is {{initial}} Bq. How long until the activity falls to {{target}} Bq?",
+    "variables": {
+      "hl": { "type": "pick", "options": [2, 3, 4, 5, 6] },
+      "initial": { "type": "pick", "options": [800, 1600, 3200, 6400] },
+      "halves": { "type": "pick", "options": [2, 3, 4] },
+      "target": { "type": "derived", "expr": "initial / pow(2, halves)" },
+      "ans": { "type": "derived", "expr": "hl * halves" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "hl * halves",
+      "unit": "days"
+    },
+    "explanation": "From {{initial}} to {{target}} Bq requires {{halves}} half-lives ({{initial}} → {{initial/2}} → {{initial/4}} → {{target}}). Time = {{halves}} × {{hl}} = {{ans}} days."
+  },
+  {
+    "id": "pp-background-radiation-sources",
+    "topic": "particle-physics",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL sources of background radiation.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Radon gas from rocks and soil",
+        "Cosmic rays from space",
+        "Medical X-rays",
+        "WiFi signals",
+        "Radioactive rocks and building materials"
+      ],
+      "correctOptions": [
+        "Radon gas from rocks and soil",
+        "Cosmic rays from space",
+        "Medical X-rays",
+        "Radioactive rocks and building materials"
+      ]
+    },
+    "explanation": "Background radiation sources: radon gas (~50% of UK background), cosmic rays from space, naturally occurring radioactive materials in rocks/soil/buildings, medical procedures (X-rays), nuclear power/weapons fallout (small %). WiFi is non-ionising EM radiation — not a source of background radiation."
+  },
+  {
+    "id": "pp-radiation-uses",
+    "topic": "particle-physics",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each use of radiation to the type of radiation used.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Smoke detector",
+          "right": "Alpha — ionises air in detector chamber"
+        },
+        {
+          "left": "Medical tracer (PET scan)",
+          "right": "Beta/gamma — can be detected outside body"
+        },
+        {
+          "left": "Sterilising equipment",
+          "right": "Gamma — penetrates packaging to kill bacteria"
+        },
+        {
+          "left": "Cancer radiotherapy",
+          "right": "Gamma — aimed at tumour to kill cancer cells"
+        }
+      ]
+    },
+    "explanation": "Smoke detector: alpha ionises air — smoke interrupts ionisation, triggering alarm. Medical tracers: beta/gamma emitters — detected externally to image organ function. Sterilisation: gamma penetrates sealed packaging to kill microorganisms. Radiotherapy: focused gamma destroys cancer cells."
+  },
+  {
+    "id": "pp-radiation-dangers",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why ionising radiation is dangerous to living cells.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "ionising radiation removes electrons from atoms in cells which can damage or break DNA leading to mutations cancer or cell death",
+      "acceptedAnswers": [
+        "ionises atoms in cells — can damage DNA causing cancer or cell death",
+        "breaks chemical bonds in DNA leading to mutations and cancer"
+      ]
+    },
+    "explanation": "Ionising radiation removes electrons from atoms, creating ions. In living cells this can damage DNA molecules — breaking bonds, causing mutations. Mutations can lead to cancer (uncontrolled cell division). High doses cause radiation sickness (mass cell death). Alpha is most dangerous if ingested/inhaled because it is highly ionising."
+  },
+  {
+    "id": "pp-nuclear-fission-definition",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is nuclear fission?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the splitting of a large unstable nucleus into two smaller nuclei releasing energy and neutrons",
+      "acceptedAnswers": [
+        "a heavy nucleus absorbs a neutron and splits into two smaller nuclei releasing neutrons and large amounts of energy",
+        "large nucleus splits releasing energy and two or more neutrons"
+      ]
+    },
+    "explanation": "Nuclear fission: a large, unstable nucleus (e.g. U-235) absorbs a slow neutron and splits into two smaller nuclei (fission fragments) releasing 2–3 neutrons and a large amount of energy (as kinetic energy and gamma radiation). The released neutrons can trigger further fissions — chain reaction."
+  },
+  {
+    "id": "pp-chain-reaction",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how a chain reaction occurs in a nuclear reactor.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "each fission releases neutrons that can trigger further fissions in nearby nuclei which release more neutrons continuing the process",
+      "acceptedAnswers": [
+        "neutrons from one fission trigger more fissions releasing more neutrons — self-sustaining reaction",
+        "neutrons produced in fission cause more uranium nuclei to split releasing further neutrons"
+      ]
+    },
+    "explanation": "Chain reaction: U-235 fissions → releases ~2-3 neutrons → each neutron can trigger another fission → releases more neutrons → and so on. In a reactor, control rods absorb excess neutrons to maintain a steady controlled chain reaction. In a bomb, the reaction is uncontrolled."
+  },
+  {
+    "id": "pp-nuclear-fusion-definition",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is nuclear fusion and why does it require extreme conditions?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "fusion is when two light nuclei join to form a larger nucleus releasing energy — it requires extreme temperature and pressure to overcome the electrostatic repulsion between nuclei",
+      "acceptedAnswers": [
+        "two small nuclei combine releasing huge energy — needs very high temperatures to give nuclei enough energy to overcome repulsion",
+        "joining light nuclei releases energy but requires millions of degrees to force nuclei close enough"
+      ]
+    },
+    "explanation": "Nuclear fusion: two light nuclei (e.g. hydrogen isotopes) overcome electrostatic repulsion and fuse to form a heavier nucleus, releasing enormous energy. Requires temperatures of ~100 million °C and high pressure to give nuclei sufficient kinetic energy to approach close enough for the strong nuclear force to act."
+  },
+  {
+    "id": "pp-fission-vs-fusion",
+    "topic": "particle-physics",
+    "difficulty": 4,
+    "image": null,
+    "template": "Match each statement to nuclear fission or nuclear fusion.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Used in current nuclear power stations",
+          "right": "Fission"
+        },
+        { "left": "Powers the Sun", "right": "Fusion" },
+        { "left": "Produces radioactive waste products", "right": "Fission" },
+        { "left": "Joins hydrogen nuclei to form helium", "right": "Fusion" },
+        {
+          "left": "Requires a large nucleus to absorb a neutron",
+          "right": "Fission"
+        }
+      ]
+    },
+    "explanation": "Fission: used in nuclear reactors, splits heavy nuclei (U-235), produces radioactive waste, triggered by neutron absorption. Fusion: powers stars (H → He in the Sun's core), potentially clean energy, enormous temperatures required, research ongoing (ITER). Fusion produces far more energy per kg of fuel with no long-lived radioactive waste."
+  },
+  {
+    "id": "pp-particle-model-states",
+    "topic": "particle-physics",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each state of matter to its particle arrangement and motion.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Solid",
+          "right": "Particles in regular lattice — vibrate in fixed positions"
+        },
+        {
+          "left": "Liquid",
+          "right": "Particles close but able to move past each other"
+        },
+        {
+          "left": "Gas",
+          "right": "Particles far apart, moving randomly at high speed"
+        }
+      ]
+    },
+    "explanation": "Solid: regular arrangement, strong forces, only vibrational motion, fixed shape and volume. Liquid: irregular arrangement, weaker forces, particles flow past each other, fixed volume, takes container's shape. Gas: particles far apart, negligible forces, random rapid motion, fills any container."
+  },
+  {
+    "id": "pp-internal-energy",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is internal energy?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the total kinetic and potential energy of all the particles in a substance",
+      "acceptedAnswers": [
+        "sum of all particle kinetic energies and potential energies in a system",
+        "total random kinetic energy plus potential energy of particles"
+      ]
+    },
+    "explanation": "Internal energy is the sum of the kinetic energy (from random particle motion) and potential energy (from intermolecular forces) of all the particles in a substance. Heating a substance increases internal energy — either by raising temperature (more KE) or changing state (more PE, breaking bonds)."
+  },
+  {
+    "id": "pp-nuclear-equation-balancing",
+    "topic": "particle-physics",
+    "difficulty": 4,
+    "image": null,
+    "template": "In alpha decay of Radium-226 (Ra, Z=88), what is the daughter nucleus produced?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Radon-222 (Rn, Z=86)",
+      "acceptedAnswers": ["Radon-222", "Rn-222", "²²²Rn", "radon 222"]
+    },
+    "explanation": "Alpha decay: ²²⁶₈₈Ra → ²²²₈₆Rn + ⁴₂He. Mass number: 226−4 = 222. Proton number: 88−2 = 86. Element with Z=86 is Radon (Rn). Nuclear equations must balance: top numbers (mass) and bottom numbers (proton/charge) must sum equally on both sides."
+  },
+  {
+    "id": "pp-radiation-safety",
+    "topic": "particle-physics",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL precautions used when handling radioactive sources in a laboratory.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Hold source with tongs — never touch directly",
+        "Minimise time near the source",
+        "Keep maximum distance from source",
+        "Store in lead-lined containers",
+        "Wear a lab coat only — no other protection needed"
+      ],
+      "correctOptions": [
+        "Hold source with tongs — never touch directly",
+        "Minimise time near the source",
+        "Keep maximum distance from source",
+        "Store in lead-lined containers"
+      ]
+    },
+    "explanation": "Radiation safety: use tongs (don't touch — alpha highly ionising at skin), minimise time (less exposure), maximise distance (intensity decreases with distance squared), use shielding (lead containers block gamma). Lab coat alone is insufficient — proper shielding and dosimetry badges are also used by professionals."
+  },
+  {
+    "id": "pp-evaluate-nuclear-power",
+    "topic": "particle-physics",
+    "difficulty": 5,
+    "image": null,
+    "template": "Evaluate nuclear fission as an energy source for the UK, considering environmental, safety, and economic factors.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "Environmental (max 2): no CO₂ during operation — helps meet climate targets (1) / radioactive waste requires safe storage for thousands of years (1) / mining uranium has environmental impact (1). Safety (max 2): risk of serious accident — Chernobyl/Fukushima (1) / but modern reactors have improved safety systems (1) / radiation health risks for workers if safety fails (1). Economic (max 2): very high construction costs and long build times (1) / low running costs — high energy density (1) / decommissioning costs very high (1). Conclusion required for full marks (1).",
+      "minWords": 40
+    },
+    "explanation": "Nuclear fission produces no CO₂ (environmental benefit) but creates long-lived radioactive waste and carries accident risk. High construction costs but low fuel costs. Compared to fossil fuels: better for climate. Compared to renewables: more reliable but riskier and more expensive to build and decommission."
+  }
+]

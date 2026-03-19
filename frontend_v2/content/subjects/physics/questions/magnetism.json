@@ -1,0 +1,331 @@
+[
+  {
+    "id": "mag-permanent-induced",
+    "topic": "magnetism",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is the difference between a permanent magnet and an induced magnet?",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Permanent magnet",
+          "right": "Produces its own magnetic field at all times"
+        },
+        {
+          "left": "Induced magnet",
+          "right": "Becomes magnetic only when placed in a magnetic field"
+        }
+      ]
+    },
+    "explanation": "Permanent magnets (e.g. bar magnets) have a persistent magnetic field. Induced magnets are magnetic materials that temporarily become magnetised when placed in an external magnetic field — they lose most magnetism when the field is removed."
+  },
+  {
+    "id": "mag-field-pattern-bar-magnet",
+    "topic": "magnetism",
+    "difficulty": 2,
+    "image": null,
+    "template": "Describe the magnetic field pattern around a bar magnet.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "field lines emerge from the north pole and enter the south pole curving around the outside of the magnet and are closest together at the poles where the field is strongest",
+      "acceptedAnswers": [
+        "lines go from N pole to S pole — densest at poles, further apart in middle — never cross",
+        "field lines leave north, loop around, enter south — field strongest where lines are closest"
+      ]
+    },
+    "explanation": "Magnetic field lines emerge from the north pole, loop through the air, and enter the south pole. Inside the magnet they run from south to north. Lines are closest near the poles (strongest field), further apart in the middle. Lines never cross. The direction of the field is the direction a free north pole would move."
+  },
+  {
+    "id": "mag-solenoid-field",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "Describe the magnetic field produced by a current-carrying solenoid.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the field inside is strong and uniform similar to a bar magnet with a north and south pole at each end",
+      "acceptedAnswers": [
+        "uniform field inside like a bar magnet — field outside is similar to a bar magnet",
+        "parallel field lines inside the coil — acts like a bar magnet with poles at each end"
+      ]
+    },
+    "explanation": "A solenoid (coil of wire carrying current) produces a magnetic field similar to a bar magnet. Inside: strong, uniform, parallel field lines. Outside: field pattern like a bar magnet. One end is north, the other south. Adding an iron core greatly strengthens the field — this is an electromagnet."
+  },
+  {
+    "id": "mag-force-on-conductor-calc",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "A wire of length {{l}} m carries a current of {{i}} A in a magnetic field of strength {{b}} T. Calculate the force on the wire.",
+    "variables": {
+      "l": { "type": "pick", "options": [0.1, 0.2, 0.3, 0.5, 1.0] },
+      "i": { "type": "pick", "options": [1, 2, 3, 4, 5, 8, 10] },
+      "b": { "type": "pick", "options": [0.1, 0.2, 0.3, 0.4, 0.5] },
+      "ans": { "type": "derived", "expr": "round(b * i * l, 3)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(b * i * l, 3)",
+      "unit": "N"
+    },
+    "explanation": "F = BIL = {{b}} × {{i}} × {{l}} = {{ans}} N. The force is maximum when the wire is perpendicular to the field, and zero when parallel."
+  },
+  {
+    "id": "mag-flemings-left-hand-rule",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "What does Fleming's left-hand rule determine?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the direction of the force on a current-carrying conductor in a magnetic field",
+      "acceptedAnswers": [
+        "direction of motion/force when current flows in a magnetic field",
+        "the thrust direction in a motor given field and current directions"
+      ]
+    },
+    "explanation": "Fleming's left-hand rule: hold thumb (force/motion), index finger (field from N to S), and middle finger (conventional current) at right angles. The thumb points in the direction of the force on the conductor. Used for motors (the motor effect)."
+  },
+  {
+    "id": "mag-motor-effect-explanation",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why a current-carrying wire experiences a force when placed in a magnetic field.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the magnetic field from the current interacts with the external magnetic field producing a resultant force on the wire",
+      "acceptedAnswers": [
+        "current creates its own magnetic field which interacts with the external field — the two fields combine to create a force",
+        "the wire's own field and the external field interact — regions of stronger and weaker field create a force"
+      ]
+    },
+    "explanation": "A current-carrying conductor has its own circular magnetic field around it. This interacts with the external magnetic field — where fields reinforce each other the field is stronger; where they oppose it is weaker. The wire is pushed from the stronger to the weaker field region — this is the motor effect."
+  },
+  {
+    "id": "mag-increase-motor-force",
+    "topic": "magnetism",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL ways to increase the force on a wire in a magnetic field.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Increase the current",
+        "Use a stronger magnet (greater B field strength)",
+        "Increase the length of wire in the field",
+        "Reverse the direction of the current",
+        "Place the wire parallel to the field"
+      ],
+      "correctOptions": [
+        "Increase the current",
+        "Use a stronger magnet (greater B field strength)",
+        "Increase the length of wire in the field"
+      ]
+    },
+    "explanation": "F = BIL. Force increases with larger B (stronger magnet), larger I (more current), larger L (longer wire in field). Reversing current reverses the force direction but not its magnitude. Wire parallel to field gives zero force (maximum force when perpendicular)."
+  },
+  {
+    "id": "mag-electromagnetic-induction",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is electromagnetic induction?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the production of a potential difference across a conductor when there is a change in magnetic flux through it",
+      "acceptedAnswers": [
+        "a voltage is induced in a conductor when it moves through a magnetic field or the field changes",
+        "changing magnetic field induces an EMF/voltage in a conductor"
+      ]
+    },
+    "explanation": "Electromagnetic induction: when a conductor moves through a magnetic field (or the field through it changes), a potential difference (EMF) is induced across the conductor. If the circuit is complete, a current flows. This is the basis of generators and transformers."
+  },
+  {
+    "id": "mag-increase-induced-emf",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL ways to increase the induced EMF in a generator.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Move the conductor faster",
+        "Use a stronger magnetic field",
+        "Increase the number of turns on the coil",
+        "Use a non-magnetic core",
+        "Decrease the rotation speed"
+      ],
+      "correctOptions": [
+        "Move the conductor faster",
+        "Use a stronger magnetic field",
+        "Increase the number of turns on the coil"
+      ]
+    },
+    "explanation": "Induced EMF increases with: faster movement (greater rate of change of flux), stronger field (more flux), more coil turns (each turn adds to the EMF). A soft iron core increases the field strength. Decreasing speed reduces EMF."
+  },
+  {
+    "id": "mag-transformer-equation-calc",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "A transformer has {{np}} turns on the primary and {{ns}} turns on the secondary. The primary voltage is {{vp}} V. Calculate the secondary voltage.",
+    "variables": {
+      "np": { "type": "pick", "options": [100, 200, 400, 500, 1000] },
+      "ns": { "type": "pick", "options": [50, 100, 200, 400, 500, 2000] },
+      "vp": { "type": "pick", "options": [12, 24, 120, 230, 240] },
+      "ans": { "type": "derived", "expr": "round(vp * ns / np, 1)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(vp * ns / np, 1)",
+      "unit": "V"
+    },
+    "explanation": "Vs/Vp = Ns/Np → Vs = Vp × (Ns/Np) = {{vp}} × ({{ns}}/{{np}}) = {{ans}} V."
+  },
+  {
+    "id": "mag-step-up-step-down",
+    "topic": "magnetism",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each transformer type to its description.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Step-up transformer",
+          "right": "More turns on secondary — increases voltage, decreases current"
+        },
+        {
+          "left": "Step-down transformer",
+          "right": "Fewer turns on secondary — decreases voltage, increases current"
+        }
+      ]
+    },
+    "explanation": "Step-up: Ns > Np → Vs > Vp (voltage increases). By conservation of energy, current decreases (P = IV). Step-down: Ns < Np → Vs < Vp (voltage decreases), current increases. National grid uses step-up transformers at power stations (high V, low I reduces cable heating) and step-down near consumers."
+  },
+  {
+    "id": "mag-transformer-current-calc",
+    "topic": "magnetism",
+    "difficulty": 4,
+    "image": null,
+    "template": "An ideal transformer has primary voltage {{vp}} V and secondary voltage {{vs}} V. The primary current is {{ip}} A. Calculate the secondary current.",
+    "variables": {
+      "vp": { "type": "pick", "options": [230, 240, 120, 100] },
+      "vs": { "type": "pick", "options": [12, 24, 48, 6] },
+      "ip": { "type": "pick", "options": [0.1, 0.2, 0.5, 1] },
+      "ans": { "type": "derived", "expr": "round(vp * ip / vs, 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(vp * ip / vs, 2)",
+      "unit": "A"
+    },
+    "explanation": "Ideal transformer: IpVp = IsVs (power in = power out). Is = IpVp ÷ Vs = {{ip}} × {{vp}} ÷ {{vs}} = {{ans}} A."
+  },
+  {
+    "id": "mag-national-grid-transformers",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the stages of electricity transmission through the national grid.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Power station generates electricity at ~25 000 V",
+        "Step-up transformer increases to ~400 000 V for transmission",
+        "High-voltage cables carry electricity across country",
+        "Step-down transformer reduces to 33 000 V for local distribution",
+        "Further step-down to 230 V for homes"
+      ]
+    },
+    "explanation": "National grid: generation (~25 kV) → step-up transformer (~400 kV) → high-voltage transmission (low current = low I²R losses) → step-down transformer (33 kV for industry) → further step-down (230 V for homes). High voltage transmission is essential for energy efficiency."
+  },
+  {
+    "id": "mag-generator-ac",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why a rotating coil in a magnetic field produces alternating current.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "as the coil rotates the direction of motion of each side of the coil through the field reverses so the induced current changes direction producing alternating current",
+      "acceptedAnswers": [
+        "each half revolution the sides of the coil move in opposite directions through the field reversing the induced EMF",
+        "rotation causes the rate of change of flux to alternate direction creating AC output"
+      ]
+    },
+    "explanation": "In a generator, as the coil rotates, each side moves upward then downward through the magnetic field. When a wire moves upward, current flows one way; when it moves downward, current reverses. This alternation produces AC. The frequency equals the rotation rate (50 Hz for UK mains)."
+  },
+  {
+    "id": "mag-transformer-requires-ac",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "True or false: A transformer works with both AC and DC supplies.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": false },
+    "explanation": "False. Transformers only work with AC. Electromagnetic induction requires a CHANGING magnetic field. AC produces a continuously changing field in the primary coil that induces an EMF in the secondary. A DC supply creates a constant (non-changing) magnetic field — no change in flux — no induction."
+  },
+  {
+    "id": "mag-right-hand-rule-solenoid",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "How can you determine which end of a solenoid is the north pole?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "use the right-hand grip rule — curl the fingers of the right hand in the direction of conventional current flow and the thumb points towards the north pole",
+      "acceptedAnswers": [
+        "right hand grip rule: thumb points to north if fingers curl in direction of current",
+        "curl right hand fingers in current direction — thumb shows north pole end"
+      ]
+    },
+    "explanation": "Right-hand grip rule for solenoids: wrap the right hand around the solenoid with fingers pointing in the direction of conventional current flow in the coils. The thumb points towards the north pole of the solenoid. Reversing the current reverses the polarity."
+  },
+  {
+    "id": "mag-relay-uses",
+    "topic": "magnetism",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how an electromagnet is used in a relay switch.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a small current through the electromagnet creates a magnetic field that attracts a metal contact closing a second circuit that carries a larger current",
+      "acceptedAnswers": [
+        "small current energises electromagnet which closes a switch in a high-current circuit",
+        "electromagnet attracts iron contact completing a separate high-power circuit"
+      ]
+    },
+    "explanation": "A relay allows a small current to control a large one. A small current through the electromagnet coil creates a magnetic field. This attracts a soft iron armature, closing the contacts of a separate high-current circuit. Used in car starter motors, industrial switching, and safety systems."
+  },
+  {
+    "id": "mag-evaluate-em-induction",
+    "topic": "magnetism",
+    "difficulty": 5,
+    "image": null,
+    "template": "Explain how the national grid uses transformers to transmit electrical energy efficiently, and evaluate why this system is used rather than transmitting at lower voltage.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "How transformers work (max 2): step-up transformer increases voltage for transmission (1) / step-down reduces voltage for consumers (1) / transformers only work with AC — reason national grid uses AC (1). Why high voltage (max 2): P_loss = I²R — high voltage means low current for same power (1) / lower current means less energy wasted as heat in cables (1) / saves money and reduces environmental impact (1). Evaluation (max 2): lower voltage safer but much greater energy loss (1) / economic and efficiency trade-off justifies high voltage (1). Conclusion for full marks (1).",
+      "minWords": 40
+    },
+    "explanation": "Step-up transformer raises voltage to ~400 kV; step-down reduces for use. High voltage → low current → P=I²R means much less heat wasted in cables. Transmitting at 230V would need enormous currents — most energy would be wasted as heat. The system uses AC because transformers only work with changing magnetic fields (AC). Safety hazard of high-voltage cables is managed by pylons and underground cables."
+  }
+]

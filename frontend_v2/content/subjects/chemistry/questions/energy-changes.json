@@ -313,7 +313,7 @@
       "type": "long_form",
       "marks": 6,
       "markScheme": "Hydrogen advantages (max 3): only product is water — no CO₂ emissions from car (1) / high energy density per kg (1) / more efficient in fuel cells than combustion (1). Hydrogen disadvantages (max 3): difficult to store safely — high pressure or cryogenic (1) / most hydrogen currently produced from natural gas (still produces CO₂) (1) / limited refuelling infrastructure (1) / currently expensive (1). Petrol advantages: existing infrastructure, energy dense, easy to store (1). Conclusion required for full marks (1).",
-      "minWords": 80
+      "minWords": 30
     },
     "explanation": "Hydrogen fuel cells produce only water, are more efficient, and have zero tailpipe emissions. However, hydrogen storage is challenging, most production still uses fossil fuels, and infrastructure is limited. Petrol has a mature infrastructure advantage but significant environmental costs."
   },

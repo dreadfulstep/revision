@@ -151,7 +151,7 @@
       "type": "long_form",
       "marks": 4,
       "markScheme": "1. Random mutation occurs in some bacteria giving resistance (1) / 2. Antibiotic kills non-resistant bacteria (1) / 3. Resistant bacteria survive and reproduce (natural selection) (1) / 4. Resistance gene passed to offspring (1) / 5. Resistant strain becomes more common in population (1) — max 4",
-      "minWords": 40
+      "minWords": 30
     },
     "explanation": "Antibiotic resistance evolves by natural selection: a random mutation gives some bacteria resistance → antibiotic kills susceptible bacteria → resistant bacteria survive and reproduce → resistance gene passed to offspring → resistant strain spreads."
   },
@@ -242,7 +242,7 @@
       "type": "long_form",
       "marks": 4,
       "markScheme": "1. Vaccine contains weakened/dead pathogen or antigens (1) / 2. Triggers immune response without causing disease (1) / 3. Lymphocytes produce antibodies (1) / 4. Memory cells are formed (1) / 5. On future exposure antibodies produced rapidly/in larger quantities (1) — max 4",
-      "minWords": 40
+      "minWords": 35
     },
     "explanation": "A vaccine introduces weakened/dead pathogens or their antigens. The immune system responds by producing antibodies and memory cells — without causing the disease. If the real pathogen is encountered later, memory cells enable a fast, strong immune response."
   },
@@ -391,7 +391,7 @@
       "type": "long_form",
       "marks": 6,
       "markScheme": "Benefits (max 3): reduces spread/incidence of disease (1) / herd immunity protects vulnerable people (1) / can eradicate disease — e.g. smallpox (1) / cheaper than treating disease (1) / reduces suffering/death (1). Drawbacks (max 3): some people cannot be vaccinated — allergies/immune conditions (1) / vaccines may have side effects (1) / some people refuse — reducing herd immunity (1) / vaccines may not be 100% effective (1) / takes time to develop new vaccines (1). Conclusion required for full marks (1).",
-      "minWords": 80
+      "minWords": 50
     },
     "explanation": "Vaccination programmes are highly effective at reducing disease incidence and can achieve herd immunity. However, not everyone can be vaccinated, some refuse, and vaccines have limitations. Overall the benefits far outweigh the risks for most populations."
   },

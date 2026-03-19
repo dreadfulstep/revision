@@ -10,7 +10,6 @@
     { "id": "waves", "name": "Waves" },
     { "id": "electricity", "name": "Electricity" },
     { "id": "magnetism", "name": "Magnetism & Electromagnetism" },
-    { "id": "particle-physics", "name": "Particle Physics & Atomic Structure" },
-    { "id": "space", "name": "Space Physics" }
+    { "id": "particle-physics", "name": "Particle Physics & Atomic Structure" }
   ]
 }

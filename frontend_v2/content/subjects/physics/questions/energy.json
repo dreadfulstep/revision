@@ -1,0 +1,395 @@
+[
+  {
+    "id": "energy-stores-matching",
+    "topic": "energy",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each example to the correct energy store.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Moving car", "right": "Kinetic energy store" },
+        {
+          "left": "Stretched elastic band",
+          "right": "Elastic potential energy store"
+        },
+        { "left": "Hot cup of tea", "right": "Thermal energy store" },
+        { "left": "Battery", "right": "Chemical energy store" },
+        {
+          "left": "Book on a shelf",
+          "right": "Gravitational potential energy store"
+        }
+      ]
+    },
+    "explanation": "Energy is stored in different ways: kinetic (moving objects), elastic potential (stretched/compressed), thermal (hot objects), chemical (fuels, batteries, food), gravitational PE (objects at height), nuclear (atomic nuclei), electromagnetic (electric/magnetic fields)."
+  },
+  {
+    "id": "energy-ke-calc",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "Calculate the kinetic energy of a {{m}} kg object moving at {{v}} m/s.",
+    "variables": {
+      "m": { "type": "pick", "options": [2, 4, 5, 8, 10, 20, 50, 70] },
+      "v": { "type": "pick", "options": [3, 4, 5, 6, 8, 10, 15, 20] },
+      "ans": { "type": "derived", "expr": "0.5 * m * v * v" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "0.5 * m * v * v",
+      "unit": "J"
+    },
+    "explanation": "KE = ½mv² = 0.5 × {{m}} × {{v}}² = 0.5 × {{m}} × {{v*v}} = {{ans}} J."
+  },
+  {
+    "id": "energy-gpe-calc",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "Calculate the gravitational potential energy of a {{m}} kg object raised {{h}} m. (g = 10 N/kg)",
+    "variables": {
+      "m": { "type": "pick", "options": [2, 5, 8, 10, 20, 50, 100] },
+      "h": { "type": "pick", "options": [2, 3, 4, 5, 8, 10, 15, 20] },
+      "ans": { "type": "derived", "expr": "m * 10 * h" }
+    },
+    "answerConfig": { "type": "number", "answer": "m * 10 * h", "unit": "J" },
+    "explanation": "GPE = mgh = {{m}} × 10 × {{h}} = {{ans}} J. This is the work done against gravity to lift the object to height h."
+  },
+  {
+    "id": "energy-elastic-pe-calc",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "A spring with spring constant {{k}} N/m is extended by {{e}} m. Calculate the elastic potential energy stored.",
+    "variables": {
+      "k": { "type": "pick", "options": [20, 40, 50, 100, 200] },
+      "e": { "type": "pick", "options": [0.1, 0.2, 0.3, 0.4, 0.5] },
+      "ans": { "type": "derived", "expr": "round(0.5 * k * e * e, 3)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(0.5 * k * e * e, 3)",
+      "unit": "J"
+    },
+    "explanation": "Elastic PE = ½ke² = 0.5 × {{k}} × {{e}}² = 0.5 × {{k}} × {{e*e}} = {{ans}} J."
+  },
+  {
+    "id": "energy-work-done-calc",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "A force of {{f}} N moves an object {{d}} m in the direction of the force. Calculate the work done.",
+    "variables": {
+      "f": { "type": "pick", "options": [5, 10, 20, 25, 40, 50, 100, 200] },
+      "d": { "type": "pick", "options": [2, 3, 4, 5, 8, 10, 15, 20] },
+      "ans": { "type": "derived", "expr": "f * d" }
+    },
+    "answerConfig": { "type": "number", "answer": "f * d", "unit": "J" },
+    "explanation": "W = Fd = {{f}} × {{d}} = {{ans}} J. Work done equals energy transferred. 1 joule = 1 newton × 1 metre."
+  },
+  {
+    "id": "energy-power-calc",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "An appliance transfers {{e}} J of energy in {{t}} seconds. Calculate the power.",
+    "variables": {
+      "e": { "type": "pick", "options": [500, 1000, 2000, 3000, 5000, 10000] },
+      "t": { "type": "pick", "options": [5, 10, 20, 25, 50, 100] },
+      "ans": { "type": "derived", "expr": "e / t" }
+    },
+    "answerConfig": { "type": "number", "answer": "e / t", "unit": "W" },
+    "explanation": "P = E ÷ t = {{e}} ÷ {{t}} = {{ans}} W. Power is the rate of energy transfer. 1 watt = 1 joule per second."
+  },
+  {
+    "id": "energy-power-force-velocity",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "A car engine exerts a driving force of {{f}} N at a constant speed of {{v}} m/s. Calculate the engine's power output.",
+    "variables": {
+      "f": { "type": "pick", "options": [500, 800, 1000, 1500, 2000, 3000] },
+      "v": { "type": "pick", "options": [10, 15, 20, 25, 30] },
+      "ans": { "type": "derived", "expr": "f * v" }
+    },
+    "answerConfig": { "type": "number", "answer": "f * v", "unit": "W" },
+    "explanation": "P = Fv = {{f}} × {{v}} = {{ans}} W. At constant speed, the driving force equals friction/air resistance. Power = force × velocity."
+  },
+  {
+    "id": "energy-efficiency-calc",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "A motor has a useful power output of {{useful}} W and a total input power of {{total}} W. Calculate its efficiency.",
+    "variables": {
+      "total": { "type": "pick", "options": [100, 200, 400, 500, 1000, 2000] },
+      "pct": { "type": "pick", "options": [40, 50, 60, 70, 75, 80] },
+      "useful": { "type": "derived", "expr": "total * pct / 100" }
+    },
+    "answerConfig": { "type": "number", "answer": "pct", "unit": "%" },
+    "explanation": "Efficiency = (useful output ÷ total input) × 100 = ({{useful}} ÷ {{total}}) × 100 = {{pct}}%."
+  },
+  {
+    "id": "energy-efficiency-definition",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or false: An efficiency greater than 100% is possible if a machine uses a catalyst.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": false },
+    "explanation": "False. Efficiency cannot exceed 100% — this would violate conservation of energy. Some energy is always wasted (usually as heat due to friction or resistance). An efficiency of 100% would require a perfectly energy-conserving device with zero waste."
+  },
+  {
+    "id": "energy-shc-calc",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "Calculate the energy needed to heat {{m}} kg of water by {{dt}}°C. (c = 4200 J/kg°C)",
+    "variables": {
+      "m": { "type": "pick", "options": [0.5, 1, 1.5, 2, 2.5, 3] },
+      "dt": { "type": "pick", "options": [5, 10, 15, 20, 25, 30, 40, 50] },
+      "ans": { "type": "derived", "expr": "m * 4200 * dt" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "m * 4200 * dt",
+      "unit": "J"
+    },
+    "explanation": "Q = mcΔT = {{m}} × 4200 × {{dt}} = {{ans}} J. c = specific heat capacity of water = 4200 J/kg°C."
+  },
+  {
+    "id": "energy-shc-definition",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is specific heat capacity?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the energy required to raise the temperature of 1 kg of a substance by 1°C",
+      "acceptedAnswers": [
+        "energy needed to heat 1 kg by 1 degree",
+        "amount of energy per kg per degree temperature change"
+      ]
+    },
+    "explanation": "Specific heat capacity (c) is the energy required to raise the temperature of 1 kg of a substance by 1°C (or 1 K). Different materials have different values. Water (4200 J/kg°C) has an unusually high SHC — it takes a lot of energy to heat up."
+  },
+  {
+    "id": "energy-latent-heat-calc",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "Calculate the energy needed to melt {{m}} kg of ice. (specific latent heat of fusion of ice = 334 000 J/kg)",
+    "variables": {
+      "m": { "type": "pick", "options": [0.1, 0.2, 0.5, 1, 1.5, 2] },
+      "ans": { "type": "derived", "expr": "m * 334000" }
+    },
+    "answerConfig": { "type": "number", "answer": "m * 334000", "unit": "J" },
+    "explanation": "Q = mL = {{m}} × 334 000 = {{ans}} J. Latent heat is used to change state at constant temperature — breaking intermolecular bonds without changing temperature."
+  },
+  {
+    "id": "energy-latent-heat-definition",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "Explain why temperature does not change during a change of state even though energy is being supplied.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the energy is used to break intermolecular bonds rather than increasing the kinetic energy of the particles",
+      "acceptedAnswers": [
+        "energy breaks bonds between particles — doesn't increase temperature",
+        "supplied energy overcomes intermolecular forces not changing particle KE"
+      ]
+    },
+    "explanation": "During a change of state (e.g. melting), the energy supplied breaks the bonds/forces between particles rather than increasing their kinetic energy. Since temperature is a measure of average kinetic energy, it remains constant until all the state change is complete."
+  },
+  {
+    "id": "energy-conduction-convection-radiation",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each method of thermal energy transfer to its correct description.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Conduction",
+          "right": "Transfer through solids by vibration of particles"
+        },
+        {
+          "left": "Convection",
+          "right": "Transfer by movement of fluid (liquid or gas)"
+        },
+        {
+          "left": "Radiation",
+          "right": "Transfer by infrared electromagnetic waves — no medium needed"
+        }
+      ]
+    },
+    "explanation": "Conduction: vibrating particles pass energy to neighbours — main mechanism in solids. Convection: warm fluid less dense, rises, cool fluid sinks — creates convection current — in liquids and gases. Radiation: infrared waves carry energy — works through vacuum (no particles needed)."
+  },
+  {
+    "id": "energy-renewable-nonrenewable",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL renewable energy sources.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Wind",
+        "Natural gas",
+        "Solar",
+        "Nuclear",
+        "Tidal",
+        "Coal",
+        "Hydroelectric"
+      ],
+      "correctOptions": ["Wind", "Solar", "Tidal", "Hydroelectric"]
+    },
+    "explanation": "Renewable: wind, solar, tidal, hydroelectric, geothermal, wave, biomass — replenished naturally. Non-renewable: coal, oil, natural gas (fossil fuels) and nuclear (uranium is finite). Nuclear produces no CO₂ but uranium is finite — sometimes classified separately as 'low carbon' rather than renewable."
+  },
+  {
+    "id": "energy-renewable-disadvantages",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL disadvantages of renewable energy sources compared to fossil fuels.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Intermittent — output varies with weather",
+        "High CO₂ emissions during operation",
+        "Large land area often required",
+        "More expensive to set up per unit energy",
+        "Cannot be stored easily"
+      ],
+      "correctOptions": [
+        "Intermittent — output varies with weather",
+        "Large land area often required",
+        "More expensive to set up per unit energy",
+        "Cannot be stored easily"
+      ]
+    },
+    "explanation": "Renewable disadvantages: intermittent supply (wind doesn't always blow, sun doesn't always shine), large footprint (wind farms, solar panels), higher initial cost per unit capacity, difficult to store surplus electricity. They do NOT produce CO₂ during operation — that's an advantage over fossil fuels."
+  },
+  {
+    "id": "energy-national-grid",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why electrical energy is transmitted at high voltage in the national grid.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "high voltage means low current which reduces energy lost as heat in the transmission cables",
+      "acceptedAnswers": [
+        "lower current at high voltage reduces I²R power losses in cables",
+        "high voltage reduces current so less energy wasted heating the cables"
+      ]
+    },
+    "explanation": "Power loss in cables = I²R. For a given power transmitted (P = IV), higher voltage means lower current. Lower current means less energy wasted as heat (I²R). Step-up transformers at power stations increase voltage; step-down transformers near homes reduce it to safe levels."
+  },
+  {
+    "id": "energy-conservation-law",
+    "topic": "energy",
+    "difficulty": 1,
+    "image": null,
+    "template": "State the law of conservation of energy.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "energy cannot be created or destroyed only transferred from one store to another",
+      "acceptedAnswers": [
+        "total energy in a closed system is always constant",
+        "energy is conserved — total before equals total after"
+      ]
+    },
+    "explanation": "The law of conservation of energy states that energy cannot be created or destroyed — it can only be transferred between stores or dissipated (spread out as thermal energy). The total energy in a closed system always remains constant."
+  },
+  {
+    "id": "energy-dissipation",
+    "topic": "energy",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is meant by energy dissipation and why is it a problem in energy systems?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "energy dissipation is when useful energy is transferred to the thermal store of the surroundings and spreads out making it less useful",
+      "acceptedAnswers": [
+        "energy spreads as waste heat into surroundings — cannot be easily recovered or used",
+        "energy transferred to thermal store of environment in a non-useful way"
+      ]
+    },
+    "explanation": "Energy dissipation occurs when energy is transferred to the thermal store of the surroundings (wasted as heat). This energy becomes spread out and cannot easily be recovered for useful purposes. It reduces efficiency. Examples: friction in engines, resistance heating in wires."
+  },
+  {
+    "id": "energy-ke-to-gpe",
+    "topic": "energy",
+    "difficulty": 4,
+    "image": null,
+    "template": "A {{m}} kg ball is thrown upward at {{v}} m/s. Calculate the maximum height reached assuming no air resistance. (g = 10 N/kg)",
+    "variables": {
+      "m": { "type": "pick", "options": [0.1, 0.2, 0.5, 1, 2] },
+      "v": { "type": "pick", "options": [4, 5, 6, 8, 10, 12, 14, 20] },
+      "ans": { "type": "derived", "expr": "round(v * v / 20, 2)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(v * v / 20, 2)",
+      "unit": "m"
+    },
+    "explanation": "At maximum height, all KE converts to GPE. ½mv² = mgh. h = v² ÷ (2g) = {{v}}² ÷ 20 = {{v*v}} ÷ 20 = {{ans}} m. Mass cancels — height does not depend on mass."
+  },
+  {
+    "id": "energy-insulation-methods",
+    "topic": "energy",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each home insulation method to the type of energy transfer it mainly reduces.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Loft insulation",
+          "right": "Conduction and convection through ceiling"
+        },
+        {
+          "left": "Double glazing",
+          "right": "Conduction through windows, convection currents"
+        },
+        {
+          "left": "Cavity wall insulation",
+          "right": "Convection currents in wall cavity"
+        },
+        {
+          "left": "Reflective foil behind radiator",
+          "right": "Radiation from radiator into wall"
+        }
+      ]
+    },
+    "explanation": "Loft insulation (fibreglass/mineral wool) traps air reducing conduction and convection. Double glazing traps air between panes. Cavity wall foam fills air gap stopping convection. Reflective foil reflects infrared radiation back into room rather than letting it conduct into wall."
+  },
+  {
+    "id": "energy-evaluate-nuclear",
+    "topic": "energy",
+    "difficulty": 5,
+    "image": null,
+    "template": "Evaluate nuclear power as an energy source for the future compared to fossil fuels.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "Nuclear advantages (max 3): no CO₂ emissions during operation (1) / high energy density — small amount of fuel produces huge energy (1) / reliable baseload power — not weather dependent (1) / low running costs once built (1). Nuclear disadvantages (max 3): radioactive waste — difficult safe disposal for thousands of years (1) / high construction cost and long build time (1) / risk of accident — Chernobyl/Fukushima (1) / uranium is a finite resource (1). Conclusion required for full marks (1).",
+      "minWords": 20
+    },
+    "explanation": "Nuclear produces no CO₂, reliable power, and enormous energy from small fuel volumes. However, radioactive waste disposal, construction costs, safety risks, and finite uranium supply are significant concerns. Overall it is cleaner than fossil fuels in terms of emissions but has unique safety and waste challenges."
+  }
+]

@@ -354,7 +354,7 @@
       "type": "long_form",
       "marks": 4,
       "markScheme": "1. Reactive metals lose electrons easily to form positive ions (1) / 2. The outer electron(s) are less strongly held in more reactive metals (1) / 3. Less energy required to remove outer electrons (lower ionisation energy) (1) / 4. This is due to greater distance from nucleus / more electron shielding (1) / 5. More reactive metals are stronger reducing agents — they reduce other species more readily (1) — max 4",
-      "minWords": 40
+      "minWords": 20
     },
     "explanation": "More reactive metals have outer electrons that are further from the nucleus and more shielded — they require less energy to remove. These metals readily lose electrons to form positive ions, making them better reducing agents. This explains trends in the reactivity series."
   },

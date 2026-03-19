@@ -305,7 +305,7 @@
       "type": "long_form",
       "marks": 4,
       "markScheme": "1. Blood glucose rises after eating (1) / 2. Pancreas detects high blood glucose (1) / 3. Beta cells release insulin (1) / 4. Insulin causes liver/muscle cells to convert glucose to glycogen (glycogenesis) (1) / 5. Blood glucose returns to normal set point (1) — max 4",
-      "minWords": 40
+      "minWords": 35
     },
     "explanation": "After a meal, blood glucose rises → pancreas beta cells detect this → insulin released into blood → insulin binds to receptors on liver and muscle cells → glucose converted to glycogen (glycogenesis) → blood glucose returns to normal set point."
   },
@@ -370,7 +370,7 @@
       "type": "long_form",
       "marks": 6,
       "markScheme": "Hormonal advantages (max 2): long-lasting effects suitable for sustained changes (1) / can affect many organs simultaneously (1) / used in development/growth/reproduction (1). Hormonal disadvantages (max 2): slower — must travel in blood (1) / less precise — cannot target a single cell (1). Nervous advantages: fast (1) / precise (1). Overall conclusion required for full marks (1).",
-      "minWords": 70
+      "minWords": 40
     },
     "explanation": "Hormones are suitable for sustained, widespread effects (e.g. growth, blood glucose regulation) but are slower. The nervous system provides fast, precise responses (e.g. reflexes). Both work together in coordinating the body."
   },
@@ -402,7 +402,7 @@
       "type": "long_form",
       "marks": 4,
       "markScheme": "Dialysis (max 2): requires regular sessions several times a week (1) / patient not cured — ongoing treatment (1) / no surgery required / lower short-term risk (1) / expensive long-term (1). Transplant (max 2): one-off treatment / long-term solution (1) / requires immunosuppressant drugs for life (1) / risk of rejection (1) / shortage of donors (1). Conclusion for full marks.",
-      "minWords": 40
+      "minWords": 30
     },
     "explanation": "Dialysis is ongoing (3×/week), not a cure, but avoids surgery risk. Transplant is a long-term solution but requires immunosuppressants and carries rejection risk. Donor shortage limits transplant availability."
   }
