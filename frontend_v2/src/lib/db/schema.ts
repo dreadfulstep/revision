@@ -131,3 +131,11 @@ export const paperAttempts = pgTable("paper_attempts", {
   submittedAt: timestamp("submitted_at"),
   markedAt:    timestamp("marked_at"),
 });
+
+export const aiMarkingCache = pgTable("ai_marking_cache", {
+  key:       text("key").primaryKey(),
+  marks:     integer("marks").notNull(),
+  feedback:  text("feedback").notNull(),
+  correct:   boolean("correct").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});

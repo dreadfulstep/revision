@@ -1,0 +1,415 @@
+[
+  {
+    "id": "inf-pathogen-types",
+    "topic": "infection-response",
+    "difficulty": 1,
+    "image": null,
+    "template": "What are the four types of pathogen that can cause infectious disease?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": ["Bacteria", "Virus", "Fungi", "Protist", "Prion", "Parasite"],
+      "correctOptions": ["Bacteria", "Virus", "Fungi", "Protist"]
+    },
+    "explanation": "The four main types of pathogen studied at GCSE are bacteria, viruses, fungi, and protists. Each causes different types of disease and requires different treatments."
+  },
+  {
+    "id": "inf-virus-replication",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "How do viruses cause damage to the body?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "viruses replicate inside cells and then burst out destroying the host cell",
+      "acceptedAnswers": [
+        "they hijack cells and replicate, killing the cell when they burst out",
+        "viruses reproduce inside host cells causing cell damage/death",
+        "they reproduce inside cells and lyse them"
+      ]
+    },
+    "explanation": "Viruses are not cells — they invade host cells and use their machinery to replicate. When new viruses are released they burst the host cell (lysis), destroying it and causing symptoms of disease."
+  },
+  {
+    "id": "inf-bacteria-toxins",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "How do bacteria cause disease in the body?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "By producing toxins that damage cells and tissues",
+        "By hijacking cell DNA",
+        "By blocking nerve signals",
+        "By reducing oxygen in blood"
+      ],
+      "answer": "By producing toxins that damage cells and tissues"
+    },
+    "explanation": "Bacteria damage the body by reproducing rapidly and producing toxins (poisonous substances) that interfere with normal cell/tissue function and cause symptoms of illness."
+  },
+  {
+    "id": "inf-spread-of-disease",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each disease to its main method of transmission.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Measles",  "right": "Droplet infection (air)" },
+        { "left": "Malaria",  "right": "Vector (mosquito)" },
+        { "left": "Salmonella", "right": "Contaminated food" },
+        { "left": "HIV",      "right": "Sexual contact / bodily fluids" },
+        { "left": "Rose black spot", "right": "Water or wind" }
+      ]
+    },
+    "explanation": "Different diseases spread by different routes: measles via respiratory droplets, malaria via mosquito bites, salmonella via contaminated food, HIV via blood/sexual contact, rose black spot via water splash/wind."
+  },
+  {
+    "id": "inf-immune-response-order",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the stages of the specific immune response.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Pathogen enters body",
+        "White blood cells detect antigens",
+        "Lymphocytes produce antibodies",
+        "Antibodies bind to antigens",
+        "Pathogen destroyed",
+        "Memory cells remain"
+      ]
+    },
+    "explanation": "The specific immune response: pathogen enters → antigens detected → lymphocytes activated → antibodies produced → antibodies bind antigens → pathogen destroyed → memory cells remain for faster future response."
+  },
+  {
+    "id": "inf-antibody-specificity",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "Why is each antibody specific to one type of antigen?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "each antibody has a complementary shape to one specific antigen",
+      "acceptedAnswers": [
+        "antibodies have a specific shape that matches only one antigen",
+        "the antibody binding site is complementary to one antigen only"
+      ]
+    },
+    "explanation": "Antibodies have a specific binding site (variable region) that is complementary in shape to only one specific antigen. This lock-and-key specificity means each antibody only works against one type of pathogen."
+  },
+  {
+    "id": "inf-memory-cells",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why a second infection by the same pathogen causes less severe symptoms.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "memory cells remain and allow faster production of antibodies on second exposure",
+      "acceptedAnswers": [
+        "memory lymphocytes respond quickly to produce large amounts of antibodies",
+        "secondary immune response is faster and stronger due to memory cells"
+      ]
+    },
+    "explanation": "After the first infection, memory cells remain in the blood. On second exposure to the same pathogen, memory cells divide rapidly and produce antibodies much faster and in greater quantities — the pathogen is destroyed before it causes serious illness."
+  },
+  {
+    "id": "inf-vaccination-herd-immunity",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain what is meant by herd immunity.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "when enough people are vaccinated the pathogen cannot spread through the population protecting even unvaccinated people",
+      "acceptedAnswers": [
+        "when most of the population is immune the disease cannot spread easily",
+        "if enough people are immune the pathogen dies out protecting vulnerable people"
+      ]
+    },
+    "explanation": "Herd immunity occurs when enough individuals in a population are immune (through vaccination or prior infection) that a pathogen cannot spread effectively — even unvaccinated people are protected because transmission chains are broken."
+  },
+  {
+    "id": "inf-antibiotic-resistance",
+    "topic": "infection-response",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how antibiotic resistance develops in a bacterial population.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Random mutation occurs in some bacteria giving resistance (1) / 2. Antibiotic kills non-resistant bacteria (1) / 3. Resistant bacteria survive and reproduce (natural selection) (1) / 4. Resistance gene passed to offspring (1) / 5. Resistant strain becomes more common in population (1) — max 4",
+      "minWords": 40
+    },
+    "explanation": "Antibiotic resistance evolves by natural selection: a random mutation gives some bacteria resistance → antibiotic kills susceptible bacteria → resistant bacteria survive and reproduce → resistance gene passed to offspring → resistant strain spreads."
+  },
+  {
+    "id": "inf-drug-development-stages",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the stages of drug development.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Discovered and tested in lab on cells/tissues",
+        "Tested on animals for safety and efficacy",
+        "Clinical trials — tested on healthy volunteers for safety",
+        "Clinical trials — tested on patients for efficacy",
+        "Drug approved and prescribed"
+      ]
+    },
+    "explanation": "Drug development follows a strict pathway: laboratory testing → animal testing → clinical trials (small scale, healthy volunteers for safety) → clinical trials (patients, double-blind for efficacy) → approval and prescription."
+  },
+  {
+    "id": "inf-double-blind-trial",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is the purpose of a double-blind clinical trial?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "neither the patient nor the doctor knows who received the drug or placebo to prevent bias",
+      "acceptedAnswers": [
+        "to eliminate bias — neither participant nor researcher knows which group received the drug",
+        "prevents placebo effect and researcher bias"
+      ]
+    },
+    "explanation": "In a double-blind trial neither the patient nor the doctor knows who receives the drug or placebo. This eliminates bias: patients cannot experience placebo effects based on expectation, and doctors cannot unconsciously treat groups differently."
+  },
+  {
+    "id": "inf-malaria-protist",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "What type of pathogen causes malaria?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Bacteria", "Virus", "Protist", "Fungi"],
+      "answer": "Protist"
+    },
+    "explanation": "Malaria is caused by Plasmodium, a protist. It is spread by the Anopheles mosquito (the vector). The mosquito transfers the protist into the blood when it bites."
+  },
+  {
+    "id": "inf-lymphocyte-types",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each type of white blood cell to its role.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Phagocyte",    "right": "Engulfs and digests pathogens" },
+        { "left": "Lymphocyte",   "right": "Produces antibodies" }
+      ]
+    },
+    "explanation": "Phagocytes carry out phagocytosis — they engulf, ingest and digest pathogens. Lymphocytes produce specific antibodies in response to antigens on pathogens."
+  },
+  {
+    "id": "inf-antibiotic-limitation",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or false: Antibiotics can be used to treat viral infections.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": false },
+    "explanation": "False. Antibiotics only work against bacteria — they target bacterial cell walls or processes not found in human or viral cells. Viruses are not affected by antibiotics."
+  },
+  {
+    "id": "inf-vaccination-mechanism",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how a vaccine provides protection against a disease.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Vaccine contains weakened/dead pathogen or antigens (1) / 2. Triggers immune response without causing disease (1) / 3. Lymphocytes produce antibodies (1) / 4. Memory cells are formed (1) / 5. On future exposure antibodies produced rapidly/in larger quantities (1) — max 4",
+      "minWords": 40
+    },
+    "explanation": "A vaccine introduces weakened/dead pathogens or their antigens. The immune system responds by producing antibodies and memory cells — without causing the disease. If the real pathogen is encountered later, memory cells enable a fast, strong immune response."
+  },
+  {
+    "id": "inf-reducing-spread",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL methods that reduce the spread of communicable disease.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Vaccination",
+        "Eating more vegetables",
+        "Isolating infected individuals",
+        "Washing hands",
+        "Using antibiotics to treat viruses"
+      ],
+      "correctOptions": ["Vaccination", "Isolating infected individuals", "Washing hands"]
+    },
+    "explanation": "Vaccination builds immunity, isolating infected individuals prevents transmission, and handwashing removes pathogens. Antibiotics do not work against viruses and diet does not directly reduce disease spread."
+  },
+  {
+    "id": "inf-plant-disease-rose-black-spot",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "What type of pathogen causes rose black spot?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "fungi",
+      "acceptedAnswers": ["fungus", "a fungus", "fungal pathogen"]
+    },
+    "explanation": "Rose black spot is caused by a fungus (Diplocarpon rosae). It causes purple/black spots on leaves, which then turn yellow and fall off, reducing photosynthesis."
+  },
+  {
+    "id": "inf-tobacco-mosaic-virus",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "How does tobacco mosaic virus (TMV) affect a plant?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "it causes a mosaic pattern of discolouration on leaves reducing photosynthesis",
+      "acceptedAnswers": [
+        "causes discolouration of leaves reducing chlorophyll and photosynthesis",
+        "produces mosaic pattern on leaves inhibiting photosynthesis"
+      ]
+    },
+    "explanation": "TMV infects plant cells and causes a distinctive mosaic discolouration pattern on leaves. Chloroplasts are destroyed, reducing the plant's ability to photosynthesise and stunting growth."
+  },
+  {
+    "id": "inf-phagocytosis-steps",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the steps of phagocytosis.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Phagocyte detects chemical signals from pathogen",
+        "Phagocyte moves towards pathogen",
+        "Phagocyte engulfs the pathogen",
+        "Enzymes digest the pathogen"
+      ]
+    },
+    "explanation": "Phagocytosis: phagocyte detects pathogen (chemotaxis) → moves towards it → engulfs it by endocytosis → enzymes in lysosomes digest and destroy the pathogen."
+  },
+  {
+    "id": "inf-antigens-definition",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "What are antigens?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "proteins on the surface of pathogens that trigger an immune response",
+      "acceptedAnswers": [
+        "surface proteins on pathogens that stimulate antibody production",
+        "molecules on pathogens that are recognised by the immune system"
+      ]
+    },
+    "explanation": "Antigens are proteins (or other molecules) on the surface of pathogens. The immune system recognises these as foreign and mounts a specific response, producing complementary antibodies."
+  },
+  {
+    "id": "inf-hiv-aids",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why HIV infection eventually leads to AIDS.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "HIV attacks and destroys lymphocytes reducing the ability to produce antibodies leaving the body unable to fight other infections",
+      "acceptedAnswers": [
+        "HIV destroys immune cells so the body cannot fight pathogens",
+        "HIV kills white blood cells making the immune system fail"
+      ]
+    },
+    "explanation": "HIV infects and destroys lymphocytes (T helper cells). Over time, the immune system becomes so weakened it cannot fight off other pathogens. AIDS is diagnosed when opportunistic infections take hold due to the collapsed immune system."
+  },
+  {
+    "id": "inf-antibiotic-discovery",
+    "topic": "infection-response",
+    "difficulty": 1,
+    "image": null,
+    "template": "Who discovered penicillin?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Alexander Fleming",
+      "acceptedAnswers": ["Fleming", "Alexander Fleming"]
+    },
+    "explanation": "Alexander Fleming discovered penicillin in 1928 when he noticed a mould (Penicillium) was killing bacteria on a culture plate. This led to the development of the first antibiotic."
+  },
+  {
+    "id": "inf-placebo-purpose",
+    "topic": "infection-response",
+    "difficulty": 2,
+    "image": null,
+    "template": "Why is a placebo used in a clinical trial?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "to provide a comparison group so the effect of the drug can be measured",
+      "acceptedAnswers": [
+        "as a control — to compare results with those taking the actual drug",
+        "to eliminate the placebo effect when comparing drug effectiveness"
+      ]
+    },
+    "explanation": "A placebo (inactive substance) provides a control group. Comparing results between the drug group and placebo group allows researchers to determine if any improvement is caused by the drug itself rather than psychological expectation."
+  },
+  {
+    "id": "inf-disease-prevention-evaluation",
+    "topic": "infection-response",
+    "difficulty": 5,
+    "image": null,
+    "template": "Evaluate the use of vaccination programmes to control infectious disease in a population.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "Benefits (max 3): reduces spread/incidence of disease (1) / herd immunity protects vulnerable people (1) / can eradicate disease — e.g. smallpox (1) / cheaper than treating disease (1) / reduces suffering/death (1). Drawbacks (max 3): some people cannot be vaccinated — allergies/immune conditions (1) / vaccines may have side effects (1) / some people refuse — reducing herd immunity (1) / vaccines may not be 100% effective (1) / takes time to develop new vaccines (1). Conclusion required for full marks (1).",
+      "minWords": 80
+    },
+    "explanation": "Vaccination programmes are highly effective at reducing disease incidence and can achieve herd immunity. However, not everyone can be vaccinated, some refuse, and vaccines have limitations. Overall the benefits far outweigh the risks for most populations."
+  },
+  {
+    "id": "inf-bacteria-vs-virus-treatment",
+    "topic": "infection-response",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why it is difficult to develop drugs that kill viruses without harming body cells.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "viruses live and reproduce inside host cells so drugs that target viruses may also damage the host cells",
+      "acceptedAnswers": [
+        "antiviral drugs must target the virus inside the cell without harming the cell",
+        "viruses use host cell machinery making it hard to target just the virus"
+      ]
+    },
+    "explanation": "Viruses replicate inside host cells using the host's own cellular machinery. Any drug that disrupts viral replication risks damaging the host cell too. This makes antivirals much harder to develop than antibiotics, which target structures unique to bacteria."
+  }
+]

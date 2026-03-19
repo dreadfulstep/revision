@@ -1,0 +1,385 @@
+[
+  {
+    "id": "inh-dna-structure",
+    "topic": "inheritance",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the shape of a DNA molecule?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "double helix",
+      "acceptedAnswers": ["double helix", "a double helix"]
+    },
+    "explanation": "DNA has a double helix structure — two strands of nucleotides twisted around each other, held together by complementary base pairs (A-T and C-G)."
+  },
+  {
+    "id": "inh-base-pairing",
+    "topic": "inheritance",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each DNA base to its complementary pair.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Adenine (A)",  "right": "Thymine (T)" },
+        { "left": "Cytosine (C)", "right": "Guanine (G)" }
+      ]
+    },
+    "explanation": "In DNA, base pairing is complementary and specific: Adenine always pairs with Thymine (A-T), and Cytosine always pairs with Guanine (C-G)."
+  },
+  {
+    "id": "inh-gene-definition",
+    "topic": "inheritance",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is a gene?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a section of DNA that codes for a specific protein",
+      "acceptedAnswers": [
+        "a sequence of bases on DNA that codes for a protein",
+        "a length of DNA coding for a particular protein"
+      ]
+    },
+    "explanation": "A gene is a specific sequence of bases on a DNA molecule that codes for the production of a particular protein. The sequence of bases determines the sequence of amino acids in the protein."
+  },
+  {
+    "id": "inh-dominant-recessive",
+    "topic": "inheritance",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the difference between dominant and recessive alleles?",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Dominant allele",  "right": "Always expressed when present" },
+        { "left": "Recessive allele", "right": "Only expressed when two copies are present" }
+      ]
+    },
+    "explanation": "A dominant allele is always expressed in the phenotype even if only one copy is present. A recessive allele is only expressed when two copies are present (homozygous recessive)."
+  },
+  {
+    "id": "inh-punnett-square-monohybrid",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "Two heterozygous parents (Bb × Bb) have offspring. What percentage of offspring would be expected to show the dominant phenotype?",
+    "variables": {},
+    "answerConfig": { "type": "number", "answer": "75", "unit": "%" },
+    "explanation": "Punnett square for Bb × Bb: BB, Bb, Bb, bb. Three out of four offspring have at least one B allele and show the dominant phenotype. 3/4 = 75%."
+  },
+  {
+    "id": "inh-homozygous-heterozygous",
+    "topic": "inheritance",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each term to its correct definition.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Homozygous",   "right": "Two identical alleles for a gene" },
+        { "left": "Heterozygous", "right": "Two different alleles for a gene" },
+        { "left": "Genotype",     "right": "The alleles an organism has" },
+        { "left": "Phenotype",    "right": "The physical characteristics expressed" }
+      ]
+    },
+    "explanation": "Homozygous = identical alleles (BB or bb). Heterozygous = different alleles (Bb). Genotype = genetic makeup. Phenotype = observable characteristics resulting from genotype and environment."
+  },
+  {
+    "id": "inh-sex-determination",
+    "topic": "inheritance",
+    "difficulty": 2,
+    "image": null,
+    "template": "What sex chromosomes does a human male have?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "XY",
+      "acceptedAnswers": ["XY", "X and Y"]
+    },
+    "explanation": "Males have XY sex chromosomes; females have XX. The Y chromosome carries the SRY gene that triggers male development. Each sperm carries either X or Y — fertilisation determines the sex of offspring."
+  },
+  {
+    "id": "inh-sex-ratio-calculation",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is the probability of a child being female (XX)?",
+    "variables": {},
+    "answerConfig": { "type": "number", "answer": "50", "unit": "%" },
+    "explanation": "Cross: XX (mother) × XY (father). Gametes: X from mother, X or Y from father. Offspring: XX (female) or XY (male) — 50% probability of each. Punnett square: XX, XY, XX, XY."
+  },
+  {
+    "id": "inh-cystic-fibrosis-inheritance",
+    "topic": "inheritance",
+    "difficulty": 4,
+    "image": null,
+    "template": "Cystic fibrosis is caused by a recessive allele (f). Two carrier parents (Ff × Ff) have children. What fraction of children would be expected to have cystic fibrosis?",
+    "variables": {},
+    "answerConfig": { "type": "number", "answer": "25", "unit": "%" },
+    "explanation": "Cross Ff × Ff: FF (25%), Ff (50%), ff (25%). Only ff individuals have cystic fibrosis. Expected fraction = 1/4 = 25%."
+  },
+  {
+    "id": "inh-mutation-definition",
+    "topic": "inheritance",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is a mutation?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a change in the sequence of bases in DNA",
+      "acceptedAnswers": [
+        "a random change in DNA",
+        "an alteration to the base sequence of DNA",
+        "a change in the genetic code"
+      ]
+    },
+    "explanation": "A mutation is a change in the base sequence of DNA. Mutations can be spontaneous or caused by mutagens (e.g. radiation, certain chemicals). Most mutations have no effect; some may alter protein structure."
+  },
+  {
+    "id": "inh-natural-selection-steps",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the steps of natural selection.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Variation exists in the population due to mutations",
+        "Competition for resources leads to a struggle for survival",
+        "Individuals best adapted survive and reproduce",
+        "Favourable alleles are passed to offspring",
+        "The population changes over many generations"
+      ]
+    },
+    "explanation": "Natural selection: variation (mutations) → competition → survival of the fittest (best adapted survive) → reproduction → alleles passed on → population changes over generations (evolution)."
+  },
+  {
+    "id": "inh-speciation",
+    "topic": "inheritance",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how geographical isolation can lead to the formation of new species.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Population becomes separated by a geographical barrier (1) / 2. Different mutations occur in each group (1) / 3. Natural selection acts differently in each environment (1) / 4. Allele frequencies change differently in each population (1) / 5. Eventually the two populations cannot interbreed — new species formed (1) — max 4",
+      "minWords": 40
+    },
+    "explanation": "Geographical isolation prevents interbreeding. Different mutations occur in each isolated group. Natural selection acts differently in each environment. Over time, allele frequencies diverge so much that the populations can no longer interbreed — speciation has occurred."
+  },
+  {
+    "id": "inh-selective-breeding",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is selective breeding and give one example.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "selecting individuals with desirable traits to breed from over many generations for example breeding cows for high milk yield",
+      "acceptedAnswers": [
+        "choosing parents with desired characteristics to breed — e.g. dogs bred for specific traits",
+        "humans selecting organisms with desired features to breed together"
+      ]
+    },
+    "explanation": "Selective breeding (artificial selection) involves choosing parent organisms with desired traits and breeding them over many generations to increase the prevalence of those traits. Examples: high-yield crops, disease-resistant plants, dogs bred for specific purposes."
+  },
+  {
+    "id": "inh-genetic-engineering-steps",
+    "topic": "inheritance",
+    "difficulty": 4,
+    "image": null,
+    "template": "Order the steps of genetic engineering to produce insulin.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Human insulin gene identified and cut out using restriction enzymes",
+        "Bacterial plasmid cut open with same restriction enzymes",
+        "Insulin gene inserted into plasmid using ligase enzyme",
+        "Recombinant plasmid inserted into bacterium",
+        "Bacteria reproduce and produce human insulin"
+      ]
+    },
+    "explanation": "Genetic engineering: identify and isolate gene (restriction enzymes) → cut open vector plasmid → insert gene (sticky ends + ligase) → transform bacteria with recombinant plasmid → bacteria produce the desired protein."
+  },
+  {
+    "id": "inh-continuous-discontinuous",
+    "topic": "inheritance",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each type of variation to an example.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Continuous variation",     "right": "Height in humans" },
+        { "left": "Discontinuous variation",  "right": "Blood group in humans" }
+      ]
+    },
+    "explanation": "Continuous variation shows a range of values (e.g. height, weight) — controlled by many genes and environment. Discontinuous variation has distinct categories (e.g. blood groups A/B/AB/O, tongue rolling) — controlled by one or few genes."
+  },
+  {
+    "id": "inh-extinction-causes",
+    "topic": "inheritance",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL factors that could cause a species to become extinct.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "New predator introduced",
+        "Habitat destruction",
+        "Disease",
+        "Climate change",
+        "Increase in genetic variation"
+      ],
+      "correctOptions": ["New predator introduced", "Habitat destruction", "Disease", "Climate change"]
+    },
+    "explanation": "Species become extinct due to: new predators (no defences), habitat loss, disease (new pathogens), climate change (unsuitable conditions). Genetic variation actually protects against extinction by providing adaptable individuals."
+  },
+  {
+    "id": "inh-polydactyly-inheritance",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "Polydactyly (extra fingers/toes) is caused by a dominant allele (D). A person with genotype Dd has a child with a person with genotype dd. What is the probability the child will have polydactyly?",
+    "variables": {},
+    "answerConfig": { "type": "number", "answer": "50", "unit": "%" },
+    "explanation": "Cross Dd × dd: offspring are Dd (polydactyly) and dd (unaffected) in 1:1 ratio. Probability of polydactyly = 1/2 = 50%."
+  },
+  {
+    "id": "inh-protein-synthesis-overview",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the stages of protein synthesis.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "DNA unzips in the nucleus",
+        "mRNA copy made (transcription)",
+        "mRNA leaves nucleus through nuclear pore",
+        "Ribosome reads mRNA codons (translation)",
+        "Amino acids joined to form a polypeptide"
+      ]
+    },
+    "explanation": "Protein synthesis: transcription (DNA → mRNA in nucleus) → mRNA exits nucleus → translation at ribosome (mRNA read, tRNA brings amino acids) → amino acids joined by peptide bonds → polypeptide/protein formed."
+  },
+  {
+    "id": "inh-fossils-evidence-evolution",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how the fossil record provides evidence for evolution.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "fossils show how organisms have changed over time with simpler organisms in older rocks and more complex ones in newer rocks",
+      "acceptedAnswers": [
+        "fossils in different rock layers show gradual changes in species over millions of years",
+        "sequence of fossils shows how species have gradually changed"
+      ]
+    },
+    "explanation": "Fossils are preserved remains of organisms from millions of years ago. Older rock layers contain fossils of simpler organisms; newer layers show more complex forms. The gradual changes visible in the fossil record support the theory of evolution."
+  },
+  {
+    "id": "inh-embryonic-screening",
+    "topic": "inheritance",
+    "difficulty": 4,
+    "image": null,
+    "template": "Evaluate the ethical issues surrounding embryonic genetic screening.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "Benefits (max 2): prevents inherited disease being passed on (1) / reduces suffering of individuals who would have the disease (1) / reduces burden on healthcare services (1). Concerns (max 2): embryos with genetic conditions are destroyed — ethical objection (1) / could lead to 'designer babies' (1) / may discriminate against people with disabilities (1) / expensive (1). Balanced conclusion for full marks.",
+      "minWords": 50
+    },
+    "explanation": "Embryonic screening can prevent serious inherited diseases, reducing suffering. However, it involves destroying embryos with genetic conditions, raises concerns about discrimination, and could lead to selection for non-medical traits."
+  },
+  {
+    "id": "inh-mendel-contribution",
+    "topic": "inheritance",
+    "difficulty": 2,
+    "image": null,
+    "template": "What did Gregor Mendel discover through his experiments with pea plants?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "that characteristics are inherited through separate units that are passed from parent to offspring",
+      "acceptedAnswers": [
+        "laws of inheritance — traits are passed as discrete units",
+        "discovered that characteristics are controlled by discrete factors now called genes"
+      ]
+    },
+    "explanation": "Mendel's pea plant experiments led him to discover that characteristics are inherited as discrete units (now called genes/alleles). He described the laws of segregation and independent assortment, though the molecular basis (DNA) was unknown until decades later."
+  },
+  {
+    "id": "inh-cloning-advantages",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "State ONE advantage and ONE disadvantage of cloning plants.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Advantage: produces large numbers of identical plants quickly",
+        "Advantage: increases genetic diversity",
+        "Disadvantage: if disease strikes one plant all identical plants are vulnerable",
+        "Disadvantage: clones are more adaptable to change"
+      ],
+      "correctOptions": [
+        "Advantage: produces large numbers of identical plants quickly",
+        "Disadvantage: if disease strikes one plant all identical plants are vulnerable"
+      ]
+    },
+    "explanation": "Cloning advantages: rapid production of many identical plants with desired traits. Disadvantages: all plants are genetically identical, so a disease or environmental change could wipe out the entire crop (lack of genetic diversity)."
+  },
+  {
+    "id": "inh-allele-frequency-change",
+    "topic": "inheritance",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain why the frequency of a beneficial allele increases in a population over time.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "individuals with the allele are better adapted and more likely to survive reproduce and pass the allele to offspring increasing its frequency",
+      "acceptedAnswers": [
+        "natural selection favours individuals with the allele so they reproduce more and pass it on",
+        "the allele gives a survival advantage so carriers reproduce more and its frequency rises"
+      ]
+    },
+    "explanation": "A beneficial allele gives individuals a survival/reproductive advantage. These individuals are more likely to survive to reproduce and pass the allele to their offspring. Over generations, the allele becomes more common in the population — this is natural selection."
+  },
+  {
+    "id": "inh-dna-evidence-evolution",
+    "topic": "inheritance",
+    "difficulty": 3,
+    "image": null,
+    "template": "How does DNA analysis provide evidence for evolution?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "closely related species have more similar DNA sequences showing they share a more recent common ancestor",
+      "acceptedAnswers": [
+        "species with similar DNA are more closely related",
+        "comparing DNA sequences shows evolutionary relationships"
+      ]
+    },
+    "explanation": "DNA sequences can be compared between species. The more similar the sequences, the more closely related the species and the more recently they shared a common ancestor. This provides molecular evidence supporting evolutionary theory."
+  }
+]

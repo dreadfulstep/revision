@@ -1,0 +1,377 @@
+[
+  {
+    "id": "organic-crude-oil-origin",
+    "topic": "organic",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is crude oil and how was it formed?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "crude oil is a mixture of hydrocarbons formed from the remains of ancient marine organisms over millions of years under heat and pressure",
+      "acceptedAnswers": [
+        "fossil fuel formed from decomposed organisms over millions of years",
+        "mixture of hydrocarbons from ancient organisms subjected to heat and pressure"
+      ]
+    },
+    "explanation": "Crude oil is a finite fossil fuel — a complex mixture of hydrocarbons (compounds of carbon and hydrogen only). It formed over millions of years from the remains of marine organisms buried under sediment and subjected to heat and pressure. It is non-renewable."
+  },
+  {
+    "id": "organic-fractional-distillation-principle",
+    "topic": "organic",
+    "difficulty": 2,
+    "image": null,
+    "template": "Explain the principle of fractional distillation of crude oil.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "crude oil is heated and different fractions condense at different temperatures based on the size of their molecules and boiling points",
+      "acceptedAnswers": [
+        "heated oil vaporises and different hydrocarbons condense at different levels as temperature decreases up the column",
+        "separation based on different boiling points — smaller molecules have lower boiling points and condense higher up"
+      ]
+    },
+    "explanation": "Crude oil is heated and vaporised. The vapour enters a fractionating column that is hotter at the bottom and cooler at the top. Hydrocarbons with high boiling points (long chains) condense near the bottom; those with low boiling points (short chains) rise higher. Each fraction is collected at a different level."
+  },
+  {
+    "id": "organic-fractions-order",
+    "topic": "organic",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order these crude oil fractions from lowest to highest boiling point.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Refinery gas (C1–C4, lowest bp)",
+        "Petrol / gasoline (C5–C10)",
+        "Kerosene / jet fuel (C10–C16)",
+        "Diesel (C14–C20)",
+        "Fuel oil and bitumen (C20+, highest bp)"
+      ]
+    },
+    "explanation": "Boiling point increases with chain length. Shorter chains (refinery gas, petrol) have lower boiling points and are collected at the top of the fractionating column. Longer chains (diesel, fuel oil, bitumen) have higher boiling points and collect lower in the column."
+  },
+  {
+    "id": "organic-alkanes-general-formula",
+    "topic": "organic",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the general formula for alkanes?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "CₙH₂ₙ₊₂",
+      "acceptedAnswers": ["CnH2n+2", "CₙH₂ₙ₊₂", "Cn H(2n+2)"]
+    },
+    "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons — all C–C single bonds. Examples: methane (CH₄, n=1), ethane (C₂H₆, n=2), propane (C₃H₈, n=3), butane (C₄H₁₀, n=4)."
+  },
+  {
+    "id": "organic-alkane-formula-calc",
+    "topic": "organic",
+    "difficulty": 2,
+    "image": null,
+    "template": "An alkane has {{n}} carbon atoms. Write its molecular formula.",
+    "variables": {
+      "n": { "type": "pick", "options": [3, 4, 5, 6] },
+      "h": { "type": "derived", "expr": "2 * n + 2" }
+    },
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [
+        ["C3H8", "C₃H₈"],
+        ["C4H10", "C₄H₁₀"],
+        ["C5H12", "C₅H₁₂"],
+        ["C6H14", "C₆H₁₄"]
+      ]
+    },
+    "explanation": "Using CₙH₂ₙ₊₂: for n = {{n}}, H = 2×{{n}}+2 = {{h}}. Molecular formula: C{{n}}H{{h}}."
+  },
+  {
+    "id": "organic-complete-combustion",
+    "topic": "organic",
+    "difficulty": 2,
+    "image": null,
+    "template": "What are the products of complete combustion of a hydrocarbon?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "carbon dioxide and water",
+      "acceptedAnswers": [
+        "water and carbon dioxide",
+        "CO₂ and H₂O",
+        "CO2 and water"
+      ]
+    },
+    "explanation": "Complete combustion of a hydrocarbon in excess oxygen: hydrocarbon + O₂ → CO₂ + H₂O. All carbon is fully oxidised to CO₂ and all hydrogen to H₂O. Complete combustion releases maximum energy."
+  },
+  {
+    "id": "organic-incomplete-combustion",
+    "topic": "organic",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL possible products of incomplete combustion of a hydrocarbon.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Carbon monoxide",
+        "Carbon (soot)",
+        "Water",
+        "Carbon dioxide",
+        "Nitrogen oxide"
+      ],
+      "correctOptions": ["Carbon monoxide", "Carbon (soot)", "Water"]
+    },
+    "explanation": "Incomplete combustion (limited oxygen): hydrocarbon → CO + C (soot) + H₂O. Carbon monoxide is toxic (binds to haemoglobin). Soot/carbon particulates cause respiratory problems. CO₂ is a complete combustion product only. NOₓ comes from nitrogen in air reacting at high temperatures, not from the hydrocarbon itself."
+  },
+  {
+    "id": "organic-alkenes-general-formula",
+    "topic": "organic",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the general formula for alkenes and what makes them different from alkanes?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "CₙH₂ₙ — they are unsaturated with a carbon-carbon double bond",
+      "acceptedAnswers": [
+        "CnH2n — unsaturated hydrocarbons containing a C=C double bond",
+        "CₙH₂ₙ — contain a double bond making them more reactive than alkanes"
+      ]
+    },
+    "explanation": "Alkenes: CₙH₂ₙ. They are unsaturated — contain at least one C=C double bond. The double bond makes alkenes much more reactive than alkanes. Examples: ethene (C₂H₄), propene (C₃H₆), butene (C₄H₈)."
+  },
+  {
+    "id": "organic-bromine-water-test",
+    "topic": "organic",
+    "difficulty": 2,
+    "image": null,
+    "template": "A student adds bromine water to two test tubes — one containing ethane, one containing ethene. Describe the observations.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Ethane (alkane)",
+          "right": "Bromine water stays orange-brown — no reaction"
+        },
+        {
+          "left": "Ethene (alkene)",
+          "right": "Bromine water decolourises (turns colourless)"
+        }
+      ]
+    },
+    "explanation": "Bromine water is an orange-brown solution. Alkenes decolourise bromine water because the C=C double bond undergoes addition with Br₂: CH₂=CH₂ + Br₂ → CH₂BrCH₂Br (dibromoethane). Alkanes don't react with bromine water at room temperature — no decolourisation."
+  },
+  {
+    "id": "organic-addition-polymerisation",
+    "topic": "organic",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain addition polymerisation using ethene as an example.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "many ethene molecules join together through their double bonds which open up to form a long chain polymer called poly(ethene) with no other products",
+      "acceptedAnswers": [
+        "alkene monomers join — double bond opens — long chain polymer formed with no byproducts",
+        "ethene monomers undergo addition to form polyethene — C=C breaks and forms new C-C bonds"
+      ]
+    },
+    "explanation": "Addition polymerisation: the C=C double bond in ethene (monomer) opens up. Thousands of ethene molecules join end-to-end forming poly(ethene). Only one product forms — no other molecules produced. The repeat unit is –CH₂–CH₂–. Many alkenes polymerise this way."
+  },
+  {
+    "id": "organic-ethanol-fermentation",
+    "topic": "organic",
+    "difficulty": 3,
+    "image": null,
+    "template": "What are the conditions for producing ethanol by fermentation?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Yeast",
+        "Glucose solution",
+        "Anaerobic conditions (no oxygen)",
+        "Temperature ~30°C",
+        "High pressure",
+        "Acid catalyst"
+      ],
+      "correctOptions": [
+        "Yeast",
+        "Glucose solution",
+        "Anaerobic conditions (no oxygen)",
+        "Temperature ~30°C"
+      ]
+    },
+    "explanation": "Fermentation conditions: glucose + yeast, anaerobic (no oxygen — yeast carries out anaerobic respiration), ~30°C (optimum for yeast enzymes — too cold: slow; too hot: yeast dies). Equation: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂. High pressure and acid catalyst are used in ethene hydration, not fermentation."
+  },
+  {
+    "id": "organic-ethanol-hydration",
+    "topic": "organic",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each feature of ethanol production to the correct method.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Uses ethene + steam", "right": "Hydration" },
+        { "left": "Uses glucose + yeast", "right": "Fermentation" },
+        { "left": "Continuous process", "right": "Hydration" },
+        {
+          "left": "Batch process, renewable feedstock",
+          "right": "Fermentation"
+        },
+        { "left": "Requires ~300°C and acid catalyst", "right": "Hydration" }
+      ]
+    },
+    "explanation": "Hydration: ethene + steam → ethanol, 300°C, 60 atm, phosphoric acid catalyst. Continuous process. Non-renewable (ethene from crude oil). Fermentation: glucose + yeast → ethanol + CO₂, ~30°C, anaerobic, batch process. Renewable feedstock (sugar/crops). Hydration gives purer product but uses non-renewable resources."
+  },
+  {
+    "id": "organic-carboxylic-acids",
+    "topic": "organic",
+    "difficulty": 2,
+    "image": null,
+    "template": "What functional group is found in carboxylic acids?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "–COOH (carboxyl group)",
+      "acceptedAnswers": ["-COOH", "COOH", "carboxyl group", "-COOH carboxyl"]
+    },
+    "explanation": "Carboxylic acids contain the –COOH (carboxyl) functional group. Examples: methanoic acid (HCOOH), ethanoic acid (CH₃COOH — vinegar), propanoic acid. They are weak acids and react with carbonates to produce CO₂."
+  },
+  {
+    "id": "organic-ester-formation",
+    "topic": "organic",
+    "difficulty": 3,
+    "image": null,
+    "template": "What type of reaction forms an ester, and what are the two reactants?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "condensation reaction between a carboxylic acid and an alcohol with water produced",
+      "acceptedAnswers": [
+        "esterification — carboxylic acid + alcohol → ester + water",
+        "acid + alcohol with acid catalyst → ester + water"
+      ]
+    },
+    "explanation": "Esterification (condensation reaction): carboxylic acid + alcohol ⇌ ester + water. Requires a strong acid catalyst (H₂SO₄). The reaction is reversible. Esters have distinctive fruity smells and are used as flavourings, perfumes, and solvents."
+  },
+  {
+    "id": "organic-condensation-polymers",
+    "topic": "organic",
+    "difficulty": 4,
+    "image": null,
+    "template": "How does condensation polymerisation differ from addition polymerisation?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "condensation polymerisation uses two different monomers and releases a small molecule such as water with each bond formed whereas addition polymerisation uses one monomer with no byproducts",
+      "acceptedAnswers": [
+        "condensation: two monomers, small molecule (water/HCl) lost; addition: one monomer, no byproduct",
+        "addition has only one product (polymer); condensation produces polymer and water"
+      ]
+    },
+    "explanation": "Addition polymerisation: one monomer (alkene), C=C opens, only product is the polymer. Condensation polymerisation: two different monomers with two functional groups each; they join releasing a small molecule (water in polyester/nylon, HCl in some others). Examples: nylon (polyamide), polyester (Terylene)."
+  },
+  {
+    "id": "organic-nylon-polyamide",
+    "topic": "organic",
+    "difficulty": 3,
+    "image": null,
+    "template": "What type of polymer is nylon and what functional group links the monomers?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "nylon is a polyamide — the monomers are joined by amide links (–CO–NH–) with water lost",
+      "acceptedAnswers": [
+        "polyamide — amide bonds form between monomers",
+        "condensation polymer with amide linkages"
+      ]
+    },
+    "explanation": "Nylon is a polyamide — a condensation polymer. It forms when a diamine and a dicarboxylic acid react, each pair forming an amide bond (–CO–NH–) with loss of water. The repeating –CO–NH– unit (amide link) gives nylon its characteristic properties: strong, resistant, used in clothing and engineering."
+  },
+  {
+    "id": "organic-cracking-definition",
+    "topic": "organic",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is cracking and why is it used in the oil industry?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "cracking breaks down large hydrocarbon molecules into smaller more useful ones including alkenes at high temperature with a catalyst",
+      "acceptedAnswers": [
+        "thermal or catalytic decomposition of long-chain alkanes into smaller alkanes and alkenes",
+        "breaking large hydrocarbon fractions into smaller molecules — produces alkenes for polymerisation and petrol"
+      ]
+    },
+    "explanation": "Cracking thermally decomposes large, less-demanded hydrocarbon fractions into smaller, more valuable ones. Conditions: high temperature (700°C thermal, or 500°C catalytic with zeolite catalyst). Products always include alkenes (used for polymerisation) and smaller alkanes (more usable fuel fractions)."
+  },
+  {
+    "id": "organic-poly-propene-repeat-unit",
+    "topic": "organic",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is the monomer that produces poly(propene)?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "propene (CH₂=CHCH₃)",
+      "acceptedAnswers": ["propene", "CH₂=CHCH₃", "propylene", "C₃H₆"]
+    },
+    "explanation": "Poly(propene) is made from propene monomers (CH₂=CHCH₃) by addition polymerisation. The C=C double bond opens and thousands of propene molecules join to form the polymer. Poly(propene) is used for plastic containers, ropes, and carpets."
+  },
+  {
+    "id": "organic-polyester-formation",
+    "topic": "organic",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how polyester is formed and give ONE use.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "polyester is formed by condensation polymerisation between a diol and a dicarboxylic acid with water released and each new bond is an ester link — used in clothing and plastic bottles",
+      "acceptedAnswers": [
+        "diol + dicarboxylic acid → polyester + water; used for PET bottles or fabric",
+        "condensation polymer from alcohol and acid monomers forming ester bonds — clothing/bottles"
+      ]
+    },
+    "explanation": "Polyester (e.g. Terylene/PET): formed from a diol (–OH at both ends) and a dicarboxylic acid (–COOH at both ends). Each reaction forms an ester bond (–CO–O–) and releases water. Uses: clothing fibres (Terylene), drinks bottles (PET — polyethylene terephthalate), films."
+  },
+  {
+    "id": "organic-addition-reactions-alkenes",
+    "topic": "organic",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each reagent to the product when it reacts with ethene (addition reaction).",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Hydrogen (H₂), Ni catalyst", "right": "Ethane (CH₃CH₃)" },
+        { "left": "Bromine (Br₂)", "right": "1,2-dibromoethane" },
+        { "left": "Steam (H₂O), acid catalyst", "right": "Ethanol (CH₃CH₂OH)" }
+      ]
+    },
+    "explanation": "Alkene addition reactions: H₂ (hydrogenation, Ni catalyst) → alkane. Br₂ → dibromoalkane (this decolourises bromine water — test for unsaturation). H₂O (hydration, acid catalyst, 300°C) → alcohol. In each case, the small molecule adds across the C=C double bond."
+  },
+  {
+    "id": "organic-crude-oil-evaluate",
+    "topic": "organic",
+    "difficulty": 5,
+    "image": null,
+    "template": "Evaluate the use of crude oil as an energy source and discuss the development of alternative fuels.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "Crude oil advantages (max 2): high energy density (1) / existing infrastructure (1) / reliable and abundant currently (1). Disadvantages (max 2): non-renewable — finite resource (1) / combustion produces CO₂ contributing to climate change (1) / oil spills/environmental damage (1). Alternative fuels (max 2): bioethanol — renewable, carbon neutral in theory (1) / hydrogen fuel cells — only water product (1) / limitations: cost, infrastructure, production issues (1). Conclusion for full marks (1).",
+      "minWords": 80
+    },
+    "explanation": "Crude oil is energy-dense and has existing infrastructure but is non-renewable and contributes to climate change. Alternatives like bioethanol (renewable, but land use issues) and hydrogen (clean but storage/production challenges) are being developed. A transition away from crude oil is essential for sustainability."
+  }
+]

@@ -1,0 +1,460 @@
+[
+  {
+    "id": "eco-food-chain-terminology",
+    "topic": "ecology",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each term to its definition in a food chain.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Producer", "right": "Makes its own food by photosynthesis" },
+        { "left": "Primary consumer", "right": "Eats the producer" },
+        { "left": "Secondary consumer", "right": "Eats the primary consumer" },
+        { "left": "Decomposer", "right": "Breaks down dead organic matter" }
+      ]
+    },
+    "explanation": "Producers (plants) make food. Primary consumers (herbivores) eat producers. Secondary consumers eat primary consumers. Decomposers (bacteria/fungi) break down dead material recycling nutrients."
+  },
+  {
+    "id": "eco-biomass-transfer-calculation",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "A producer has a biomass of {{bm}} kg. Only {{pct}}% of biomass is transferred to the next trophic level. Calculate the biomass of the primary consumer.",
+    "variables": {
+      "bm": { "type": "pick", "options": [1000, 2000, 5000, 10000] },
+      "pct": { "type": "pick", "options": [5, 10, 15] },
+      "ans": { "type": "derived", "expr": "bm * pct / 100" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "bm * pct / 100",
+      "unit": "kg"
+    },
+    "explanation": "Biomass transferred = {{bm}} × {{pct}}/100 = {{ans}} kg. Typically only 10% of biomass is transferred between trophic levels — the rest is lost as heat (respiration), waste, or indigestible material."
+  },
+  {
+    "id": "eco-why-short-food-chains",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why food chains rarely have more than four or five trophic levels.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "only about 10% of biomass is transferred at each level so there is not enough energy to support further levels",
+      "acceptedAnswers": [
+        "energy is lost at each trophic level so insufficient energy remains for more levels",
+        "most energy is lost as heat/waste at each step leaving too little for additional levels"
+      ]
+    },
+    "explanation": "At each trophic level, only ~10% of energy/biomass is transferred to the next level — the rest is lost as heat (respiration), waste, and indigestible material. After 4–5 levels, so little energy remains that it cannot support a viable population."
+  },
+  {
+    "id": "eco-carbon-cycle-processes",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each process to its role in the carbon cycle.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Photosynthesis", "right": "Removes CO₂ from atmosphere" },
+        { "left": "Respiration", "right": "Releases CO₂ into atmosphere" },
+        {
+          "left": "Decomposition",
+          "right": "Returns carbon from dead organisms to soil/atmosphere"
+        },
+        { "left": "Combustion", "right": "Burns fossil fuels releasing CO₂" }
+      ]
+    },
+    "explanation": "Carbon cycle: photosynthesis removes CO₂ → stored in organic molecules → respiration/combustion release CO₂ back → decomposers break down dead matter returning carbon to the atmosphere and soil."
+  },
+  {
+    "id": "eco-nitrogen-cycle",
+    "topic": "ecology",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain the role of bacteria in the nitrogen cycle.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Nitrogen-fixing bacteria convert atmospheric N₂ to ammonia/nitrates in soil (1) / 2. Nitrifying bacteria convert ammonia to nitrites then nitrates (1) / 3. Plants absorb nitrates through roots to make proteins (1) / 4. Decomposers break down dead organisms releasing ammonia (ammonification) (1) / 5. Denitrifying bacteria convert nitrates back to N₂ gas (1) — max 4",
+      "minWords": 25
+    },
+    "explanation": "Bacteria play several roles: nitrogen-fixing bacteria convert N₂ → ammonia (free-living or in root nodules), nitrifying bacteria convert ammonia → nitrites → nitrates (usable by plants), decomposers release ammonia from dead matter, denitrifying bacteria return N₂ to atmosphere."
+  },
+  {
+    "id": "eco-biodiversity-importance",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "State THREE reasons why biodiversity is important.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Greater ecosystem stability and resilience",
+        "Source of new medicines from plants/organisms",
+        "Reduces competition between species",
+        "Genetic resources for future crops/medicines",
+        "Increases risk of disease spread"
+      ],
+      "correctOptions": [
+        "Greater ecosystem stability and resilience",
+        "Source of new medicines from plants/organisms",
+        "Genetic resources for future crops/medicines"
+      ]
+    },
+    "explanation": "Biodiversity is important for: ecosystem stability (complex food webs are more resilient), discovery of new medicines (e.g. antibiotics from fungi), and maintaining genetic resources for agriculture and biotechnology."
+  },
+  {
+    "id": "eco-global-warming-effects",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL possible effects of global warming on living organisms.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Changes in migration patterns",
+        "Species distribution shifts towards poles",
+        "Increased biodiversity in all areas",
+        "Some species may become extinct",
+        "Earlier breeding seasons"
+      ],
+      "correctOptions": [
+        "Changes in migration patterns",
+        "Species distribution shifts towards poles",
+        "Some species may become extinct",
+        "Earlier breeding seasons"
+      ]
+    },
+    "explanation": "Global warming effects: species shift their ranges towards poles/higher altitudes as temperatures rise, migration and breeding times change, species unable to adapt face extinction. Overall biodiversity tends to decrease, not increase."
+  },
+  {
+    "id": "eco-deforestation-effects",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain TWO ways deforestation affects the carbon cycle.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "fewer trees means less CO2 removed by photosynthesis and burning trees releases carbon stored in wood",
+      "acceptedAnswers": [
+        "less photosynthesis reducing CO2 absorption and burning releases stored CO2",
+        "reduces CO2 uptake and increases CO2 release through burning"
+      ]
+    },
+    "explanation": "Deforestation affects the carbon cycle in two main ways: (1) fewer trees means less CO₂ removed from the atmosphere by photosynthesis; (2) burning trees releases the carbon stored in wood as CO₂, increasing atmospheric CO₂ and contributing to global warming."
+  },
+  {
+    "id": "eco-quadrat-method",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "A quadrat of area {{qa}} m² contains {{count}} daisy plants. The total study area is {{total}} m². Estimate the total number of daisy plants.",
+    "variables": {
+      "qa": { "type": "pick", "options": [1, 4] },
+      "count": { "type": "int", "min": 3, "max": 20 },
+      "total": { "type": "pick", "options": [100, 200, 400, 1000] },
+      "ans": { "type": "derived", "expr": "count * total / qa" }
+    },
+    "answerConfig": { "type": "number", "answer": "count * total / qa" },
+    "explanation": "Population estimate = (count in quadrat / quadrat area) × total area = ({{count}} / {{qa}}) × {{total}} = {{ans}} plants."
+  },
+  {
+    "id": "eco-decomposition-factors",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL conditions that speed up decomposition.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Warm temperature",
+        "Moist conditions",
+        "Cold temperature",
+        "Presence of oxygen",
+        "Acidic pH"
+      ],
+      "correctOptions": [
+        "Warm temperature",
+        "Moist conditions",
+        "Presence of oxygen"
+      ]
+    },
+    "explanation": "Decomposition is fastest in warm, moist, aerobic conditions — these are optimal for the enzymes and metabolic activity of decomposing bacteria and fungi. Cold, dry, or anaerobic conditions slow decomposition significantly."
+  },
+  {
+    "id": "eco-water-cycle",
+    "topic": "ecology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the stages of the water cycle.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Water evaporates from oceans and lakes",
+        "Water vapour rises and cools",
+        "Condensation forms clouds",
+        "Precipitation falls as rain or snow",
+        "Water returns to oceans via rivers"
+      ]
+    },
+    "explanation": "Water cycle: evaporation (oceans/lakes/transpiration) → water vapour rises and cools → condensation (clouds form) → precipitation (rain/snow) → runoff/rivers → back to oceans."
+  },
+  {
+    "id": "eco-indicator-species",
+    "topic": "ecology",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is an indicator species? Give an example.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a species whose presence or absence indicates the environmental quality for example lichens indicate clean air",
+      "acceptedAnswers": [
+        "organism used to assess pollution levels — e.g. freshwater invertebrates indicate water quality",
+        "species that shows the condition of an environment — e.g. lichens (air), mayfly larvae (clean water)"
+      ]
+    },
+    "explanation": "Indicator species are organisms sensitive to environmental conditions. Their presence or absence shows the quality of the environment. Lichens indicate clean air (sensitive to SO₂). Mayfly larvae indicate clean water. Rat-tailed maggots indicate polluted water."
+  },
+  {
+    "id": "eco-greenhouse-gases",
+    "topic": "ecology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL greenhouse gases that contribute to global warming.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Carbon dioxide",
+        "Methane",
+        "Oxygen",
+        "Water vapour",
+        "Nitrogen"
+      ],
+      "correctOptions": ["Carbon dioxide", "Methane", "Water vapour"]
+    },
+    "explanation": "The main greenhouse gases are CO₂ (from burning fossil fuels), methane (from cattle, landfill, rice paddies), and water vapour. Oxygen and nitrogen are major atmospheric gases but are not greenhouse gases."
+  },
+  {
+    "id": "eco-pollution-acid-rain",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "How is acid rain formed and what effects does it have?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "sulfur dioxide and nitrogen oxides from burning fossil fuels dissolve in rainwater forming acids that damage plants soil and aquatic life",
+      "acceptedAnswers": [
+        "SO2 and NO from combustion dissolve in rain creating acidic conditions that harm ecosystems"
+      ]
+    },
+    "explanation": "Burning fossil fuels releases SO₂ and NOₓ. These dissolve in atmospheric water to form sulphuric and nitric acid — acid rain. Effects: damages leaves, leaches nutrients from soil, acidifies lakes and rivers killing aquatic life."
+  },
+  {
+    "id": "eco-rewilding-benefits",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Suggest TWO benefits of rewilding a habitat.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Increases biodiversity by restoring habitats",
+        "Reintroducing apex predators restores trophic balance",
+        "Reduces need for conservation effort",
+        "Guarantees survival of all species",
+        "Provides ecosystem services such as flood prevention"
+      ],
+      "correctOptions": [
+        "Increases biodiversity by restoring habitats",
+        "Reintroducing apex predators restores trophic balance"
+      ]
+    },
+    "explanation": "Rewilding — restoring ecosystems to a natural state — can restore habitats, increase biodiversity, reintroduce species that maintain ecosystem balance (e.g. wolves controlling deer populations), and provide ecosystem services like carbon storage and flood management."
+  },
+  {
+    "id": "eco-trophic-levels-energy-loss",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "State THREE reasons why energy is lost between trophic levels.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Energy lost as heat through respiration",
+        "Some material not eaten/ingested",
+        "Some material not digested — lost in faeces",
+        "Energy stored in bones and hair is unavailable",
+        "Energy gained through photosynthesis"
+      ],
+      "correctOptions": [
+        "Energy lost as heat through respiration",
+        "Some material not eaten/ingested",
+        "Some material not digested — lost in faeces"
+      ]
+    },
+    "explanation": "Energy is lost between trophic levels via: (1) heat from respiration — only ~10% of energy in food is converted to new biomass; (2) uneaten material; (3) indigestible material in faeces; (4) excretion of waste products."
+  },
+  {
+    "id": "eco-transect-method",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Why is a transect used rather than random quadrats when studying a gradient such as a rocky shore?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a transect allows systematic sampling along an environmental gradient to show how species distribution changes with distance",
+      "acceptedAnswers": [
+        "shows change in species along a gradient rather than random distribution",
+        "records how organisms change systematically along a continuous environmental change"
+      ]
+    },
+    "explanation": "A belt or line transect is used when there is a systematic change in the environment (gradient). Quadrats are placed at regular intervals along the transect, allowing ecologists to see how species distribution changes continuously along the gradient."
+  },
+  {
+    "id": "eco-population-size-factors",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL factors that could cause a population to decrease in size.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Increased predation",
+        "Increased food availability",
+        "Disease outbreak",
+        "Habitat destruction",
+        "Reduced competition"
+      ],
+      "correctOptions": [
+        "Increased predation",
+        "Disease outbreak",
+        "Habitat destruction"
+      ]
+    },
+    "explanation": "Population decreases with: more predators (increased death rate), disease (kills individuals), habitat loss (reduced carrying capacity). Increased food availability and reduced competition would increase population size."
+  },
+  {
+    "id": "eco-interdependence",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain what is meant by interdependence in an ecosystem, using an example.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "organisms in an ecosystem depend on each other for example predators depend on prey for food and plants depend on insects for pollination",
+      "acceptedAnswers": [
+        "species rely on each other — removing one affects others e.g. bees pollinating flowers",
+        "organisms are connected through feeding relationships and other interactions"
+      ]
+    },
+    "explanation": "Interdependence means species in an ecosystem rely on each other for survival. For example: plants need insects for pollination; predators depend on prey; prey control plant populations. Removing any species can have cascading effects throughout the ecosystem."
+  },
+  {
+    "id": "eco-eutrophication",
+    "topic": "ecology",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how fertiliser runoff causes eutrophication and fish to die.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Nitrates/phosphates run into water causing algal bloom (1) / 2. Algae blocks light reaching aquatic plants (1) / 3. Plants die — decomposers increase in number (1) / 4. Decomposers use oxygen for respiration — oxygen levels fall (1) / 5. Fish and aerobic organisms die due to lack of oxygen (1) — max 4",
+      "minWords": 30
+    },
+    "explanation": "Fertiliser nitrates/phosphates enter water → algal bloom → algae block light → aquatic plants die → decomposers multiply and respire aerobically → oxygen depleted → fish and aerobic organisms die (deoxygenation)."
+  },
+  {
+    "id": "eco-conservation-methods",
+    "topic": "ecology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each conservation method to its description.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Seed bank",
+          "right": "Stores seeds of plants for future use"
+        },
+        {
+          "left": "Captive breeding",
+          "right": "Breeds endangered species in zoos for reintroduction"
+        },
+        {
+          "left": "Marine reserve",
+          "right": "Protected area where fishing is banned"
+        },
+        {
+          "left": "Reforestation",
+          "right": "Planting trees to replace those that were cut down"
+        }
+      ]
+    },
+    "explanation": "Conservation methods: seed banks preserve plant genetic diversity, captive breeding programmes help endangered species recover, marine reserves allow fish populations to recover, reforestation restores habitats."
+  },
+  {
+    "id": "eco-biomass-pyramid",
+    "topic": "ecology",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or false: A pyramid of biomass always has the largest bar at the bottom.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": true },
+    "explanation": "True. In a pyramid of biomass, producers (bottom) always have the greatest biomass. Each successive trophic level has less biomass because energy is lost at each stage — the pyramid narrows upward."
+  },
+  {
+    "id": "eco-human-impacts-evaluate",
+    "topic": "ecology",
+    "difficulty": 5,
+    "image": null,
+    "template": "Evaluate the impact of human activities on biodiversity and suggest how these impacts can be reduced.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "Negative impacts (max 3): deforestation destroys habitats reducing species (1) / pollution damages ecosystems (1) / overfishing reduces fish populations (1) / climate change alters habitats (1) / introduction of invasive species (1). Reducing impacts (max 3): protected areas/nature reserves (1) / sustainable farming/fishing (1) / reducing carbon emissions (1) / reforestation/rewilding (1) / international agreements e.g. CITES (1). Conclusion required for full marks (1).",
+      "minWords": 50
+    },
+    "explanation": "Human activities reduce biodiversity through habitat destruction, pollution, overexploitation, and climate change. Impacts can be reduced through conservation, sustainable resource use, pollution control, and international cooperation."
+  },
+  {
+    "id": "eco-food-web-stability",
+    "topic": "ecology",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain why a complex food web is more stable than a simple food chain.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "in a complex food web if one species is lost others can feed on alternative prey so the ecosystem can continue functioning",
+      "acceptedAnswers": [
+        "more feeding relationships mean loss of one species has less impact",
+        "alternative food sources mean predators are not entirely dependent on one prey species"
+      ]
+    },
+    "explanation": "A complex food web has many interconnections. If one species declines, predators can switch to alternative prey and the ecosystem continues to function. In a simple food chain, loss of one species can collapse the entire chain."
+  }
+]

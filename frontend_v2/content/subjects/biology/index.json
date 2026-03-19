@@ -5,12 +5,12 @@
   "colour": "#22c55e",
   "papers": ["1", "2"],
   "topics": [
-    { "id": "cell-biology",       "name": "Cell Biology" },
-    { "id": "organisation",       "name": "Organisation" },
+    { "id": "cell-biology", "name": "Cell Biology" },
+    { "id": "organisation", "name": "Organisation" },
     { "id": "infection-response", "name": "Infection & Response" },
-    { "id": "bioenergetics",      "name": "Bioenergetics" },
-    { "id": "homeostasis",        "name": "Homeostasis & Response" },
-    { "id": "inheritance",        "name": "Inheritance, Variation & Evolution" },
-    { "id": "ecology",            "name": "Ecology" }
+    { "id": "bioenergetics", "name": "Bioenergetics" },
+    { "id": "homeostasis", "name": "Homeostasis & Response" },
+    { "id": "inheritance", "name": "Inheritance, Variation & Evolution" },
+    { "id": "ecology", "name": "Ecology" }
   ]
 }

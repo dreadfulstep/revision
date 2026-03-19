@@ -31,6 +31,8 @@ type Props = {
   items: string[];
   onChange: (v: string) => void;
   disabled?: boolean;
+  correctOrder?: string[];
+  showResult?: boolean;
 };
 
 interface ItemProps {
@@ -40,6 +42,8 @@ interface ItemProps {
   listeners?: SyntheticListenerMap;
   attributes?: DraggableAttributes;
   style?: React.CSSProperties;
+  correctOrder?: string[];
+  showResult?: boolean;
 }
 
 function Item({
@@ -49,16 +53,27 @@ function Item({
   listeners,
   attributes,
   style,
+  correctOrder,
+  showResult,
 }: ItemProps) {
+  const correctPos = correctOrder?.indexOf(id);
+  const isCorrectPos =
+    showResult && correctPos !== undefined && correctPos === index;
+  const isWrongPos =
+    showResult && correctPos !== undefined && correctPos !== index;
+
   return (
     <div
       style={style}
       className={cn(
-        "flex items-center gap-3 px-4 py-3.5 rounded-2xl border-2 bg-card select-none touch-none w-full",
-        "transition-colors duration-200",
+        "flex items-center gap-3 px-4 py-3.5 rounded-2xl border-2 bg-card select-none touch-none w-full transition-colors duration-200",
         isDragging
-          ? "border-foreground/20 shadow-xl scale-[1.02] bg-card/90 backdrop-blur-sm"
-          : "border-border hover:border-foreground/10",
+          ? "border-foreground/20 shadow-xl scale-[1.02]"
+          : isCorrectPos
+            ? "border-score-high bg-score-high/5"
+            : isWrongPos
+              ? "border-score-low bg-score-low/5"
+              : "border-border hover:border-foreground/10",
       )}
     >
       <div
@@ -71,14 +86,23 @@ function Item({
             "w-6 h-6 rounded-lg flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5",
             isDragging
               ? "bg-foreground text-background"
-              : "bg-muted text-muted-foreground",
+              : isCorrectPos
+                ? "bg-score-high/20 text-score-high"
+                : isWrongPos
+                  ? "bg-score-low/20 text-score-low"
+                  : "bg-muted text-muted-foreground",
           )}
         >
           {index + 1}
         </span>
-        <span className="flex-1 text-sm font-medium leading-snug wrap-break-word hyphens-auto pr-2">
+        <span className="flex-1 text-sm font-medium leading-snug pr-2">
           {id}
         </span>
+        {isWrongPos && correctPos !== undefined && (
+          <span className="text-[10px] text-score-low font-mono shrink-0 mt-1">
+            pos {correctPos + 1}
+          </span>
+        )}
         <GripVertical
           size={15}
           className="text-muted-foreground/30 shrink-0 mt-1"
@@ -92,10 +116,14 @@ function SortableItem({
   id,
   index,
   disabled,
+  correctOrder,
+  showResult,
 }: {
   id: string;
   index: number;
   disabled?: boolean;
+  correctOrder?: string[];
+  showResult?: boolean;
 }) {
   const {
     attributes,
@@ -119,6 +147,8 @@ function SortableItem({
         index={index}
         listeners={listeners}
         attributes={attributes}
+        correctOrder={correctOrder}
+        showResult={showResult}
       />
     </div>
   );
@@ -126,7 +156,7 @@ function SortableItem({
 
 function useHasMounted() {
   const [hasMounted, setHasMounted] = useState(false);
-  
+
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
       setHasMounted(true);
@@ -141,6 +171,8 @@ export default function Ordering({
   items: initialItems,
   onChange,
   disabled,
+  correctOrder,
+  showResult,
 }: Props) {
   const [items, setItems] = useState<string[]>(() =>
     [...initialItems].sort(() => Math.random() - 0.5),
@@ -192,6 +224,8 @@ export default function Ordering({
                 id={item}
                 index={i}
                 disabled={disabled}
+                correctOrder={correctOrder}
+                showResult={showResult}
               />
             ))}
           </div>

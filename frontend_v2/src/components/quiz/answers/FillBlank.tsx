@@ -1,5 +1,4 @@
 "use client";
-
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -7,16 +6,12 @@ type Props = {
   values: string[];
   onChange: (vals: string[]) => void;
   disabled?: boolean;
+  correctAnswers?: string[][];
+  showResult?: boolean;
 };
 
-export default function FillBlank({
-  template,
-  values,
-  onChange,
-  disabled,
-}: Props) {
+export default function FillBlank({ template, values, onChange, disabled, correctAnswers, showResult }: Props) {
   const parts = template.split(/(\[\[blank\d+\]\])/g);
-
   let blankIndex = 0;
 
   return (
@@ -24,40 +19,42 @@ export default function FillBlank({
       {parts.map((part, i) => {
         if (part.match(/\[\[blank\d+\]\]/)) {
           const idx = blankIndex++;
-          const value = values[idx] || "";
+          const value = values[idx] ?? "";
+          const correct = correctAnswers?.[idx];
+          const isCorrect = showResult && correct?.some(c => c.toLowerCase().trim() === value.toLowerCase().trim());
+          const isWrong = showResult && !isCorrect;
 
           return (
-            <input
-              key={i}
-              value={value}
-              onChange={(e) => {
-                const copy = [...values];
-                copy[idx] = e.target.value;
-                onChange(copy);
-              }}
-              disabled={disabled}
-              className={cn(
-                "inline-block align-baseline mx-1",
-                "bg-transparent border-b-2 border-border",
-                "focus:border-primary outline-none",
-                "text-center font-medium",
-                "transition-all",
-                "min-w-15",
-                "px-1",
-                disabled && "opacity-50 cursor-not-allowed"
+            <span key={i} className="inline-flex flex-col items-center mx-1 relative">
+              <input
+                value={value}
+                onChange={e => {
+                  const copy = [...values];
+                  copy[idx] = e.target.value;
+                  onChange(copy);
+                }}
+                disabled={disabled}
+                className={cn(
+                  "inline-block align-baseline",
+                  "bg-transparent border-b-2",
+                  "focus:outline-none text-center font-medium transition-all px-1",
+                  "min-w-[4ch]",
+                  isCorrect ? "border-score-high text-score-high" :
+                  isWrong   ? "border-score-low text-score-low" :
+                              "border-border focus:border-primary",
+                  disabled && "cursor-not-allowed opacity-50"
+                )}
+                style={{ width: `${Math.max(value.length, 4)}ch` }}
+              />
+              {showResult && isWrong && correct && (
+                <span className="text-[10px] text-score-high font-medium mt-0.5 whitespace-nowrap">
+                  {correct[0]}
+                </span>
               )}
-              style={{
-                width: `${Math.max(value.length, 4)}ch`,
-              }}
-            />
+            </span>
           );
         }
-
-        return (
-          <span key={i} className="whitespace-pre-wrap">
-            {part}
-          </span>
-        );
+        return <span key={i} className="whitespace-pre-wrap">{part}</span>;
       })}
     </p>
   );

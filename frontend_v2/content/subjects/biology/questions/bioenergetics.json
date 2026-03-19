@@ -1,0 +1,368 @@
+[
+  {
+    "id": "bio-photosynthesis-equation",
+    "topic": "bioenergetics",
+    "difficulty": 2,
+    "image": null,
+    "template": "What are the reactants and products of photosynthesis?",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Reactants", "right": "Carbon dioxide and water" },
+        { "left": "Products",  "right": "Glucose and oxygen" }
+      ]
+    },
+    "explanation": "Photosynthesis: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂. Carbon dioxide and water are the reactants; glucose and oxygen are the products."
+  },
+  {
+    "id": "bio-photosynthesis-energy-source",
+    "topic": "bioenergetics",
+    "difficulty": 1,
+    "image": null,
+    "template": "What energy source drives photosynthesis?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "light energy",
+      "acceptedAnswers": ["light", "sunlight", "solar energy"]
+    },
+    "explanation": "Photosynthesis is an endothermic process that absorbs light energy (from the Sun) and converts it into chemical energy stored in glucose."
+  },
+  {
+    "id": "bio-limiting-factors-multiselect",
+    "topic": "bioenergetics",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL factors that can limit the rate of photosynthesis.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": ["Light intensity", "Carbon dioxide concentration", "Temperature", "Oxygen concentration", "Water availability"],
+      "correctOptions": ["Light intensity", "Carbon dioxide concentration", "Temperature", "Water availability"]
+    },
+    "explanation": "The three main limiting factors are light intensity, CO₂ concentration, and temperature. Water is also required but is rarely limiting in practice. Oxygen concentration does not limit photosynthesis."
+  },
+  {
+    "id": "bio-aerobic-respiration-equation",
+    "topic": "bioenergetics",
+    "difficulty": 2,
+    "image": null,
+    "template": "What are the products of aerobic respiration?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "carbon dioxide and water",
+      "acceptedAnswers": ["water and carbon dioxide", "CO2 and water", "CO₂ and H₂O"]
+    },
+    "explanation": "Aerobic respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy (ATP). Glucose and oxygen are used; carbon dioxide and water are released."
+  },
+  {
+    "id": "bio-anaerobic-respiration-animals",
+    "topic": "bioenergetics",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the product of anaerobic respiration in animal muscle cells?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "lactic acid",
+      "acceptedAnswers": ["lactate", "lactic acid / lactate"]
+    },
+    "explanation": "In animal muscles during intense exercise, anaerobic respiration produces lactic acid (lactate) from glucose. This builds up and causes muscle fatigue/cramp."
+  },
+  {
+    "id": "bio-anaerobic-respiration-plants",
+    "topic": "bioenergetics",
+    "difficulty": 2,
+    "image": null,
+    "template": "What are the products of anaerobic respiration in yeast?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "ethanol and carbon dioxide",
+      "acceptedAnswers": ["alcohol and CO2", "ethanol and CO2", "carbon dioxide and ethanol"]
+    },
+    "explanation": "Yeast (and plant cells) carry out anaerobic respiration (fermentation) producing ethanol and carbon dioxide. This is the basis of brewing and bread-making."
+  },
+  {
+    "id": "bio-atp-role",
+    "topic": "bioenergetics",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the role of ATP in cells?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "it is the energy currency of the cell used to power cellular processes",
+      "acceptedAnswers": [
+        "stores and transfers energy for use in cellular reactions",
+        "provides energy for metabolic processes"
+      ]
+    },
+    "explanation": "ATP (adenosine triphosphate) is the immediate energy source for cellular processes. Respiration produces ATP, which is then broken down to ADP releasing energy for processes like muscle contraction, active transport, and biosynthesis."
+  },
+  {
+    "id": "bio-respiration-location",
+    "topic": "bioenergetics",
+    "difficulty": 2,
+    "image": null,
+    "template": "In which organelle does aerobic respiration mainly occur?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "mitochondria",
+      "acceptedAnswers": ["mitochondrion", "the mitochondria"]
+    },
+    "explanation": "The main stages of aerobic respiration occur in the mitochondria. This is why cells with high energy demands (e.g. muscle cells) contain many mitochondria."
+  },
+  {
+    "id": "bio-photosynthesis-location",
+    "topic": "bioenergetics",
+    "difficulty": 1,
+    "image": null,
+    "template": "In which organelle does photosynthesis occur?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "chloroplast",
+      "acceptedAnswers": ["chloroplasts", "in the chloroplast"]
+    },
+    "explanation": "Photosynthesis occurs in chloroplasts, which contain the green pigment chlorophyll that absorbs light energy."
+  },
+  {
+    "id": "bio-aerobic-vs-anaerobic-atp",
+    "topic": "bioenergetics",
+    "difficulty": 3,
+    "image": null,
+    "template": "True or false: Aerobic respiration produces more ATP than anaerobic respiration.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": true },
+    "explanation": "True. Aerobic respiration fully oxidises glucose producing around 36–38 ATP molecules. Anaerobic respiration only partially breaks down glucose producing just 2 ATP — it is far less efficient."
+  },
+  {
+    "id": "bio-oxygen-debt",
+    "topic": "bioenergetics",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is meant by oxygen debt after exercise?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the extra oxygen needed after exercise to break down the lactic acid that built up during anaerobic respiration",
+      "acceptedAnswers": [
+        "extra oxygen needed to oxidise lactic acid after anaerobic respiration",
+        "oxygen needed to remove lactate that accumulated during exercise"
+      ]
+    },
+    "explanation": "During intense exercise, muscles respire anaerobically and lactic acid builds up. After exercise, extra oxygen (oxygen debt) is needed to oxidise the lactic acid to CO₂ and water — this is why breathing rate stays elevated after exercise."
+  },
+  {
+    "id": "bio-greenhouse-growing",
+    "topic": "bioenergetics",
+    "difficulty": 3,
+    "image": null,
+    "template": "A farmer increases CO₂ concentration in a greenhouse from {{co2_low}} ppm to {{co2_high}} ppm. The rate of photosynthesis increases by {{pct}}%. Calculate the new rate if the original rate was {{orig}} arbitrary units.",
+    "variables": {
+      "co2_low":  { "type": "pick", "options": [400, 500] },
+      "co2_high": { "type": "pick", "options": [800, 1000, 1200] },
+      "pct":      { "type": "pick", "options": [20, 25, 30, 40, 50] },
+      "orig":     { "type": "pick", "options": [40, 50, 60, 80] },
+      "ans":      { "type": "derived", "expr": "orig * (1 + pct/100)" }
+    },
+    "answerConfig": { "type": "number", "answer": "orig * (1 + pct / 100)", "unit": "au" },
+    "explanation": "New rate = original × (1 + percentage increase/100) = {{orig}} × (1 + {{pct}}/100) = {{orig}} × {{1+pct/100}} = {{ans}} au."
+  },
+  {
+    "id": "bio-factors-respiration-rate",
+    "topic": "bioenergetics",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why the rate of aerobic respiration increases during exercise.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "muscles need more ATP for contraction so respiration increases to meet demand using more glucose and oxygen",
+      "acceptedAnswers": [
+        "increased demand for energy/ATP causes more glucose and oxygen to be used in respiration",
+        "more energy needed for muscle contraction drives increased respiration rate"
+      ]
+    },
+    "explanation": "During exercise, muscles contract more rapidly and need more ATP. To produce more ATP, cells increase the rate of aerobic respiration, requiring more glucose and oxygen. Heart rate and breathing rate increase to deliver these."
+  },
+  {
+    "id": "bio-chlorophyll-pigment",
+    "topic": "bioenergetics",
+    "difficulty": 1,
+    "image": null,
+    "template": "What colour of light does chlorophyll absorb most effectively?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Green", "Red and blue", "Yellow", "White"],
+      "answer": "Red and blue"
+    },
+    "explanation": "Chlorophyll absorbs red and blue light most effectively for photosynthesis. Green light is reflected, which is why plants appear green."
+  },
+  {
+    "id": "bio-uses-of-glucose",
+    "topic": "bioenergetics",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL uses of glucose produced by photosynthesis in a plant.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": ["Respiration", "Making cellulose", "Making starch for storage", "Making proteins (with nitrates)", "Making oxygen"],
+      "correctOptions": ["Respiration", "Making cellulose", "Making starch for storage", "Making proteins (with nitrates)"]
+    },
+    "explanation": "Plants use glucose from photosynthesis for: respiration (energy), cellulose (cell walls), starch (storage), and proteins (combined with nitrates). Oxygen is a byproduct of photosynthesis, not made from glucose."
+  },
+  {
+    "id": "bio-inverse-square-light",
+    "topic": "bioenergetics",
+    "difficulty": 4,
+    "image": null,
+    "template": "A lamp is placed {{d1}} cm from a plant. The rate of photosynthesis is {{r1}} units. The lamp is moved to {{d2}} cm. Predict the new rate.",
+    "variables": {
+      "d1": { "type": "pick", "options": [10, 20] },
+      "d2": { "type": "pick", "options": [20, 40] },
+      "r1": { "type": "pick", "options": [40, 60, 80, 100] },
+      "r2": { "type": "derived", "expr": "r1 * (d1 * d1) / (d2 * d2)" }
+    },
+    "answerConfig": { "type": "number", "answer": "r1 * (d1 * d1) / (d2 * d2)", "unit": "units" },
+    "explanation": "Light intensity is inversely proportional to distance squared. Rate ∝ 1/d². New rate = {{r1}} × ({{d1}}²/{{d2}}²) = {{r1}} × {{d1*d1}}/{{d2*d2}} = {{r2}} units."
+  },
+  {
+    "id": "bio-fermentation-uses",
+    "topic": "bioenergetics",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each fermentation product to its use.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Ethanol",        "right": "Alcoholic drinks / biofuel" },
+        { "left": "Carbon dioxide", "right": "Makes bread rise" },
+        { "left": "Lactic acid",    "right": "Yoghurt production" }
+      ]
+    },
+    "explanation": "Fermentation by yeast produces ethanol (for beer/wine/biofuel) and CO₂ (used in bread-making). Lactic acid fermentation by bacteria is used to make yoghurt and cheese."
+  },
+  {
+    "id": "bio-photosynthesis-endothermic",
+    "topic": "bioenergetics",
+    "difficulty": 2,
+    "image": null,
+    "template": "Is photosynthesis an endothermic or exothermic reaction? Explain.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "endothermic because it absorbs light energy from the surroundings",
+      "acceptedAnswers": [
+        "endothermic — takes in energy from light",
+        "endothermic as it requires energy input"
+      ]
+    },
+    "explanation": "Photosynthesis is endothermic — it absorbs energy (light) from the environment and stores it as chemical energy in glucose. Respiration is the reverse: exothermic, releasing that stored energy."
+  },
+  {
+    "id": "bio-respiration-exothermic",
+    "topic": "bioenergetics",
+    "difficulty": 2,
+    "image": null,
+    "template": "Is aerobic respiration endothermic or exothermic?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Endothermic", "Exothermic", "Neither", "Both"],
+      "answer": "Exothermic"
+    },
+    "explanation": "Aerobic respiration is exothermic — it releases energy stored in glucose as ATP and heat. This is why your body temperature rises during exercise."
+  },
+  {
+    "id": "bio-rate-photosynthesis-temp",
+    "topic": "bioenergetics",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain what happens to the rate of photosynthesis if temperature rises above the optimum.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the enzymes involved denature so the rate decreases",
+      "acceptedAnswers": [
+        "enzymes denature at high temperatures reducing the rate",
+        "active sites of photosynthesis enzymes change shape reducing the reaction rate"
+      ]
+    },
+    "explanation": "Photosynthesis is controlled by enzymes (e.g. RuBisCO). Above the optimum temperature, these enzymes denature — their active sites change shape permanently — so the rate of photosynthesis falls sharply even with plenty of light and CO₂."
+  },
+  {
+    "id": "bio-commercial-greenhouses",
+    "topic": "bioenergetics",
+    "difficulty": 4,
+    "image": null,
+    "template": "Evaluate the use of artificial lighting and extra CO₂ in commercial greenhouses to increase crop yield.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "Benefits (max 2): light and CO₂ are limiting factors — increasing them raises rate of photosynthesis (1) / increases glucose production and therefore plant growth/yield (1) / crops can grow year-round / in winter (1). Drawbacks (max 2): extra electricity/CO₂ costs money — may reduce profit margin (1) / environmental cost of increased energy use (1) / only beneficial if other limiting factors are not present (1). Conclusion for full marks (1).",
+      "minWords": 35
+    },
+    "explanation": "Increasing CO₂ and light intensity removes these as limiting factors, increasing photosynthesis rate and crop yield. However, the cost of artificial lighting and CO₂ injection must be weighed against increased revenue — it is most effective when these are genuinely limiting."
+  },
+  {
+    "id": "bio-anaerobic-advantage",
+    "topic": "bioenergetics",
+    "difficulty": 3,
+    "image": null,
+    "template": "Suggest ONE advantage of anaerobic respiration over aerobic respiration.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "it can provide energy when oxygen is unavailable",
+      "acceptedAnswers": [
+        "allows energy release in absence of oxygen",
+        "provides ATP when there is not enough oxygen",
+        "faster energy release for short bursts"
+      ]
+    },
+    "explanation": "Anaerobic respiration's key advantage is that it does not require oxygen. This allows muscles to continue generating ATP during intense exercise when oxygen delivery cannot keep up with demand, preventing complete fatigue."
+  },
+  {
+    "id": "bio-net-gas-exchange-plant",
+    "topic": "bioenergetics",
+    "difficulty": 4,
+    "image": null,
+    "template": "A plant is in bright light. Which gas does it take in and which does it release on balance? Explain.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "takes in carbon dioxide and releases oxygen because the rate of photosynthesis exceeds respiration",
+      "acceptedAnswers": [
+        "net uptake of CO2 and net release of O2 as photosynthesis rate is greater than respiration rate",
+        "absorbs more CO2 than it produces and releases more O2 than it uses"
+      ]
+    },
+    "explanation": "A plant respires at all times, using O₂ and releasing CO₂. In bright light, the rate of photosynthesis greatly exceeds respiration. The net effect is uptake of CO₂ and release of O₂ — the products of photosynthesis outweigh those of respiration."
+  },
+  {
+    "id": "bio-compensation-point",
+    "topic": "bioenergetics",
+    "difficulty": 4,
+    "image": null,
+    "template": "What is meant by the compensation point for a plant?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the light intensity at which the rate of photosynthesis equals the rate of respiration so there is no net gas exchange",
+      "acceptedAnswers": [
+        "when photosynthesis rate equals respiration rate",
+        "the point where CO2 taken in equals CO2 released"
+      ]
+    },
+    "explanation": "The compensation point is the light intensity at which photosynthesis exactly balances respiration. CO₂ produced by respiration is exactly used by photosynthesis and vice versa — there is no net gas exchange with the environment."
+  }
+]

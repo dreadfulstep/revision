@@ -5,12 +5,12 @@
   "colour": "#8b5cf6",
   "papers": ["1", "2"],
   "topics": [
-    { "id": "forces",           "name": "Forces" },
-    { "id": "energy",           "name": "Energy" },
-    { "id": "waves",            "name": "Waves" },
-    { "id": "electricity",      "name": "Electricity" },
-    { "id": "magnetism",        "name": "Magnetism & Electromagnetism" },
+    { "id": "forces", "name": "Forces" },
+    { "id": "energy", "name": "Energy" },
+    { "id": "waves", "name": "Waves" },
+    { "id": "electricity", "name": "Electricity" },
+    { "id": "magnetism", "name": "Magnetism & Electromagnetism" },
     { "id": "particle-physics", "name": "Particle Physics & Atomic Structure" },
-    { "id": "space",            "name": "Space Physics" }
+    { "id": "space", "name": "Space Physics" }
   ]
 }

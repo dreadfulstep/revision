@@ -1,0 +1,409 @@
+[
+  {
+    "id": "home-homeostasis-definition",
+    "topic": "homeostasis",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is homeostasis?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the regulation of internal conditions to maintain a stable environment",
+      "acceptedAnswers": [
+        "maintaining a constant internal environment",
+        "keeping internal conditions within narrow limits despite external changes"
+      ]
+    },
+    "explanation": "Homeostasis is the process by which organisms maintain a stable internal environment (e.g. temperature, blood glucose, water content) despite changes in external conditions."
+  },
+  {
+    "id": "home-nervous-system-parts",
+    "topic": "homeostasis",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each component to its role in the nervous system.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Receptor",  "right": "Detects a stimulus" },
+        { "left": "Effector",  "right": "Produces a response (muscle or gland)" },
+        { "left": "CNS",       "right": "Processes information and coordinates response" },
+        { "left": "Neurone",   "right": "Carries electrical impulses" }
+      ]
+    },
+    "explanation": "Receptors detect stimuli → sensory neurones carry impulse to CNS → CNS processes and sends signal via motor neurones → effectors (muscles/glands) carry out the response."
+  },
+  {
+    "id": "home-reflex-arc-order",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the components of a reflex arc.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": ["Receptor", "Sensory neurone", "Relay neurone (in spinal cord)", "Motor neurone", "Effector"]
+    },
+    "explanation": "Reflex arc: receptor (detects stimulus) → sensory neurone → relay neurone (in spinal cord — bypasses brain for speed) → motor neurone → effector (muscle contracts or gland secretes)."
+  },
+  {
+    "id": "home-reflex-advantage",
+    "topic": "homeostasis",
+    "difficulty": 2,
+    "image": null,
+    "template": "Why are reflexes faster than voluntary responses?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "reflexes bypass the brain and go through the spinal cord only",
+      "acceptedAnswers": [
+        "they do not involve conscious thought or the brain",
+        "the impulse takes a shorter route through the spinal cord"
+      ]
+    },
+    "explanation": "Reflex arcs pass through the spinal cord rather than the brain, shortening the pathway. This means the response happens automatically and much faster than a conscious voluntary response."
+  },
+  {
+    "id": "home-nervous-vs-hormonal",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each feature to the nervous or hormonal system.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Fast, short-lived response",    "right": "Nervous system" },
+        { "left": "Slow, long-lasting response",   "right": "Hormonal system" },
+        { "left": "Carried in blood",              "right": "Hormonal system" },
+        { "left": "Carried as electrical impulse", "right": "Nervous system" }
+      ]
+    },
+    "explanation": "Nervous system: electrical impulses, fast (milliseconds), short-lived, specific target. Hormonal system: chemical messengers in blood, slower (seconds to minutes), longer-lasting, affects many target organs."
+  },
+  {
+    "id": "home-insulin-glucagon",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each hormone to its effect on blood glucose.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Insulin",   "right": "Lowers blood glucose — converts glucose to glycogen" },
+        { "left": "Glucagon",  "right": "Raises blood glucose — converts glycogen to glucose" }
+      ]
+    },
+    "explanation": "Insulin (released when blood glucose is high) stimulates conversion of glucose to glycogen in the liver, lowering blood glucose. Glucagon (released when blood glucose is low) stimulates glycogen breakdown to glucose, raising blood glucose."
+  },
+  {
+    "id": "home-diabetes-type1-vs-type2",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Compare type 1 and type 2 diabetes.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Type 1",  "right": "Pancreas does not produce insulin — treated with injections" },
+        { "left": "Type 2",  "right": "Body cells do not respond to insulin — treated with diet and exercise" }
+      ]
+    },
+    "explanation": "Type 1: autoimmune — pancreas cannot produce insulin, treated with insulin injections. Type 2: cells become resistant to insulin, often linked to obesity/diet, managed with diet, exercise, and sometimes medication."
+  },
+  {
+    "id": "home-kidney-filtration",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the stages of urine production in the kidney.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Blood filtered under high pressure in glomerulus",
+        "Small molecules pass into Bowman's capsule",
+        "Glucose, water and ions selectively reabsorbed",
+        "Remaining fluid (urine) passes to collecting duct",
+        "Urine excreted via ureter to bladder"
+      ]
+    },
+    "explanation": "Kidney filtration: ultrafiltration in glomerulus → filtrate in Bowman's capsule → selective reabsorption (all glucose, water as needed, useful ions) → urine formation → collecting duct → ureter → bladder."
+  },
+  {
+    "id": "home-adh-role",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain the role of ADH in regulating water content.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "ADH increases the permeability of the collecting duct causing more water to be reabsorbed into the blood producing more concentrated urine",
+      "acceptedAnswers": [
+        "ADH makes kidney tubules more permeable so more water is reabsorbed",
+        "ADH causes more water reabsorption in kidneys producing concentrated urine"
+      ]
+    },
+    "explanation": "When blood water potential falls, the pituitary gland releases ADH. ADH increases the permeability of the kidney collecting duct, causing more water to be reabsorbed by osmosis into the blood — producing smaller volumes of more concentrated urine."
+  },
+  {
+    "id": "home-thermoregulation-mechanisms",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL responses the body uses when core temperature rises too high.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Sweating increases",
+        "Shivering begins",
+        "Blood vessels near skin dilate (vasodilation)",
+        "Blood vessels near skin constrict (vasoconstriction)",
+        "Hairs on skin lie flat"
+      ],
+      "correctOptions": [
+        "Sweating increases",
+        "Blood vessels near skin dilate (vasodilation)",
+        "Hairs on skin lie flat"
+      ]
+    },
+    "explanation": "When too hot: sweating (evaporation cools skin), vasodilation (more blood near surface to lose heat), hairs lie flat (no trapped air insulation). Shivering and vasoconstriction are cold responses."
+  },
+  {
+    "id": "home-plant-hormones-auxin",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how auxin causes a shoot to bend towards light.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "auxin moves to the shaded side causing cells there to elongate more so the shoot bends towards the light",
+      "acceptedAnswers": [
+        "more auxin on dark side causes more cell elongation on that side bending the shoot to light",
+        "auxin accumulates on shaded side promoting cell elongation causing phototropism"
+      ]
+    },
+    "explanation": "Auxin is produced at the shoot tip and moves away from light. On the shaded side, higher auxin concentration causes cells to elongate more. The greater elongation on the dark side causes the shoot to curve towards the light source — phototropism."
+  },
+  {
+    "id": "home-gibberellin-role",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "State TWO uses of gibberellins in agriculture.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Promote seed germination",
+        "Cause stem elongation",
+        "Promote root growth",
+        "Ripening of fruit",
+        "Production of seedless fruit"
+      ],
+      "correctOptions": ["Promote seed germination", "Cause stem elongation"]
+    },
+    "explanation": "Gibberellins are plant hormones used in agriculture to: promote seed germination (break dormancy) and cause stem/internode elongation. They are also used in brewing to stimulate enzyme production."
+  },
+  {
+    "id": "home-reproductive-hormones-order",
+    "topic": "homeostasis",
+    "difficulty": 4,
+    "image": null,
+    "template": "Order the hormones involved in the menstrual cycle.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "FSH causes egg to mature in ovary",
+        "Oestrogen causes uterus lining to thicken",
+        "LH surge triggers ovulation",
+        "Progesterone maintains uterus lining"
+      ]
+    },
+    "explanation": "Menstrual cycle: FSH (from pituitary) → egg matures → oestrogen secreted → uterus lining thickens + inhibits FSH → LH surge → ovulation → progesterone maintains lining. If no fertilisation, hormone levels fall and lining is shed."
+  },
+  {
+    "id": "home-negative-feedback",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain the principle of negative feedback in homeostasis.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "when a condition changes from the set point the body detects the change and responds to reverse it back to normal",
+      "acceptedAnswers": [
+        "a change triggers a response that opposes the change returning conditions to normal",
+        "the output of a system feeds back to reduce the original change"
+      ]
+    },
+    "explanation": "Negative feedback: a deviation from the set point is detected by receptors → the control centre triggers a corrective response → the response brings conditions back to the set point → correction stops. This maintains stability."
+  },
+  {
+    "id": "home-contraceptive-pill",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how the combined contraceptive pill prevents pregnancy.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "it contains oestrogen and progesterone which inhibit FSH production preventing egg maturation and ovulation",
+      "acceptedAnswers": [
+        "hormones in the pill stop FSH being released so no egg matures",
+        "synthetic oestrogen/progesterone prevent ovulation by negative feedback on FSH and LH"
+      ]
+    },
+    "explanation": "The combined pill contains synthetic oestrogen and progesterone. These maintain high hormone levels, which via negative feedback suppress FSH production — no egg matures. LH is also suppressed preventing ovulation."
+  },
+  {
+    "id": "home-ivf-hormones",
+    "topic": "homeostasis",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain why FSH and LH are given to women undergoing IVF treatment.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "FSH stimulates the production of multiple mature eggs and LH triggers their release so several eggs can be collected for fertilisation",
+      "acceptedAnswers": [
+        "FSH stimulates superovulation producing multiple eggs and LH triggers ovulation",
+        "given to stimulate the release of multiple eggs for collection"
+      ]
+    },
+    "explanation": "In IVF, FSH is given to stimulate superovulation (production of multiple mature eggs). LH is given to trigger their release. The eggs are collected, fertilised in vitro, and the resulting embryos implanted into the uterus."
+  },
+  {
+    "id": "home-insulin-structure",
+    "topic": "homeostasis",
+    "difficulty": 2,
+    "image": null,
+    "template": "What type of molecule is insulin?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a protein",
+      "acceptedAnswers": ["protein", "a hormone made of protein", "polypeptide"]
+    },
+    "explanation": "Insulin is a protein hormone produced by beta cells in the islets of Langerhans in the pancreas. It is released when blood glucose rises above the set point."
+  },
+  {
+    "id": "home-blood-glucose-regulation",
+    "topic": "homeostasis",
+    "difficulty": 4,
+    "image": null,
+    "template": "Describe the process by which blood glucose is returned to normal after a meal.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Blood glucose rises after eating (1) / 2. Pancreas detects high blood glucose (1) / 3. Beta cells release insulin (1) / 4. Insulin causes liver/muscle cells to convert glucose to glycogen (glycogenesis) (1) / 5. Blood glucose returns to normal set point (1) — max 4",
+      "minWords": 40
+    },
+    "explanation": "After a meal, blood glucose rises → pancreas beta cells detect this → insulin released into blood → insulin binds to receptors on liver and muscle cells → glucose converted to glycogen (glycogenesis) → blood glucose returns to normal set point."
+  },
+  {
+    "id": "home-kidney-dialysis",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how kidney dialysis removes waste from the blood.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "blood flows past a partially permeable membrane and waste products diffuse out into the dialysis fluid down a concentration gradient",
+      "acceptedAnswers": [
+        "urea and excess ions diffuse from blood across a membrane into dialysate solution",
+        "waste products diffuse across a partially permeable membrane into dialysis fluid"
+      ]
+    },
+    "explanation": "In dialysis, blood passes through tubing made of partially permeable membrane. Waste products (urea, excess ions) diffuse from the blood (high concentration) into the dialysate fluid (low concentration). Useful substances are kept in blood as the dialysate contains the correct levels."
+  },
+  {
+    "id": "home-osmoregulation-sweating",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "On a hot day a person sweats heavily. What effect does this have on ADH secretion?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "ADH secretion increases",
+        "ADH secretion decreases",
+        "ADH secretion stays the same",
+        "ADH is not involved"
+      ],
+      "answer": "ADH secretion increases"
+    },
+    "explanation": "Heavy sweating reduces blood water potential (blood becomes more concentrated). Osmoreceptors in the hypothalamus detect this → pituitary gland releases more ADH → kidney reabsorbs more water → produces less, more concentrated urine."
+  },
+  {
+    "id": "home-type2-diabetes-cause",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "State TWO risk factors for developing type 2 diabetes.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": ["Obesity", "Lack of exercise", "Eating too much sugar directly", "Old age", "Autoimmune condition"],
+      "correctOptions": ["Obesity", "Lack of exercise"]
+    },
+    "explanation": "Type 2 diabetes risk factors include obesity (particularly abdominal fat) and physical inactivity. These cause cells to become less responsive to insulin. Note: eating sugar does not directly cause type 2 diabetes, though a poor diet leading to obesity does."
+  },
+  {
+    "id": "home-hormone-coordination-evaluate",
+    "topic": "homeostasis",
+    "difficulty": 5,
+    "image": null,
+    "template": "Evaluate the use of hormones compared to the nervous system for coordinating the body's responses.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "Hormonal advantages (max 2): long-lasting effects suitable for sustained changes (1) / can affect many organs simultaneously (1) / used in development/growth/reproduction (1). Hormonal disadvantages (max 2): slower — must travel in blood (1) / less precise — cannot target a single cell (1). Nervous advantages: fast (1) / precise (1). Overall conclusion required for full marks (1).",
+      "minWords": 70
+    },
+    "explanation": "Hormones are suitable for sustained, widespread effects (e.g. growth, blood glucose regulation) but are slower. The nervous system provides fast, precise responses (e.g. reflexes). Both work together in coordinating the body."
+  },
+  {
+    "id": "home-auxin-geotropism",
+    "topic": "homeostasis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how auxin causes a root to grow downwards (positive geotropism).",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "auxin accumulates on the lower side of the root but inhibits cell elongation there so the upper side grows more causing the root to curve downwards",
+      "acceptedAnswers": [
+        "more auxin on lower side inhibits growth there so upper side elongates more bending root down",
+        "auxin in high concentrations inhibits root cell elongation causing downward bending"
+      ]
+    },
+    "explanation": "In roots, high concentrations of auxin inhibit (rather than promote) cell elongation. Gravity causes auxin to accumulate on the lower side → less elongation on lower side → more elongation on upper side → root curves downward — positive geotropism."
+  },
+  {
+    "id": "home-dialysis-vs-transplant",
+    "topic": "homeostasis",
+    "difficulty": 4,
+    "image": null,
+    "template": "Compare kidney dialysis and kidney transplant as treatments for kidney failure.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "Dialysis (max 2): requires regular sessions several times a week (1) / patient not cured — ongoing treatment (1) / no surgery required / lower short-term risk (1) / expensive long-term (1). Transplant (max 2): one-off treatment / long-term solution (1) / requires immunosuppressant drugs for life (1) / risk of rejection (1) / shortage of donors (1). Conclusion for full marks.",
+      "minWords": 40
+    },
+    "explanation": "Dialysis is ongoing (3×/week), not a cure, but avoids surgery risk. Transplant is a long-term solution but requires immunosuppressants and carries rejection risk. Donor shortage limits transplant availability."
+  }
+]

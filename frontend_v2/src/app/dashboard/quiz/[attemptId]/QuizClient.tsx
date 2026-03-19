@@ -15,6 +15,7 @@ import Ordering from "@/components/quiz/answers/Ordering";
 import MultiPart from "@/components/quiz/answers/MultiPart";
 import QuestionImage from "@/components/quiz/QuizImage";
 import FillBlank from "@/components/quiz/answers/FillBlank";
+import LongForm from "@/components/quiz/answers/LongForm";
 
 export type DisplayConfig =
   | { type: "number"; unit?: string }
@@ -43,7 +44,12 @@ export type ClientQuestion = {
 
 type FeedbackState = {
   correct: boolean;
-  correctAnswer: string;
+  correctAnswer:
+    | string
+    | string[]
+    | Record<string, string>
+    | { label: string; answer: string; unit?: string }[]
+    | string[][];
   explanation: string;
   xpGained: number;
   isLast: boolean;
@@ -52,7 +58,27 @@ type FeedbackState = {
   newLevel: number;
   rankedUp: boolean;
   newRank: { title: string; colour: string } | null;
+  aiFeedback: string | null;
+  aiMarks: number | null;
 };
+
+function formatCorrectAnswer(
+  type: string,
+  correctAnswer: FeedbackState["correctAnswer"],
+): string {
+  if (typeof correctAnswer === "string") return correctAnswer;
+  if (Array.isArray(correctAnswer)) {
+    if (typeof correctAnswer[0] === "string")
+      return (correctAnswer as string[]).join(", ");
+    return (correctAnswer as string[][]).map((b) => b[0]).join(", ");
+  }
+  if (typeof correctAnswer === "object" && correctAnswer !== null) {
+    return Object.entries(correctAnswer as Record<string, string>)
+      .map(([k, v]) => `${k} → ${v}`)
+      .join(" | ");
+  }
+  return String(correctAnswer);
+}
 
 export default function QuizClient({
   attemptId,
@@ -128,7 +154,10 @@ export default function QuizClient({
       ? cfg.parts.every((p) => (multiPartAnswer[p.label] ?? "").trim() !== "")
       : cfg.type === "multi_select"
         ? multiAnswer.length > 0
-        : answer !== "";
+        : cfg.type === "long_form"
+          ? answer.trim().split(/\s+/).filter(Boolean).length >=
+            (cfg.minWords ?? 1)
+          : answer !== "";
 
   const progress = (index / total) * 100;
 
@@ -179,7 +208,11 @@ export default function QuizClient({
                   setAnswer(v);
                   submit(v);
                 }}
-                disabled={loading}
+                disabled={loading || !!feedback}
+                correctValue={
+                  feedback ? String(feedback.correctAnswer) : undefined
+                }
+                showResult={!!feedback}
               />
             )}
             {cfg.type === "multiple_choice" && (
@@ -190,7 +223,11 @@ export default function QuizClient({
                   setAnswer(v);
                   submit(v);
                 }}
-                disabled={loading}
+                disabled={loading || !!feedback}
+                correctValue={
+                  feedback ? String(feedback.correctAnswer) : undefined
+                }
+                showResult={!!feedback}
               />
             )}
             {(cfg.type === "number" || cfg.type === "text") && (
@@ -200,7 +237,7 @@ export default function QuizClient({
                 onSubmit={submit}
                 unit={"unit" in cfg ? cfg.unit : undefined}
                 type={cfg.type}
-                disabled={loading}
+                disabled={loading || !!feedback}
               />
             )}
             {cfg.type === "multi_select" && (
@@ -208,7 +245,11 @@ export default function QuizClient({
                 options={cfg.options}
                 value={multiAnswer}
                 onChange={setMultiAnswer}
-                disabled={loading}
+                disabled={loading || !!feedback}
+                correctValues={
+                  feedback ? (feedback.correctAnswer as string[]) : undefined
+                }
+                showResult={!!feedback}
               />
             )}
             {cfg.type === "matching" && (
@@ -216,7 +257,13 @@ export default function QuizClient({
                 pairs={cfg.pairs}
                 key={question.id}
                 onChange={setAnswer}
-                disabled={loading}
+                disabled={loading || !!feedback}
+                matchingResults={feedback?.matchingResults ?? null}
+                correctAnswer={
+                  feedback
+                    ? (feedback.correctAnswer as Record<string, string>)
+                    : undefined
+                }
               />
             )}
             {cfg.type === "ordering" && (
@@ -224,7 +271,11 @@ export default function QuizClient({
                 items={cfg.items}
                 key={question.id}
                 onChange={setAnswer}
-                disabled={loading}
+                disabled={loading || !!feedback}
+                correctOrder={
+                  feedback ? (feedback.correctAnswer as string[]) : undefined
+                }
+                showResult={!!feedback}
               />
             )}
             {cfg.type === "multi_part" && (
@@ -232,7 +283,16 @@ export default function QuizClient({
                 parts={cfg.parts}
                 value={multiPartAnswer}
                 onChange={setMultiPartAnswer}
-                disabled={loading}
+                disabled={loading || !!feedback}
+                correctParts={
+                  feedback
+                    ? (feedback.correctAnswer as {
+                        label: string;
+                        answer: string;
+                      }[])
+                    : undefined
+                }
+                showResult={!!feedback}
               />
             )}
             {cfg.type === "fill_blank" && (
@@ -240,7 +300,21 @@ export default function QuizClient({
                 template={question.template}
                 values={multiAnswer}
                 onChange={setMultiAnswer}
-                disabled={loading}
+                disabled={loading || !!feedback}
+                correctAnswers={
+                  feedback ? (feedback.correctAnswer as string[][]) : undefined
+                }
+                showResult={!!feedback}
+              />
+            )}
+            {cfg.type === "long_form" && (
+              <LongForm
+                value={answer}
+                onChange={setAnswer}
+                onSubmit={submit}
+                marks={cfg.marks}
+                minWords={cfg.minWords}
+                disabled={loading || !!feedback}
               />
             )}
           </div>
@@ -260,6 +334,15 @@ export default function QuizClient({
                 >
                   {feedback.correct ? "Spot on!" : "Not quite"}
                 </span>
+
+                {feedback.aiMarks !== null &&
+                  feedback.aiMarks !== undefined && (
+                    <span className="text-sm font-mono text-muted-foreground">
+                      {feedback.aiMarks}/
+                      {cfg.type === "long_form" ? cfg.marks : "?"} marks
+                    </span>
+                  )}
+
                 {feedback.correct && (
                   <div className="ml-auto flex items-center gap-1 border-2 text-white px-3 py-1 rounded-full text-xs font-bold">
                     <Sparkles size={12} /> +{feedback.xpGained} XP
@@ -267,13 +350,24 @@ export default function QuizClient({
                 )}
               </div>
 
+              {feedback.aiFeedback && !feedback.correct && (
+                <div className="mt-2">
+                  <p className="text-xs uppercase font-bold opacity-60 mb-1">
+                    Why incorrect
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {feedback.aiFeedback}
+                  </p>
+                </div>
+              )}
+
               {!feedback.correct && (
                 <div className="mb-4">
                   <p className="text-xs uppercase font-bold opacity-60 mb-1">
                     Correct Answer
                   </p>
                   <p className="text-sm font-semibold">
-                    {feedback.correctAnswer}
+                    {formatCorrectAnswer(cfg.type, feedback.correctAnswer)}
                   </p>
                 </div>
               )}
@@ -302,7 +396,11 @@ export default function QuizClient({
                 disabled={loading || !canSubmit}
                 className="w-full h-14 text-base font-bold rounded-2xl shadow-lg transition-all active:scale-[0.98]"
               >
-                {loading ? "Checking..." : "Check Answer"}
+                {loading
+                  ? "Checking..."
+                  : cfg.type === "long_form"
+                    ? "Submit for marking"
+                    : "Check Answer"}
               </Button>
             )
           ) : (

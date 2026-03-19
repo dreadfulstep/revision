@@ -1,0 +1,414 @@
+[
+  {
+    "id": "atmos-current-composition",
+    "topic": "atmosphere",
+    "difficulty": 1,
+    "image": null,
+    "template": "Approximately what percentage of the Earth's atmosphere is nitrogen?",
+    "variables": {},
+    "answerConfig": { "type": "number", "answer": "78", "unit": "%" },
+    "explanation": "The current atmosphere is approximately 78% nitrogen (N₂), 21% oxygen (O₂), 1% argon (Ar), and 0.04% carbon dioxide (CO₂). The remaining trace gases include water vapour, neon, helium, and methane."
+  },
+  {
+    "id": "atmos-composition-matching",
+    "topic": "atmosphere",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each atmospheric gas to its approximate percentage.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Nitrogen", "right": "~78%" },
+        { "left": "Oxygen", "right": "~21%" },
+        { "left": "Argon", "right": "~1%" },
+        { "left": "Carbon dioxide", "right": "~0.04%" }
+      ]
+    },
+    "explanation": "Current atmosphere: N₂ ≈ 78%, O₂ ≈ 21%, Ar ≈ 1%, CO₂ ≈ 0.04%. These proportions have been relatively stable for several hundred million years, maintained by the carbon cycle, rock cycle, and biological processes."
+  },
+  {
+    "id": "atmos-early-atmosphere",
+    "topic": "atmosphere",
+    "difficulty": 2,
+    "image": null,
+    "template": "What was the early atmosphere of Earth mainly composed of?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Carbon dioxide",
+        "Water vapour",
+        "Nitrogen",
+        "Oxygen",
+        "Argon"
+      ],
+      "correctOptions": ["Carbon dioxide", "Water vapour", "Nitrogen"]
+    },
+    "explanation": "Earth's early atmosphere (from volcanic outgassing) was mainly CO₂ and water vapour with some nitrogen, similar to the current atmosphere of Venus and Mars. There was very little oxygen. The CO₂ levels were much higher than today."
+  },
+  {
+    "id": "atmos-evolution-order",
+    "topic": "atmosphere",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the events in the evolution of Earth's atmosphere.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Volcanic activity releases CO₂, water vapour and nitrogen",
+        "Oceans form as water vapour condenses",
+        "CO₂ dissolves in oceans and forms carbonate rocks",
+        "Photosynthetic algae/plants produce oxygen",
+        "Oxygen builds up, ozone layer forms",
+        "Complex aerobic life develops"
+      ]
+    },
+    "explanation": "Atmosphere evolution: volcanoes → CO₂/H₂O/N₂ atmosphere → oceans form (condensation) → CO₂ absorbed (dissolves, forms CaCO₃) → photosynthesis produces O₂ → O₂ builds up → ozone (O₃) layer forms blocking UV → complex aerobic life possible."
+  },
+  {
+    "id": "atmos-photosynthesis-oxygen",
+    "topic": "atmosphere",
+    "difficulty": 2,
+    "image": null,
+    "template": "How did photosynthesis change Earth's atmosphere?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "photosynthesis removed carbon dioxide from the atmosphere and released oxygen increasing its concentration",
+      "acceptedAnswers": [
+        "removed CO₂ and produced O₂ — oxygen increased from near zero to ~21%",
+        "algae/plants absorbed CO₂ and released O₂ changing the atmospheric composition"
+      ]
+    },
+    "explanation": "Early photosynthetic organisms (cyanobacteria, then algae and plants) absorbed CO₂ and released O₂ as a waste product. Over hundreds of millions of years, O₂ accumulated in the atmosphere — rising from near zero to about 21%. This enabled aerobic respiration and complex life."
+  },
+  {
+    "id": "atmos-greenhouse-gases",
+    "topic": "atmosphere",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL gases that contribute to the greenhouse effect.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Carbon dioxide",
+        "Methane",
+        "Water vapour",
+        "Nitrogen",
+        "Oxygen"
+      ],
+      "correctOptions": ["Carbon dioxide", "Methane", "Water vapour"]
+    },
+    "explanation": "Greenhouse gases absorb and re-emit infrared radiation: CO₂ (from fossil fuels/deforestation), methane (from cattle, rice paddies, landfill), water vapour (major natural greenhouse gas). Nitrogen and oxygen are not greenhouse gases — they do not absorb IR radiation."
+  },
+  {
+    "id": "atmos-greenhouse-effect-mechanism",
+    "topic": "atmosphere",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how greenhouse gases cause global warming.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "greenhouse gases absorb infrared radiation emitted by the Earth's surface and re-emit it in all directions including back to Earth trapping heat and raising temperature",
+      "acceptedAnswers": [
+        "absorb and re-radiate IR radiation preventing heat escaping to space",
+        "trap heat by absorbing outgoing infrared radiation from Earth's surface"
+      ]
+    },
+    "explanation": "Solar radiation passes through the atmosphere and warms the Earth's surface. The surface emits infrared radiation. Greenhouse gas molecules absorb this IR and re-emit it in all directions — including back towards Earth. This 'trapping' of heat is the enhanced greenhouse effect, causing global temperature rise."
+  },
+  {
+    "id": "atmos-methane-sources",
+    "topic": "atmosphere",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL human activities that increase atmospheric methane.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Cattle farming",
+        "Rice paddy fields",
+        "Landfill sites",
+        "Burning petrol",
+        "Using electric cars"
+      ],
+      "correctOptions": [
+        "Cattle farming",
+        "Rice paddy fields",
+        "Landfill sites"
+      ]
+    },
+    "explanation": "Methane sources: cattle (digestive fermentation produces CH₄), flooded rice paddies (anaerobic decomposition of organic matter), landfill sites (anaerobic decomposition of waste). Burning petrol mainly produces CO₂. Electric cars don't directly produce greenhouse gases during use."
+  },
+  {
+    "id": "atmos-co2-levels-causes",
+    "topic": "atmosphere",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain TWO human activities that have increased CO₂ levels in the atmosphere.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "burning fossil fuels releases CO₂ stored underground and deforestation reduces the amount of CO₂ absorbed by photosynthesis",
+      "acceptedAnswers": [
+        "combustion of coal/oil/gas releases stored CO₂ and cutting down forests means less photosynthesis",
+        "fossil fuel burning and deforestation both increase atmospheric CO₂"
+      ]
+    },
+    "explanation": "Two main human causes of rising CO₂: (1) Burning fossil fuels (coal, oil, gas) releases carbon stored underground for millions of years as CO₂; (2) Deforestation — trees absorb CO₂ by photosynthesis; removing them reduces CO₂ uptake AND releases stored carbon when burnt/decomposed."
+  },
+  {
+    "id": "atmos-global-warming-effects",
+    "topic": "atmosphere",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL potential consequences of global warming.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Rising sea levels due to melting ice",
+        "More frequent extreme weather events",
+        "Loss of biodiversity as habitats change",
+        "Increased crop yields globally",
+        "Ocean acidification"
+      ],
+      "correctOptions": [
+        "Rising sea levels due to melting ice",
+        "More frequent extreme weather events",
+        "Loss of biodiversity as habitats change",
+        "Ocean acidification"
+      ]
+    },
+    "explanation": "Global warming consequences: sea level rise (thermal expansion + ice melt), more extreme weather (stronger storms, droughts), biodiversity loss (habitat shift/destruction), ocean acidification (CO₂ dissolves forming carbonic acid). Some regions may see localised yield increases but globally food security is threatened."
+  },
+  {
+    "id": "atmos-carbon-footprint",
+    "topic": "atmosphere",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is meant by carbon footprint?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the total amount of greenhouse gases produced directly and indirectly by a person, organisation or product",
+      "acceptedAnswers": [
+        "total CO₂ and other greenhouse gas emissions from an activity or person",
+        "measure of greenhouse gas emissions expressed as CO₂ equivalent"
+      ]
+    },
+    "explanation": "Carbon footprint is the total amount of greenhouse gases (expressed as CO₂ equivalent) produced directly and indirectly by a person, organisation, or product. Direct: driving, heating home. Indirect: energy used to make products, food production, transportation of goods."
+  },
+  {
+    "id": "atmos-reduce-carbon-footprint",
+    "topic": "atmosphere",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL methods that would reduce an individual's carbon footprint.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Using public transport instead of driving",
+        "Eating less meat",
+        "Using renewable energy",
+        "Buying more products from abroad",
+        "Improving home insulation"
+      ],
+      "correctOptions": [
+        "Using public transport instead of driving",
+        "Eating less meat",
+        "Using renewable energy",
+        "Improving home insulation"
+      ]
+    },
+    "explanation": "Carbon footprint reductions: public transport (fewer vehicle emissions per person), less meat (livestock farming is high-emission), renewable energy (no fossil fuels), insulation (less heating energy needed). Buying more products from abroad increases transport emissions — the opposite."
+  },
+  {
+    "id": "atmos-finite-renewable-resources",
+    "topic": "atmosphere",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each resource to whether it is finite or renewable.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Coal", "right": "Finite" },
+        { "left": "Timber (managed)", "right": "Renewable" },
+        { "left": "Natural gas", "right": "Finite" },
+        { "left": "Crops for biofuel", "right": "Renewable" },
+        { "left": "Copper ore", "right": "Finite" }
+      ]
+    },
+    "explanation": "Finite (non-renewable) resources take millions of years to form and will eventually run out: fossil fuels, metal ores. Renewable resources can be replenished on a human timescale: timber (if replanted), crops, wind, solar, water. Sustainable management is key to maintaining renewable resources."
+  },
+  {
+    "id": "atmos-water-treatment",
+    "topic": "atmosphere",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the steps in treating drinking water.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Sedimentation — large particles settle out",
+        "Filtration through sand and gravel to remove smaller particles",
+        "Chlorination to kill bacteria and microorganisms",
+        "Safe to distribute"
+      ]
+    },
+    "explanation": "Water treatment: sedimentation (coagulants added — particles clump and sink) → filtration (sand/gravel removes fine particles) → chlorination (kills pathogens). Sometimes fluoride is added to prevent tooth decay. Distillation is not used in large-scale water treatment (too expensive)."
+  },
+  {
+    "id": "atmos-lca-definition",
+    "topic": "atmosphere",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is a life cycle assessment (LCA)?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "an assessment of the environmental impact of a product at every stage from raw material extraction to manufacture use and disposal",
+      "acceptedAnswers": [
+        "evaluates environmental impact of a product from cradle to grave",
+        "assessment covering extraction, production, use and disposal of a product"
+      ]
+    },
+    "explanation": "An LCA considers the environmental impact of a product throughout its entire life: raw material extraction, manufacturing processes (energy, water, waste), transport at each stage, use phase, and end-of-life disposal or recycling. It helps compare the overall environmental impact of different products or materials."
+  },
+  {
+    "id": "atmos-lca-stages",
+    "topic": "atmosphere",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the stages of a life cycle assessment.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Extraction of raw materials",
+        "Manufacturing and processing",
+        "Transport and distribution",
+        "Use by consumer",
+        "Disposal or recycling"
+      ]
+    },
+    "explanation": "LCA stages (cradle to grave): raw material extraction (mining, forestry) → manufacturing (energy, chemical processes) → transport (emissions) → use phase (energy consumption, durability) → end of life (landfill, incineration, recycling). Each stage has an environmental impact to quantify."
+  },
+  {
+    "id": "atmos-ceramics-polymers-composites",
+    "topic": "atmosphere",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each material class to its correct description.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Ceramic",
+          "right": "Hard, brittle, heat-resistant material made from clay or other mineral compounds"
+        },
+        {
+          "left": "Polymer",
+          "right": "Long-chain molecule material — can be flexible or rigid"
+        },
+        {
+          "left": "Composite",
+          "right": "Material made from two or more different materials to combine their properties"
+        }
+      ]
+    },
+    "explanation": "Ceramics (clay pottery, glass, cement) are hard and heat-resistant but brittle. Polymers (plastics) are versatile — can be flexible or rigid, cheap to produce. Composites (carbon fibre/resin, fibreglass, concrete) combine materials to get superior properties — e.g. strong and lightweight."
+  },
+  {
+    "id": "atmos-fractional-distillation-air",
+    "topic": "atmosphere",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how nitrogen and oxygen are separated from liquid air.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "air is liquefied then fractionally distilled — nitrogen boils off first at −196°C and oxygen remains as liquid boiling at −183°C",
+      "acceptedAnswers": [
+        "liquid air is fractionally distilled — nitrogen lower boiling point evaporates first",
+        "fractional distillation of liquid air separates N₂ (bp −196°C) from O₂ (bp −183°C)"
+      ]
+    },
+    "explanation": "Air is cooled and compressed to form liquid air. Fractional distillation separates components based on boiling point. Nitrogen (bp −196°C) has a lower boiling point than oxygen (bp −183°C) — nitrogen evaporates first as the temperature rises. The process also separates argon (bp −186°C)."
+  },
+  {
+    "id": "atmos-evaluate-global-warming",
+    "topic": "atmosphere",
+    "difficulty": 5,
+    "image": null,
+    "template": "Evaluate the evidence for human-caused climate change and discuss the challenges of international action to reduce it.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "Evidence (max 3): rising CO₂ levels correlate with industrial activity (1) / global average temperature increase records (1) / ice core data shows CO₂ and temperature linked historically (1) / scientific consensus from multiple independent lines of evidence (1). Challenges (max 3): economic cost of switching from fossil fuels (1) / developing nations need energy to grow (1) / international agreements difficult to enforce (1) / scientific uncertainty about timescale/magnitude (1). Conclusion for full marks (1).",
+      "minWords": 80
+    },
+    "explanation": "Evidence strongly supports human-caused climate change: CO₂ levels at highest in 800,000 years, temperature records show clear warming trend, multiple independent data sources agree. Challenges: cost, global inequality, enforcement of agreements, some scientific uncertainty about magnitude of effects."
+  },
+  {
+    "id": "atmos-co2-limestone",
+    "topic": "atmosphere",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how carbon dioxide was removed from the early atmosphere to form sedimentary rocks.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "CO₂ dissolved in oceans reacting with calcium ions to form calcium carbonate which was deposited as limestone when marine organisms died",
+      "acceptedAnswers": [
+        "CO₂ dissolved in seawater, marine organisms used it to make calcium carbonate shells which formed limestone sediment",
+        "dissolved CO₂ formed carbonate ions that precipitated as CaCO₃ and accumulated as limestone rock"
+      ]
+    },
+    "explanation": "CO₂ dissolved in oceans: CO₂ + H₂O → H₂CO₃ (carbonic acid). Marine organisms (shellfish, plankton) extracted calcium carbonate from seawater to make shells/skeletons. When they died, shells accumulated on the ocean floor, gradually forming limestone and chalk rocks. This locked away vast amounts of carbon."
+  },
+  {
+    "id": "atmos-ozone-layer",
+    "topic": "atmosphere",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the role of the ozone layer?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "it absorbs harmful ultraviolet radiation from the Sun protecting life on Earth",
+      "acceptedAnswers": [
+        "blocks UV radiation preventing damage to DNA and living organisms",
+        "filters out UV light from the Sun"
+      ]
+    },
+    "explanation": "The ozone layer (in the stratosphere) absorbs most of the Sun's ultraviolet (UV) radiation. Without this protection, UV causes DNA damage in living cells — leading to skin cancer, mutations, and harm to ecosystems. The formation of ozone was essential for allowing complex life to develop on land."
+  },
+  {
+    "id": "atmos-sustainable-development",
+    "topic": "atmosphere",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain what is meant by sustainable development and why it is important.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "meeting the needs of the present without compromising the ability of future generations to meet their own needs by using resources at a rate they can be replenished",
+      "acceptedAnswers": [
+        "development that meets current needs without depleting resources for future generations",
+        "using resources at a sustainable rate so they remain available in the future"
+      ]
+    },
+    "explanation": "Sustainable development balances economic growth, social needs, and environmental protection. It means using resources no faster than they can be replenished, minimising waste and pollution, and preserving biodiversity. It's important because non-sustainable resource use depletes finite resources and damages ecosystems that future generations depend on."
+  }
+]

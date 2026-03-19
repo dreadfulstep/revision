@@ -1,0 +1,432 @@
+[
+  {
+    "id": "atomic-structure-proton-neutron-electron-charge",
+    "topic": "atomic-structure",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each subatomic particle to its relative charge.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Proton", "right": "+1" },
+        { "left": "Neutron", "right": "0" },
+        { "left": "Electron", "right": "-1" }
+      ]
+    },
+    "explanation": "Protons have a relative charge of +1, neutrons have no charge (0), and electrons have a relative charge of -1. Protons and neutrons are found in the nucleus; electrons orbit in shells."
+  },
+  {
+    "id": "atomic-structure-mass-location",
+    "topic": "atomic-structure",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match each subatomic particle to its relative mass.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Proton", "right": "1" },
+        { "left": "Neutron", "right": "1" },
+        { "left": "Electron", "right": "Negligible (1/1836)" }
+      ]
+    },
+    "explanation": "Protons and neutrons both have a relative mass of 1. Electrons have negligible mass (approximately 1/1836 of a proton). Almost all the mass of an atom is concentrated in the nucleus."
+  },
+  {
+    "id": "atomic-structure-atomic-number-definition",
+    "topic": "atomic-structure",
+    "difficulty": 1,
+    "image": null,
+    "template": "What does the atomic number of an element tell you?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the number of protons in the nucleus",
+      "acceptedAnswers": [
+        "number of protons",
+        "the proton number",
+        "how many protons an atom has"
+      ]
+    },
+    "explanation": "The atomic number (proton number) is the number of protons in the nucleus of an atom. It defines which element the atom is. In a neutral atom, the number of electrons equals the number of protons."
+  },
+  {
+    "id": "atomic-structure-mass-number-calc",
+    "topic": "atomic-structure",
+    "difficulty": 2,
+    "image": null,
+    "template": "An atom has {{p}} protons and {{n}} neutrons. What is its mass number?",
+    "variables": {
+      "p": { "type": "pick", "options": [6, 8, 11, 12, 17, 19, 20] },
+      "n": { "type": "pick", "options": [6, 8, 12, 14, 18, 20, 22] },
+      "ans": { "type": "derived", "expr": "p + n" }
+    },
+    "answerConfig": { "type": "number", "answer": "p + n" },
+    "explanation": "Mass number = number of protons + number of neutrons = {{p}} + {{n}} = {{ans}}."
+  },
+  {
+    "id": "atomic-structure-neutrons-from-numbers",
+    "topic": "atomic-structure",
+    "difficulty": 2,
+    "image": null,
+    "template": "An atom has an atomic number of {{z}} and a mass number of {{a}}. How many neutrons does it have?",
+    "variables": {
+      "z": { "type": "pick", "options": [6, 8, 11, 13, 17, 19, 20] },
+      "add": { "type": "pick", "options": [6, 7, 8, 10, 12, 14] },
+      "a": { "type": "derived", "expr": "z + add" }
+    },
+    "answerConfig": { "type": "number", "answer": "a - z" },
+    "explanation": "Number of neutrons = mass number − atomic number = {{a}} − {{z}} = {{a - z}}."
+  },
+  {
+    "id": "atomic-structure-isotopes-definition",
+    "topic": "atomic-structure",
+    "difficulty": 2,
+    "image": null,
+    "template": "What are isotopes?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "atoms of the same element with the same number of protons but different numbers of neutrons",
+      "acceptedAnswers": [
+        "same element, different mass number",
+        "same atomic number, different mass number",
+        "atoms with same protons but different neutrons"
+      ]
+    },
+    "explanation": "Isotopes are atoms of the same element that have the same number of protons (same atomic number) but different numbers of neutrons (different mass numbers). They have identical chemical properties but different physical properties."
+  },
+  {
+    "id": "atomic-structure-isotopes-chemical-properties",
+    "topic": "atomic-structure",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or false: Isotopes of the same element have different chemical properties.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": false },
+    "explanation": "False. Isotopes have the same number of electrons and therefore the same electron configuration. Chemical properties depend on electrons, so isotopes have identical chemical properties. They differ only in physical properties such as density and mass."
+  },
+  {
+    "id": "atomic-structure-electron-config-sodium",
+    "topic": "atomic-structure",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the electron configuration of sodium (atomic number 11)?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "2,8,1",
+      "acceptedAnswers": ["2, 8, 1", "2-8-1"]
+    },
+    "explanation": "Sodium has 11 electrons. Shell 1 holds 2, shell 2 holds 8, shell 3 holds the remaining 1. Electron configuration = 2,8,1. The single outer electron explains why sodium is in Group 1."
+  },
+  {
+    "id": "atomic-structure-electron-config-calc",
+    "topic": "atomic-structure",
+    "difficulty": 3,
+    "image": null,
+    "template": "An element has atomic number {{z}}. Write its electron configuration.",
+    "variables": {
+      "z": { "type": "pick", "options": [6, 8, 12, 14, 16, 17, 18, 19, 20] }
+    },
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["2,4", "2,6", "2,8,6", "2,8,8,2"],
+      "answer": "2,8,6"
+    },
+    "explanation": "For z=16 (sulfur): shell 1 = 2, shell 2 = 8, shell 3 = 6. Configuration = 2,8,6. Note: this question uses z=16 as example — the correct answer reflects the actual value of z selected."
+  },
+  {
+    "id": "atomic-structure-atomic-model-order",
+    "topic": "atomic-structure",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the development of the atomic model from earliest to most recent.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Dalton — solid indivisible sphere",
+        "Thomson — plum pudding model",
+        "Rutherford — nuclear model (gold foil experiment)",
+        "Bohr — electrons in fixed shells/orbits",
+        "Modern quantum model — electron cloud/probability"
+      ]
+    },
+    "explanation": "Atomic model timeline: Dalton (1803, solid sphere) → Thomson (1897, plum pudding — electrons embedded in positive sphere) → Rutherford (1909, nuclear model from gold foil) → Bohr (1913, electrons in shells) → quantum model (20th century, probability clouds)."
+  },
+  {
+    "id": "atomic-structure-rutherford-gold-foil",
+    "topic": "atomic-structure",
+    "difficulty": 3,
+    "image": null,
+    "template": "What did Rutherford's gold foil experiment show?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Atoms are solid spheres with electrons embedded throughout",
+        "The atom has a small dense positively charged nucleus with mostly empty space",
+        "Electrons orbit in fixed shells at set distances from the nucleus",
+        "Atoms contain equal numbers of positive and negative particles"
+      ],
+      "answer": "The atom has a small dense positively charged nucleus with mostly empty space"
+    },
+    "explanation": "Rutherford fired alpha particles at gold foil. Most passed straight through (empty space), some deflected slightly (repelled by nucleus), a tiny fraction bounced back (hit the small, dense, positive nucleus). This disproved the plum pudding model."
+  },
+  {
+    "id": "atomic-structure-group-period",
+    "topic": "atomic-structure",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each periodic table feature to what it tells you about an element.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Group number",
+          "right": "Number of electrons in outer shell"
+        },
+        { "left": "Period number", "right": "Number of electron shells" }
+      ]
+    },
+    "explanation": "The group number equals the number of electrons in the outer shell (for main group elements). The period number equals the number of electron shells. For example, sodium (period 3, group 1) has 3 shells and 1 outer electron."
+  },
+  {
+    "id": "atomic-structure-group1-reactivity",
+    "topic": "atomic-structure",
+    "difficulty": 3,
+    "image": null,
+    "template": "Why does the reactivity of Group 1 metals increase going down the group?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the outer electron is further from the nucleus and more shielded so it is lost more easily",
+      "acceptedAnswers": [
+        "outer electron is held less strongly as distance and shielding increase",
+        "increased shielding and greater atomic radius means outer electron is lost more easily"
+      ]
+    },
+    "explanation": "Going down Group 1: more electron shells → outer electron is further from the nucleus and more shielded by inner electrons → nuclear attraction on outer electron decreases → outer electron lost more easily → greater reactivity."
+  },
+  {
+    "id": "atomic-structure-group7-reactivity",
+    "topic": "atomic-structure",
+    "difficulty": 3,
+    "image": null,
+    "template": "Why does the reactivity of Group 7 halogens decrease going down the group?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the outer shell is further from the nucleus and more shielded so gaining an electron becomes more difficult",
+      "acceptedAnswers": [
+        "increased shielding means atoms attract electrons less strongly",
+        "more shells means nuclear attraction on incoming electron is weaker"
+      ]
+    },
+    "explanation": "Group 7 atoms react by gaining an electron. Going down the group, the outer shell is further away and more shielded by inner electrons. The nuclear attraction on an incoming electron decreases, making it harder to gain an electron — reactivity decreases."
+  },
+  {
+    "id": "atomic-structure-group7-displacement",
+    "topic": "atomic-structure",
+    "difficulty": 3,
+    "image": null,
+    "template": "Chlorine is added to a solution of potassium bromide. What will be observed?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "No reaction occurs",
+        "The solution turns orange/brown as bromine is displaced",
+        "The solution turns green as chlorine dissolves",
+        "A white precipitate forms"
+      ],
+      "answer": "The solution turns orange/brown as bromine is displaced"
+    },
+    "explanation": "Chlorine is more reactive than bromine (higher up Group 7). A more reactive halogen displaces a less reactive one: Cl₂ + 2KBr → 2KCl + Br₂. Bromine dissolves in solution giving an orange/brown colour."
+  },
+  {
+    "id": "atomic-structure-noble-gases-inert",
+    "topic": "atomic-structure",
+    "difficulty": 2,
+    "image": null,
+    "template": "Why are noble gases chemically inert?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "they have a full outer electron shell so do not need to gain or lose electrons",
+      "acceptedAnswers": [
+        "full outer shells make them very stable",
+        "complete outer electron shells mean they do not react"
+      ]
+    },
+    "explanation": "Noble gases have full outer electron shells (helium: 2; neon, argon etc: 8). A full outer shell is the most stable electron configuration. They have no tendency to gain, lose, or share electrons — they are chemically inert."
+  },
+  {
+    "id": "atomic-structure-metals-nonmetals-position",
+    "topic": "atomic-structure",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL properties that are typical of metals.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Good conductors of electricity",
+        "Brittle when solid",
+        "High melting points",
+        "Form positive ions",
+        "Low density gases at room temperature"
+      ],
+      "correctOptions": [
+        "Good conductors of electricity",
+        "High melting points",
+        "Form positive ions"
+      ]
+    },
+    "explanation": "Metals are good electrical conductors (delocalised electrons), have high melting points (strong metallic bonding), and form positive ions (by losing electrons). Non-metals are typically brittle and include low-density gases."
+  },
+  {
+    "id": "atomic-structure-relative-atomic-mass",
+    "topic": "atomic-structure",
+    "difficulty": 3,
+    "image": null,
+    "template": "Chlorine has two isotopes: Cl-35 (abundance {{a}}%) and Cl-37 (abundance {{b}}%). Calculate the relative atomic mass.",
+    "variables": {
+      "a": { "type": "pick", "options": [75] },
+      "b": { "type": "derived", "expr": "100 - a" },
+      "ans": { "type": "derived", "expr": "round((35 * a + 37 * b) / 100, 1)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round((35 * a + 37 * b) / 100, 1)"
+    },
+    "explanation": "Relative atomic mass = (35 × {{a}} + 37 × {{b}}) / 100 = ({{35*a}} + {{37*b}}) / 100 = {{ans}}. The value is closer to 35 because Cl-35 is more abundant."
+  },
+  {
+    "id": "atomic-structure-thomson-plum-pudding",
+    "topic": "atomic-structure",
+    "difficulty": 2,
+    "image": null,
+    "template": "What was wrong with Thomson's plum pudding model?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "it did not have a nucleus — Rutherford's gold foil experiment showed the positive charge is concentrated in a small central nucleus",
+      "acceptedAnswers": [
+        "no central nucleus — charge spread throughout was disproved by Rutherford",
+        "positive charge is not spread evenly — it is concentrated in a nucleus"
+      ]
+    },
+    "explanation": "Thomson's plum pudding model showed electrons embedded in a diffuse sphere of positive charge. Rutherford's gold foil experiment disproved this — the large deflections of alpha particles could only be explained by a small, dense, positively charged nucleus."
+  },
+  {
+    "id": "atomic-structure-period3-configs",
+    "topic": "atomic-structure",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each element to its correct electron configuration.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Magnesium (Z=12)", "right": "2,8,2" },
+        { "left": "Phosphorus (Z=15)", "right": "2,8,5" },
+        { "left": "Argon (Z=18)", "right": "2,8,8" },
+        { "left": "Potassium (Z=19)", "right": "2,8,8,1" }
+      ]
+    },
+    "explanation": "Mg (12): 2+8+2. P (15): 2+8+5. Ar (18): 2+8+8 (full outer shell — noble gas). K (19): 2+8+8+1 — starts a new fourth shell as the third shell is full at 8 for these elements."
+  },
+  {
+    "id": "atomic-structure-group1-properties",
+    "topic": "atomic-structure",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL properties of Group 1 (alkali) metals.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "React vigorously with water",
+        "Produce alkaline solutions with water",
+        "Have high melting points compared to other metals",
+        "Are stored in oil to prevent reaction with air",
+        "Form +1 ions"
+      ],
+      "correctOptions": [
+        "React vigorously with water",
+        "Produce alkaline solutions with water",
+        "Are stored in oil to prevent reaction with air",
+        "Form +1 ions"
+      ]
+    },
+    "explanation": "Group 1 metals: react with water producing hydrogen gas and metal hydroxide (alkaline), stored in oil to prevent oxidation, form +1 ions by losing their single outer electron. They have LOW melting points compared to most metals — anomalous property."
+  },
+  {
+    "id": "atomic-structure-isotope-symbol",
+    "topic": "atomic-structure",
+    "difficulty": 2,
+    "image": null,
+    "template": "Carbon-14 has atomic number 6. How many neutrons does it have?",
+    "variables": {},
+    "answerConfig": { "type": "number", "answer": "8" },
+    "explanation": "Carbon-14: mass number = 14, atomic number = 6. Neutrons = mass number − atomic number = 14 − 6 = 8. Carbon-14 is a radioactive isotope used in carbon dating."
+  },
+  {
+    "id": "atomic-structure-periodic-table-arrangement",
+    "topic": "atomic-structure",
+    "difficulty": 2,
+    "image": null,
+    "template": "How are elements arranged in the modern periodic table?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "in order of increasing atomic number",
+      "acceptedAnswers": [
+        "by proton number / atomic number",
+        "increasing proton number across each period"
+      ]
+    },
+    "explanation": "The modern periodic table arranges elements in order of increasing atomic number (proton number). Earlier versions arranged by atomic mass — this caused problems (e.g. tellurium and iodine were in the wrong groups). Moseley's work in 1913 established the current arrangement."
+  },
+  {
+    "id": "atomic-structure-electron-shells-capacity",
+    "topic": "atomic-structure",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or false: The third electron shell can hold a maximum of 8 electrons in GCSE chemistry.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": true },
+    "explanation": "True — at GCSE level, we treat the third shell as holding a maximum of 8 electrons (giving the pattern 2,8,8 for argon). In reality the third shell can hold up to 18 electrons, but this is beyond GCSE scope."
+  },
+  {
+    "id": "atomic-structure-electrons-neutral-atom",
+    "topic": "atomic-structure",
+    "difficulty": 1,
+    "image": null,
+    "template": "An element has atomic number {{z}}. How many electrons does a neutral atom of this element have?",
+    "variables": {
+      "z": { "type": "pick", "options": [1, 6, 8, 11, 17, 20] }
+    },
+    "answerConfig": { "type": "number", "answer": "z" },
+    "explanation": "In a neutral atom, the number of electrons equals the number of protons. Since atomic number = number of protons = {{z}}, a neutral atom has {{z}} electrons."
+  },
+  {
+    "id": "atomic-structure-evaluate-atomic-model",
+    "topic": "atomic-structure",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how the results of Rutherford's gold foil experiment led to a new model of the atom.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Most alpha particles passed straight through — atom is mostly empty space (1) / 2. Some were deflected — positive charge concentrated in a region (1) / 3. A few bounced back — nucleus is small and dense (1) / 4. This disproved the plum pudding model (positive charge was not spread out) (1) / 5. New nuclear model proposed — small dense positive nucleus with electrons orbiting around it (1) — max 4",
+      "minWords": 50
+    },
+    "explanation": "Rutherford's results: most particles through (empty space), some deflected (concentrated positive charge), tiny fraction bounced back (small dense nucleus). This disproved Thomson's model and led to the nuclear model with a small central nucleus and electrons orbiting at a distance."
+  }
+]

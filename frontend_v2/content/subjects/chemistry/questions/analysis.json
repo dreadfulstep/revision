@@ -1,0 +1,354 @@
+[
+  {
+    "id": "analysis-pure-substance",
+    "topic": "analysis",
+    "difficulty": 1,
+    "image": null,
+    "template": "How can you tell if a substance is pure using its melting point?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a pure substance has a sharp single melting point while an impure substance melts over a range of temperatures",
+      "acceptedAnswers": [
+        "pure substances melt at one specific temperature; mixtures melt over a range",
+        "sharp melting point = pure; broad/low melting point range = impure"
+      ]
+    },
+    "explanation": "A pure substance melts at one specific temperature (sharp melting point). An impure substance or mixture melts over a range of temperatures (usually lower than the pure substance's melting point). This is how melting/boiling point data can confirm purity."
+  },
+  {
+    "id": "analysis-rf-definition",
+    "topic": "analysis",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the formula for calculating Rf value in chromatography?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Rf = distance moved by substance / distance moved by solvent front",
+      "acceptedAnswers": [
+        "distance of spot from baseline ÷ distance of solvent front from baseline",
+        "Rf = spot distance / solvent front distance"
+      ]
+    },
+    "explanation": "Rf = distance moved by substance ÷ distance moved by solvent front. Rf values are always between 0 and 1. A particular substance always has the same Rf in the same solvent — useful for identification by comparing to known standards."
+  },
+  {
+    "id": "analysis-rf-calculation",
+    "topic": "analysis",
+    "difficulty": 2,
+    "image": null,
+    "template": "A spot travels {{spot}} cm and the solvent front travels {{solvent}} cm. Calculate the Rf value.",
+    "variables": {
+      "solvent": { "type": "pick", "options": [8, 10, 12, 15, 16, 20] },
+      "pct": { "type": "pick", "options": [25, 30, 40, 50, 60, 75, 80] },
+      "spot": { "type": "derived", "expr": "round(solvent * pct / 100, 1)" },
+      "ans": { "type": "derived", "expr": "round(spot / solvent, 2)" }
+    },
+    "answerConfig": { "type": "number", "answer": "round(spot / solvent, 2)" },
+    "explanation": "Rf = distance spot moved ÷ distance solvent moved = {{spot}} ÷ {{solvent}} = {{ans}}. Rf is a dimensionless ratio between 0 and 1."
+  },
+  {
+    "id": "analysis-chromatography-pure-mixture",
+    "topic": "analysis",
+    "difficulty": 2,
+    "image": null,
+    "template": "A sample produces ONE spot in paper chromatography. What does this suggest?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The sample is definitely a pure substance",
+        "The sample may be pure or may contain components with identical Rf values",
+        "The sample is a mixture",
+        "The chromatography did not work"
+      ],
+      "answer": "The sample may be pure or may contain components with identical Rf values"
+    },
+    "explanation": "One spot suggests the sample may be pure. However, it could also contain two substances with identical Rf values in that solvent. To confirm purity, the chromatography should be repeated with a different solvent. Multiple spots definitely indicate a mixture."
+  },
+  {
+    "id": "analysis-flame-test-colours",
+    "topic": "analysis",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each metal ion to the flame colour it produces.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Lithium (Li⁺)", "right": "Crimson/red" },
+        { "left": "Sodium (Na⁺)", "right": "Yellow" },
+        { "left": "Potassium (K⁺)", "right": "Lilac/purple" },
+        { "left": "Calcium (Ca²⁺)", "right": "Orange-red" },
+        { "left": "Copper (Cu²⁺)", "right": "Green/blue-green" }
+      ]
+    },
+    "explanation": "Flame test colours: Li = crimson, Na = yellow (very distinctive, even tiny amounts), K = lilac, Ca = orange-red, Cu = green. These are caused by electrons absorbing heat energy and emitting specific wavelengths of light when falling back to lower energy levels."
+  },
+  {
+    "id": "analysis-naoh-precipitate-colours",
+    "topic": "analysis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each metal ion to the colour of precipitate formed when NaOH is added.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Fe²⁺ (iron(II))", "right": "Green precipitate" },
+        { "left": "Fe³⁺ (iron(III))", "right": "Brown/rust precipitate" },
+        { "left": "Cu²⁺ (copper)", "right": "Blue precipitate" },
+        { "left": "Al³⁺, Ca²⁺, Mg²⁺", "right": "White precipitate" }
+      ]
+    },
+    "explanation": "NaOH precipitate test: Fe²⁺ → green Fe(OH)₂, Fe³⁺ → brown/rust Fe(OH)₃, Cu²⁺ → blue Cu(OH)₂, Al³⁺/Ca²⁺/Mg²⁺ → white precipitates. Al³⁺ unique: white precipitate dissolves in excess NaOH (amphoteric). Ca²⁺ and Mg²⁺ white precipitates do not dissolve in excess."
+  },
+  {
+    "id": "analysis-aluminium-distinction",
+    "topic": "analysis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Both aluminium and calcium ions produce a white precipitate with NaOH. How can you distinguish between them?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "add excess NaOH — the aluminium hydroxide precipitate dissolves while calcium hydroxide does not",
+      "acceptedAnswers": [
+        "Al(OH)₃ dissolves in excess NaOH forming aluminate ion; Ca(OH)₂ remains as white precipitate",
+        "excess NaOH dissolves the Al³⁺ precipitate but not Ca²⁺"
+      ]
+    },
+    "explanation": "Both Al³⁺ and Ca²⁺ (and Mg²⁺) give white precipitates with NaOH. Adding excess NaOH distinguishes them: Al(OH)₃ is amphoteric and dissolves in excess NaOH forming aluminate ions (Al(OH)₄⁻). Ca(OH)₂ and Mg(OH)₂ do not dissolve in excess NaOH."
+  },
+  {
+    "id": "analysis-gas-tests",
+    "topic": "analysis",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each gas to its correct laboratory test.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Hydrogen", "right": "Lit splint — squeaky pop" },
+        { "left": "Oxygen", "right": "Glowing splint — relights" },
+        { "left": "Carbon dioxide", "right": "Limewater — turns milky" },
+        { "left": "Ammonia", "right": "Damp red litmus paper — turns blue" },
+        {
+          "left": "Hydrogen chloride",
+          "right": "Damp blue litmus paper — turns red"
+        }
+      ]
+    },
+    "explanation": "Gas tests: H₂ — lit splint → squeaky pop (H₂ ignites). O₂ — glowing splint relights (supports combustion). CO₂ — turns limewater milky (Ca(OH)₂ + CO₂ → CaCO₃). NH₃ — turns damp red litmus blue (alkaline). HCl — turns damp blue litmus red (acidic), also produces white smoke with NH₃."
+  },
+  {
+    "id": "analysis-halide-tests",
+    "topic": "analysis",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each halide ion to the precipitate colour formed when silver nitrate solution is added.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Chloride (Cl⁻)", "right": "White precipitate of AgCl" },
+        { "left": "Bromide (Br⁻)", "right": "Cream precipitate of AgBr" },
+        { "left": "Iodide (I⁻)", "right": "Yellow precipitate of AgI" }
+      ]
+    },
+    "explanation": "Silver nitrate test for halides: add dilute HNO₃ (to remove interfering carbonate/sulfate ions) then AgNO₃ solution. Cl⁻ → white AgCl, Br⁻ → cream AgBr, I⁻ → yellow AgI. Solubility: AgCl dissolves in dilute NH₃; AgBr dissolves in concentrated NH₃; AgI insoluble in NH₃."
+  },
+  {
+    "id": "analysis-carbonate-test",
+    "topic": "analysis",
+    "difficulty": 2,
+    "image": null,
+    "template": "How do you test for the presence of carbonate ions (CO₃²⁻)?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "add dilute acid — if carbonate is present CO₂ is produced which turns limewater milky",
+      "acceptedAnswers": [
+        "add dilute HCl or H₂SO₄ — effervescence occurs and gas turns limewater milky",
+        "add acid — CO₂ produced which gives positive limewater test"
+      ]
+    },
+    "explanation": "Carbonate test: add dilute acid (HCl or H₂SO₄). CO₃²⁻ + 2H⁺ → H₂O + CO₂. The CO₂ produced is confirmed by bubbling through limewater (Ca(OH)₂) — which turns milky/white as CaCO₃ precipitate forms."
+  },
+  {
+    "id": "analysis-sulfate-test",
+    "topic": "analysis",
+    "difficulty": 2,
+    "image": null,
+    "template": "How do you test for the presence of sulfate ions (SO₄²⁻)?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "add dilute hydrochloric acid then barium chloride solution — a white precipitate of barium sulfate forms",
+      "acceptedAnswers": [
+        "add HCl and BaCl₂ solution — white precipitate forms if sulfate present",
+        "barium chloride with acidified solution — white BaSO₄ precipitate"
+      ]
+    },
+    "explanation": "Sulfate test: add dilute HCl (removes interfering ions) then BaCl₂ solution. SO₄²⁻ + Ba²⁺ → BaSO₄↓ (white precipitate). BaSO₄ is insoluble — the precipitate confirms sulfate. The HCl prevents carbonate interference (carbonates also give precipitates with barium)."
+  },
+  {
+    "id": "analysis-chromatography-uses",
+    "topic": "analysis",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL correct uses of paper/thin-layer chromatography.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Identifying substances by comparing Rf values",
+        "Separating a mixture into pure components",
+        "Determining the number of substances in a mixture",
+        "Measuring the mass of each component",
+        "Testing food colourings for illegal additives"
+      ],
+      "correctOptions": [
+        "Identifying substances by comparing Rf values",
+        "Separating a mixture into pure components",
+        "Determining the number of substances in a mixture",
+        "Testing food colourings for illegal additives"
+      ]
+    },
+    "explanation": "Chromatography is used for: identification (Rf comparison), separation of mixtures, determining number of components (number of spots), forensic analysis, food testing. It cannot directly measure mass of each component (that requires quantitative techniques)."
+  },
+  {
+    "id": "analysis-limewater-test",
+    "topic": "analysis",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is the result of bubbling carbon dioxide through limewater?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the limewater turns milky or cloudy white",
+      "acceptedAnswers": [
+        "limewater goes cloudy/milky",
+        "a white precipitate forms — calcium carbonate"
+      ]
+    },
+    "explanation": "Limewater is calcium hydroxide solution (Ca(OH)₂). CO₂ + Ca(OH)₂ → CaCO₃ + H₂O. Calcium carbonate is insoluble, forming a white precipitate that makes the limewater appear milky/cloudy. If excess CO₂ is bubbled through, the precipitate redissolves (forming calcium bicarbonate)."
+  },
+  {
+    "id": "analysis-instrumental-methods",
+    "topic": "analysis",
+    "difficulty": 4,
+    "image": null,
+    "template": "Give TWO advantages of instrumental methods of analysis over traditional chemical tests.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Can detect very small amounts of substance (high sensitivity)",
+        "Rapid — results obtained quickly",
+        "Can identify unknown substances",
+        "Do not require any equipment",
+        "Cheaper than chemical tests"
+      ],
+      "correctOptions": [
+        "Can detect very small amounts of substance (high sensitivity)",
+        "Rapid — results obtained quickly"
+      ]
+    },
+    "explanation": "Instrumental methods (GC, mass spectrometry, IR spectroscopy) advantages: high sensitivity (can detect trace amounts, e.g. ppm), rapid results, can be automated, can handle many samples. Disadvantages: expensive equipment, requires trained operators, cannot always identify completely unknown substances without databases."
+  },
+  {
+    "id": "analysis-flame-test-procedure",
+    "topic": "analysis",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the steps for carrying out a flame test correctly.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Clean the nichrome wire loop in concentrated HCl",
+        "Dip the cleaned loop in the sample solution",
+        "Hold the loop in the edge of a blue Bunsen flame",
+        "Observe and record the flame colour",
+        "Clean the loop again before testing another sample"
+      ]
+    },
+    "explanation": "Flame test procedure: clean loop in HCl to remove previous contamination → dip in sample → hold in non-luminous flame → observe colour. Must clean thoroughly between samples (especially to remove yellow Na⁺ contamination which could mask other colours)."
+  },
+  {
+    "id": "analysis-sodium-yellow-contamination",
+    "topic": "analysis",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or false: Sodium contamination can mask the flame colours of other metal ions.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": true },
+    "explanation": "True. Sodium produces an intense yellow flame that can completely overwhelm other colours. Even trace contamination from fingerprints or previous tests gives a yellow flame. This is why the nichrome wire must be thoroughly cleaned in HCl between tests and the loop must not be touched with fingers."
+  },
+  {
+    "id": "analysis-rf-range",
+    "topic": "analysis",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is the possible range of Rf values?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "between 0 and 1",
+      "acceptedAnswers": ["0 to 1", "0–1", "0 and 1", "from 0 to 1"]
+    },
+    "explanation": "Rf values are always between 0 and 1. Rf = 0 means the substance did not move at all (strongly attracted to stationary phase). Rf = 1 means the substance moved as far as the solvent front (no attraction to stationary phase). An Rf > 1 is impossible."
+  },
+  {
+    "id": "analysis-identify-unknown-ion",
+    "topic": "analysis",
+    "difficulty": 4,
+    "image": null,
+    "template": "An unknown solution gives a green flame test and a blue precipitate with NaOH. Identify the metal ion present and explain your reasoning.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 3,
+      "markScheme": "1. Green flame test indicates copper ions (Cu²⁺) (1) / 2. Blue precipitate with NaOH is Cu(OH)₂ — confirms copper(II) ions (1) / 3. Both tests agree — the ion is Cu²⁺ / copper(II) (1)",
+      "minWords": 25
+    },
+    "explanation": "Green flame test → copper. NaOH blue precipitate (Cu(OH)₂) → Cu²⁺ confirmed. Both tests independently identify the same ion. The ion is Cu²⁺ (copper(II))."
+  },
+  {
+    "id": "analysis-mixture-chromatography",
+    "topic": "analysis",
+    "difficulty": 3,
+    "image": null,
+    "template": "A chromatogram shows 3 spots. What does this tell you about the sample?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the sample is a mixture containing at least 3 different substances",
+      "acceptedAnswers": [
+        "at least 3 components in the mixture",
+        "sample contains 3 substances with different Rf values"
+      ]
+    },
+    "explanation": "Each spot represents a different substance with a distinct Rf value. Three spots means at least 3 different substances are present in the sample — it is definitely a mixture. However, two substances with the same Rf might overlap — there could be more than 3 components."
+  },
+  {
+    "id": "analysis-mass-spectrometry-overview",
+    "topic": "analysis",
+    "difficulty": 4,
+    "image": null,
+    "template": "What information can mass spectrometry provide about a substance?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the relative molecular mass of the substance from the molecular ion peak and the fragmentation pattern can help identify the molecule",
+      "acceptedAnswers": [
+        "Mr from the highest m/z peak and structural information from fragmentation",
+        "molecular mass and identity of fragments to help determine structure"
+      ]
+    },
+    "explanation": "Mass spectrometry: the highest m/z value (molecular ion peak, M⁺) gives the relative molecular mass. The fragmentation pattern (other peaks) shows fragments of the molecule, helping determine its structure. Instruments can identify substances by comparing fragmentation patterns to databases."
+  }
+]

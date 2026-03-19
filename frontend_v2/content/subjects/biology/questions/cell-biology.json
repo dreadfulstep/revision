@@ -1,0 +1,407 @@
+[
+  {
+    "id": "cell-bio-prokaryote-size",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "A bacterial cell has a length of {{len}} μm. Convert this to metres.",
+    "variables": {
+      "len": { "type": "pick", "options": [2, 5, 10, 15, 20] },
+      "ans": { "type": "derived", "expr": "len * pow(10, -6)" }
+    },
+    "answerConfig": { "type": "number", "answer": "len * pow(10, -6)", "unit": "m" },
+    "explanation": "1 μm = 1×10⁻⁶ m. So {{len}} μm = {{len}} × 10⁻⁶ = {{len}}×10⁻⁶ m."
+  },
+  {
+    "id": "cell-bio-magnification-calc",
+    "topic": "cell-biology",
+    "difficulty": 3,
+    "image": null,
+    "template": "A cell has an actual size of {{actual}} μm. Under a microscope the image appears {{image}} mm. Calculate the magnification.",
+    "variables": {
+      "actual": { "type": "pick", "options": [20, 25, 40, 50] },
+      "mag":    { "type": "pick", "options": [100, 200, 400, 500] },
+      "image":  { "type": "derived", "expr": "round(actual * mag / 1000, 1)" }
+    },
+    "answerConfig": { "type": "number", "answer": "mag" },
+    "explanation": "Magnification = image size ÷ actual size. Convert: actual = {{actual}} μm = {{actual/1000}} mm. Magnification = {{image}} ÷ {{actual/1000}} = ×{{mag}}."
+  },
+  {
+    "id": "cell-bio-eukaryote-vs-prokaryote-mc",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which of the following is found in a prokaryotic cell but NOT in a eukaryotic cell?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Plasmid", "Mitochondria", "Nucleus", "Ribosomes"],
+      "answer": "Plasmid"
+    },
+    "explanation": "Prokaryotic cells have plasmids (small circular DNA), no membrane-bound nucleus, and no mitochondria. Ribosomes are found in both."
+  },
+  {
+    "id": "cell-bio-organelle-matching",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each organelle to its function.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Mitochondria",   "right": "Site of aerobic respiration" },
+        { "left": "Ribosome",       "right": "Site of protein synthesis" },
+        { "left": "Cell membrane",  "right": "Controls what enters and leaves the cell" },
+        { "left": "Nucleus",        "right": "Contains DNA and controls cell activity" },
+        { "left": "Chloroplast",    "right": "Site of photosynthesis" }
+      ]
+    },
+    "explanation": "Each organelle has a specific function: mitochondria → aerobic respiration, ribosomes → protein synthesis, cell membrane → selective permeability, nucleus → genetic control, chloroplasts → photosynthesis."
+  },
+  {
+    "id": "cell-bio-cell-wall-material",
+    "topic": "cell-biology",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is the cell wall of a plant cell made from?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "cellulose",
+      "acceptedAnswers": ["cellulose fibres", "cellulose fiber"]
+    },
+    "explanation": "Plant cell walls are made from cellulose fibres, which provide structural support."
+  },
+  {
+    "id": "cell-bio-diffusion-definition",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Define diffusion.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the net movement of particles from an area of high concentration to an area of low concentration",
+      "acceptedAnswers": [
+        "movement of particles from high to low concentration",
+        "net movement of molecules down a concentration gradient",
+        "movement down a concentration gradient"
+      ]
+    },
+    "explanation": "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration — down the concentration gradient. It is a passive process requiring no energy."
+  },
+  {
+    "id": "cell-bio-osmosis-definition",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Define osmosis.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the movement of water molecules from a dilute solution to a concentrated solution through a partially permeable membrane",
+      "acceptedAnswers": [
+        "movement of water from high water potential to low water potential through a partially permeable membrane",
+        "net movement of water through a partially permeable membrane down a water potential gradient"
+      ]
+    },
+    "explanation": "Osmosis is the net movement of water molecules from a region of high water potential (dilute solution) to a region of low water potential (concentrated solution) through a partially permeable membrane."
+  },
+  {
+    "id": "cell-bio-active-transport-energy",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or false: Active transport requires energy from respiration.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": true },
+    "explanation": "True. Active transport moves substances against the concentration gradient (from low to high concentration) and requires ATP energy produced by respiration."
+  },
+  {
+    "id": "cell-bio-mitosis-order",
+    "topic": "cell-biology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the stages of the cell cycle.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": ["DNA replication", "Cell growth", "Chromosomes line up at centre", "Chromosomes pulled apart", "Cell divides into two"]
+    },
+    "explanation": "The cell cycle: growth → DNA replication → chromosomes condense and line up → chromosomes pulled to opposite poles → cytoplasm divides (cytokinesis) producing two identical daughter cells."
+  },
+  {
+    "id": "cell-bio-stem-cell-types",
+    "topic": "cell-biology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL statements that are true about embryonic stem cells.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "They can differentiate into any cell type",
+        "They are found in adult bone marrow",
+        "They are pluripotent",
+        "Their use raises ethical concerns",
+        "They are used to treat type 2 diabetes directly"
+      ],
+      "correctOptions": [
+        "They can differentiate into any cell type",
+        "They are pluripotent",
+        "Their use raises ethical concerns"
+      ]
+    },
+    "explanation": "Embryonic stem cells are pluripotent — they can become any cell type. Their use is controversial ethically. Adult stem cells are found in bone marrow (not embryonic ones). Stem cells can treat some conditions but not directly type 2 diabetes."
+  },
+  {
+    "id": "cell-bio-surface-area-volume",
+    "topic": "cell-biology",
+    "difficulty": 3,
+    "image": null,
+    "template": "A cube-shaped cell has a side length of {{s}} μm. Calculate its surface area to volume ratio.",
+    "variables": {
+      "s":  { "type": "pick", "options": [2, 4, 5, 10] },
+      "sa": { "type": "derived", "expr": "6 * s * s" },
+      "v":  { "type": "derived", "expr": "s * s * s" },
+      "r":  { "type": "derived", "expr": "6 / s" }
+    },
+    "answerConfig": { "type": "number", "answer": "6 / s", "unit": ":1" },
+    "explanation": "Surface area = 6 × {{s}}² = {{sa}} μm². Volume = {{s}}³ = {{v}} μm³. SA:V ratio = {{sa}} ÷ {{v}} = {{r}}:1."
+  },
+  {
+    "id": "cell-bio-prokaryote-features-multiselect",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL features found in a prokaryotic cell.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": ["Cell wall", "Nucleus", "Ribosome", "Plasmid", "Mitochondria", "Cell membrane"],
+      "correctOptions": ["Cell wall", "Ribosome", "Plasmid", "Cell membrane"]
+    },
+    "explanation": "Prokaryotic cells have: cell wall, ribosomes, plasmids, cell membrane, and nucleoid region (no true nucleus). They do NOT have a nucleus or mitochondria."
+  },
+  {
+    "id": "cell-bio-microscope-resolution",
+    "topic": "cell-biology",
+    "difficulty": 3,
+    "image": null,
+    "template": "An electron microscope has a higher resolution than a light microscope. What does this mean?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "it can distinguish between two points that are closer together",
+      "acceptedAnswers": [
+        "it can show more detail",
+        "it can see smaller structures",
+        "it produces a clearer image with more detail"
+      ]
+    },
+    "explanation": "Resolution is the ability to distinguish between two separate points. A higher resolution means smaller structures can be seen as distinct — electron microscopes can resolve objects 0.1 nm apart, far better than light microscopes."
+  },
+  {
+    "id": "cell-bio-cancer-mitosis",
+    "topic": "cell-biology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how cancer is related to mitosis.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "cancer is caused by uncontrolled cell division by mitosis",
+      "acceptedAnswers": [
+        "cancer cells divide uncontrollably by mitosis",
+        "mutations cause cells to undergo mitosis repeatedly without stopping",
+        "uncontrolled mitosis leads to tumour formation"
+      ]
+    },
+    "explanation": "Cancer occurs when mutations in DNA cause cells to undergo mitosis repeatedly and uncontrollably, forming a tumour. Normal cell division is regulated but cancer cells ignore these controls."
+  },
+  {
+    "id": "cell-bio-differentiation",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is meant by cell differentiation?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the process by which a cell changes to become specialised for its function",
+      "acceptedAnswers": [
+        "when a cell becomes specialised",
+        "cells developing into specialised types",
+        "a cell adapting its structure for a specific role"
+      ]
+    },
+    "explanation": "Differentiation is the process by which unspecialised cells develop into specialised cells with a particular structure suited to their function, such as red blood cells or nerve cells."
+  },
+  {
+    "id": "cell-bio-osmosis-effect-plant",
+    "topic": "cell-biology",
+    "difficulty": 3,
+    "image": null,
+    "template": "A plant cell is placed in a solution with a lower water potential than the cell contents. What happens?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["The cell becomes turgid", "The cell becomes plasmolysed", "The cell stays the same", "The cell bursts"],
+      "answer": "The cell becomes plasmolysed"
+    },
+    "explanation": "Water moves out of the cell by osmosis (from higher water potential inside to lower water potential outside). The vacuole shrinks and the cell membrane pulls away from the cell wall — plasmolysis."
+  },
+  {
+    "id": "cell-bio-active-transport-gut",
+    "topic": "cell-biology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Glucose is absorbed from the gut into the blood even when its concentration is higher in the blood. What process is responsible?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "active transport",
+      "acceptedAnswers": ["active transport"]
+    },
+    "explanation": "Active transport moves glucose against the concentration gradient (from low to high concentration). This requires ATP from respiration and uses carrier proteins in the cell membrane."
+  },
+  {
+    "id": "cell-bio-factors-diffusion-rate",
+    "topic": "cell-biology",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL factors that increase the rate of diffusion.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Increasing concentration gradient",
+        "Decreasing surface area",
+        "Increasing temperature",
+        "Increasing thickness of membrane",
+        "Decreasing distance"
+      ],
+      "correctOptions": [
+        "Increasing concentration gradient",
+        "Increasing temperature",
+        "Decreasing distance"
+      ]
+    },
+    "explanation": "Rate of diffusion increases with: greater concentration gradient, higher temperature (more kinetic energy), shorter diffusion distance, greater surface area, thinner membrane."
+  },
+  {
+    "id": "cell-bio-therapeutic-cloning",
+    "topic": "cell-biology",
+    "difficulty": 4,
+    "image": null,
+    "template": "Suggest one advantage and one disadvantage of using therapeutic cloning to treat patients.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "Advantage — any one of: cells would not be rejected by patient's immune system (1) / tissues/organs would be genetically identical to patient (1) / could replace damaged cells/tissues (1). Disadvantage — any one of: embryo is destroyed in the process raising ethical concerns (1) / expensive/technically difficult (1) / risk of introducing mutations (1). Max 2 marks per side.",
+      "minWords": 25
+    },
+    "explanation": "Therapeutic cloning creates embryonic stem cells genetically identical to the patient, reducing rejection risk. However, it requires destroying an embryo, which raises ethical concerns."
+  },
+  {
+    "id": "cell-bio-magnification-actual-size",
+    "topic": "cell-biology",
+    "difficulty": 3,
+    "image": null,
+    "template": "An image of a cell is {{img}} mm long. The magnification is ×{{mag}}. Calculate the actual size of the cell in μm.",
+    "variables": {
+      "img": { "type": "pick", "options": [2, 4, 5, 8, 10] },
+      "mag": { "type": "pick", "options": [100, 200, 400, 500] },
+      "ans": { "type": "derived", "expr": "round((img / mag) * 1000, 2)" }
+    },
+    "answerConfig": { "type": "number", "answer": "round((img / mag) * 1000, 2)", "unit": "μm" },
+    "explanation": "Actual size = image size ÷ magnification = {{img}} mm ÷ {{mag}} = {{img/mag}} mm. Convert to μm: × 1000 = {{ans}} μm."
+  },
+  {
+    "id": "cell-bio-eukaryote-only-structures",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which structure is found in eukaryotic cells but NOT prokaryotic cells?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Ribosome", "Cell membrane", "Mitochondria", "Cell wall"],
+      "answer": "Mitochondria"
+    },
+    "explanation": "Mitochondria are membrane-bound organelles found only in eukaryotic cells. Both cell types have ribosomes and cell membranes. Cell walls are found in plants and bacteria but made of different materials."
+  },
+  {
+    "id": "cell-bio-stem-cell-adult-source",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Where in the body are adult stem cells found?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "bone marrow",
+      "acceptedAnswers": ["bone marrow", "in bone marrow"]
+    },
+    "explanation": "Adult stem cells are mainly found in bone marrow. They can differentiate into blood cells. They are less versatile than embryonic stem cells as they can only become a limited range of cell types."
+  },
+  {
+    "id": "cell-bio-osmosis-animal-cell",
+    "topic": "cell-biology",
+    "difficulty": 3,
+    "image": null,
+    "template": "What happens to an animal cell placed in pure water?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "it swells and bursts",
+      "acceptedAnswers": ["it lyses", "it takes in water and bursts", "swells and lyses", "it takes in water by osmosis and bursts"]
+    },
+    "explanation": "Water moves into the animal cell by osmosis (from high water potential outside to lower inside). Unlike plant cells, animal cells have no cell wall, so they continue to swell until they burst (lyse)."
+  },
+  {
+    "id": "cell-bio-role-of-mitosis",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "State TWO roles of mitosis in the human body.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": ["Growth", "Production of gametes", "Repair of damaged tissue", "Genetic variation", "Asexual reproduction in body cells"],
+      "correctOptions": ["Growth", "Repair of damaged tissue"]
+    },
+    "explanation": "Mitosis is used for growth (increasing cell number) and repair (replacing damaged or dead cells). Gametes are produced by meiosis, not mitosis."
+  },
+  {
+    "id": "cell-bio-plant-vs-animal-cell",
+    "topic": "cell-biology",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which structure is found in plant cells but NOT animal cells?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Mitochondria", "Permanent vacuole", "Ribosome", "Cell membrane"],
+      "answer": "Permanent vacuole"
+    },
+    "explanation": "Plant cells have a permanent vacuole (filled with cell sap), cell wall, and chloroplasts — none of which are found in animal cells. Mitochondria, ribosomes, and cell membranes are in both."
+  },
+  {
+    "id": "cell-bio-concentration-gradient-explain",
+    "topic": "cell-biology",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain why a large surface area to volume ratio is important for single-celled organisms.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 3,
+      "markScheme": "1. Single-celled organisms rely on diffusion to exchange substances with their environment (1) / 2. A large SA:V ratio means diffusion distance to the centre of the cell is short (1) / 3. Substances can diffuse in/out quickly enough to meet the cell's needs (1) / 4. In larger organisms the SA:V ratio is smaller so specialised exchange surfaces are needed (1) — max 3",
+      "minWords": 30
+    },
+    "explanation": "Single-celled organisms have a large surface area relative to their volume, meaning diffusion distances are short. This allows oxygen, glucose and other substances to reach all parts of the cell quickly enough without specialised exchange surfaces."
+  }
+]

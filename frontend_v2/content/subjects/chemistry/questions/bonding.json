@@ -1,0 +1,421 @@
+[
+  {
+    "id": "bonding-ionic-definition",
+    "topic": "bonding",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is ionic bonding?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the electrostatic attraction between oppositely charged ions formed by transfer of electrons",
+      "acceptedAnswers": [
+        "electrostatic attraction between positive and negative ions",
+        "transfer of electrons from metal to non-metal forming oppositely charged ions that attract"
+      ]
+    },
+    "explanation": "Ionic bonding involves the transfer of electrons from a metal to a non-metal. The metal loses electrons to form a positive ion; the non-metal gains electrons to form a negative ion. The strong electrostatic attraction between these oppositely charged ions is the ionic bond."
+  },
+  {
+    "id": "bonding-ionic-which-elements",
+    "topic": "bonding",
+    "difficulty": 1,
+    "image": null,
+    "template": "Which combination of elements typically forms ionic bonds?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Metal and non-metal",
+        "Two non-metals",
+        "Two metals",
+        "Non-metal and noble gas"
+      ],
+      "answer": "Metal and non-metal"
+    },
+    "explanation": "Ionic bonds form between metals and non-metals. The metal loses electrons to form a positive ion; the non-metal gains electrons to form a negative ion. Two non-metals share electrons (covalent bonding)."
+  },
+  {
+    "id": "bonding-ionic-properties",
+    "topic": "bonding",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL properties of ionic compounds.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "High melting and boiling points",
+        "Conduct electricity when dissolved in water",
+        "Conduct electricity when solid",
+        "Brittle — shatter when struck",
+        "Insoluble in water"
+      ],
+      "correctOptions": [
+        "High melting and boiling points",
+        "Conduct electricity when dissolved in water",
+        "Brittle — shatter when struck"
+      ]
+    },
+    "explanation": "Ionic compounds: high mp/bp (strong electrostatic forces in giant lattice), conduct when dissolved or molten (ions free to move), do NOT conduct when solid (ions fixed in lattice), brittle (layers of ions shift and like charges repel). Most are soluble in water."
+  },
+  {
+    "id": "bonding-ionic-conduct-solid",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why ionic compounds do not conduct electricity when solid.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the ions are fixed in the lattice and cannot move to carry charge",
+      "acceptedAnswers": [
+        "ions are held in fixed positions and cannot move",
+        "no free ions or electrons to carry current in the solid state"
+      ]
+    },
+    "explanation": "Electrical conduction requires charged particles that can move. In a solid ionic compound, ions are held in fixed positions in the giant ionic lattice by strong electrostatic forces. They cannot move, so charge cannot flow — no conduction."
+  },
+  {
+    "id": "bonding-covalent-definition",
+    "topic": "bonding",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is a covalent bond?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a shared pair of electrons between two non-metal atoms",
+      "acceptedAnswers": [
+        "sharing of a pair of electrons between atoms",
+        "two atoms sharing electrons to achieve full outer shells"
+      ]
+    },
+    "explanation": "A covalent bond is formed when two non-metal atoms each contribute one electron to form a shared pair. The shared electrons are attracted by both nuclei, holding the atoms together. Both atoms achieve a full outer shell."
+  },
+  {
+    "id": "bonding-simple-molecular-properties",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "Why do simple molecular covalent compounds have low melting points?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the intermolecular forces between molecules are weak and require little energy to overcome",
+      "acceptedAnswers": [
+        "weak van der Waals/intermolecular forces between molecules are easily broken",
+        "low energy needed to separate molecules as intermolecular forces are weak"
+      ]
+    },
+    "explanation": "Simple molecular compounds (e.g. H₂O, CO₂, CH₄) have strong covalent bonds within molecules but only weak intermolecular forces (van der Waals forces) between molecules. Only the weak intermolecular forces need to be overcome on melting — little energy required — so melting points are low."
+  },
+  {
+    "id": "bonding-giant-covalent-structures",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each giant covalent structure to its correct description.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Diamond",
+          "right": "Each carbon bonded to 4 others — very hard, does not conduct"
+        },
+        {
+          "left": "Graphite",
+          "right": "Layers of hexagonal rings — conducts electricity, slippery"
+        },
+        {
+          "left": "Silicon dioxide",
+          "right": "Each silicon bonded to 2 oxygen atoms — hard, high melting point"
+        }
+      ]
+    },
+    "explanation": "Diamond: tetrahedral 4-bond structure, extremely hard, no free electrons so no conduction. Graphite: layered structure with delocalised electrons between layers (conducts), weak forces between layers (slippery lubricant). SiO₂: giant covalent lattice, very high melting point."
+  },
+  {
+    "id": "bonding-graphite-conducts",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "Graphite is a non-metal but conducts electricity. Explain why.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "each carbon atom forms 3 covalent bonds leaving one delocalised electron per atom that can move and carry charge",
+      "acceptedAnswers": [
+        "delocalised electrons between layers are free to move and carry current",
+        "free electrons exist in graphite structure that move to conduct electricity"
+      ]
+    },
+    "explanation": "In graphite, each carbon forms 3 covalent bonds in hexagonal layers. The fourth outer electron from each carbon is delocalised — free to move throughout the structure. These mobile electrons allow graphite to conduct electricity, despite being a non-metal."
+  },
+  {
+    "id": "bonding-metallic-description",
+    "topic": "bonding",
+    "difficulty": 2,
+    "image": null,
+    "template": "Describe metallic bonding.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a lattice of positive metal ions surrounded by a sea of delocalised electrons",
+      "acceptedAnswers": [
+        "positive ions in a lattice with free/delocalised electrons between them",
+        "metal ions held together by electrostatic attraction to delocalised electrons"
+      ]
+    },
+    "explanation": "In metals, outer electrons leave their atoms to form a 'sea' of delocalised electrons. The positive metal ions are arranged in a regular lattice. The strong electrostatic attraction between the positive ions and the negative delocalised electrons holds the structure together."
+  },
+  {
+    "id": "bonding-metals-properties-explained",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each property of metals to its explanation in terms of metallic bonding.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Good electrical conductor",
+          "right": "Delocalised electrons carry charge through the metal"
+        },
+        {
+          "left": "Malleable",
+          "right": "Layers of ions can slide without breaking the structure"
+        },
+        {
+          "left": "High melting point",
+          "right": "Strong electrostatic forces between ions and electrons require much energy to overcome"
+        }
+      ]
+    },
+    "explanation": "Metals conduct due to free electrons. They are malleable because ion layers can slide over each other while still surrounded by electrons. High melting points result from the strong electrostatic attraction throughout the giant metallic lattice."
+  },
+  {
+    "id": "bonding-alloys-harder",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why alloys are harder than pure metals.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "different sized atoms in the alloy distort the regular lattice preventing layers from sliding over each other",
+      "acceptedAnswers": [
+        "foreign atoms disrupt the regular arrangement making it harder for layers to slide",
+        "atoms of different size disrupt the lattice structure preventing easy deformation"
+      ]
+    },
+    "explanation": "In a pure metal, identical atoms are arranged in regular layers that can slide easily over each other (making the metal soft/malleable). In an alloy, atoms of different sizes distort the lattice. This prevents layers from sliding as easily — the alloy is harder and stronger."
+  },
+  {
+    "id": "bonding-nanoparticles-definition",
+    "topic": "bonding",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the size range of nanoparticles?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "1 to 100 nanometres",
+      "acceptedAnswers": [
+        "1-100 nm",
+        "1 to 100 nm",
+        "between 1 and 100 nanometres"
+      ]
+    },
+    "explanation": "Nanoparticles have dimensions in the range 1–100 nm (nanometres). At this scale, materials can exhibit different properties from their bulk form due to the very high surface area to volume ratio."
+  },
+  {
+    "id": "bonding-nanoparticles-sa-v",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "Why do nanoparticles have different properties from larger pieces of the same material?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "nanoparticles have a much larger surface area to volume ratio so more atoms are on the surface and can interact with other substances",
+      "acceptedAnswers": [
+        "very high surface area to volume ratio gives different chemical and physical properties",
+        "most atoms are at the surface at nanoscale changing how the material behaves"
+      ]
+    },
+    "explanation": "As particles get smaller, the surface area to volume ratio increases dramatically. At nanoscale, nearly all atoms are on the surface. This increases reactivity and can produce novel optical, electrical, and mechanical properties not seen in bulk materials."
+  },
+  {
+    "id": "bonding-fullerenes-buckminsterfullerene",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "How many carbon atoms are in a buckminsterfullerene molecule?",
+    "variables": {},
+    "answerConfig": { "type": "number", "answer": "60" },
+    "explanation": "Buckminsterfullerene (C₆₀) contains 60 carbon atoms arranged in a sphere of pentagons and hexagons — resembling a football. It was the first fullerene discovered and has potential uses in drug delivery."
+  },
+  {
+    "id": "bonding-graphene-properties",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL correct statements about graphene.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "It is a single layer of graphite one atom thick",
+        "It conducts electricity",
+        "It is very strong despite being thin",
+        "It does not contain carbon",
+        "It has a lower melting point than diamond"
+      ],
+      "correctOptions": [
+        "It is a single layer of graphite one atom thick",
+        "It conducts electricity",
+        "It is very strong despite being thin"
+      ]
+    },
+    "explanation": "Graphene is a single layer of carbon atoms arranged in a hexagonal lattice — essentially one layer of graphite. It conducts electricity (delocalised electrons), is extremely strong, and is one of the hardest known materials. It is entirely made of carbon."
+  },
+  {
+    "id": "bonding-polymer-properties",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why different polymers have different melting points.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the strength of intermolecular forces between polymer chains depends on chain length and structure — stronger forces give higher melting points",
+      "acceptedAnswers": [
+        "longer chains or more polar groups create stronger intermolecular forces requiring more energy to melt",
+        "melting point depends on the strength of forces between polymer molecules"
+      ]
+    },
+    "explanation": "Polymers are large molecules. The melting point depends on the intermolecular forces between chains. Longer chains or chains with polar groups have stronger intermolecular forces — more energy needed to separate them — higher melting point. Thermosetting polymers have cross-links and don't melt."
+  },
+  {
+    "id": "bonding-ionic-vs-covalent",
+    "topic": "bonding",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order these steps to describe how an ionic bond forms between sodium and chlorine.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Sodium atom has 1 outer electron",
+        "Sodium transfers its outer electron to chlorine",
+        "Sodium becomes Na⁺ ion (full outer shell)",
+        "Chlorine becomes Cl⁻ ion (full outer shell)",
+        "Electrostatic attraction between Na⁺ and Cl⁻ forms ionic bond"
+      ]
+    },
+    "explanation": "Ionic bond formation in NaCl: Na has 1 outer electron (2,8,1) → transfers to Cl (2,8,7) → Na⁺ formed (2,8) + Cl⁻ formed (2,8,8) → strong electrostatic attraction between oppositely charged ions."
+  },
+  {
+    "id": "bonding-diamond-hard",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why diamond is extremely hard.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "each carbon atom forms four strong covalent bonds in a tetrahedral arrangement creating a rigid giant covalent lattice",
+      "acceptedAnswers": [
+        "giant covalent structure with each carbon bonded to four others — very rigid",
+        "four covalent bonds per carbon in all directions creates extremely strong 3D structure"
+      ]
+    },
+    "explanation": "In diamond, each carbon atom forms 4 strong covalent bonds in a tetrahedral arrangement. This creates a rigid 3D giant covalent lattice with strong bonds in all directions. Breaking diamond requires breaking many strong C–C covalent bonds — extremely hard."
+  },
+  {
+    "id": "bonding-ionic-giant-lattice",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "Why do ionic compounds have high melting points?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "there are strong electrostatic forces of attraction between many oppositely charged ions in the giant ionic lattice requiring a lot of energy to overcome",
+      "acceptedAnswers": [
+        "strong forces between positive and negative ions in the lattice need lots of energy to break",
+        "many strong ionic bonds throughout the lattice structure require high energy to disrupt"
+      ]
+    },
+    "explanation": "Ionic compounds form giant ionic lattices where each ion is surrounded by oppositely charged ions. The strong electrostatic forces act in all directions throughout the lattice. Breaking these forces requires a large amount of energy — hence high melting and boiling points."
+  },
+  {
+    "id": "bonding-nanoparticles-risks",
+    "topic": "bonding",
+    "difficulty": 4,
+    "image": null,
+    "template": "Evaluate the use of nanoparticles in consumer products such as sunscreen and antibacterial surfaces.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "Benefits (max 2): enhanced UV protection in sunscreen due to large SA:V (1) / antibacterial properties more effective than bulk material (1) / targeted drug delivery possible (1). Risks (max 2): long-term health effects unknown — may penetrate cells/organs (1) / environmental impact of nanoparticle release not fully understood (1) / regulation is limited (1). Balanced conclusion for full marks.",
+      "minWords": 50
+    },
+    "explanation": "Nanoparticles offer enhanced performance in sunscreen (better UV absorption), antibacterial coatings, and drug delivery. However, their small size means they can penetrate biological membranes and their long-term toxicity is poorly understood — cautious use is recommended."
+  },
+  {
+    "id": "bonding-bonding-types-summary",
+    "topic": "bonding",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each type of substance to its bonding and structure.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Sodium chloride", "right": "Giant ionic lattice" },
+        { "left": "Water", "right": "Simple molecular covalent" },
+        { "left": "Diamond", "right": "Giant covalent lattice" },
+        { "left": "Copper", "right": "Giant metallic lattice" }
+      ]
+    },
+    "explanation": "NaCl: giant ionic lattice (metal + non-metal, electron transfer). Water: simple molecular (non-metal + non-metal, small molecules). Diamond: giant covalent (carbon, all strong bonds throughout). Copper: giant metallic (positive ions + delocalised electrons)."
+  },
+  {
+    "id": "bonding-carbon-nanotubes",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "State TWO uses of carbon nanotubes.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Reinforcing materials — added to composites for strength",
+        "Electrical conductors in nano-circuits",
+        "As a food preservative",
+        "Replacing ionic compounds in batteries",
+        "Drug delivery into cells"
+      ],
+      "correctOptions": [
+        "Reinforcing materials — added to composites for strength",
+        "Electrical conductors in nano-circuits"
+      ]
+    },
+    "explanation": "Carbon nanotubes are extremely strong (useful in composite materials) and conduct electricity (useful in nanotechnology circuits). They also have potential in drug delivery. They do not function as food preservatives or replace ionic compounds in batteries."
+  },
+  {
+    "id": "bonding-fullerenes-uses",
+    "topic": "bonding",
+    "difficulty": 3,
+    "image": null,
+    "template": "True or false: Fullerenes can be used to trap and deliver drug molecules inside their hollow cage structure.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": true },
+    "explanation": "True. Fullerenes such as C₆₀ have hollow cage-like structures that can encapsulate other molecules including drug molecules. This makes them promising candidates for targeted drug delivery systems in medicine."
+  }
+]

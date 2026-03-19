@@ -8,6 +8,8 @@ type Props = {
   pairs: Pair[];
   onChange: (v: string) => void;
   disabled?: boolean;
+  matchingResults?: Record<string, boolean> | null;
+  correctAnswer?: Record<string, string>;
 };
 
 const COLORS = [
@@ -23,7 +25,13 @@ type Connection = { left: string; right: string; color: string };
 type PathData = { d: string; color: string; key: string };
 type Point = { x: number; y: number };
 
-export default function Matching({ pairs, onChange, disabled }: Props) {
+export default function Matching({
+  pairs,
+  onChange,
+  disabled,
+  matchingResults,
+  correctAnswer,
+}: Props) {
   const [rights, setRights] = useState<string[]>(() =>
     pairs.map((p) => p.right),
   );
@@ -292,6 +300,12 @@ export default function Matching({ pairs, onChange, disabled }: Props) {
             const isDraggingThis = dragFrom === p.left;
             const color = getConnectionColor(p.left);
 
+            const isMatchCorrect =
+              matchingResults != null && matchingResults[p.left] === true;
+            const isMatchWrong =
+              matchingResults != null && matchingResults[p.left] === false;
+            const showCorrectVal = isMatchWrong && correctAnswer?.[p.left];
+
             return (
               <button
                 key={p.left}
@@ -315,6 +329,8 @@ export default function Matching({ pairs, onChange, disabled }: Props) {
                     !isMatched &&
                     !isDraggingThis &&
                     "border-border bg-card hover:border-muted-foreground/30 shadow-sm",
+                  isMatchCorrect && "border-score-high bg-score-high/10",
+                  isMatchWrong && "border-score-low bg-score-low/10",
                 )}
                 style={
                   isMatched || isDraggingThis
@@ -327,6 +343,11 @@ export default function Matching({ pairs, onChange, disabled }: Props) {
                 }
               >
                 {p.left}
+                {showCorrectVal && (
+                  <span className="block text-[10px] text-score-high mt-0.5 font-normal">
+                    → {correctAnswer![p.left]}
+                  </span>
+                )}
               </button>
             );
           })}

@@ -1,0 +1,356 @@
+[
+  {
+    "id": "energy-exothermic-definition",
+    "topic": "energy-changes",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is an exothermic reaction?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a reaction that transfers energy to the surroundings causing the temperature to increase",
+      "acceptedAnswers": [
+        "reaction that releases heat energy to surroundings",
+        "energy is released — temperature of surroundings rises",
+        "reaction with negative enthalpy change that heats surroundings"
+      ]
+    },
+    "explanation": "An exothermic reaction transfers (releases) energy to the surroundings. The temperature of the reaction mixture and surroundings increases. The products have less energy than the reactants. ΔH is negative."
+  },
+  {
+    "id": "energy-endothermic-definition",
+    "topic": "energy-changes",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is an endothermic reaction?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a reaction that takes in energy from the surroundings causing the temperature to decrease",
+      "acceptedAnswers": [
+        "reaction that absorbs heat from surroundings",
+        "energy is absorbed — temperature of surroundings falls",
+        "reaction where products have more energy than reactants"
+      ]
+    },
+    "explanation": "An endothermic reaction absorbs energy from the surroundings. The temperature of the surroundings decreases. The products have more energy than the reactants. ΔH is positive."
+  },
+  {
+    "id": "energy-exo-endo-examples",
+    "topic": "energy-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each reaction to whether it is exothermic or endothermic.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Combustion of methane", "right": "Exothermic" },
+        { "left": "Thermal decomposition", "right": "Endothermic" },
+        { "left": "Neutralisation", "right": "Exothermic" },
+        { "left": "Photosynthesis", "right": "Endothermic" },
+        { "left": "Respiration", "right": "Exothermic" }
+      ]
+    },
+    "explanation": "Exothermic: combustion, neutralisation, oxidation reactions, respiration — energy released. Endothermic: thermal decomposition, photosynthesis, dissolving ammonium nitrate — energy absorbed."
+  },
+  {
+    "id": "energy-reaction-profile-features",
+    "topic": "energy-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "On a reaction profile, what does the activation energy represent?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the minimum energy required for the reaction to occur",
+      "acceptedAnswers": [
+        "minimum energy reactants need to start reacting",
+        "energy needed to break bonds and start the reaction"
+      ]
+    },
+    "explanation": "Activation energy is the minimum energy that colliding particles must have for the reaction to occur. On a reaction profile, it is the energy difference between the reactants and the peak (transition state). Catalysts lower the activation energy, providing an alternative pathway."
+  },
+  {
+    "id": "energy-catalyst-profile",
+    "topic": "energy-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "How does a catalyst change the reaction profile of a reaction?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "it lowers the activation energy providing an alternative reaction pathway but does not change the energy of reactants or products",
+      "acceptedAnswers": [
+        "decreases activation energy — the peak is lower but reactant and product energy levels unchanged",
+        "provides an alternative route with lower activation energy"
+      ]
+    },
+    "explanation": "A catalyst provides an alternative reaction pathway with a lower activation energy. On the reaction profile, the peak is lower. The energy levels of reactants and products are unchanged — the overall energy change (ΔH) is the same. More particles now have sufficient energy to react."
+  },
+  {
+    "id": "energy-bond-breaking-forming",
+    "topic": "energy-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "True or false: Breaking bonds releases energy and forming bonds requires energy.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": false },
+    "explanation": "False — it is the opposite. Breaking bonds REQUIRES energy (endothermic). Forming bonds RELEASES energy (exothermic). In an exothermic reaction overall, more energy is released forming bonds than is absorbed breaking bonds."
+  },
+  {
+    "id": "energy-bond-energy-calc-h2-o2",
+    "topic": "energy-changes",
+    "difficulty": 4,
+    "image": null,
+    "template": "Calculate the overall energy change for H₂ + Cl₂ → 2HCl. Bond energies: H–H = 436 kJ/mol, Cl–Cl = 243 kJ/mol, H–Cl = 432 kJ/mol.",
+    "variables": {},
+    "answerConfig": { "type": "number", "answer": "-185", "unit": "kJ/mol" },
+    "explanation": "Energy in (breaking bonds): H–H = 436, Cl–Cl = 243. Total = 679 kJ. Energy out (forming bonds): 2 × H–Cl = 2 × 432 = 864 kJ. ΔH = energy in − energy out = 679 − 864 = −185 kJ/mol. Negative = exothermic."
+  },
+  {
+    "id": "energy-bond-energy-calc-variable",
+    "topic": "energy-changes",
+    "difficulty": 4,
+    "image": null,
+    "template": "In a reaction, breaking bonds requires {{ein}} kJ/mol and forming bonds releases {{eout}} kJ/mol. What is the overall energy change?",
+    "variables": {
+      "ein": { "type": "pick", "options": [400, 500, 600, 700, 800] },
+      "diff": { "type": "pick", "options": [-200, -150, -100, 100, 150, 200] },
+      "eout": { "type": "derived", "expr": "ein - diff" },
+      "ans": { "type": "derived", "expr": "diff" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "ein - eout",
+      "unit": "kJ/mol"
+    },
+    "explanation": "ΔH = energy in (bonds broken) − energy out (bonds formed) = {{ein}} − {{eout}} = {{ein - eout}} kJ/mol. Negative value = exothermic; positive = endothermic."
+  },
+  {
+    "id": "energy-exothermic-products-energy",
+    "topic": "energy-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "In an exothermic reaction, how does the energy of the products compare to the reactants?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Products have more energy than reactants",
+        "Products have less energy than reactants",
+        "Products and reactants have the same energy",
+        "Cannot be determined"
+      ],
+      "answer": "Products have less energy than reactants"
+    },
+    "explanation": "In an exothermic reaction, energy is released to the surroundings. The products end up at a lower energy level than the reactants — the difference is the energy released. On a reaction profile, the products' line is lower than the reactants'."
+  },
+  {
+    "id": "energy-calorimetry-principle",
+    "topic": "energy-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "A student burns a fuel and heats {{mass}} g of water. The temperature rises by {{dt}}°C. Calculate the energy transferred. (c = 4.2 J/g°C)",
+    "variables": {
+      "mass": { "type": "pick", "options": [50, 100, 150, 200, 250] },
+      "dt": { "type": "pick", "options": [5, 10, 15, 20, 25, 30] },
+      "ans": { "type": "derived", "expr": "mass * 4.2 * dt" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "mass * 4.2 * dt",
+      "unit": "J"
+    },
+    "explanation": "q = mcΔT = {{mass}} × 4.2 × {{dt}} = {{ans}} J. Where m = mass of water, c = specific heat capacity of water (4.2 J/g°C), ΔT = temperature change."
+  },
+  {
+    "id": "energy-calorimetry-limitations",
+    "topic": "energy-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL reasons why a simple calorimetry experiment gives a lower energy value than the actual value.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Heat lost to surroundings (air, container)",
+        "Incomplete combustion of fuel",
+        "Water evaporation from the container",
+        "The fuel gains mass during burning",
+        "Using too much water"
+      ],
+      "correctOptions": [
+        "Heat lost to surroundings (air, container)",
+        "Incomplete combustion of fuel",
+        "Water evaporation from the container"
+      ]
+    },
+    "explanation": "Simple calorimetry underestimates energy because: heat is lost to the surrounding air and the calorimeter container; incomplete combustion means not all fuel energy is released; water evaporation takes energy away. Fuels lose mass when burned (not gain), and using more water just changes the temperature rise."
+  },
+  {
+    "id": "energy-fuel-cells-hydrogen",
+    "topic": "energy-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is the overall reaction in a hydrogen fuel cell?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "hydrogen and oxygen react to produce water",
+      "acceptedAnswers": [
+        "2H₂ + O₂ → 2H₂O",
+        "H2 + O2 → H2O",
+        "hydrogen reacts with oxygen to form water"
+      ]
+    },
+    "explanation": "In a hydrogen fuel cell: H₂ is oxidised at the anode (loses electrons), O₂ is reduced at the cathode (gains electrons). Overall: 2H₂ + O₂ → 2H₂O. The only product is water — no carbon dioxide emissions during operation."
+  },
+  {
+    "id": "energy-fuel-cell-advantages",
+    "topic": "energy-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL advantages of hydrogen fuel cells over conventional combustion engines.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Only waste product is water",
+        "Hydrogen is easy to store and transport",
+        "Higher efficiency than combustion",
+        "No greenhouse gas emissions during operation",
+        "Hydrogen fuel is currently cheap and widely available"
+      ],
+      "correctOptions": [
+        "Only waste product is water",
+        "Higher efficiency than combustion",
+        "No greenhouse gas emissions during operation"
+      ]
+    },
+    "explanation": "Fuel cell advantages: only water produced (no CO₂, NOₓ, particulates during operation), more efficient than combustion (~40–60% vs ~25% for petrol). Disadvantages: hydrogen is difficult to store safely, expensive to produce (usually from natural gas), limited refuelling infrastructure."
+  },
+  {
+    "id": "energy-cells-batteries",
+    "topic": "energy-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "What energy transfer occurs in a cell or battery?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "chemical energy is converted to electrical energy",
+      "acceptedAnswers": [
+        "chemical → electrical energy",
+        "stored chemical energy released as electrical energy"
+      ]
+    },
+    "explanation": "Cells and batteries use spontaneous redox reactions to convert chemical energy directly into electrical energy. The voltage produced depends on the difference in reactivity between the two electrodes and the electrolyte used."
+  },
+  {
+    "id": "energy-endothermic-uses",
+    "topic": "energy-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "Give ONE everyday use of an endothermic process.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "cold packs / sports ice packs",
+      "acceptedAnswers": [
+        "instant cold pack for sports injuries",
+        "cool packs — ammonium nitrate dissolving is endothermic",
+        "refrigeration"
+      ]
+    },
+    "explanation": "Endothermic processes absorb heat from surroundings — useful for cooling. Cold packs/ice packs used in sports medicine contain ammonium nitrate. When mixed with water, the dissolving process is endothermic — absorbing heat from the skin."
+  },
+  {
+    "id": "energy-energy-level-diagram",
+    "topic": "energy-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the features of a reaction profile from lowest to highest energy for an exothermic reaction.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Products (lowest energy)",
+        "Reactants",
+        "Transition state / activated complex (highest energy)"
+      ]
+    },
+    "explanation": "For an exothermic reaction on a reaction profile: products are lowest (energy released), reactants are intermediate, transition state (activation energy peak) is highest. The activation energy is the energy from reactants to the peak; the overall ΔH is the difference between reactants and products."
+  },
+  {
+    "id": "energy-bond-energy-concept",
+    "topic": "energy-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "True or false: A reaction is endothermic if more energy is required to break bonds than is released when bonds form.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": true },
+    "explanation": "True. ΔH = energy absorbed (breaking bonds) − energy released (forming bonds). If more energy is absorbed breaking bonds than is released making new bonds, ΔH is positive — the reaction is endothermic. The products contain more energy than the reactants."
+  },
+  {
+    "id": "energy-combustion-exo",
+    "topic": "energy-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or false: Combustion reactions are endothermic.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": false },
+    "explanation": "False. Combustion is exothermic — it releases energy to the surroundings. Energy is required to initiate combustion (activation energy, e.g. a spark), but the reaction overall releases much more energy than is input. This makes combustion reactions useful as energy sources."
+  },
+  {
+    "id": "energy-evaluate-hydrogen-fuel",
+    "topic": "energy-changes",
+    "difficulty": 5,
+    "image": null,
+    "template": "Evaluate the use of hydrogen as a fuel for cars compared to petrol.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 6,
+      "markScheme": "Hydrogen advantages (max 3): only product is water — no CO₂ emissions from car (1) / high energy density per kg (1) / more efficient in fuel cells than combustion (1). Hydrogen disadvantages (max 3): difficult to store safely — high pressure or cryogenic (1) / most hydrogen currently produced from natural gas (still produces CO₂) (1) / limited refuelling infrastructure (1) / currently expensive (1). Petrol advantages: existing infrastructure, energy dense, easy to store (1). Conclusion required for full marks (1).",
+      "minWords": 80
+    },
+    "explanation": "Hydrogen fuel cells produce only water, are more efficient, and have zero tailpipe emissions. However, hydrogen storage is challenging, most production still uses fossil fuels, and infrastructure is limited. Petrol has a mature infrastructure advantage but significant environmental costs."
+  },
+  {
+    "id": "energy-reaction-profile-endo",
+    "topic": "energy-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "For an endothermic reaction, where are the products on a reaction profile relative to the reactants?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Below the reactants",
+        "At the same level as reactants",
+        "Above the reactants",
+        "At the same level as the transition state"
+      ],
+      "answer": "Above the reactants"
+    },
+    "explanation": "In an endothermic reaction, the products have more energy than the reactants — energy has been absorbed from the surroundings. On the reaction profile, the products' energy level is higher than the reactants'. ΔH is positive."
+  },
+  {
+    "id": "energy-specific-heat-concept",
+    "topic": "energy-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "Why does water have a high specific heat capacity compared to many other substances?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "water has strong hydrogen bonds between molecules that require a lot of energy to overcome before temperature rises",
+      "acceptedAnswers": [
+        "strong intermolecular forces in water mean much energy is needed to raise temperature",
+        "water molecules are strongly attracted to each other requiring more energy per degree of temperature rise"
+      ]
+    },
+    "explanation": "Water's high specific heat capacity (4200 J/kg°C) is due to the strong hydrogen bonds between water molecules. Much of the energy supplied goes into breaking hydrogen bonds rather than increasing kinetic energy (temperature). This is why water is used as a coolant and why coastal climates are milder."
+  }
+]

@@ -1,0 +1,397 @@
+[
+  {
+    "id": "org-enzyme-substrate-mc",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the name of the model that describes how an enzyme and its substrate interact?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Lock and key model", "Fluid mosaic model", "Double helix model", "Induced fit model"],
+      "answer": "Lock and key model"
+    },
+    "explanation": "The lock and key model describes how a substrate (key) fits precisely into the complementary active site of an enzyme (lock). Only a substrate with the correct shape can bind."
+  },
+  {
+    "id": "org-enzyme-temp-optimum",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "At what approximate temperature does most human enzyme activity peak?",
+    "variables": {},
+    "answerConfig": { "type": "number", "answer": "37", "unit": "°C" },
+    "explanation": "Human enzymes have an optimum temperature of approximately 37°C (body temperature). Above this, the enzyme denatures as the active site changes shape."
+  },
+  {
+    "id": "org-enzyme-denaturation",
+    "topic": "organisation",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain what happens to an enzyme when it is denatured.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the shape of the active site changes so the substrate can no longer bind",
+      "acceptedAnswers": [
+        "active site changes shape permanently",
+        "substrate no longer fits the active site",
+        "the enzyme loses its shape and stops working"
+      ]
+    },
+    "explanation": "Denaturation causes the bonds holding the enzyme's 3D structure to break. The active site changes shape permanently so the substrate can no longer bind — the enzyme stops working."
+  },
+  {
+    "id": "org-enzyme-ph-amylase",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "Where in the digestive system does amylase work best?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Stomach", "Small intestine / mouth", "Large intestine", "Oesophagus"],
+      "answer": "Small intestine / mouth"
+    },
+    "explanation": "Amylase works optimally at neutral/slightly alkaline pH (around pH 7–8). It is produced in the salivary glands (mouth) and pancreas, and works in the mouth and small intestine."
+  },
+  {
+    "id": "org-enzyme-substrate-breakdown",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each enzyme to the substrate it breaks down.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Amylase",   "right": "Starch" },
+        { "left": "Protease",  "right": "Proteins" },
+        { "left": "Lipase",    "right": "Lipids/fats" }
+      ]
+    },
+    "explanation": "Amylase breaks down starch into simple sugars. Protease breaks down proteins into amino acids. Lipase breaks down lipids (fats) into fatty acids and glycerol."
+  },
+  {
+    "id": "org-heart-chambers",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "How many chambers does the human heart have?",
+    "variables": {},
+    "answerConfig": { "type": "number", "answer": "4" },
+    "explanation": "The human heart has four chambers: right atrium, right ventricle, left atrium, and left ventricle. The right side pumps deoxygenated blood to the lungs; the left side pumps oxygenated blood to the body."
+  },
+  {
+    "id": "org-blood-vessel-matching",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each blood vessel to its correct description.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Artery",    "right": "Thick muscular wall, carries blood away from heart" },
+        { "left": "Vein",      "right": "Has valves, carries blood towards heart" },
+        { "left": "Capillary", "right": "One cell thick wall, site of exchange" }
+      ]
+    },
+    "explanation": "Arteries carry blood away from the heart under high pressure — thick muscular walls. Veins carry blood back to the heart under low pressure — have valves to prevent backflow. Capillaries are one cell thick to allow exchange of substances."
+  },
+  {
+    "id": "org-double-circulation",
+    "topic": "organisation",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is meant by a double circulatory system?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "blood passes through the heart twice for every complete circuit of the body",
+      "acceptedAnswers": [
+        "two separate circuits: one to the lungs and one to the body",
+        "pulmonary and systemic circulation",
+        "blood goes to lungs then returns to heart before going to the body"
+      ]
+    },
+    "explanation": "A double circulatory system has two loops: pulmonary circulation (heart → lungs → heart) and systemic circulation (heart → body → heart). Blood passes through the heart twice per circuit, maintaining high pressure to the body."
+  },
+  {
+    "id": "org-lungs-gas-exchange",
+    "topic": "organisation",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL features of alveoli that make them efficient for gas exchange.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Large surface area",
+        "Thick walls",
+        "Good blood supply",
+        "Moist lining",
+        "One cell thick walls"
+      ],
+      "correctOptions": [
+        "Large surface area",
+        "Good blood supply",
+        "Moist lining",
+        "One cell thick walls"
+      ]
+    },
+    "explanation": "Alveoli are efficient because they have: large surface area (many alveoli), thin walls (one cell thick) for short diffusion distance, rich blood supply to maintain concentration gradient, moist lining for gases to dissolve."
+  },
+  {
+    "id": "org-food-test-starch",
+    "topic": "organisation",
+    "difficulty": 1,
+    "image": null,
+    "template": "What reagent is used to test for the presence of starch?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "iodine solution",
+      "acceptedAnswers": ["iodine", "iodine/potassium iodide", "potassium iodide solution"]
+    },
+    "explanation": "Iodine solution turns blue-black in the presence of starch. If no starch is present, the solution remains orange-brown."
+  },
+  {
+    "id": "org-food-test-glucose",
+    "topic": "organisation",
+    "difficulty": 1,
+    "image": null,
+    "template": "What colour does Benedict's solution turn when glucose is present after heating?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "brick red",
+      "acceptedAnswers": ["orange-red", "orange", "red", "brick-red", "orange/red/brick red"]
+    },
+    "explanation": "Benedict's solution turns brick red/orange when heated with a reducing sugar such as glucose. A negative result remains blue."
+  },
+  {
+    "id": "org-transpiration-factors",
+    "topic": "organisation",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select ALL conditions that would increase the rate of transpiration.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": ["High temperature", "High humidity", "High light intensity", "Windy conditions", "Low temperature"],
+      "correctOptions": ["High temperature", "High light intensity", "Windy conditions"]
+    },
+    "explanation": "Transpiration increases with: higher temperature (more evaporation), higher light intensity (stomata open wider), wind (removes water vapour maintaining gradient). High humidity reduces the concentration gradient so slows transpiration."
+  },
+  {
+    "id": "org-xylem-phloem",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each tissue to what it transports.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Xylem",  "right": "Water and mineral ions upward from roots" },
+        { "left": "Phloem", "right": "Sucrose and amino acids in both directions" }
+      ]
+    },
+    "explanation": "Xylem transports water and dissolved mineral ions from roots to leaves (transpiration stream) — movement is one-way upward. Phloem transports sucrose and amino acids from leaves to other parts (translocation) — movement is bidirectional."
+  },
+  {
+    "id": "org-coronary-heart-disease",
+    "topic": "organisation",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how fatty deposits cause coronary heart disease.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "fatty deposits narrow the coronary arteries reducing blood flow to the heart muscle causing a heart attack",
+      "acceptedAnswers": [
+        "fatty plaques build up in coronary arteries restricting blood flow to heart",
+        "atherosclerosis narrows arteries reducing oxygen supply to heart muscle"
+      ]
+    },
+    "explanation": "Fatty deposits (plaques/atherosclerosis) build up inside the walls of coronary arteries, narrowing the lumen. This reduces blood flow and oxygen supply to the heart muscle. If a clot blocks the artery completely, a heart attack results."
+  },
+  {
+    "id": "org-heart-rate-pacemaker",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the role of the pacemaker in the heart?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "it controls the resting heart rate by producing electrical impulses",
+      "acceptedAnswers": [
+        "sets the rhythm of the heartbeat",
+        "generates electrical signals that cause the heart to contract",
+        "controls heart rate"
+      ]
+    },
+    "explanation": "The natural pacemaker (sinoatrial node) in the right atrium generates electrical impulses that spread across the heart, causing the atria and then ventricles to contract in a coordinated rhythm."
+  },
+  {
+    "id": "org-enzyme-rate-concentration",
+    "topic": "organisation",
+    "difficulty": 3,
+    "image": null,
+    "template": "A student measures enzyme activity at different substrate concentrations. At very high substrate concentrations the rate stops increasing. Explain why.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "all active sites are occupied so increasing substrate concentration has no further effect",
+      "acceptedAnswers": [
+        "the enzyme is saturated — all active sites are full",
+        "no more active sites available for substrate to bind",
+        "every active site is occupied with substrate"
+      ]
+    },
+    "explanation": "At very high substrate concentrations all enzyme active sites are occupied at all times — the enzyme is saturated. Adding more substrate cannot increase the rate as there are no free active sites available."
+  },
+  {
+    "id": "org-lipase-products",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "What are the products when lipase breaks down a fat molecule?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "fatty acids and glycerol",
+      "acceptedAnswers": ["glycerol and fatty acids", "fatty acids and glycerol"]
+    },
+    "explanation": "Lipase catalyses the hydrolysis of lipids (fats/oils) into fatty acids and glycerol. These smaller molecules can then be absorbed through the gut wall."
+  },
+  {
+    "id": "org-bile-function",
+    "topic": "organisation",
+    "difficulty": 3,
+    "image": null,
+    "template": "State TWO functions of bile in digestion.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Emulsifies fats",
+        "Produces enzymes to digest proteins",
+        "Neutralises stomach acid",
+        "Absorbs glucose",
+        "Kills bacteria in food"
+      ],
+      "correctOptions": ["Emulsifies fats", "Neutralises stomach acid"]
+    },
+    "explanation": "Bile has two main roles: (1) emulsifying fats — breaking large fat droplets into smaller ones increasing surface area for lipase; (2) neutralising stomach acid — bile is alkaline, creating the optimum pH for enzymes in the small intestine."
+  },
+  {
+    "id": "org-villi-adaptations",
+    "topic": "organisation",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how villi are adapted for the absorption of digested food.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Large surface area for absorption (1) / 2. Single layer of epithelial cells — short diffusion distance (1) / 3. Rich blood supply / capillary network maintains concentration gradient (1) / 4. Lacteals absorb fatty acids and glycerol (1) / 5. Microvilli further increase surface area (1) — max 4",
+      "minWords": 35
+    },
+    "explanation": "Villi are finger-like projections lining the small intestine. They have a large surface area, a single layer of cells (short diffusion distance), a rich capillary network (maintains concentration gradient for glucose/amino acids), and lacteals for fat absorption."
+  },
+  {
+    "id": "org-stomata-function",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the function of stomata in a leaf?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "they allow gas exchange — carbon dioxide in and oxygen out — and water vapour to leave",
+      "acceptedAnswers": [
+        "gas exchange and transpiration",
+        "allow CO2 in and O2 out",
+        "pores for gas exchange"
+      ]
+    },
+    "explanation": "Stomata are pores in the leaf surface that allow gas exchange (CO2 in for photosynthesis, O2 out) and water vapour loss (transpiration). They are opened and closed by guard cells."
+  },
+  {
+    "id": "org-heart-structure-order",
+    "topic": "organisation",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the path of deoxygenated blood through the heart and lungs.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": ["Right atrium", "Right ventricle", "Pulmonary artery", "Lungs", "Pulmonary vein", "Left atrium"]
+    },
+    "explanation": "Deoxygenated blood enters the right atrium → right ventricle → pulmonary artery → lungs (gas exchange) → pulmonary vein → left atrium → left ventricle → aorta → body."
+  },
+  {
+    "id": "org-protease-products",
+    "topic": "organisation",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is the product when protease breaks down a protein?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "amino acids",
+      "acceptedAnswers": ["amino acids"]
+    },
+    "explanation": "Protease enzymes catalyse the hydrolysis of proteins into their constituent amino acids, which can then be absorbed and used to build new proteins."
+  },
+  {
+    "id": "org-amylase-product",
+    "topic": "organisation",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is the product of amylase breaking down starch?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "maltose",
+      "acceptedAnswers": ["maltose", "simple sugars", "reducing sugars", "glucose"]
+    },
+    "explanation": "Amylase catalyses the hydrolysis of starch into maltose (a disaccharide). Maltase then further breaks maltose into glucose."
+  },
+  {
+    "id": "org-enzyme-structure-explain",
+    "topic": "organisation",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain how the structure of an enzyme allows it to catalyse a specific reaction. Include reference to the active site.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Enzyme has a specific active site shape (1) / 2. Active site is complementary to a specific substrate (1) / 3. Substrate binds to active site forming enzyme-substrate complex (1) / 4. Only one substrate fits due to complementary shape — specificity (1) / 5. Changing pH/temperature changes active site shape so substrate cannot bind (1) — max 4",
+      "minWords": 40
+    },
+    "explanation": "Each enzyme has a uniquely shaped active site that is complementary to one specific substrate. When the substrate binds, an enzyme-substrate complex forms and the reaction is catalysed. This explains enzyme specificity — only the correct substrate fits."
+  },
+  {
+    "id": "org-plant-organ-systems",
+    "topic": "organisation",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each plant organ to its function.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Leaf",   "right": "Photosynthesis and gas exchange" },
+        { "left": "Stem",   "right": "Support and transport" },
+        { "left": "Root",   "right": "Absorb water and mineral ions" },
+        { "left": "Flower", "right": "Reproduction" }
+      ]
+    },
+    "explanation": "Leaves are the main site of photosynthesis. Stems provide support and contain xylem and phloem. Roots absorb water and minerals and anchor the plant. Flowers are reproductive organs."
+  }
+]

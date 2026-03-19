@@ -1,0 +1,388 @@
+[
+  {
+    "id": "chem-changes-reactivity-series-order",
+    "topic": "chemical-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order these metals from most reactive to least reactive.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": ["Potassium", "Sodium", "Magnesium", "Zinc", "Iron", "Copper"]
+    },
+    "explanation": "Reactivity series (most to least reactive): K > Na > Ca > Mg > Al > Zn > Fe > Pb > H > Cu > Ag > Au. Of these: Potassium > Sodium > Magnesium > Zinc > Iron > Copper."
+  },
+  {
+    "id": "chem-changes-displacement-predict",
+    "topic": "chemical-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "Iron is added to copper sulfate solution. What is observed?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "No reaction — copper is more reactive than iron",
+        "The blue solution loses colour and copper metal forms on the iron",
+        "Iron dissolves and the solution turns green with no solid forming",
+        "A white precipitate forms"
+      ],
+      "answer": "The blue solution loses colour and copper metal forms on the iron"
+    },
+    "explanation": "Iron is more reactive than copper. Fe + CuSO₄ → FeSO₄ + Cu. Iron displaces copper from solution. The blue Cu²⁺ ions are removed so the solution loses colour (becomes pale green as Fe²⁺ forms), and copper metal deposits on the iron."
+  },
+  {
+    "id": "chem-changes-displacement-rule",
+    "topic": "chemical-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "What condition must be met for a displacement reaction to occur between a metal and a metal salt solution?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the metal being added must be more reactive than the metal in the salt solution",
+      "acceptedAnswers": [
+        "the added metal must be higher in the reactivity series than the dissolved metal",
+        "added metal must displace the less reactive metal ion from solution"
+      ]
+    },
+    "explanation": "A more reactive metal can displace a less reactive metal from a compound. If the added metal is more reactive, it loses electrons to the metal ions in solution, reducing them to metal atoms while itself becoming ions."
+  },
+  {
+    "id": "chem-changes-extraction-method",
+    "topic": "chemical-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each metal to its correct extraction method.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Aluminium (very reactive)",
+          "right": "Electrolysis of molten ore"
+        },
+        {
+          "left": "Iron (moderately reactive)",
+          "right": "Reduction with carbon in blast furnace"
+        },
+        {
+          "left": "Gold (unreactive)",
+          "right": "Found native — no extraction needed"
+        }
+      ]
+    },
+    "explanation": "Very reactive metals (Al, Na, K) cannot be reduced by carbon — electrolysis of molten ionic compound is needed. Moderately reactive metals (Fe, Zn, Cu to some extent) can be reduced by carbon. Unreactive metals (Au, Pt) exist as elements in nature."
+  },
+  {
+    "id": "chem-changes-rusting-conditions",
+    "topic": "chemical-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "What TWO substances must be present for iron to rust?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": ["Oxygen", "Carbon dioxide", "Water", "Salt", "Acid"],
+      "correctOptions": ["Oxygen", "Water"]
+    },
+    "explanation": "Rusting requires both oxygen and water (moisture). Iron + oxygen + water → hydrated iron(III) oxide (rust). Salt and acid speed up rusting but are not required. CO₂ is not needed for the basic rusting reaction."
+  },
+  {
+    "id": "chem-changes-rust-prevention",
+    "topic": "chemical-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "Explain how galvanising prevents iron from rusting.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "iron is coated with zinc which acts as a barrier and also as a sacrificial anode being oxidised instead of the iron",
+      "acceptedAnswers": [
+        "zinc coating prevents oxygen and water reaching iron",
+        "zinc protects iron by physical barrier and sacrificial protection"
+      ]
+    },
+    "explanation": "Galvanising coats iron/steel with zinc. This provides a physical barrier preventing oxygen and water from reaching the iron. Even if the zinc layer is scratched, zinc is more reactive than iron and preferentially oxidises — sacrificial protection. The iron remains protected."
+  },
+  {
+    "id": "chem-changes-electrolysis-definition",
+    "topic": "chemical-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is electrolysis?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the decomposition of an ionic substance using electricity",
+      "acceptedAnswers": [
+        "breaking down an ionic compound using electrical energy",
+        "using direct current to decompose an electrolyte"
+      ]
+    },
+    "explanation": "Electrolysis uses electrical energy to decompose an ionic substance (electrolyte). The substance must be molten or dissolved in water so ions can move to the electrodes. Metal/hydrogen forms at cathode (−); non-metal/oxygen forms at anode (+)."
+  },
+  {
+    "id": "chem-changes-electrolysis-products-molten",
+    "topic": "chemical-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "During electrolysis of molten lead bromide (PbBr₂), what forms at each electrode?",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Cathode (negative electrode)", "right": "Lead metal" },
+        { "left": "Anode (positive electrode)", "right": "Bromine gas" }
+      ]
+    },
+    "explanation": "In molten PbBr₂: Pb²⁺ ions move to cathode and gain electrons (reduced) → lead metal deposits. Br⁻ ions move to anode and lose electrons (oxidised) → bromine gas produced. Cathode: reduction. Anode: oxidation (OIL RIG or OILRIG mnemonic)."
+  },
+  {
+    "id": "chem-changes-electrolysis-aqueous",
+    "topic": "chemical-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "Dilute sulfuric acid is electrolysed. What is produced at the cathode?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Oxygen", "Sulfur", "Hydrogen", "Sulfur dioxide"],
+      "answer": "Hydrogen"
+    },
+    "explanation": "In dilute aqueous solutions, hydrogen ions (H⁺) are discharged at the cathode in preference to metal ions (unless the metal is below hydrogen in reactivity series). 2H⁺ + 2e⁻ → H₂. At the anode, OH⁻ ions are discharged: 4OH⁻ → 2H₂O + O₂."
+  },
+  {
+    "id": "chem-changes-half-equation-cathode",
+    "topic": "chemical-changes",
+    "difficulty": 4,
+    "image": null,
+    "template": "Write the half equation for the formation of copper at the cathode during electrolysis of copper sulfate solution.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Cu²⁺ + 2e⁻ → Cu",
+      "acceptedAnswers": ["Cu2+ + 2e- → Cu", "Cu²⁺ + 2e⁻ → Cu(s)"]
+    },
+    "explanation": "At the cathode: Cu²⁺ ions from solution gain 2 electrons and are reduced to copper metal. Half equation: Cu²⁺ + 2e⁻ → Cu. Reduction occurs at the cathode (gain of electrons)."
+  },
+  {
+    "id": "chem-changes-neutralisation-equation",
+    "topic": "chemical-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "Write the ionic equation for neutralisation.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "H⁺ + OH⁻ → H₂O",
+      "acceptedAnswers": ["H+ + OH- → H2O", "H⁺(aq) + OH⁻(aq) → H₂O(l)"]
+    },
+    "explanation": "All neutralisation reactions between strong acids and alkalis reduce to the same ionic equation: H⁺(aq) + OH⁻(aq) → H₂O(l). The other ions (spectator ions) do not change and are not included."
+  },
+  {
+    "id": "chem-changes-ph-scale",
+    "topic": "chemical-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each pH range to the correct description.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "pH 1–3", "right": "Strong acid" },
+        { "left": "pH 4–6", "right": "Weak acid" },
+        { "left": "pH 7", "right": "Neutral" },
+        { "left": "pH 8–10", "right": "Weak alkali" },
+        { "left": "pH 11–14", "right": "Strong alkali" }
+      ]
+    },
+    "explanation": "pH scale: 0–7 acidic (lower = more acidic), 7 neutral, 7–14 alkaline (higher = more alkaline). Strong acids fully dissociate (HCl, H₂SO₄, HNO₃). Weak acids partially dissociate (ethanoic acid, citric acid)."
+  },
+  {
+    "id": "chem-changes-strong-vs-weak-acid",
+    "topic": "chemical-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain the difference between a strong acid and a concentrated acid.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a strong acid fully dissociates in water while concentration refers to the amount of acid dissolved per unit volume — a strong acid can be dilute and a weak acid can be concentrated",
+      "acceptedAnswers": [
+        "strength refers to degree of ionisation; concentration refers to amount of substance per volume",
+        "strong acid completely ionises; concentration is about how much acid is dissolved"
+      ]
+    },
+    "explanation": "Strength refers to the degree of ionisation/dissociation. A strong acid (HCl, H₂SO₄) fully dissociates in water. A weak acid (CH₃COOH) only partially dissociates. Concentration refers to moles of acid per dm³ — independent of strength. Dilute HCl is strong but dilute; concentrated ethanoic acid is weak but concentrated."
+  },
+  {
+    "id": "chem-changes-acid-metal-products",
+    "topic": "chemical-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "What are the products when magnesium reacts with hydrochloric acid?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "magnesium chloride and hydrogen",
+      "acceptedAnswers": [
+        "MgCl₂ and H₂",
+        "hydrogen gas and magnesium chloride",
+        "MgCl2 and H2"
+      ]
+    },
+    "explanation": "Acid + metal → salt + hydrogen. Mg + 2HCl → MgCl₂ + H₂. Magnesium chloride is the salt formed. Hydrogen gas is produced — test with a lit splint (squeaky pop)."
+  },
+  {
+    "id": "chem-changes-acid-carbonate",
+    "topic": "chemical-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "What THREE products form when calcium carbonate reacts with hydrochloric acid?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Calcium chloride",
+        "Water",
+        "Carbon dioxide",
+        "Hydrogen",
+        "Calcium oxide"
+      ],
+      "correctOptions": ["Calcium chloride", "Water", "Carbon dioxide"]
+    },
+    "explanation": "Acid + metal carbonate → salt + water + carbon dioxide. CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂. The CO₂ produced turns limewater milky."
+  },
+  {
+    "id": "chem-changes-salt-naming",
+    "topic": "chemical-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "What salt is formed when zinc reacts with sulfuric acid?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "zinc sulfate",
+      "acceptedAnswers": ["ZnSO₄", "zinc sulfate", "ZnSO4"]
+    },
+    "explanation": "Acid + metal → salt + hydrogen. H₂SO₄ + Zn → ZnSO₄ + H₂. Sulfuric acid always produces sulfate salts. The metal gives the first part of the salt name — zinc sulfate."
+  },
+  {
+    "id": "chem-changes-making-soluble-salt",
+    "topic": "chemical-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the steps to make a pure, dry sample of copper sulfate crystals from copper oxide and sulfuric acid.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Add excess copper oxide to warm dilute sulfuric acid",
+        "Filter to remove excess copper oxide",
+        "Evaporate the filtrate to concentrate the solution",
+        "Leave to cool and crystallise",
+        "Filter to collect crystals and dry between filter paper"
+      ]
+    },
+    "explanation": "Excess metal oxide used to ensure all acid reacts → filter off excess solid → evaporate water to get concentrated solution → cool to crystallise → filter and dry crystals. Excess oxide ensures no leftover acid that would contaminate the salt."
+  },
+  {
+    "id": "chem-changes-sacrificial-protection",
+    "topic": "chemical-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain how a sacrificial anode protects a ship's hull from rusting.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a block of a more reactive metal such as zinc is attached to the hull and corrodes preferentially protecting the iron from oxidation",
+      "acceptedAnswers": [
+        "zinc or magnesium block corrodes instead of the iron hull",
+        "more reactive metal oxidises in place of iron — replaced when corroded"
+      ]
+    },
+    "explanation": "A sacrificial anode is a block of a more reactive metal (usually zinc or magnesium) attached to the iron/steel hull. Because zinc is more reactive, it oxidises preferentially instead of the iron. The zinc gradually corrodes and is replaced periodically — the hull remains intact."
+  },
+  {
+    "id": "chem-changes-electrolysis-aluminium",
+    "topic": "chemical-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "Why is aluminium extracted by electrolysis rather than reduction with carbon?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "aluminium is more reactive than carbon so carbon cannot reduce aluminium oxide",
+      "acceptedAnswers": [
+        "Al is too reactive — carbon cannot displace it from its ore",
+        "aluminium oxide cannot be reduced by carbon as aluminium is higher in the reactivity series"
+      ]
+    },
+    "explanation": "Carbon can only reduce metal oxides of metals that are less reactive than carbon (below Al in reactivity series: Fe, Pb, Cu). Aluminium is more reactive than carbon, so carbon cannot displace it. Electrolysis of molten aluminium oxide (with cryolite to lower melting point) is used instead."
+  },
+  {
+    "id": "chem-changes-oxidation-reduction",
+    "topic": "chemical-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "In the reaction: CuO + H₂ → Cu + H₂O, which substance is oxidised and which is reduced?",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "CuO (copper oxide)",
+          "right": "Reduced — loses oxygen / gains electrons"
+        },
+        {
+          "left": "H₂ (hydrogen)",
+          "right": "Oxidised — gains oxygen / loses electrons"
+        }
+      ]
+    },
+    "explanation": "Oxidation is loss of electrons / gain of oxygen. Reduction is gain of electrons / loss of oxygen (OILRIG). CuO loses oxygen → reduced. H₂ gains oxygen → oxidised. They are simultaneously oxidised and reduced — a redox reaction."
+  },
+  {
+    "id": "chem-changes-reactivity-series-explain",
+    "topic": "chemical-changes",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain, in terms of electron transfer, why more reactive metals form ions more readily.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. Reactive metals lose electrons easily to form positive ions (1) / 2. The outer electron(s) are less strongly held in more reactive metals (1) / 3. Less energy required to remove outer electrons (lower ionisation energy) (1) / 4. This is due to greater distance from nucleus / more electron shielding (1) / 5. More reactive metals are stronger reducing agents — they reduce other species more readily (1) — max 4",
+      "minWords": 40
+    },
+    "explanation": "More reactive metals have outer electrons that are further from the nucleus and more shielded — they require less energy to remove. These metals readily lose electrons to form positive ions, making them better reducing agents. This explains trends in the reactivity series."
+  },
+  {
+    "id": "chem-changes-precipitation",
+    "topic": "chemical-changes",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is a precipitation reaction?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a reaction where two solutions are mixed and an insoluble solid forms",
+      "acceptedAnswers": [
+        "two soluble substances react to form an insoluble product (precipitate)",
+        "formation of an insoluble salt by mixing two solutions"
+      ]
+    },
+    "explanation": "A precipitation reaction occurs when two solutions are mixed and an insoluble product (precipitate) forms. For example, mixing lead nitrate and potassium iodide solutions: Pb(NO₃)₂ + 2KI → PbI₂↓ + 2KNO₃. The yellow lead iodide precipitate is insoluble."
+  },
+  {
+    "id": "chem-changes-acid-base-define",
+    "topic": "chemical-changes",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or false: A base is any substance that neutralises an acid to form a salt and water only.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": false },
+    "explanation": "False. A base is a substance that neutralises an acid, but the products vary: metal oxide/hydroxide + acid → salt + water; metal carbonate + acid → salt + water + CO₂. A base that is soluble in water is called an alkali. Not all neutralisations produce only salt and water."
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "id": "rates-collision-theory",
+    "topic": "rates-equilibrium",
+    "difficulty": 2,
+    "image": null,
+    "template": "What TWO conditions must be met for a collision between reactant particles to result in a reaction?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Particles must collide",
+        "Collision must have sufficient energy (≥ activation energy)",
+        "Particles must be the correct orientation",
+        "Temperature must be above 100°C",
+        "Both particles must be in aqueous solution"
+      ],
+      "correctOptions": [
+        "Collision must have sufficient energy (≥ activation energy)",
+        "Particles must be the correct orientation"
+      ]
+    },
+    "explanation": "Collision theory: particles must collide AND the collision must have energy ≥ activation energy AND (for complex molecules) the correct orientation. In GCSE, the two key conditions are sufficient energy and correct orientation (though orientation is often simplified to just sufficient energy)."
+  },
+  {
+    "id": "rates-temperature-effect",
+    "topic": "rates-equilibrium",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why increasing temperature increases the rate of a reaction.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "higher temperature gives particles more kinetic energy so collisions are more frequent and a greater proportion have energy exceeding the activation energy",
+      "acceptedAnswers": [
+        "more particles have energy above activation energy and collisions are more frequent",
+        "increased kinetic energy means more successful collisions per second"
+      ]
+    },
+    "explanation": "Increasing temperature increases kinetic energy of particles. They move faster → more frequent collisions. More importantly, a greater proportion of particles now have energy ≥ activation energy → more collisions result in reaction → rate increases."
+  },
+  {
+    "id": "rates-concentration-effect",
+    "topic": "rates-equilibrium",
+    "difficulty": 2,
+    "image": null,
+    "template": "How does increasing the concentration of a reactant in solution affect the rate of reaction?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "more particles per unit volume leads to more frequent collisions increasing the rate",
+      "acceptedAnswers": [
+        "higher concentration means more particles in same volume so more collisions occur",
+        "increased collision frequency increases rate"
+      ]
+    },
+    "explanation": "Higher concentration means more reactant particles in the same volume. The particles are closer together → more frequent collisions → more successful collisions per second → faster rate. Concentration does not change the energy of individual collisions."
+  },
+  {
+    "id": "rates-surface-area-effect",
+    "topic": "rates-equilibrium",
+    "difficulty": 2,
+    "image": null,
+    "template": "A solid reactant is ground into a powder. Explain how this affects the rate of reaction.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "grinding increases the surface area so more particles are exposed allowing more frequent collisions and a faster rate",
+      "acceptedAnswers": [
+        "greater surface area exposes more particles to the other reactant increasing collision frequency",
+        "more surface area means more contact between reactants — rate increases"
+      ]
+    },
+    "explanation": "A powder has a much greater surface area than a lump of the same mass. More surface area means more particles are exposed to reactant molecules → more frequent collisions per second → faster rate. The total number of reactant particles is the same — only the surface is changed."
+  },
+  {
+    "id": "rates-catalyst-definition",
+    "topic": "rates-equilibrium",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is a catalyst?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "a substance that increases the rate of a reaction without being used up",
+      "acceptedAnswers": [
+        "speeds up a reaction and is not consumed in the process",
+        "lowers activation energy without being permanently changed"
+      ]
+    },
+    "explanation": "A catalyst increases the rate of a chemical reaction by providing an alternative pathway with a lower activation energy. It is not consumed in the reaction — it can be used repeatedly. Different reactions require specific catalysts."
+  },
+  {
+    "id": "rates-rate-from-time",
+    "topic": "rates-equilibrium",
+    "difficulty": 3,
+    "image": null,
+    "template": "A reaction is complete in {{time}} seconds. Calculate the rate of reaction.",
+    "variables": {
+      "time": { "type": "pick", "options": [20, 25, 40, 50, 100, 200] },
+      "ans": { "type": "derived", "expr": "round(1 / time, 4)" }
+    },
+    "answerConfig": {
+      "type": "number",
+      "answer": "round(1 / time, 4)",
+      "unit": "s⁻¹"
+    },
+    "explanation": "Rate = 1 ÷ time = 1 ÷ {{time}} = {{ans}} s⁻¹. This is a relative measure of rate — useful for comparing experiments where the same volume of gas or same amount of product is the endpoint."
+  },
+  {
+    "id": "rates-reversible-reaction",
+    "topic": "rates-equilibrium",
+    "difficulty": 2,
+    "image": null,
+    "template": "What does the symbol ⇌ in a chemical equation indicate?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the reaction is reversible and can proceed in both the forward and reverse directions",
+      "acceptedAnswers": [
+        "a reversible reaction — products can react to reform reactants",
+        "equilibrium is possible — reaction goes in both directions"
+      ]
+    },
+    "explanation": "The ⇌ symbol indicates a reversible reaction. Both the forward reaction (reactants → products) and reverse reaction (products → reactants) can occur. At equilibrium, both reactions proceed at the same rate."
+  },
+  {
+    "id": "rates-dynamic-equilibrium",
+    "topic": "rates-equilibrium",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain what is meant by dynamic equilibrium.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the forward and reverse reactions occur at the same rate so the concentrations of reactants and products remain constant",
+      "acceptedAnswers": [
+        "rate of forward reaction equals rate of reverse reaction — concentrations are constant but not equal",
+        "both reactions still occurring but at equal rates so no net change in composition"
+      ]
+    },
+    "explanation": "Dynamic equilibrium: both forward and reverse reactions continue but at equal rates. Concentrations of reactants and products remain constant (though not necessarily equal). The system appears static but reactions are still occurring — hence 'dynamic'."
+  },
+  {
+    "id": "rates-le-chatelier-temperature",
+    "topic": "rates-equilibrium",
+    "difficulty": 4,
+    "image": null,
+    "template": "For the reaction: N₂ + 3H₂ ⇌ 2NH₃ (ΔH = −92 kJ/mol). What happens to the equilibrium position if temperature is increased?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Shifts right — more ammonia produced",
+        "Shifts left — less ammonia produced",
+        "No change — temperature only affects rate",
+        "Shifts right if pressure is also increased"
+      ],
+      "answer": "Shifts left — less ammonia produced"
+    },
+    "explanation": "Le Chatelier's principle: increasing temperature favours the endothermic direction. The forward reaction is exothermic (ΔH = −92 kJ/mol), so the reverse is endothermic. Increasing temperature shifts equilibrium left — less NH₃, more N₂ and H₂."
+  },
+  {
+    "id": "rates-le-chatelier-pressure",
+    "topic": "rates-equilibrium",
+    "difficulty": 4,
+    "image": null,
+    "template": "For N₂ + 3H₂ ⇌ 2NH₃, what happens to equilibrium position when pressure is increased?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "equilibrium shifts to the right as there are fewer moles of gas on the right side reducing pressure",
+      "acceptedAnswers": [
+        "shifts right towards fewer moles of gas — 4 moles on left 2 on right",
+        "higher pressure favours side with fewer gas molecules — equilibrium shifts right"
+      ]
+    },
+    "explanation": "Le Chatelier's principle: increased pressure shifts equilibrium towards the side with fewer moles of gas. Left side: 1 + 3 = 4 moles of gas. Right side: 2 moles of gas. Increased pressure → equilibrium shifts right → more NH₃ produced."
+  },
+  {
+    "id": "rates-haber-process-conditions",
+    "topic": "rates-equilibrium",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match each condition of the Haber process to its justification.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "~450°C (moderate temperature)",
+          "right": "Compromise: high enough for acceptable rate, not so high equilibrium shifts too far left"
+        },
+        {
+          "left": "~200 atm (high pressure)",
+          "right": "Shifts equilibrium right (fewer moles gas on right) and increases rate"
+        },
+        {
+          "left": "Iron catalyst",
+          "right": "Increases rate without shifting equilibrium position"
+        },
+        {
+          "left": "Unreacted gases recycled",
+          "right": "Increases overall yield over time"
+        }
+      ]
+    },
+    "explanation": "Haber process conditions are a compromise. High temperature increases rate but shifts equilibrium left (exothermic reaction). High pressure shifts equilibrium right and increases rate but is expensive. Iron catalyst increases rate cheaply. Recycling maximises atom economy."
+  },
+  {
+    "id": "rates-concentration-equilibrium",
+    "topic": "rates-equilibrium",
+    "difficulty": 3,
+    "image": null,
+    "template": "In a reversible reaction at equilibrium, more reactant is added. What happens?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "the equilibrium shifts to the right to produce more products until a new equilibrium is established",
+      "acceptedAnswers": [
+        "forward reaction speeds up temporarily — equilibrium shifts right towards products",
+        "system opposes the change by producing more products — new equilibrium with higher product concentration"
+      ]
+    },
+    "explanation": "Le Chatelier's principle: adding more reactant increases its concentration. The system opposes this by increasing the forward reaction rate. The equilibrium shifts right, consuming the extra reactant and producing more product until a new equilibrium is reached."
+  },
+  {
+    "id": "rates-haber-raw-materials",
+    "topic": "rates-equilibrium",
+    "difficulty": 2,
+    "image": null,
+    "template": "What are the raw materials for the Haber process?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "nitrogen from the air and hydrogen from natural gas",
+      "acceptedAnswers": [
+        "N₂ from fractional distillation of air and H₂ from methane/natural gas",
+        "atmospheric nitrogen and hydrogen from steam reforming of methane"
+      ]
+    },
+    "explanation": "Haber process raw materials: nitrogen is obtained from fractional distillation of liquid air (~78% N₂); hydrogen is obtained from the reaction of methane (natural gas) with steam — steam reforming. N₂ + 3H₂ ⇌ 2NH₃."
+  },
+  {
+    "id": "rates-factors-affecting-rate",
+    "topic": "rates-equilibrium",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the following factors from most to least effect on increasing rate when doubled: temperature, concentration, surface area (in terms of their mechanism).",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Temperature — increases frequency AND proportion with sufficient energy",
+        "Concentration — increases collision frequency only",
+        "Surface area — increases collision frequency only (solid reactant)"
+      ]
+    },
+    "explanation": "Temperature has the greatest effect because it increases both collision frequency and the proportion of particles with energy ≥ activation energy. Concentration and surface area increase collision frequency only. A 10°C rise roughly doubles rate; doubling concentration has a smaller proportional effect."
+  },
+  {
+    "id": "rates-catalyst-not-equilibrium",
+    "topic": "rates-equilibrium",
+    "difficulty": 3,
+    "image": null,
+    "template": "True or false: Adding a catalyst shifts the equilibrium position of a reversible reaction.",
+    "variables": {},
+    "answerConfig": { "type": "true_false", "answer": false },
+    "explanation": "False. A catalyst speeds up both the forward and reverse reactions equally — it lowers the activation energy of both pathways. The equilibrium position (concentrations of reactants and products at equilibrium) is unchanged. The catalyst just allows equilibrium to be reached more quickly."
+  },
+  {
+    "id": "rates-contact-process",
+    "topic": "rates-equilibrium",
+    "difficulty": 4,
+    "image": null,
+    "template": "The Contact process makes sulfur trioxide: 2SO₂ + O₂ ⇌ 2SO₃ (ΔH = −197 kJ/mol). State the conditions used and explain why pressure is kept at ~1 atm rather than higher.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "Conditions: 450°C, ~1 atm (atmospheric), V₂O₅ catalyst (1 mark for any two correct). Pressure reasoning: there are 3 moles of gas on left and 2 on right so high pressure would shift equilibrium right increasing yield (1) / however SO₃ conversion is already ~99.5% at 1 atm (1) / cost and safety of high-pressure equipment not justified when yield is already very high (1) — max 4",
+      "minWords": 40
+    },
+    "explanation": "Contact process: 450°C (compromise temperature), ~1 atm, V₂O₅ catalyst. Although higher pressure would increase yield (3 moles → 2 moles gas), the equilibrium position at 1 atm already gives ~99.5% conversion. High-pressure equipment is expensive and dangerous — not economically justified for marginal yield gain."
+  },
+  {
+    "id": "rates-pressure-gaseous",
+    "topic": "rates-equilibrium",
+    "difficulty": 3,
+    "image": null,
+    "template": "Explain why increasing pressure increases the rate of a reaction between gases.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "higher pressure means gas particles are closer together so collisions are more frequent",
+      "acceptedAnswers": [
+        "increased pressure compresses gas increasing concentration — more frequent collisions",
+        "particles are in smaller volume at higher pressure — collision frequency increases"
+      ]
+    },
+    "explanation": "Increasing pressure on a gas compresses it into a smaller volume. The same number of particles now occupy less space — they are more concentrated. More frequent collisions occur per unit time → rate of reaction increases. Pressure has the same effect as concentration for gases."
+  },
+  {
+    "id": "rates-le-chatelier-principle",
+    "topic": "rates-equilibrium",
+    "difficulty": 3,
+    "image": null,
+    "template": "State Le Chatelier's principle.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "if a system at equilibrium is subjected to a change the system will respond to oppose that change and restore equilibrium",
+      "acceptedAnswers": [
+        "a system at equilibrium opposes any imposed change",
+        "when conditions change the equilibrium shifts to minimise the effect of that change"
+      ]
+    },
+    "explanation": "Le Chatelier's principle: when a change is made to a system at equilibrium (temperature, pressure, concentration), the system responds in a way that opposes the change and re-establishes equilibrium. It predicts the direction of the equilibrium shift but not the new equilibrium position."
+  },
+  {
+    "id": "rates-rate-factors-summary",
+    "topic": "rates-equilibrium",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select ALL factors that can increase the rate of a chemical reaction.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Increase temperature",
+        "Add a catalyst",
+        "Increase concentration of reactants",
+        "Decrease surface area",
+        "Increase pressure (gases only)"
+      ],
+      "correctOptions": [
+        "Increase temperature",
+        "Add a catalyst",
+        "Increase concentration of reactants",
+        "Increase pressure (gases only)"
+      ]
+    },
+    "explanation": "Rate increases with: higher temperature, catalyst (lower Ea), higher concentration, higher pressure (gases), greater surface area. Decreasing surface area would decrease rate, not increase it."
+  },
+  {
+    "id": "rates-haber-yield-tradeoff",
+    "topic": "rates-equilibrium",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain why the Haber process uses a moderate temperature of ~450°C rather than a much lower temperature, even though lower temperatures give a higher equilibrium yield of ammonia.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "at lower temperatures the rate is too slow to be economically viable even though the equilibrium yield would be higher so 450°C is a compromise giving an acceptable rate and reasonable yield",
+      "acceptedAnswers": [
+        "lower temperature gives better yield but unacceptably slow rate — compromise needed",
+        "rate is too low at low temperatures making it uneconomic despite higher equilibrium conversion"
+      ]
+    },
+    "explanation": "The forward reaction is exothermic — lower temperature shifts equilibrium right, giving higher yield. However, at low temperatures the reaction rate is very slow (fewer particles with activation energy). In industry, a compromise of ~450°C gives an acceptable rate (~15% conversion per pass) with continuous recycling to achieve economic ammonia production."
+  }
+]
