@@ -1,0 +1,422 @@
+[
+  {
+    "id": "identity-culture-family-vocab-translation",
+    "topic": "identity-culture",
+    "difficulty": 1,
+    "image": null,
+    "template": "Translate the word 'stepfather' into Spanish.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "el padrastro",
+      "acceptedAnswers": ["padrastro", "un padrastro"]
+    },
+    "explanation": "In Spanish, 'stepfather' is 'padrastro'. The prefix 'padre' (father) is modified."
+  },
+  {
+    "id": "identity-culture-adj-agreement-gender",
+    "topic": "identity-culture",
+    "difficulty": 2,
+    "image": null,
+    "template": "Choose the correct form of the adjective to complete the sentence: 'Mis hermanas son muy [[blank0]].'",
+    "variables": {
+      "adj": {
+        "type": "pick",
+        "options": ["simpático", "simpática", "simpáticos", "simpáticas"]
+      }
+    },
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["simpático", "simpática", "simpáticos", "simpáticas"],
+      "answer": "simpáticas"
+    },
+    "explanation": "Because 'hermanas' (sisters) is feminine and plural, the adjective must also be feminine and plural: 'simpáticas'."
+  },
+  {
+    "id": "identity-culture-ser-estar-distinction",
+    "topic": "identity-culture",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match the sentence to the correct verb (ser or estar) based on its usage in descriptions.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Ella ___ inteligente.",
+          "right": "ser"
+        },
+        {
+          "left": "Él ___ cansado.",
+          "right": "estar"
+        },
+        {
+          "left": "Nosotros ___ de España.",
+          "right": "ser"
+        },
+        {
+          "left": "Tú ___ en el cine.",
+          "right": "estar"
+        }
+      ]
+    },
+    "explanation": "Use 'ser' for permanent traits (intelligence, origin) and 'estar' for temporary states or locations (tiredness, being at the cinema)."
+  },
+  {
+    "id": "identity-culture-tech-pros-cons",
+    "topic": "identity-culture",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which of the following is a disadvantage of social media in Spanish?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Es una pérdida de tiempo",
+        "Te permite estar en contacto",
+        "Es fácil de usar",
+        "Puedes compartir fotos"
+      ],
+      "answer": "Es una pérdida de tiempo"
+    },
+    "explanation": "'Es una pérdida de tiempo' means 'It is a waste of time', which is a common negative point mentioned in GCSE Spanish themes."
+  },
+  {
+    "id": "identity-culture-reflexive-verbs-routine",
+    "topic": "identity-culture",
+    "difficulty": 2,
+    "image": null,
+    "template": "Translate 'I wake up' into Spanish.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "me despierto",
+      "acceptedAnswers": ["yo me despierto", "me levanto", "yo me levanto"]
+    },
+    "explanation": "'Despertarse' is a reflexive verb. For the 'yo' form, the 'se' becomes 'me' and the stem changes (e -> ie)."
+  },
+  {
+    "id": "identity-culture-festivals-matching",
+    "topic": "identity-culture",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match the Spanish festival to its description.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "La Tomatina",
+          "right": "A giant food fight with tomatoes"
+        },
+        {
+          "left": "Las Fallas",
+          "right": "Burning large paper-mâché figures"
+        },
+        {
+          "left": "El Día de los Muertos",
+          "right": "Honouring deceased loved ones"
+        },
+        {
+          "left": "La Semana Santa",
+          "right": "Religious processions before Easter"
+        }
+      ]
+    },
+    "explanation": "These are key cultural events in Spain and Mexico required for AQA Theme 1."
+  },
+  {
+    "id": "identity-culture-translation-friendship",
+    "topic": "identity-culture",
+    "difficulty": 4,
+    "image": null,
+    "template": "Translate the sentence: 'I get on well with my brother because he is funny.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Me llevo bien con mi hermano porque es gracioso",
+      "acceptedAnswers": [
+        "Me llevo bien con mi hermano porque es divertido",
+        "Yo me llevo bien con mi hermano porque es gracioso",
+        "Me llevo bien con mi hermano ya que es gracioso"
+      ]
+    },
+    "explanation": "The idiom 'llevarse bien con' is used for 'to get on well with'. 'Gracioso' or 'divertido' can be used for 'funny'."
+  },
+  {
+    "id": "identity-culture-free-time-verbs",
+    "topic": "identity-culture",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select the correct verb to complete: 'Los fines de semana, suelo ___ al tenis.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["jugar", "hacer", "practicar", "ver"],
+      "answer": "jugar"
+    },
+    "explanation": "In Spanish, you 'jugar a' (play) sports that involve a ball or game, like tennis."
+  },
+  {
+    "id": "identity-culture-food-vocab",
+    "topic": "identity-culture",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is 'breakfast' in Spanish?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "el desayuno",
+      "acceptedAnswers": ["desayuno", "un desayuno"]
+    },
+    "explanation": "'Breakfast' is 'el desayuno', related to the verb 'desayunar'."
+  },
+  {
+    "id": "identity-culture-social-media-multi",
+    "topic": "identity-culture",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select the two verbs that are commonly used when talking about using social media.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": ["subir", "descargar", "cocinar", "nadar"],
+      "correctOptions": ["subir", "descargar"]
+    },
+    "explanation": "'Subir' means to upload (e.g. photos) and 'descargar' means to download."
+  },
+  {
+    "id": "identity-culture-personality-traits",
+    "topic": "identity-culture",
+    "difficulty": 2,
+    "image": null,
+    "template": "If someone is 'terco', what are they?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["Stubborn", "Kind", "Selfish", "Brave"],
+      "answer": "Stubborn"
+    },
+    "explanation": "'Terco' is the Spanish adjective for stubborn. Synonyms include 'cabezota'."
+  },
+  {
+    "id": "identity-culture-true-false-gender",
+    "topic": "identity-culture",
+    "difficulty": 1,
+    "image": null,
+    "template": "True or False: In Spanish, all nouns ending in '-o' are masculine and all nouns ending in '-a' are feminine.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": false
+    },
+    "explanation": "While it is a general rule, there are exceptions like 'el problema' (masculine ending in -a) and 'la mano' (feminine ending in -o)."
+  },
+  {
+    "id": "identity-culture-translation-social-media",
+    "topic": "identity-culture",
+    "difficulty": 3,
+    "image": null,
+    "template": "Translate the phrase: 'I use my mobile to chat with my friends.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Uso mi móvil para chatear con mis amigos",
+      "acceptedAnswers": [
+        "Utilizo mi móvil para chatear con mis amigos",
+        "Uso el móvil para hablar con mis amigos",
+        "Uso mi celular para chatear con mis amigos"
+      ]
+    },
+    "explanation": "'Para' is used here to mean 'in order to'. 'Chatear' is a common verb for chatting online."
+  },
+  {
+    "id": "identity-culture-ordering-routine",
+    "topic": "identity-culture",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order these daily routine activities chronologically from morning to night.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": ["despertarse", "desayunar", "almorzar", "acostarse"]
+    },
+    "explanation": "The order is: wake up (despertarse), eat breakfast (desayunar), eat lunch (almorzar), and go to bed (acostarse)."
+  },
+  {
+    "id": "identity-culture-comparatives-family",
+    "topic": "identity-culture",
+    "difficulty": 3,
+    "image": null,
+    "template": "Translate: 'My father is older than my mother.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Mi padre es mayor que mi madre",
+      "acceptedAnswers": ["Mi padre es más viejo que mi madre"]
+    },
+    "explanation": "The comparative for age is 'mayor que' (older than) or 'menor que' (younger than)."
+  },
+  {
+    "id": "identity-culture-gustar-grammar",
+    "topic": "identity-culture",
+    "difficulty": 4,
+    "image": null,
+    "template": "Why is 'gustan' used instead of 'gusta' in the sentence: 'Me gustan los deportes.'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Because the subject 'los deportes' is plural",
+        "Because 'yo' is the subject",
+        "Because it is in the past tense",
+        "Because it is a reflexive verb"
+      ],
+      "answer": "Because the subject 'los deportes' is plural"
+    },
+    "explanation": "With 'gustar', the thing being liked is the grammatical subject. Since 'los deportes' is plural, the verb must be 'gustan'."
+  },
+  {
+    "id": "identity-culture-daily-routine-reflexive",
+    "topic": "identity-culture",
+    "difficulty": 3,
+    "image": null,
+    "template": "Complete the sentence with the correct reflexive pronoun: 'Nosotros ___ duchamos cada mañana.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "nos",
+      "acceptedAnswers": ["nosotros nos"]
+    },
+    "explanation": "For the 'nosotros' form of reflexive verbs, the pronoun used is 'nos'."
+  },
+  {
+    "id": "identity-culture-hobbies-fill",
+    "topic": "identity-culture",
+    "difficulty": 2,
+    "image": null,
+    "template": "En mi tiempo libre, me gusta [[blank0]] música y [[blank1]] libros.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["escuchar"], ["leer"]]
+    },
+    "explanation": "The infinitive is used after 'me gusta'. You listen to (escuchar) music and read (leer) books."
+  },
+  {
+    "id": "identity-culture-holiday-tradition-long",
+    "topic": "identity-culture",
+    "difficulty": 4,
+    "image": null,
+    "template": "Describe one custom associated with 'Las doce uvas' in Spain.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 2,
+      "markScheme": "1. Mention that it takes place on New Year's Eve (Nochevieja) (1) / 2. Explain that people eat 12 grapes at midnight, one for each chime of the clock (1) / Accept: Bringing good luck for the year ahead."
+    },
+    "explanation": "Eating 12 grapes on New Year's Eve is a major Spanish tradition for luck."
+  },
+  {
+    "id": "identity-culture-plural-adjectives",
+    "topic": "identity-culture",
+    "difficulty": 2,
+    "image": null,
+    "template": "Make the adjective 'trabajador' plural to match 'mis padres'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "trabajadores",
+      "acceptedAnswers": ["trabajadores"]
+    },
+    "explanation": "Adjectives ending in a consonant add '-es' to become plural: trabajador -> trabajadores."
+  },
+  {
+    "id": "identity-culture-internet-vocab",
+    "topic": "identity-culture",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match the technology term to its English equivalent.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "el teclado",
+          "right": "keyboard"
+        },
+        {
+          "left": "la pantalla",
+          "right": "screen"
+        },
+        {
+          "left": "la red",
+          "right": "network/web"
+        },
+        {
+          "left": "el correo electrónico",
+          "right": "email"
+        }
+      ]
+    },
+    "explanation": "Basic computing and internet vocabulary is part of the technology sub-topic."
+  },
+  {
+    "id": "identity-culture-possessive-adjectives",
+    "topic": "identity-culture",
+    "difficulty": 2,
+    "image": null,
+    "template": "How do you say 'our house' in Spanish?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "nuestra casa",
+      "acceptedAnswers": ["nuestra casa"]
+    },
+    "explanation": "The possessive adjective must agree with 'casa' (feminine singular), so 'nuestra' is used."
+  },
+  {
+    "id": "identity-culture-true-false-food",
+    "topic": "identity-culture",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or False: A 'tortilla española' traditionally contains eggs, potatoes, and onions.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "A Spanish omelette is distinct from the Mexican flour/corn tortilla and consists of eggs and potatoes (onions are common but debated!)."
+  },
+  {
+    "id": "identity-culture-long-form-social-media",
+    "topic": "identity-culture",
+    "difficulty": 5,
+    "image": null,
+    "template": "Explain why some people consider social media dangerous in Spanish context.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 3,
+      "markScheme": "1. Mention the risk of cyberbullying (ciberacoso) (1) / 2. Mention the lack of privacy or safety with strangers (privacidad/desconocidos) (1) / 3. Mention the risk of addiction (adicción) (1)"
+    },
+    "explanation": "Theme 1 Higher tier requires discussing the negative impacts of technology such as 'el ciberacoso' and 'la adicción'."
+  },
+  {
+    "id": "identity-culture-translation-general",
+    "topic": "identity-culture",
+    "difficulty": 4,
+    "image": null,
+    "template": "Translate: 'Yesterday I went out with my friends and we ate paella.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Ayer salí con mis amigos y comimos paella",
+      "acceptedAnswers": [
+        "Ayer salí con mis amigos y tomamos paella",
+        "Fui fuera con mis amigos ayer y comimos paella"
+      ]
+    },
+    "explanation": "This requires the preterite tense: 'salí' (I went out) and 'comimos' (we ate)."
+  }
+]

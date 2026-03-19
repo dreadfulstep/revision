@@ -1,0 +1,13 @@
+{
+  "id": "spanish",
+  "name": "Spanish",
+  "exam_board": "AQA",
+  "colour": "#FFFF00",
+  "papers": ["1", "2"],
+  "topics": [
+    { "id": "identity-culture", "name": "Identity & Culture" },
+    { "id": "local-national", "name": "Local, National & Global" },
+    { "id": "future-plans", "name": "Future Plans & Employment" },
+    { "id": "grammar", "name": "Grammar & Structures" }
+  ]
+}

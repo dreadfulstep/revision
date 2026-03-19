@@ -1,0 +1,370 @@
+[
+  {
+    "id": "grammar-present-regular-conjugation",
+    "topic": "grammar",
+    "difficulty": 1,
+    "image": null,
+    "template": "Choose the correct present tense form of the verb 'hablar' for the pronoun 'nosotros'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["hablamos", "habláis", "hablan", "hablamos "],
+      "answer": "hablamos"
+    },
+    "explanation": "To conjugate regular -ar verbs in the present tense for 'nosotros', you remove the '-ar' and add '-amos'."
+  },
+  {
+    "id": "grammar-ser-estar-distinction",
+    "topic": "grammar",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match the usage rule to the correct Spanish verb.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Physical location", "right": "estar" },
+        { "left": "Occupation or profession", "right": "ser" },
+        { "left": "Temporary emotions", "right": "estar" },
+        { "left": "Origin and nationality", "right": "ser" },
+        { "left": "Permanent characteristics", "right": "ser" }
+      ]
+    },
+    "explanation": "Remember the acronyms: DOCTOR (Description, Occupation, Characteristic, Time, Origin, Relationship) for 'ser' and PLACE (Position, Location, Action, Condition, Emotion) for 'estar'."
+  },
+  {
+    "id": "grammar-preterite-irregular-ir",
+    "topic": "grammar",
+    "difficulty": 2,
+    "image": null,
+    "template": "Translate the sentence 'I went to the cinema' into Spanish.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "fui al cine",
+      "acceptedAnswers": ["yo fui al cine", "fui para el cine"]
+    },
+    "explanation": "'Fui' is the 'yo' form of 'ir' (to go) in the preterite tense. 'Al' is the contraction of 'a' + 'el'."
+  },
+  {
+    "id": "grammar-reflexive-placement-blank",
+    "topic": "grammar",
+    "difficulty": 3,
+    "image": null,
+    "template": "Complete the sentence with the correct reflexive pronoun: 'Normalmente, [[blank0]] levanto a las siete.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["me"]]
+    },
+    "explanation": "The verb 'levantarse' is reflexive. For the 'yo' form (indicated by 'levanto'), the pronoun must be 'me'."
+  },
+  {
+    "id": "grammar-future-tense-irregular-hacer",
+    "topic": "grammar",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is the correct future tense form of 'hacer' (to do/make) for 'ellos'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["hacerán", "harán", "harían", "hicieron"],
+      "answer": "harán"
+    },
+    "explanation": "'Hacer' is irregular in the future tense; its stem changes to 'har-'. The ending for 'ellos' is '-án'."
+  },
+  {
+    "id": "grammar-gustar-plural-agreement",
+    "topic": "grammar",
+    "difficulty": 2,
+    "image": null,
+    "template": "Choose the correct form of 'gustar': 'Me [[blank0]] los libros de historia.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["gustan"]]
+    },
+    "explanation": "With 'gustar', the verb must agree with the thing being liked. Since 'los libros' is plural, we use 'gustan'."
+  },
+  {
+    "id": "grammar-negatives-ni-ni",
+    "topic": "grammar",
+    "difficulty": 4,
+    "image": null,
+    "template": "Translate 'I have neither a dog nor a cat' into Spanish.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "no tengo ni perro ni gato",
+      "acceptedAnswers": [
+        "no tengo ni un perro ni un gato",
+        "ni tengo perro ni gato"
+      ]
+    },
+    "explanation": "The 'ni... ni' structure is used for 'neither... nor'. In Spanish, a 'no' is required before the verb if 'ni' follows."
+  },
+  {
+    "id": "grammar-comparatives-structure",
+    "topic": "grammar",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which phrase correctly means 'more intelligent than'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "más inteligente que",
+        "más inteligente como",
+        "tan inteligente que",
+        "muy inteligente que"
+      ],
+      "answer": "más inteligente que"
+    },
+    "explanation": "The comparative structure for 'more... than' is 'más + [adjective] + que'."
+  },
+  {
+    "id": "grammar-imperfect-vs-preterite-use",
+    "topic": "grammar",
+    "difficulty": 4,
+    "image": null,
+    "template": "True or False: The imperfect tense is used for actions that happened at a specific, completed point in time.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": false
+    },
+    "explanation": "False. The preterite is used for completed actions. The imperfect is used for descriptions, habits, or ongoing actions in the past."
+  },
+  {
+    "id": "grammar-dop-placement-blank",
+    "topic": "grammar",
+    "difficulty": 4,
+    "image": null,
+    "template": "Complete the sentence with the correct direct object pronoun for 'la manzana' (the apple): 'La manzana es roja. Juan [[blank0]] come.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["la"]]
+    },
+    "explanation": "'La manzana' is feminine singular, so the direct object pronoun is 'la'. It is placed before the conjugated verb 'come'."
+  },
+  {
+    "id": "grammar-conditional-formation-regular",
+    "topic": "grammar",
+    "difficulty": 3,
+    "image": null,
+    "template": "What is the 'nosotros' form of the verb 'comer' in the conditional tense?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["comeríamos", "comeremos", "comíamos", "comiéramos"],
+      "answer": "comeríamos"
+    },
+    "explanation": "To form the conditional, you add the endings (-ía, -ías, -ía, -íamos, -íais, -ían) to the full infinitive."
+  },
+  {
+    "id": "grammar-superlatives-best",
+    "topic": "grammar",
+    "difficulty": 3,
+    "image": null,
+    "template": "How do you say 'the best' (masculine singular) in Spanish?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "el mejor",
+      "acceptedAnswers": ["mejor"]
+    },
+    "explanation": "'Mejor' is an irregular comparative/superlative. 'El mejor' means 'the best'."
+  },
+  {
+    "id": "grammar-imperfect-ar-conjugation",
+    "topic": "grammar",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select the correct imperfect tense ending for 'yo' in -ar verbs.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["-aba", "-ía", "-aste", "-ado"],
+      "answer": "-aba"
+    },
+    "explanation": "For -ar verbs in the imperfect, the 'yo' and 'él/ella' forms both end in '-aba'."
+  },
+  {
+    "id": "grammar-prepositions-por-para",
+    "topic": "grammar",
+    "difficulty": 4,
+    "image": null,
+    "template": "Which word correctly completes the sentence to mean 'for' (as a destination/purpose): 'Salgo [[blank0]] Madrid mañana.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["para"]]
+    },
+    "explanation": "'Para' is used for destinations, deadlines, and purposes. 'Por' is used for duration, exchange, and movement through/by."
+  },
+  {
+    "id": "grammar-preterite-irregulars-matching",
+    "topic": "grammar",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match the irregular preterite 'yo' form to its infinitive.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "hice", "right": "hacer" },
+        { "left": "tuve", "right": "tener" },
+        { "left": "puse", "right": "poner" },
+        { "left": "vine", "right": "venir" },
+        { "left": "supe", "right": "saber" }
+      ]
+    },
+    "explanation": "These verbs have unique stems in the preterite: hic-, tuv-, pus-, vin-, sup-."
+  },
+  {
+    "id": "grammar-subjunctive-intro-rule",
+    "topic": "grammar",
+    "difficulty": 5,
+    "image": null,
+    "template": "True or False: The present subjunctive is often used after 'es importante que' to express necessity or opinion.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Impersonal expressions like 'es importante que' or 'es posible que' trigger the subjunctive mood in the following clause."
+  },
+  {
+    "id": "grammar-tan-como-equality",
+    "topic": "grammar",
+    "difficulty": 3,
+    "image": null,
+    "template": "Complete the comparison of equality: 'El libro es [[blank0]] interesante como la película.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["tan"]]
+    },
+    "explanation": "To say 'as... as' in Spanish, use the structure 'tan + [adjective] + como'."
+  },
+  {
+    "id": "grammar-ser-present-conjugation",
+    "topic": "grammar",
+    "difficulty": 1,
+    "image": null,
+    "template": "Order the present tense forms of 'ser' from 'yo' to 'ellos'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": ["soy", "eres", "es", "somos", "sois", "son"]
+    },
+    "explanation": "The verb 'ser' (to be) is highly irregular in the present tense."
+  },
+  {
+    "id": "grammar-direct-object-pronouns-multi",
+    "topic": "grammar",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select all words that are valid Direct Object Pronouns in Spanish.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": ["lo", "la", "le", "los", "las", "se"],
+      "correctOptions": ["lo", "la", "los", "las"]
+    },
+    "explanation": "'Lo, la, los, las' are direct object pronouns. 'Le' is an indirect object pronoun, and 'se' is a reflexive or 'dummy' pronoun."
+  },
+  {
+    "id": "grammar-tense-identification-long",
+    "topic": "grammar",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain the difference in meaning between 'Comí una manzana' and 'Comía una manzana'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 2,
+      "markScheme": "1. 'Comí' is preterite and implies a finished, single action (I ate an apple) (1) / 2. 'Comía' is imperfect and implies a habitual action or an action that was in progress (I used to eat / I was eating an apple) (1)",
+      "minWords": 20
+    },
+    "explanation": "This demonstrates the fundamental contrast between the Preterite (completed) and Imperfect (ongoing/habitual) past tenses."
+  },
+  {
+    "id": "grammar-reflexive-pronouns-order",
+    "topic": "grammar",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the reflexive pronouns correctly (me, te, se, nos, os, se).",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": ["me", "te", "se", "nos", "os", "se"]
+    },
+    "explanation": "These are the pronouns used with reflexive verbs, corresponding to the subjects yo, tú, él, nosotros, vosotros, ellos."
+  },
+  {
+    "id": "grammar-translations-future",
+    "topic": "grammar",
+    "difficulty": 3,
+    "image": null,
+    "template": "Translate 'Tomorrow we will play football' into Spanish.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "mañana jugaremos al fútbol",
+      "acceptedAnswers": [
+        "mañana jugaremos fútbol",
+        "mañana vamos a jugar al fútbol"
+      ]
+    },
+    "explanation": "'Jugaremos' is the future tense of 'jugar'. Remember 'jugar al' is required when followed by a sport."
+  },
+  {
+    "id": "grammar-superlatives-worst",
+    "topic": "grammar",
+    "difficulty": 3,
+    "image": null,
+    "template": "How do you say 'the worst' (feminine singular) in Spanish?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "la peor",
+      "acceptedAnswers": ["peor"]
+    },
+    "explanation": "'Peor' is the irregular comparative/superlative for bad/worst."
+  },
+  {
+    "id": "grammar-tense-usage-match",
+    "topic": "grammar",
+    "difficulty": 4,
+    "image": null,
+    "template": "Match the sentence to the tense it uses.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Bailaré en la fiesta.", "right": "Future" },
+        { "left": "Bailaba cada día.", "right": "Imperfect" },
+        { "left": "Bailé anoche.", "right": "Preterite" },
+        { "left": "Bailaría si pudiera.", "right": "Conditional" }
+      ]
+    },
+    "explanation": "Identifying endings (-aré, -aba, -é, -aría) is key to recognizing tenses in GCSE Spanish."
+  },
+  {
+    "id": "grammar-complex-structures-long",
+    "topic": "grammar",
+    "difficulty": 5,
+    "image": null,
+    "template": "Evaluate why using 'Si tuviera más dinero, compraría un coche' is considered high-level grammar.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 3,
+      "markScheme": "1. It uses a conditional sentence structure (Si clause) (1) / 2. It correctly conjugates the imperfect subjunctive ('tuviera') (1) / 3. It correctly pairs it with the conditional tense ('compraría') to express a hypothetical situation (1)",
+      "minWords": 30
+    },
+    "explanation": "Using 'Si' + Imperfect Subjunctive + Conditional is a hallmark of Higher tier Spanish proficiency."
+  }
+]

@@ -1,0 +1,401 @@
+[
+  {
+    "id": "local-national-town-vocab-matching",
+    "topic": "local-national",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match the Spanish places in a town to their English translations.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "el ayuntamiento", "right": "town hall" },
+        { "left": "la comisaría", "right": "police station" },
+        { "left": "el barrio", "right": "neighborhood" },
+        { "left": "la oficina de correos", "right": "post office" },
+        { "left": "el polideportivo", "right": "sports center" }
+      ]
+    },
+    "explanation": "These are common vocabulary items for describing a town (Theme 2). 'Ayuntamiento' is a key term often appearing in AQA papers."
+  },
+  {
+    "id": "local-national-environment-translation-1",
+    "topic": "local-national",
+    "difficulty": 3,
+    "image": null,
+    "template": "Translate the following sentence into Spanish: 'I recycle plastic and glass to protect the environment.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Reciclo el plástico y el vidrio para proteger el medio ambiente",
+      "acceptedAnswers": [
+        "Reciclo plástico y vidrio para proteger el medio ambiente",
+        "Yo reciclo el plástico y el vidrio para proteger el medio ambiente",
+        "Reciclo plástico y cristal para proteger el medio ambiente"
+      ]
+    },
+    "explanation": "The verb 'reciclar' is regular. 'Para' + infinitive is used to express purpose ('to protect'). 'El medio ambiente' is the standard term for the environment."
+  },
+  {
+    "id": "local-national-holiday-preterite-multiple",
+    "topic": "local-national",
+    "difficulty": 2,
+    "image": null,
+    "template": "Choose the correct preterite form to complete the sentence: 'El año pasado, mi familia y yo ______ a España.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["fuimos", "vamos", "fueron", "iba"],
+      "answer": "fuimos"
+    },
+    "explanation": "'El año pasado' (last year) requires the preterite. 'Mi familia y yo' is the 'nosotros' form. 'Fuimos' is the irregular preterite of 'ir'."
+  },
+  {
+    "id": "local-national-transport-prepositions",
+    "topic": "local-national",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which preposition is used when saying you travel 'by' a mode of transport (e.g., by train, by bus)?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "en",
+      "acceptedAnswers": ["en tren", "en autobús"]
+    },
+    "explanation": "In Spanish, we use 'en' for modes of transport: 'en tren' (by train), 'en coche' (by car), 'en avión' (by plane). The exception is 'a pie' (on foot) or 'a caballo' (on horseback)."
+  },
+  {
+    "id": "local-national-environment-multi-select",
+    "topic": "local-national",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which of these are environmental problems? Select all that apply.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "la deforestación",
+        "el calentamiento global",
+        "la energía renovable",
+        "la pobreza",
+        "la escasez de agua"
+      ],
+      "correctOptions": [
+        "la deforestación",
+        "el calentamiento global",
+        "la escasez de agua"
+      ]
+    },
+    "explanation": "'La energía renovable' is a solution, and while 'la pobreza' (poverty) is a global issue, it is usually categorized under social issues rather than environmental ones in this specific sub-topic."
+  },
+  {
+    "id": "local-national-school-subjects-translation",
+    "topic": "local-national",
+    "difficulty": 1,
+    "image": null,
+    "template": "Translate 'business studies' into Spanish.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "empresariales",
+      "acceptedAnswers": [
+        "estudios empresariales",
+        "ciencias empresariales",
+        "comercio"
+      ]
+    },
+    "explanation": "'Empresariales' or 'Estudios empresariales' is the standard translation for Business Studies in a school context."
+  },
+  {
+    "id": "local-national-school-rules-modal",
+    "topic": "local-national",
+    "difficulty": 4,
+    "image": null,
+    "template": "Translate the school rule: 'It is forbidden to chew gum.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "está prohibido comer chicle",
+      "acceptedAnswers": [
+        "se prohíbe comer chicle",
+        "no se permite comer chicle",
+        "está prohibido mascar chicle"
+      ]
+    },
+    "explanation": "'Está prohibido' + infinitive is a common structure for rules. 'Mascar' or 'comer' are both accepted for 'chewing' gum in Spanish."
+  },
+  {
+    "id": "local-national-home-description-ordering",
+    "topic": "local-national",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the words to form a correct sentence: 'Vivo en una casa moderna en las afueras.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": ["Vivo", "en", "una", "casa", "moderna", "en", "las", "afueras"]
+    },
+    "explanation": "The sentence structure follows: Verb + Preposition + Noun + Adjective + Location. 'Las afueras' means the outskirts."
+  },
+  {
+    "id": "local-national-travel-activity-preterite",
+    "topic": "local-national",
+    "difficulty": 3,
+    "image": null,
+    "template": "Complete with the correct preterite form: 'Durante las vacaciones, yo ______ (sacar) muchas fotos.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "saqué",
+      "acceptedAnswers": ["saqué"]
+    },
+    "explanation": "Verbs ending in -car have a spelling change in the 'yo' form of the preterite: c becomes qu. Therefore, 'sacar' becomes 'saqué'."
+  },
+  {
+    "id": "local-national-global-issues-true-false",
+    "topic": "local-national",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or False: 'Los sin techo' refers to people who are homeless.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "'Sin' (without) and 'techo' (roof/ceiling) literally translates to 'those without a roof', used for homeless people."
+  },
+  {
+    "id": "local-national-town-directions-matching",
+    "topic": "local-national",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match the directions to their English equivalents.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "dobla a la derecha", "right": "turn right" },
+        { "left": "sigue todo recto", "right": "go straight on" },
+        { "left": "cruza la plaza", "right": "cross the square" },
+        { "left": "toma la segunda calle", "right": "take the second street" }
+      ]
+    },
+    "explanation": "Imperative forms (commands) are frequently used in the Theme 2 context of giving and following directions."
+  },
+  {
+    "id": "local-national-region-climat-tf",
+    "topic": "local-national",
+    "difficulty": 1,
+    "image": null,
+    "template": "True or False: 'Hay niebla' means 'It is sunny'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": false
+    },
+    "explanation": "'Hay niebla' means 'It is foggy'. 'Hace sol' means 'It is sunny'."
+  },
+  {
+    "id": "local-national-school-system-longform",
+    "topic": "local-national",
+    "difficulty": 4,
+    "image": null,
+    "template": "Briefly explain two differences between the Spanish school system and the UK system regarding the timetable or subjects.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 2,
+      "markScheme": "1. Mentions that Spanish schools often have a longer lunch break or 'siesta' time (or finish earlier at 2pm) (1) / 2. Mentions that students stay in the same classroom while teachers move, or the split between 'Bachillerato' and vocational routes (1)"
+    },
+    "explanation": "Understanding cultural differences (Theme 3/2 overlap) is key for the higher level evaluation tasks."
+  },
+  {
+    "id": "local-national-environment-actions-fill",
+    "topic": "local-national",
+    "difficulty": 2,
+    "image": null,
+    "template": "Para ayudar al medio ambiente, se debe [[blank0]] las luces y [[blank1]] menos agua.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["apagar"], ["ahorrar", "consumir", "usar"]]
+    },
+    "explanation": "'Se debe' (one must) is followed by the infinitive. 'Apagar' (to turn off) and 'ahorrar' (to save) are essential environmental verbs."
+  },
+  {
+    "id": "local-national-tourism-translation-2",
+    "topic": "local-national",
+    "difficulty": 3,
+    "image": null,
+    "template": "Translate: 'There is a lot to do for tourists in my region.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Hay mucho que hacer para los turistas en mi región",
+      "acceptedAnswers": [
+        "Hay mucho que hacer para turistas en mi región",
+        "En mi región hay mucho que hacer para los turistas",
+        "Hay muchas cosas que hacer para los turistas en mi región"
+      ]
+    },
+    "explanation": "Uses the impersonal 'Hay' (there is) and the structure 'mucho que + infinitive' (a lot to do)."
+  },
+  {
+    "id": "local-national-travel-accommodation-vocab",
+    "topic": "local-national",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which word refers to a 'youth hostel' in Spanish?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "un albergue juvenil",
+        "una pensión",
+        "un parador",
+        "un campamento"
+      ],
+      "answer": "un albergue juvenil"
+    },
+    "explanation": "'Albergue' is hostel; 'juvenil' means youth. A 'parador' is a luxury state-run hotel, often in a historic building."
+  },
+  {
+    "id": "local-national-environment-problems-causes",
+    "topic": "local-national",
+    "difficulty": 5,
+    "image": null,
+    "template": "Explain the effect of 'los combustibles fósiles' on 'el efecto invernadero'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 3,
+      "markScheme": "1. Fossil fuels release carbon dioxide (dióxido de carbono) when burnt (1) / 2. This gas traps heat in the atmosphere (1) / 3. This contributes to the greenhouse effect (efecto invernadero) and global warming (1)"
+    },
+    "explanation": "Higher tier students need to be able to discuss cause and effect regarding global issues."
+  },
+  {
+    "id": "local-national-holiday-opinions-imperfect",
+    "topic": "local-national",
+    "difficulty": 3,
+    "image": null,
+    "template": "Translate: 'The hotel was modern but the food was disgusting.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "El hotel era moderno pero la comida era asquerosa",
+      "acceptedAnswers": [
+        "El hotel era moderno pero la comida era fatal",
+        "El hotel era moderno sin embargo la comida era asquerosa"
+      ]
+    },
+    "explanation": "Descriptions in the past use the imperfect tense ('era'). 'Asquerosa' is a strong higher-tier adjective for 'disgusting'."
+  },
+  {
+    "id": "local-national-school-uniform-pros-cons",
+    "topic": "local-national",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which phrase expresses an advantage of wearing a school uniform?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Evita las diferencias entre ricos y pobres",
+        "Es muy incómodo",
+        "No permite la expresión individual",
+        "Es demasiado caro"
+      ],
+      "answer": "Evita las diferencias entre ricos y pobres"
+    },
+    "explanation": "'Evita las diferencias...' means 'It avoids differences between rich and poor', a common pro-uniform argument in GCSE Spanish."
+  },
+  {
+    "id": "local-national-directions-prepositions-fill",
+    "topic": "local-national",
+    "difficulty": 2,
+    "image": null,
+    "template": "La biblioteca está [[blank0]] del parque y [[blank1]] de la iglesia.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [
+        ["al lado", "cerca", "lejos", "detrás"],
+        ["enfrente", "delante"]
+      ]
+    },
+    "explanation": "Requires prepositions of place. Note that many require 'de' (e.g., 'al lado de', 'enfrente de')."
+  },
+  {
+    "id": "local-national-region-geography-vocab",
+    "topic": "local-national",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is the Spanish word for 'coast'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "la costa",
+      "acceptedAnswers": ["costa"]
+    },
+    "explanation": "Basic geographical vocabulary for Theme 2."
+  },
+  {
+    "id": "local-national-town-negatives-grammar",
+    "topic": "local-national",
+    "difficulty": 4,
+    "image": null,
+    "template": "Translate: 'In my town there is neither a cinema nor a stadium.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "En mi pueblo no hay ni cine ni estadio",
+      "acceptedAnswers": [
+        "En mi ciudad no hay ni un cine ni un estadio",
+        "En mi pueblo no hay ni un cine ni un estadio"
+      ]
+    },
+    "explanation": "Uses the double negative structure 'ni... ni...' (neither... nor...)."
+  },
+  {
+    "id": "local-national-holiday-future-conditional",
+    "topic": "local-national",
+    "difficulty": 4,
+    "image": null,
+    "template": "Complete the sentence with the conditional form: 'Si tuviera mucho dinero, ______ (ir) a México.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "iría",
+      "acceptedAnswers": ["iría"]
+    },
+    "explanation": "This is a 'Si' clause using the imperfect subjunctive ('tuviera') followed by the conditional ('iría'). This is a Higher-only structure."
+  },
+  {
+    "id": "local-national-transport-comparative",
+    "topic": "local-national",
+    "difficulty": 3,
+    "image": null,
+    "template": "Translate: 'The train is faster than the bus.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "El tren es más rápido que el autobús",
+      "acceptedAnswers": ["El tren es más veloz que el autobús"]
+    },
+    "explanation": "Uses the comparative structure 'más + adjective + que'."
+  },
+  {
+    "id": "local-national-global-issues-ordering",
+    "topic": "local-national",
+    "difficulty": 5,
+    "image": null,
+    "template": "Explain the concept of 'Comercio Justo' (Fair Trade).",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 2,
+      "markScheme": "1. Mention that it ensures producers/workers in developing countries get a fair price/salary (1) / 2. Mention it promotes better working conditions or sustainability (1)"
+    },
+    "explanation": "'Comercio Justo' is a specific sub-topic within Global Issues in the AQA specification."
+  }
+]

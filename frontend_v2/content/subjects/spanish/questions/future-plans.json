@@ -1,0 +1,412 @@
+[
+  {
+    "id": "future-plans-jobs-vocab-matching",
+    "topic": "future-plans",
+    "difficulty": 1,
+    "image": null,
+    "template": "Match the Spanish job titles to their English translations.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "el enfermero", "right": "nurse" },
+        { "left": "el abogado", "right": "lawyer" },
+        { "left": "el contable", "right": "accountant" },
+        { "left": "el azafato", "right": "flight attendant" },
+        { "left": "el arquitecto", "right": "architect" }
+      ]
+    },
+    "explanation": "These are common professional nouns used in Theme 3 of the AQA GCSE Spanish specification."
+  },
+  {
+    "id": "future-plans-future-tense-irregular-hacer",
+    "topic": "future-plans",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the correct 'yo' form of the verb 'hacer' in the future tense?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["haceré", "haré", "hice", "hacía"],
+      "answer": "haré"
+    },
+    "explanation": "'Hacer' has an irregular stem in the future tense: 'har-'. Adding the 'yo' ending '-é' gives 'haré'."
+  },
+  {
+    "id": "future-plans-university-translation",
+    "topic": "future-plans",
+    "difficulty": 3,
+    "image": null,
+    "template": "Translate this sentence into Spanish: 'In the future, I would like to study at university.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "En el futuro me gustaría estudiar en la universidad",
+      "acceptedAnswers": [
+        "En el futuro, me gustaría estudiar en la universidad",
+        "Me gustaría estudiar en la universidad en el futuro",
+        "Quisiera estudiar en la universidad en el futuro"
+      ]
+    },
+    "explanation": "'Me gustaría' (conditional) is the standard way to express 'I would like'. 'En el futuro' establishes the time frame."
+  },
+  {
+    "id": "future-plans-subjunctive-querer-que",
+    "topic": "future-plans",
+    "difficulty": 5,
+    "image": null,
+    "template": "Complete the sentence using the correct form of the present subjunctive: 'Mis padres quieren que yo [[blank0]] (estudiar) medicina.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [["estudie"]]
+    },
+    "explanation": "After 'quieren que' (wish/desire for someone else), the subjunctive mood is required. For 'yo' and the verb 'estudiar', the form is 'estudie'."
+  },
+  {
+    "id": "future-plans-future-tense-endings-order",
+    "topic": "future-plans",
+    "difficulty": 2,
+    "image": null,
+    "template": "Order the future tense endings from 'yo' to 'ellos/ellas'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": ["-é", "-ás", "-á", "-emos", "-éis", "-án"]
+    },
+    "explanation": "The future tense endings are added directly to the infinitive and are the same for -ar, -er, and -ir verbs."
+  },
+  {
+    "id": "future-plans-work-experience-verbs",
+    "topic": "future-plans",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which verb is used with 'prácticas' to mean 'to do work experience'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["hacer", "tener", "dar", "ver"],
+      "answer": "hacer"
+    },
+    "explanation": "In Spanish, you 'hacer prácticas' (to do/carry out work experience)."
+  },
+  {
+    "id": "future-plans-job-adjectives-multi",
+    "topic": "future-plans",
+    "difficulty": 2,
+    "image": null,
+    "template": "Select three adjectives that describe a positive aspect of a job.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "bien pagado",
+        "desafiante",
+        "monótono",
+        "gratificante",
+        "estresante"
+      ],
+      "correctOptions": ["bien pagado", "desafiante", "gratificante"]
+    },
+    "explanation": "'Bien pagado' (well-paid), 'desafiante' (challenging), and 'gratificante' (rewarding) are positive. 'Monótono' and 'estresante' are negative."
+  },
+  {
+    "id": "future-plans-imperfect-childhood",
+    "topic": "future-plans",
+    "difficulty": 3,
+    "image": null,
+    "template": "True or False: The sentence 'Cuando era joven, quería ser bombero' is grammatically correct.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "The imperfect tense ('era', 'quería') is correctly used here to describe states and habits in the past during childhood."
+  },
+  {
+    "id": "future-plans-future-irregular-stems",
+    "topic": "future-plans",
+    "difficulty": 4,
+    "image": null,
+    "template": "Match the irregular verb to its future/conditional stem.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "tener", "right": "tendr-" },
+        { "left": "poder", "right": "podr-" },
+        { "left": "saber", "right": "sabr-" },
+        { "left": "querer", "right": "querr-" },
+        { "left": "venir", "right": "vendr-" }
+      ]
+    },
+    "explanation": "These verbs drop the infinitive vowel and/or add a 'd' or 'r' to form the stem for both the future and conditional tenses."
+  },
+  {
+    "id": "future-plans-career-translation-2",
+    "topic": "future-plans",
+    "difficulty": 4,
+    "image": null,
+    "template": "Translate: 'If I pass my exams, I will look for a job.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Si apruebo mis exámenes, buscaré un trabajo",
+      "acceptedAnswers": [
+        "Si apruebo mis exámenes buscaré trabajo",
+        "Buscaré un empleo si apruebo mis exámenes"
+      ]
+    },
+    "explanation": "In 'Si' clauses referring to the future, the 'if' part is usually present tense and the result is future tense ('buscaré')."
+  },
+  {
+    "id": "future-plans-ambition-vocabulary",
+    "topic": "future-plans",
+    "difficulty": 2,
+    "image": null,
+    "template": "What does the phrase 'tengo la intención de' mean?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "I have the intention of",
+        "I have the interest in",
+        "I have the ability to",
+        "I have the dream of"
+      ],
+      "answer": "I have the intention of"
+    },
+    "explanation": "It is a useful complex phrase for expressing future plans, similar to 'tengo ganas de' or 'pienso + infinitive'."
+  },
+  {
+    "id": "future-plans-employment-advantages-long",
+    "topic": "future-plans",
+    "difficulty": 4,
+    "image": null,
+    "template": "Explain the advantages of taking a 'año sabático' (gap year) before university.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 3,
+      "markScheme": "1. Mention gaining work experience or new skills (aprender nuevas habilidades) (1) / 2. Mention the opportunity to travel or learn a language (viajar/aprender un idioma) (1) / 3. Mention personal growth or a break from studying (madurar/descansar de los estudios) (1)",
+      "minWords": 30
+    },
+    "explanation": "The 'año sabático' is a common topic in Theme 3. Higher students should use specific vocabulary like 'mejorar mis perspectivas laborales'."
+  },
+  {
+    "id": "future-plans-future-tense-formation-rules",
+    "topic": "future-plans",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or False: To form the future tense of regular verbs, you remove the -ar/-er/-ir ending before adding the new endings.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": false
+    },
+    "explanation": "Unlike the present tense, the future tense is formed by adding endings to the **whole infinitive** (e.g., hablar + é = hablaré)."
+  },
+  {
+    "id": "future-plans-job-skills-translation",
+    "topic": "future-plans",
+    "difficulty": 3,
+    "image": null,
+    "template": "Translate 'I am good at languages' into Spanish.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "se me dan bien los idiomas",
+      "acceptedAnswers": [
+        "soy bueno en los idiomas",
+        "soy buena en los idiomas",
+        "se me dan bien las lenguas"
+      ]
+    },
+    "explanation": "While 'soy bueno en' is correct, 'se me dan bien' is a more idiomatic and higher-level way to express aptitude."
+  },
+  {
+    "id": "future-plans-job-interview-phrases",
+    "topic": "future-plans",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match the interview phrase to its meaning.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "¿Tiene experiencia?", "right": "Do you have experience?" },
+        { "left": "¿Cuál es el sueldo?", "right": "What is the salary?" },
+        { "left": "el horario", "right": "the schedule/hours" },
+        { "left": "a tiempo parcial", "right": "part-time" }
+      ]
+    },
+    "explanation": "Vocabulary related to job applications and interviews is essential for the world of work sub-topic."
+  },
+  {
+    "id": "future-plans-conditional-usage",
+    "topic": "future-plans",
+    "difficulty": 3,
+    "image": null,
+    "template": "Choose the correct conditional form: 'Si ganara la lotería, [[blank0]] (comprar) una oficina.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["compraría", "compraré", "compraba", "compro"],
+      "answer": "compraría"
+    },
+    "explanation": "After an imperfect subjunctive ('ganara'), the conditional 'compraría' is used to express a hypothetical situation."
+  },
+  {
+    "id": "future-plans-job-responsibilities-fill",
+    "topic": "future-plans",
+    "difficulty": 3,
+    "image": null,
+    "template": "Como recepcionista, tengo que [[blank0]] por teléfono y [[blank1]] a los clientes.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [
+        ["hablar", "contestar"],
+        ["ayudar", "atender", "recibir"]
+      ]
+    },
+    "explanation": "Typical tasks for a receptionist include answering the phone ('contestar por teléfono') and helping customers ('atender a los clientes')."
+  },
+  {
+    "id": "future-plans-further-ed-multi",
+    "topic": "future-plans",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which of the following terms relate to education after school? Select all that apply.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "la universidad",
+        "el bachillerato",
+        "el recreo",
+        "la formación profesional",
+        "la escuela primaria"
+      ],
+      "correctOptions": [
+        "la universidad",
+        "el bachillerato",
+        "la formación profesional"
+      ]
+    },
+    "explanation": "University, A-levels (Bachillerato), and vocational training are post-16/18 options. 'Recreo' is break time and 'primaria' is primary school."
+  },
+  {
+    "id": "future-plans-future-career-long",
+    "topic": "future-plans",
+    "difficulty": 5,
+    "image": null,
+    "template": "In Spanish, describe your ideal job and explain why it appeals to you.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 4,
+      "markScheme": "1. States a specific job (e.g., Mi trabajo ideal sería...) (1) / 2. Uses the conditional tense correctly (1) / 3. Provides a reason using 'porque' or 'ya que' (1) / 4. Includes a positive adjective or detail about salary/hours (1)",
+      "minWords": 40
+    },
+    "explanation": "This task assesses the ability to use complex structures (conditional) and provide detailed reasons (AO4)."
+  },
+  {
+    "id": "future-plans-work-experience-negative",
+    "topic": "future-plans",
+    "difficulty": 4,
+    "image": null,
+    "template": "Translate: 'My work experience was a waste of time because I did nothing.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "Mis prácticas fueron una pérdida de tiempo porque no hice nada",
+      "acceptedAnswers": [
+        "Mi experiencia laboral fue una pérdida de tiempo porque no hice nada",
+        "Mis prácticas fueron una pérdida de tiempo ya que no hice nada"
+      ]
+    },
+    "explanation": "'Una pérdida de tiempo' is a key phrase. It uses the preterite 'fueron' (was/were) and 'hice' (I did) to describe a specific past event."
+  },
+  {
+    "id": "future-plans-translation-english-1",
+    "topic": "future-plans",
+    "difficulty": 2,
+    "image": null,
+    "template": "Translate to English: 'Espero ganar mucho dinero.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "I hope to earn a lot of money",
+      "acceptedAnswers": [
+        "I hope to earn lots of money",
+        "I am hoping to earn a lot of money"
+      ]
+    },
+    "explanation": "'Esperar' can mean 'to hope' or 'to wait'. In this context of future plans, it means 'hope'."
+  },
+  {
+    "id": "future-plans-poverty-global-link",
+    "topic": "future-plans",
+    "difficulty": 4,
+    "image": null,
+    "template": "Which phrase correctly describes a desire to help others through a career?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Quiero trabajar como voluntario para ayudar a los demás",
+        "Quiero un trabajo con un sueldo muy alto",
+        "Quiero trabajar solo para evitar el estrés",
+        "Quiero ser jefe para mandar a la gente"
+      ],
+      "answer": "Quiero trabajar como voluntario para ayudar a los demás"
+    },
+    "explanation": "'Trabajar como voluntario' (to work as a volunteer) and 'ayudar a los demás' (to help others) are key phrases for social ambitions."
+  },
+  {
+    "id": "future-plans-grammar-pero-vs-sino",
+    "topic": "future-plans",
+    "difficulty": 5,
+    "image": null,
+    "template": "Choose the correct word: 'No quiero ser médico, [[blank0]] enfermero.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": ["pero", "sino", "si", "porque"],
+      "answer": "sino"
+    },
+    "explanation": "'Sino' is used instead of 'pero' when the first part of the sentence is negative and the second part provides a direct contradiction/alternative ('but rather')."
+  },
+  {
+    "id": "future-plans-future-translation-3",
+    "topic": "future-plans",
+    "difficulty": 4,
+    "image": null,
+    "template": "Translate: 'Next year I will go to university if I get good grades.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "El año que viene iré a la universidad si saco buenas notas",
+      "acceptedAnswers": [
+        "El año próximo iré a la universidad si obtengo buenas notas",
+        "Iré a la universidad el año que viene si saco buenas notas"
+      ]
+    },
+    "explanation": "This sentence combines 'El año que viene' (future time marker), 'iré' (irregular future of ir), and 'sacar buenas notas' (to get good grades)."
+  },
+  {
+    "id": "future-plans-unemployment-vocab",
+    "topic": "future-plans",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is the Spanish word for 'unemployed'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "en paro",
+      "acceptedAnswers": ["desempleado", "desempleada"]
+    },
+    "explanation": "'En paro' is very common in Spain. 'Desempleado' is also widely used across the Spanish-speaking world."
+  }
+]
