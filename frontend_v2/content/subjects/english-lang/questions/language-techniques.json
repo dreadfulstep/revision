@@ -1,0 +1,428 @@
+[
+  {
+    "id": "lang-tech-id-simile-ocean",
+    "topic": "language-techniques",
+    "difficulty": 1,
+    "image": null,
+    "template": "Identify the language technique used in this sentence: 'The waves crashed against the jagged rocks like a thousand breaking mirrors.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Simile",
+        "Metaphor",
+        "Personification",
+        "Oxymoron"
+      ],
+      "answer": "Simile"
+    },
+    "explanation": "The word 'like' is used to compare the waves to breaking mirrors, making it a simile."
+  },
+  {
+    "id": "lang-tech-def-matching-basics",
+    "topic": "language-techniques",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each language technique to its correct definition.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Metaphor", "right": "Describing something as if it is something else" },
+        { "left": "Onomatopoeia", "right": "A word that imitates the sound it describes" },
+        { "left": "Hyperbole", "right": "Exaggeration used for emphasis or effect" },
+        { "left": "Alliteration", "right": "Repetition of the same starting consonant sounds" }
+      ]
+    },
+    "explanation": "These are fundamental building blocks of descriptive writing. Metaphor states X is Y, while alliteration focuses on initial sounds."
+  },
+  {
+    "id": "lang-tech-id-personification-wind",
+    "topic": "language-techniques",
+    "difficulty": 2,
+    "image": null,
+    "template": "What technique is used in the following extract? 'The wind whispered through the skeletal trees, mourning the loss of summer.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "personification",
+      "acceptedAnswers": ["pathetic fallacy", "anthropomorphism"]
+    },
+    "explanation": "The wind is given human qualities such as 'whispering' and 'mourning', which is personification. Since it reflects a somber mood, 'pathetic fallacy' is also an acceptable term."
+  },
+  {
+    "id": "lang-tech-effect-sibilance-snake",
+    "topic": "language-techniques",
+    "difficulty": 3,
+    "image": null,
+    "template": "Read this sentence: 'The serpent slithered silently across the scorching sand.' Which technique is used, and what is its most likely effect?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Sibilance; it creates a hushing or hissing sound that mimics the snake",
+        "Alliteration; it makes the sentence sound happy and lighthearted",
+        "Onomatopoeia; it uses words that sound like sand",
+        "Oxymoron; it creates a sense of confusion for the reader"
+      ],
+      "answer": "Sibilance; it creates a hushing or hissing sound that mimics the snake"
+    },
+    "explanation": "Sibilance is the repetition of 's' sounds. In this context, it mimics the natural hissing of a snake, creating an eerie or predatory atmosphere."
+  },
+  {
+    "id": "lang-tech-id-oxymoron-love",
+    "topic": "language-techniques",
+    "difficulty": 2,
+    "image": null,
+    "template": "Identify the technique used here: 'Their parting was a sweet sorrow, a beautiful nightmare they couldn't escape.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "oxymoron",
+      "acceptedAnswers": ["juxtaposition", "paradox"]
+    },
+    "explanation": "An oxymoron places two contradictory words side-by-side, such as 'sweet sorrow' or 'beautiful nightmare'."
+  },
+  {
+    "id": "lang-tech-select-persuasive",
+    "topic": "language-techniques",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which of the following techniques are commonly used to make a piece of writing more persuasive? (Select 3)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Rhetorical questions",
+        "Rule of three",
+        "Direct address",
+        "Onomatopoeia",
+        "Personification"
+      ],
+      "correctOptions": [
+        "Rhetorical questions",
+        "Rule of three",
+        "Direct address"
+      ]
+    },
+    "explanation": "Rhetorical questions engage the reader, the rule of three makes points memorable, and direct address (using 'you') creates a personal connection."
+  },
+  {
+    "id": "lang-tech-id-anaphora-speech",
+    "topic": "language-techniques",
+    "difficulty": 4,
+    "image": null,
+    "template": "Consider this extract: 'We shall fight for our freedom. We shall fight for our children. We shall fight for our future.' What is the specific name for the repetition of 'We shall fight' at the start of these sentences?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "anaphora",
+      "acceptedAnswers": ["repetition"]
+    },
+    "explanation": "Anaphora is the deliberate repetition of the first part of the sentence in order to achieve an artistic or persuasive effect."
+  },
+  {
+    "id": "lang-tech-connotations-darkness",
+    "topic": "language-techniques",
+    "difficulty": 3,
+    "image": null,
+    "template": "In the sentence 'A shadow loomed over the city, choking the last remnants of hope,' which word has the most negative connotations used to create a sense of oppression?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Choking",
+        "Loomed",
+        "Shadow",
+        "Remnants"
+      ],
+      "answer": "Choking"
+    },
+    "explanation": "'Choking' suggests violence, breathlessness, and total control, which creates a much more visceral and oppressive feeling than the other options."
+  },
+  {
+    "id": "lang-tech-ordering-intensity",
+    "topic": "language-techniques",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order these verbs from the 'weakest' to 'strongest' in terms of the intensity of emotion they convey.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Disliked",
+        "Hated",
+        "Loathed",
+        "Abhorred"
+      ]
+    },
+    "explanation": "Vocabulary choice impacts tone. 'Disliked' is a mild preference, while 'Abhorred' suggests a deep, intense, and visceral disgust."
+  },
+  {
+    "id": "lang-tech-id-juxtaposition-contrast",
+    "topic": "language-techniques",
+    "difficulty": 3,
+    "image": null,
+    "template": "In a description of a battlefield, a writer describes a 'tiny, delicate daisy blooming amidst the charred remains of a tank.' What technique is being used here?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Juxtaposition",
+        "Euphemism",
+        "Sibilance",
+        "Alliteration"
+      ],
+      "answer": "Juxtaposition"
+    },
+    "explanation": "Juxtaposition is placing two very different things close together to highlight their differences—in this case, life and beauty versus death and destruction."
+  },
+  {
+    "id": "lang-tech-def-semantic-field",
+    "topic": "language-techniques",
+    "difficulty": 4,
+    "image": null,
+    "template": "A writer uses the words 'scalpel', 'sterile', 'anaesthetic', and 'ward'. This is an example of a [[blank0]] [[blank1]] of medicine.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [
+        ["semantic", "lexical"],
+        ["field"]
+      ]
+    },
+    "explanation": "A semantic field is a collection of words which are related to the same topic or concept."
+  },
+  {
+    "id": "lang-tech-id-euphemism-death",
+    "topic": "language-techniques",
+    "difficulty": 3,
+    "image": null,
+    "template": "When a character says someone has 'passed away' instead of 'died', which technique are they using?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "euphemism",
+      "acceptedAnswers": ["softening language"]
+    },
+    "explanation": "A euphemism is a mild or indirect word or expression substituted for one considered to be too harsh or blunt when referring to something unpleasant or embarrassing."
+  },
+  {
+    "id": "lang-tech-true-false-pathetic-fallacy",
+    "topic": "language-techniques",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or False: Pathetic fallacy is a specific type of personification where the weather or environment reflects the internal emotions of a character.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Pathetic fallacy is when the environment (usually weather) mirrors human feelings, such as rain falling during a funeral to represent sadness."
+  },
+  {
+    "id": "lang-tech-matching-persuasive-defs",
+    "topic": "language-techniques",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match these persuasive techniques to their examples.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Expert Opinion", "right": "'Dr. Smith claims that 8 hours of sleep is vital.'" },
+        { "left": "Emotive Language", "right": "'These defenseless creatures are being heartlessly slaughtered.'" },
+        { "left": "Anecdote", "right": "'Last year, I met a young girl who had lost everything...'" },
+        { "left": "Inclusive Pronouns", "right": "'We must act now to save our planet.'" }
+      ]
+    },
+    "explanation": "Expert opinions add authority; emotive language triggers feelings; anecdotes provide a personal story; inclusive pronouns create a sense of shared responsibility."
+  },
+  {
+    "id": "lang-tech-id-listing-effect",
+    "topic": "language-techniques",
+    "difficulty": 3,
+    "image": null,
+    "template": "The writer uses a list: 'The room was filled with dust, broken glass, torn wallpaper, and the scent of decay.' What is the most likely effect of this listing?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "To overwhelm the reader with a sense of neglect and ruin",
+        "To show that the character is very organized",
+        "To make the scene feel fast-paced and exciting",
+        "To provide a humorous tone to the description"
+      ],
+      "answer": "To overwhelm the reader with a sense of neglect and ruin"
+    },
+    "explanation": "Listing multiple negative details together emphasizes the extent of the decay, creating a cumulative effect of desolation."
+  },
+  {
+    "id": "lang-tech-vocabulary-formal-vs-informal",
+    "topic": "language-techniques",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which sentence uses a formal register suitable for a serious letter of complaint?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "I am writing to express my profound dissatisfaction with the service provided.",
+        "I'm really annoyed about how bad the service was yesterday.",
+        "The service was a total joke and I want my money back ASAP.",
+        "I'm gutted that you guys messed up my order so badly."
+      ],
+      "answer": "I am writing to express my profound dissatisfaction with the service provided."
+    },
+    "explanation": "Formal language avoids contractions ('I am' vs 'I'm'), uses sophisticated vocabulary ('profound dissatisfaction'), and maintains a polite but firm tone."
+  },
+  {
+    "id": "lang-tech-id-symbolism-white",
+    "topic": "language-techniques",
+    "difficulty": 3,
+    "image": null,
+    "template": "In a story, a character repeatedly sees a white dove whenever they think of their late mother. What is the dove most likely acting as?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "symbol",
+      "acceptedAnswers": ["motif", "metaphor"]
+    },
+    "explanation": "A symbol is an object that represents an idea or quality. Here, the dove likely symbolizes peace, purity, or the mother's spirit."
+  },
+  {
+    "id": "lang-tech-id-rhetorical-q",
+    "topic": "language-techniques",
+    "difficulty": 1,
+    "image": null,
+    "template": "What is the name for a question that is asked for effect or to make a point, rather than to get an answer?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Rhetorical question",
+        "Open question",
+        "Hypothetical question",
+        "Direct question"
+      ],
+      "answer": "Rhetorical question"
+    },
+    "explanation": "Rhetorical questions are used to persuade the audience to agree with the speaker's implied answer."
+  },
+  {
+    "id": "lang-tech-long-form-metaphor-analysis",
+    "topic": "language-techniques",
+    "difficulty": 4,
+    "image": null,
+    "template": "Extract: 'The city was a hungry beast, devouring the dreams of those who walked its streets.'\n\nExplain the effect of the metaphor used in this extract.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 3,
+      "markScheme": "1. Identifies the city is being compared to a 'hungry beast' (1). / 2. Explains that this suggests the city is dangerous, predatory, or consuming (1). / 3. Analyzes how 'devouring dreams' implies that the city destroys people's hopes or ambitions (1)."
+    },
+    "explanation": "The metaphor characterizes the city as something inhuman and threatening, suggesting that it takes from people rather than giving to them."
+  },
+  {
+    "id": "lang-tech-select-sensory",
+    "topic": "language-techniques",
+    "difficulty": 2,
+    "image": null,
+    "template": "A writer wants to use 'sensory detail' to describe a busy market. Which of these examples use sensory language? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "The sharp, zesty aroma of sliced lemons filled the air.",
+        "Rough burlap sacks scraped against my palms.",
+        "The market was very busy today.",
+        "The cacophony of shouting vendors echoed through the stalls.",
+        "I walked to the market at 10am."
+      ],
+      "correctOptions": [
+        "The sharp, zesty aroma of sliced lemons filled the air.",
+        "Rough burlap sacks scraped against my palms.",
+        "The cacophony of shouting vendors echoed through the stalls."
+      ]
+    },
+    "explanation": "Sensory language appeals to the five senses: smell (aroma), touch (scraped/palms), and sound (cacophony/echoed)."
+  },
+  {
+    "id": "lang-tech-true-false-narrative",
+    "topic": "language-techniques",
+    "difficulty": 1,
+    "image": null,
+    "template": "True or False: A 'first-person narrative' is told from the perspective of a character using the pronouns 'I' and 'we'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "First-person narration allows the reader to see directly into the narrator's thoughts and feelings."
+  },
+  {
+    "id": "lang-tech-matching-description-terms",
+    "topic": "language-techniques",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match these descriptive writing techniques to their definitions.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Show, Not Tell", "right": "Using actions and senses to reveal traits instead of stating them" },
+        { "left": "Atmosphere", "right": "The overall mood or feeling created in a piece of writing" },
+        { "left": "Sensory Detail", "right": "Language that appeals to the five senses" },
+        { "left": "Figurative Language", "right": "Language used in a non-literal way, like similes and metaphors" }
+      ]
+    },
+    "explanation": "'Show, not tell' is a vital skill for high-level descriptive writing, as it engages the reader's imagination."
+  },
+  {
+    "id": "lang-tech-id-metaphor-vs-simile",
+    "topic": "language-techniques",
+    "difficulty": 2,
+    "image": null,
+    "template": "Look at these two sentences:\n1. The snow was a white blanket.\n2. The snow was like a white blanket.\n\nIdentify the technique used in sentence 1.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "metaphor",
+      "acceptedAnswers": ["extended metaphor"]
+    },
+    "explanation": "Sentence 1 is a metaphor because it says the snow *is* a blanket. Sentence 2 is a simile because it uses 'like'."
+  },
+  {
+    "id": "lang-tech-effect-rhetorical-q",
+    "topic": "language-techniques",
+    "difficulty": 3,
+    "image": null,
+    "template": "In a speech about poverty, the speaker asks: 'Can we really look the other way while children go hungry?' What is the primary effect of this rhetorical question?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "To make the audience feel a sense of moral guilt and responsibility",
+        "To find out if the audience is actually looking away",
+        "To confuse the audience about the topic",
+        "To show that the speaker doesn't know the answer"
+      ],
+      "answer": "To make the audience feel a sense of moral guilt and responsibility"
+    },
+    "explanation": "Rhetorical questions in persuasion often target the audience's conscience, making the 'correct' moral answer feel obvious."
+  },
+  {
+    "id": "lang-tech-long-form-onomatopoeia-analysis",
+    "topic": "language-techniques",
+    "difficulty": 4,
+    "image": null,
+    "template": "Extract: 'The dry leaves crunched and crackled under her boots as she hurried through the woods.'\n\nExplain how the writer uses sound to create an atmosphere in this extract.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 3,
+      "markScheme": "1. Identifies the use of onomatopoeia in 'crunched' and 'crackled' (1). / 2. Explains that these harsh, sharp sounds mimic the physical breaking of leaves (1). / 3. Analyzes how this creates a sense of tension or the fear of being heard/followed (1)."
+    },
+    "explanation": "Onomatopoeia brings the scene to life through sound, making the reader hear what the character hears, which increases immersion and tension."
+  }
+]

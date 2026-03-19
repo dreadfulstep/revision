@@ -1,0 +1,433 @@
+[
+  {
+    "id": "writing-skills-grammar-apostrophe-possessive",
+    "topic": "writing-skills",
+    "difficulty": 1,
+    "image": null,
+    "template": "Which sentence uses the apostrophe correctly to show that the coat belongs to one girl?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The girl's coat was bright red.",
+        "The girls' coat was bright red.",
+        "The girls coat's was bright red.",
+        "The girles coat was bright red."
+      ],
+      "answer": "The girl's coat was bright red."
+    },
+    "explanation": "To show possession for a singular noun (one girl), you add an apostrophe followed by an 's'. 'Girls'' would imply the coat belongs to multiple girls."
+  },
+  {
+    "id": "writing-skills-technique-afofest-matching",
+    "topic": "writing-skills",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match each persuasive technique from the AFOREST mnemonic to its correct example.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Alliteration", "right": "Functional, fashionable, and fast." },
+        { "left": "Fact", "right": "The earth orbits the sun." },
+        { "left": "Opinion", "right": "This is the best movie ever made." },
+        { "left": "Rhetorical Question", "right": "Do you want to be successful?" },
+        { "left": "Exaggeration", "right": "I've told you a million times." }
+      ]
+    },
+    "explanation": "AFOREST stands for Alliteration, Facts, Opinions, Rhetorical Questions, Emotive Language, Statistics, and Three (rule of)."
+  },
+  {
+    "id": "writing-skills-opening-in-medias-res",
+    "topic": "writing-skills",
+    "difficulty": 2,
+    "image": null,
+    "template": "What is the term for a narrative opening that starts 'in the middle of things', without prior introduction of characters or setting?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "in medias res",
+      "acceptedAnswers": ["starting in the middle", "middle of the action"]
+    },
+    "explanation": "In medias res is Latin for 'into the middle of things'. It is a technique used to hook the reader immediately with action."
+  },
+  {
+    "id": "writing-skills-grammar-conjunction-start",
+    "topic": "writing-skills",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or False: In modern English writing, it is grammatically incorrect to start a sentence with a coordinating conjunction such as 'And' or 'But'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": false
+    },
+    "explanation": "While often discouraged in very formal or old-fashioned teaching, starting a sentence with 'And' or 'But' is a common and acceptable way to create emphasis or a sense of voice in GCSE writing."
+  },
+  {
+    "id": "writing-skills-punctuation-semicolon-use",
+    "topic": "writing-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "Select the sentence that uses a semicolon correctly to link two closely related independent clauses.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The weather was terrible; we decided to stay indoors.",
+        "The weather was terrible; staying indoors.",
+        "Because the weather was terrible; we stayed indoors.",
+        "The weather was terrible; and we stayed indoors."
+      ],
+      "answer": "The weather was terrible; we decided to stay indoors."
+    },
+    "explanation": "A semicolon must separate two full sentences (independent clauses) that are related in theme. It should not be followed by a conjunction like 'and'."
+  },
+  {
+    "id": "writing-skills-vocabulary-synonym-intensity",
+    "topic": "writing-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "A student is writing a horror story and wants to replace the word 'scared'. Order these synonyms from the least intense to the most intense feeling.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Uneasy",
+        "Apprehensive",
+        "Terrified",
+        "Petrified"
+      ]
+    },
+    "explanation": "Choosing precise vocabulary (AO5) is key. 'Uneasy' is a mild feeling, while 'Petrified' implies being so scared one cannot move."
+  },
+  {
+    "id": "writing-skills-grammar-sentence-fragment-effect",
+    "topic": "writing-skills",
+    "difficulty": 4,
+    "image": null,
+    "template": "Extract: 'He ran. Faster. The shadow gained ground. Silence.'\n\nWhy has the writer used sentence fragments like 'Faster' and 'Silence'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "To create a sense of urgency, panic, and fast pace",
+        "Because they forgot to add a subject and a verb",
+        "To make the writing look more like a poem",
+        "To slow down the reading speed for the audience"
+      ],
+      "answer": "To create a sense of urgency, panic, and fast pace"
+    },
+    "explanation": "Short, fragmented sentences (minor sentences) mimic the gasping breath or rapid thoughts of someone in a high-stress situation."
+  },
+  {
+    "id": "writing-skills-structure-linear-vs-non",
+    "topic": "writing-skills",
+    "difficulty": 2,
+    "image": null,
+    "template": "A narrative that follows a clear time sequence from start to finish is described as having a [[blank0]] structure.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "linear",
+      "acceptedAnswers": ["chronological"]
+    },
+    "explanation": "Linear structures move forward in time (A to B to C), whereas non-linear structures might use flashbacks or time jumps."
+  },
+  {
+    "id": "writing-skills-technique-sensory-imagery",
+    "topic": "writing-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which of these sentences uses 'olfactory' imagery to describe a setting?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The scent of rotting seaweed and salt air hung heavy over the pier.",
+        "The jagged rocks felt like sandpaper against his skin.",
+        "A distant siren wailed through the fog like a lonely ghost.",
+        "The neon signs flickered with a harsh, bruising light."
+      ],
+      "answer": "The scent of rotting seaweed and salt air hung heavy over the pier."
+    },
+    "explanation": "Olfactory imagery relates specifically to the sense of smell. 'Scent' is the key indicator here."
+  },
+  {
+    "id": "writing-skills-grammar-apostrophe-it",
+    "topic": "writing-skills",
+    "difficulty": 1,
+    "image": null,
+    "template": "Fill in the blanks with the correct forms of 'it': [[blank0]] clear that the dog has lost [[blank1]] collar.",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [
+        ["It's", "It is"],
+        ["its"]
+      ]
+    },
+    "explanation": "'It's' is a contraction of 'it is'. 'Its' is a possessive pronoun meaning 'belonging to it'. This is a common error in AO6."
+  },
+  {
+    "id": "writing-skills-closing-technique-call-to-action",
+    "topic": "writing-skills",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which closing technique is most appropriate for a persuasive speech about environmental protection?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "A call to action",
+        "A sudden plot twist",
+        "A cliffhanger",
+        "A detailed description of a tree"
+      ],
+      "answer": "A call to action"
+    },
+    "explanation": "A 'call to action' tells the audience exactly what they should do next, which is the goal of persuasive writing."
+  },
+  {
+    "id": "writing-skills-technique-onomatopoeia-purpose",
+    "topic": "writing-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "A writer describes a fire using words like 'crackle', 'hiss', and 'pop'. What is the name of this technique?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "onomatopoeia",
+      "acceptedAnswers": ["auditory imagery", "sound symbolism"]
+    },
+    "explanation": "Onomatopoeia refers to words that phonetically imitate the sound they describe, helping to create a vivid auditory experience."
+  },
+  {
+    "id": "writing-skills-multi-select-persuasive-devices",
+    "topic": "writing-skills",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which of the following are examples of 'rhetorical devices' used in persuasive writing? (Select 3)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "The Rule of Three",
+        "Hyperbole",
+        "Direct Address",
+        "In medias res",
+        "Pathetic Fallacy"
+      ],
+      "correctOptions": [
+        "The Rule of Three",
+        "Hyperbole",
+        "Direct Address"
+      ]
+    },
+    "explanation": "The Rule of Three, Hyperbole (exaggeration), and Direct Address (using 'you') are core persuasive tools. In medias res is narrative, and pathetic fallacy is descriptive."
+  },
+  {
+    "id": "writing-skills-punctuation-colon-lists",
+    "topic": "writing-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "True or False: A colon should be used to introduce a list only if the part of the sentence before the colon is a complete independent clause.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Correct: 'I need three things: milk, eggs, and bread' is right. 'I need: milk, eggs, and bread' is technically incorrect because 'I need' is not a complete sentence."
+  },
+  {
+    "id": "writing-skills-planning-structure-order",
+    "topic": "writing-skills",
+    "difficulty": 2,
+    "image": null,
+    "template": "Put these steps of the writing process in the most logical order for a 45-minute exam task.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Read the prompt and identify audience/purpose",
+        "Spend 5 minutes planning paragraphs and key vocabulary",
+        "Write the response following the plan",
+        "Proofread for spelling and punctuation errors"
+      ]
+    },
+    "explanation": "Planning and proofreading are essential for hitting the higher marks in AO5 and AO6."
+  },
+  {
+    "id": "writing-skills-vocabulary-precise-verbs",
+    "topic": "writing-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which verb creates the most 'menacing' tone to replace the word 'walked' in the sentence: 'The figure walked through the graveyard.'?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Stalked",
+        "Ambled",
+        "Sauntered",
+        "Trudged"
+      ],
+      "answer": "Stalked"
+    },
+    "explanation": "'Stalked' implies a predator following prey, which is far more menacing than 'ambled' (relaxed) or 'trudged' (tired)."
+  },
+  {
+    "id": "writing-skills-matching-sentence-purpose",
+    "topic": "writing-skills",
+    "difficulty": 4,
+    "image": null,
+    "template": "Match the sentence type to the effect it is most likely to have in a piece of descriptive writing.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        { "left": "Simple Sentence", "right": "To provide a sudden shock or clear fact." },
+        { "left": "Complex Sentence", "right": "To show detail and relationship between ideas." },
+        { "left": "Compound Sentence", "right": "To balance two equal ideas or show a sequence." },
+        { "left": "Exclamatory Sentence", "right": "To convey high emotion or urgency." }
+      ]
+    },
+    "explanation": "Varied sentence structures (AO6) keep the reader engaged and allow the writer to control the 'flow' of information."
+  },
+  {
+    "id": "writing-skills-longform-describe-personification",
+    "topic": "writing-skills",
+    "difficulty": 4,
+    "image": null,
+    "template": "Describe a storm using personification. (Your answer should be 1-2 sentences).",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 2,
+      "markScheme": "1. Uses a clear example of personification (giving the storm human traits, e.g., 'angry', 'shouting', 'fingers') (1). / 2. Maintains technical accuracy in spelling and punctuation (1).",
+      "minWords": 10
+    },
+    "explanation": "Personification brings inanimate objects to life. For example: 'The wind howled in rage, clawing at the windowpanes with icy fingers.'"
+  },
+  {
+    "id": "writing-skills-technique-parenthesis",
+    "topic": "writing-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "What punctuation marks can be used to create 'parenthesis' (adding extra information that could be removed)?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Brackets",
+        "Commas",
+        "Dashes",
+        "Full stops",
+        "Semicolons"
+      ],
+      "correctOptions": [
+        "Brackets",
+        "Commas",
+        "Dashes"
+      ]
+    },
+    "explanation": "Brackets, double commas, and double dashes can all be used to set off parenthetical information."
+  },
+  {
+    "id": "writing-skills-grammar-homophones",
+    "topic": "writing-skills",
+    "difficulty": 1,
+    "image": null,
+    "template": "Choose the correct word to complete the sentence: 'The teacher told the students to put [[blank0]] books over [[blank1]].'",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [
+        ["their"],
+        ["there"]
+      ]
+    },
+    "explanation": "'Their' is possessive (belonging to them). 'There' refers to a place."
+  },
+  {
+    "id": "writing-skills-technique-vivid-description-opening",
+    "topic": "writing-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which of the following is the best example of a 'vivid description' opening for a story set in a desert?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The sun was a molten coin, melting into the horizon and scorching the endless dunes.",
+        "A desert is a very dry place with lots of sand and not much water.",
+        "I went to the desert once and it was really hot and I didn't like it.",
+        "Did you know that deserts can be cold at night as well as hot in the day?"
+      ],
+      "answer": "The sun was a molten coin, melting into the horizon and scorching the endless dunes."
+    },
+    "explanation": "This option uses a metaphor ('molten coin') and powerful verbs ('scorching'), which is more effective for AO5 than simple facts or personal anecdotes."
+  },
+  {
+    "id": "writing-skills-grammar-active-vs-passive",
+    "topic": "writing-skills",
+    "difficulty": 5,
+    "image": null,
+    "template": "Change this sentence from passive voice to active voice: 'The window was smashed by the ball.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "The ball smashed the window.",
+      "acceptedAnswers": ["The ball smashed the window"]
+    },
+    "explanation": "In active voice, the subject (the ball) performs the action (smashed). Active voice is often more direct and punchy."
+  },
+  {
+    "id": "writing-skills-structure-circular-narrative",
+    "topic": "writing-skills",
+    "difficulty": 4,
+    "image": null,
+    "template": "What is the structural term for a story that ends by returning to the same image, idea, or location used in the opening?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "cyclical structure",
+      "acceptedAnswers": ["circular narrative", "cyclical", "frame narrative"]
+    },
+    "explanation": "A cyclical structure creates a sense of completion or shows that despite the journey, some things remain the same."
+  },
+  {
+    "id": "writing-skills-longform-persuasive-opening",
+    "topic": "writing-skills",
+    "difficulty": 5,
+    "image": null,
+    "template": "Write an opening sentence for an article titled 'The End of the Plastic Era' using a shocking statistic.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 2,
+      "markScheme": "1. Includes a credible-sounding (or real) statistic related to plastic (1). / 2. Uses an engaging tone suitable for an article opening (1).",
+      "minWords": 10
+    },
+    "explanation": "Statistics provide immediate authority and shock value. Example: 'By 2050, there will be more plastic in our oceans than fish.'"
+  },
+  {
+    "id": "writing-skills-grammar-complex-sentence-ident",
+    "topic": "writing-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which of the following is a complex sentence?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Although it was raining, the explorers continued their journey.",
+        "The explorers continued their journey and they didn't look back.",
+        "The explorers continued their journey.",
+        "Walking through the rain, the explorers were tired."
+      ],
+      "answer": "Although it was raining, the explorers continued their journey."
+    },
+    "explanation": "A complex sentence contains an independent clause and a dependent clause (starting with a subordinating conjunction like 'Although')."
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "id": "english-language",
+  "name": "English Language",
+  "exam_board": "AQA",
+  "colour": "#FFFF00",
+  "papers": ["1", "2"],
+  "topics": [
+    { "id": "language-techniques", "name": "Language Techniques & Analysis" },
+    { "id": "structure-form", "name": "Structure, Form & Organisation" },
+    { "id": "reading-skills", "name": "Reading & Comprehension Skills" },
+    { "id": "writing-skills", "name": "Writing Skills & Craft" }
+  ]
+}

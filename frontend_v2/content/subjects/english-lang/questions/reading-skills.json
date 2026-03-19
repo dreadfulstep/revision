@@ -1,0 +1,493 @@
+[
+  {
+    "id": "reading-skills-ao1-explicit-info",
+    "topic": "reading-skills",
+    "difficulty": 1,
+    "image": null,
+    "template": "Extract: 'The sun was high in the sky, beating down on the dusty road. Martha wiped her brow and gripped her heavy suitcase tighter, her boots clicking rhythmically on the dry earth.'\n\nBased on the extract, identify two explicit facts about Martha's situation.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "She is carrying a heavy suitcase",
+        "She is walking on a dusty road",
+        "She is feeling very lonely",
+        "She is traveling to a new city",
+        "The weather is hot"
+      ],
+      "correctOptions": [
+        "She is carrying a heavy suitcase",
+        "She is walking on a dusty road",
+        "The weather is hot"
+      ]
+    },
+    "explanation": "Explicit information is directly stated. The text mentions the 'heavy suitcase', the 'dusty road', and the sun 'beating down' (hot weather). Martha's feelings or destination are not explicitly mentioned."
+  },
+  {
+    "id": "reading-skills-ao1-inference-mood",
+    "topic": "reading-skills",
+    "difficulty": 2,
+    "image": null,
+    "template": "Extract: 'James stared at the envelope on the mat. He didn't pick it up. Instead, he walked into the kitchen and started whistling a tune that was much too loud and much too fast.'\n\nWhat can be inferred about James's reaction to the letter?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "He is anxious or nervous about its contents",
+        "He hasn't noticed that the letter has arrived",
+        "He is excited to read the news inside",
+        "He is angry at the person who sent it"
+      ],
+      "answer": "He is anxious or nervous about its contents"
+    },
+    "explanation": "Inference involves reading between the lines. His avoidance of the letter and his 'too loud' whistling suggest a forced distraction to cover up nerves or anxiety."
+  },
+  {
+    "id": "reading-skills-purpose-matching",
+    "topic": "reading-skills",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match the following text types to their most likely primary purpose.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "A travel brochure",
+          "right": "To persuade"
+        },
+        {
+          "left": "A recipe book",
+          "right": "To instruct"
+        },
+        {
+          "left": "A news report",
+          "right": "To inform"
+        },
+        {
+          "left": "A satirical column",
+          "right": "To entertain/criticise"
+        }
+      ]
+    },
+    "explanation": "Identifying purpose is key to AO3. Writers choose specific language and structures based on whether they want to sell, teach, or inform."
+  },
+  {
+    "id": "reading-skills-tone-id",
+    "topic": "reading-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "Extract: 'Oh, brilliant. Another flat tyre. Just what I needed on a Monday morning when I'm already twenty minutes late for the most important meeting of my career.'\n\nWhich word best describes the tone of the speaker?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Sarcastic",
+        "Optimistic",
+        "Melancholic",
+        "Apathetic"
+      ],
+      "answer": "Sarcastic"
+    },
+    "explanation": "The use of 'Oh, brilliant' to describe a negative event (a flat tyre) is a classic example of verbal irony or sarcasm."
+  },
+  {
+    "id": "reading-skills-ao3-perspective-diff",
+    "topic": "reading-skills",
+    "difficulty": 4,
+    "image": null,
+    "template": "Source A (19th Century): 'The steam engine is a mechanical marvel, a roaring testament to man's dominion over nature.'\nSource B (Modern): 'The legacy of the industrial age is written in the soot-stained lungs of our ancestors and the rising tides of a warming world.'\n\nWhat is the main difference in perspective between the two writers?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Source A is celebratory while Source B is critical",
+        "Source A is fearful while Source B is bored",
+        "Source A focuses on nature while Source B focuses on machinery",
+        "Both writers are equally concerned about climate change"
+      ],
+      "answer": "Source A is celebratory while Source B is critical"
+    },
+    "explanation": "Source A uses positive language ('marvel', 'testament'), whereas Source B focuses on negative consequences ('soot-stained', 'warming world')."
+  },
+  {
+    "id": "reading-skills-vocabulary-context",
+    "topic": "reading-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "In the sentence 'The candidate's argument was tenuous at best, lacking any concrete evidence to support his wild claims,' what does the word 'tenuous' imply?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "weak",
+      "acceptedAnswers": [
+        "fragile",
+        "flimsy",
+        "uncertain",
+        "shaky"
+      ]
+    },
+    "explanation": "Context clues like 'lacking concrete evidence' and 'wild claims' suggest that the argument is not strong or well-supported."
+  },
+  {
+    "id": "reading-skills-true-false-ao4",
+    "topic": "reading-skills",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or False: AO4 (Critical Evaluation) requires you to express a personal opinion on how well a writer has achieved a particular effect, supported by evidence from the text.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "AO4 asks you to evaluate 'to what extent you agree' with a statement, meaning you must judge the success of the writer's methods."
+  },
+  {
+    "id": "reading-skills-ordering-summarising",
+    "topic": "reading-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "Order the steps for writing an effective summary of two different texts.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Read the question to identify the specific focus of the summary",
+        "Scan both texts for relevant points related to that focus",
+        "Synthesise the information by grouping similar or different ideas",
+        "Write the summary using your own words as much as possible"
+      ]
+    },
+    "explanation": "Summarising (AO1) requires selection, synthesis, and rephrasing to show a concise understanding."
+  },
+  {
+    "id": "reading-skills-implicit-meaning",
+    "topic": "reading-skills",
+    "difficulty": 4,
+    "image": null,
+    "template": "Extract: 'The headmaster adjusted his spectacles and looked at the boy over the top of them. He sighed, a long, heavy sound that seemed to rattle the trophies in the glass cabinet.'\n\nWhat is the implicit meaning of the headmaster's sigh?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "He is disappointed or exhausted by the boy's behavior",
+        "He has a medical condition affecting his breathing",
+        "He is very impressed by the boy's recent achievements",
+        "The room is too hot and he is trying to cool down"
+      ],
+      "answer": "He is disappointed or exhausted by the boy's behavior"
+    },
+    "explanation": "Implicit meaning (inference) suggests the 'heavy' sigh and looking 'over the top' of glasses are signs of weariness or disappointment in a disciplinary context."
+  },
+  {
+    "id": "reading-skills-audience-identification",
+    "topic": "reading-skills",
+    "difficulty": 2,
+    "image": null,
+    "template": "An article uses slang like 'no cap', 'vibe check', and 'bet'. Who is the most likely intended audience?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Teenagers and young adults",
+        "Academic professors",
+        "Professional historians",
+        "Toddlers and young children"
+      ],
+      "answer": "Teenagers and young adults"
+    },
+    "explanation": "The use of contemporary slang is a linguistic marker designed to appeal to a specific younger demographic."
+  },
+  {
+    "id": "reading-skills-matching-tonal-adj",
+    "topic": "reading-skills",
+    "difficulty": 4,
+    "image": null,
+    "template": "Match the adjective describing tone to the sentence that best exemplifies it.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Nostalgic",
+          "right": "'I remember the golden summers of my childhood...'"
+        },
+        {
+          "left": "Alarming",
+          "right": "'The danger is immediate; we must evacuate now!'"
+        },
+        {
+          "left": "Hostile",
+          "right": "'I don't care what you think; your opinion is worthless.'"
+        },
+        {
+          "left": "Ironic",
+          "right": "'The fire station burned down yesterday.'"
+        }
+      ]
+    },
+    "explanation": "Tone is the writer's attitude toward the subject. These examples show how word choice and situation create different emotional atmospheres."
+  },
+  {
+    "id": "reading-skills-summary-main-idea",
+    "topic": "reading-skills",
+    "difficulty": 2,
+    "image": null,
+    "template": "Extract: 'Despite the rise of digital books, local libraries remain vital hubs. They offer free internet, community workshops, and a quiet space for students to study, proving that their value goes far beyond just lending paperbacks.'\n\nWhat is the main idea of this passage?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Libraries are still important for reasons other than books",
+        "Digital books are better than physical books",
+        "Students should only study in libraries",
+        "Libraries need more funding to stay open"
+      ],
+      "answer": "Libraries are still important for reasons other than books"
+    },
+    "explanation": "The passage argues that libraries are 'vital hubs' because of the various community services they provide in the digital age."
+  },
+  {
+    "id": "reading-skills-ao2-structure-focus",
+    "topic": "reading-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "When a writer shifts the focus from a wide description of a landscape to a tiny detail on a character's face, this is a structural technique known as a [[blank0]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "zoom",
+      "acceptedAnswers": [
+        "zoom-in",
+        "focus shift",
+        "narrowing of focus"
+      ]
+    },
+    "explanation": "Structural analysis (AO2) involves looking at how the writer directs the reader's 'camera' or attention."
+  },
+  {
+    "id": "reading-skills-evaluation-success",
+    "topic": "reading-skills",
+    "difficulty": 4,
+    "image": null,
+    "template": "A student says: 'The writer effectively creates a sense of isolation by focusing on the silence of the snow-covered forest.'\n\nWhich of the following is the most important part of an AO4 response to this statement?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Analyzing specific language choices that emphasize silence",
+        "Listing the different types of trees in the forest",
+        "Explaining why forests are usually quiet in winter",
+        "Giving a dictionary definition of the word 'isolation'"
+      ],
+      "answer": "Analyzing specific language choices that emphasize silence"
+    },
+    "explanation": "Critical evaluation must be rooted in technical analysis. You must explain *how* the writer's methods lead to your judgment."
+  },
+  {
+    "id": "reading-skills-purpose-advise",
+    "topic": "reading-skills",
+    "difficulty": 1,
+    "image": null,
+    "template": "If a text includes phrases like 'You should...', 'Try to...', and 'It is recommended that...', what is its most likely purpose?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "to advise",
+      "acceptedAnswers": [
+        "advise",
+        "advising",
+        "to suggest",
+        "to guide"
+      ]
+    },
+    "explanation": "Language that offers suggestions or guidance is typical of texts intended to advise the reader."
+  },
+  {
+    "id": "reading-skills-comparison-connectives",
+    "topic": "reading-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which of these connectives are used to show a **difference** between two texts? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Conversely",
+        "Similarly",
+        "In contrast",
+        "Furthermore",
+        "Alternatively"
+      ],
+      "correctOptions": [
+        "Conversely",
+        "In contrast",
+        "Alternatively"
+      ]
+    },
+    "explanation": "'Similarly' and 'Furthermore' are used to show similarities or add information, while the others signal a shift to a different point of view."
+  },
+  {
+    "id": "reading-skills-id-writer-viewpoint",
+    "topic": "reading-skills",
+    "difficulty": 4,
+    "image": null,
+    "template": "Extract: 'The new housing development is an architectural scar on our green belt, a tasteless cluster of grey boxes that ignores the history of our village.'\n\nWhat is the writer's viewpoint on the housing development?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "critical",
+      "acceptedAnswers": [
+        "negative",
+        "hostile",
+        "opposed",
+        "disapproving"
+      ]
+    },
+    "explanation": "The writer uses emotive and negative metaphors ('architectural scar', 'tasteless cluster') to show their strong disapproval."
+  },
+  {
+    "id": "reading-skills-ao2-metaphor-effect",
+    "topic": "reading-skills",
+    "difficulty": 5,
+    "image": null,
+    "template": "Extract: 'Fear was a cold hand gripping my heart, squeezing tighter with every shadow that moved.'\n\nExplain the effect of the metaphor 'Fear was a cold hand'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 3,
+      "markScheme": "1. Identifies the metaphor (1). / 2. Explains the connotation of 'cold' as something chilling or lifeless (1). / 3. Analyzes the verb 'gripping' as suggesting total control or paralysis (1).",
+      "minWords": 30
+    },
+    "explanation": "The metaphor makes an abstract emotion (fear) feel like a physical, threatening force, increasing the tension for the reader."
+  },
+  {
+    "id": "reading-skills-true-false-19th-century",
+    "topic": "reading-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "True or False: 19th-century non-fiction texts often use more complex sentence structures and a more formal, elevated vocabulary than modern web articles.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Historical context often means the writing style is more densely packed with clauses and formal terminology compared to modern, accessible journalism."
+  },
+  {
+    "id": "reading-skills-synthesising-diff",
+    "topic": "reading-skills",
+    "difficulty": 4,
+    "image": null,
+    "template": "Text A describes a storm as 'a terrifying beast'. Text B describes the same storm as 'a cleansing rain'. Which word best describes the difference in their synthesis?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Perspective",
+        "Content",
+        "Accuracy",
+        "Setting"
+      ],
+      "answer": "Perspective"
+    },
+    "explanation": "The content (the storm) is the same, but the writers have different viewpoints (perspectives) on its nature and impact."
+  },
+  {
+    "id": "reading-skills-fact-vs-opinion",
+    "topic": "reading-skills",
+    "difficulty": 1,
+    "image": null,
+    "template": "Identify the opinion in the list below.",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The museum was built in 1924.",
+        "The museum is the most boring place in the city.",
+        "Entry to the museum is free on Tuesdays.",
+        "The museum houses three distinct galleries."
+      ],
+      "answer": "The museum is the most boring place in the city."
+    },
+    "explanation": "A fact can be proven; an opinion (like whether something is 'boring') is a subjective viewpoint."
+  },
+  {
+    "id": "reading-skills-ao1-find-copy",
+    "topic": "reading-skills",
+    "difficulty": 1,
+    "image": null,
+    "template": "Extract: 'The cottage was small with a thatched roof and a bright red door.'\n\nFind and copy the phrase that describes the roof.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "thatched roof",
+      "acceptedAnswers": [
+        "thatched"
+      ]
+    },
+    "explanation": "This is a basic AO1 'find and copy' task. You must take the words exactly as they appear in the text."
+  },
+  {
+    "id": "reading-skills-purpose-argue",
+    "topic": "reading-skills",
+    "difficulty": 4,
+    "image": null,
+    "template": "Extract: 'While some may claim that social media connects us, the reality is that it often creates a wall of digital isolation, isolating us from the very people we are supposed to be close to.'\n\nThis extract is most likely from a text intended to [[blank0]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "argue",
+      "acceptedAnswers": [
+        "persuade",
+        "critique"
+      ]
+    },
+    "explanation": "The writer presents a counter-argument ('While some may claim...') and then asserts their own strong viewpoint, which is typical of argumentative writing."
+  },
+  {
+    "id": "reading-skills-matching-audience-clues",
+    "topic": "reading-skills",
+    "difficulty": 3,
+    "image": null,
+    "template": "Match the linguistic feature to the likely intended audience.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Highly technical jargon",
+          "right": "Specialist professionals"
+        },
+        {
+          "left": "Simple vocabulary and short sentences",
+          "right": "Young children/Beginner readers"
+        },
+        {
+          "left": "Inclusive 'we' and emotive appeals",
+          "right": "Potential charity donors"
+        },
+        {
+          "left": "Formal, objective tone",
+          "right": "Government officials"
+        }
+      ]
+    },
+    "explanation": "Writers adapt their 'register' (the level of formality and choice of words) to suit the people they are writing for."
+  },
+  {
+    "id": "reading-skills-ao2-long-form-structure",
+    "topic": "reading-skills",
+    "difficulty": 5,
+    "image": null,
+    "template": "Extract: 'He opened the box. Inside was the key he had lost twenty years ago.'\n\nExplain how the writer uses structure to create interest in these two sentences.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 3,
+      "markScheme": "1. Identifies the use of short, simple sentences to create a quick pace (1). / 2. Explains the 'hook' at the end of the first sentence (waiting to see what is in the box) (1). / 3. Analyzes how the revelation in the second sentence creates a sense of mystery or backstory (1).",
+      "minWords": 30
+    },
+    "explanation": "Structural interest is created by controlling the flow of information. Short sentences often signal important plot points or revelations."
+  }
+]

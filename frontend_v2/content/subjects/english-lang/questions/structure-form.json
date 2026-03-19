@@ -1,0 +1,485 @@
+[
+  {
+    "id": "structure-form-sentence-types-simple",
+    "topic": "structure-form",
+    "difficulty": 1,
+    "image": null,
+    "template": "Identify the sentence type used in this extract: 'The door creaked.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Simple sentence",
+        "Compound sentence",
+        "Complex sentence",
+        "Minor sentence"
+      ],
+      "answer": "Simple sentence"
+    },
+    "explanation": "A simple sentence contains only one independent clause (a subject and a verb). It is often used for impact or to create a fast pace."
+  },
+  {
+    "id": "structure-form-narrative-perspective-definitions",
+    "topic": "structure-form",
+    "difficulty": 2,
+    "image": null,
+    "template": "Match the narrative perspective to its correct definition.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "First person",
+          "right": "Narrated by a character using 'I' or 'we'"
+        },
+        {
+          "left": "Third person limited",
+          "right": "Focuses on the thoughts and feelings of one character"
+        },
+        {
+          "left": "Third person omniscient",
+          "right": "An all-knowing narrator who sees into every character"
+        },
+        {
+          "left": "Second person",
+          "right": "Addresses the reader directly using 'you'"
+        }
+      ]
+    },
+    "explanation": "Perspective determines how much information the reader has access to and the level of intimacy with the characters."
+  },
+  {
+    "id": "structure-form-effect-short-sentences",
+    "topic": "structure-form",
+    "difficulty": 2,
+    "image": null,
+    "template": "A writer uses a series of very short sentences during an action scene. What is the most likely structural effect?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "To increase the pace and create tension",
+        "To provide detailed imagery of the setting",
+        "To slow down the narrative for reflection",
+        "To create a formal and academic tone"
+      ],
+      "answer": "To increase the pace and create tension"
+    },
+    "explanation": "Short sentences speed up the reading process, mimicking the frantic nature of an action sequence or a character's panic."
+  },
+  {
+    "id": "structure-form-structural-features-list",
+    "topic": "structure-form",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which of the following are considered 'structural features' rather than 'language features'? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Narrative shift",
+        "Flashback",
+        "Metaphor",
+        "Cyclical structure",
+        "Onomatopoeia"
+      ],
+      "correctOptions": [
+        "Narrative shift",
+        "Flashback",
+        "Cyclical structure"
+      ]
+    },
+    "explanation": "Structural features relate to the 'building' of the text and how it moves, whereas language features relate to specific word choices and imagery."
+  },
+  {
+    "id": "structure-form-term-cyclical",
+    "topic": "structure-form",
+    "difficulty": 2,
+    "image": null,
+    "template": "When a story ends by returning to the same location or theme mentioned at the very beginning, this is known as a [[blank0]] structure.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "cyclical",
+      "acceptedAnswers": [
+        "circular",
+        "cycle"
+      ]
+    },
+    "explanation": "A cyclical structure can suggest that nothing has changed, or emphasize the change that has occurred in the journey between the start and end."
+  },
+  {
+    "id": "structure-form-sentence-types-complex",
+    "topic": "structure-form",
+    "difficulty": 2,
+    "image": null,
+    "template": "A [[blank0]] sentence is made up of an independent clause and one or more dependent (subordinate) clauses.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "complex",
+      "acceptedAnswers": [
+        "complex sentence"
+      ]
+    },
+    "explanation": "Complex sentences allow writers to show relationships between ideas, such as cause and effect or time sequences."
+  },
+  {
+    "id": "structure-form-effect-long-sentences",
+    "topic": "structure-form",
+    "difficulty": 3,
+    "image": null,
+    "template": "A writer uses a very long, multi-clause sentence to describe a character walking through a lush garden. What is the intended effect?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "To mirror the flowing, abundant nature of the setting",
+        "To shock the reader with a sudden realization",
+        "To create a sense of urgent danger",
+        "To hide the fact that nothing is happening"
+      ],
+      "answer": "To mirror the flowing, abundant nature of the setting"
+    },
+    "explanation": "Long sentences can slow down the pace and allow for a cumulative buildup of detail, mirroring the richness of a description."
+  },
+  {
+    "id": "structure-form-true-false-flashback",
+    "topic": "structure-form",
+    "difficulty": 1,
+    "image": null,
+    "template": "True or False: A 'flashback' is a structural shift that moves the narrative back in time to provide context or backstory.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Flashbacks are common structural tools used to reveal character motivations or explain current events through past experiences."
+  },
+  {
+    "id": "structure-form-ordering-analysis",
+    "topic": "structure-form",
+    "difficulty": 3,
+    "image": null,
+    "template": "In AQA English Language Paper 1 Question 3, you are asked to analyze structure. Order these steps to form a logical analysis of a text's structure.",
+    "variables": {},
+    "answerConfig": {
+      "type": "ordering",
+      "items": [
+        "Identify what the writer focuses on at the very beginning",
+        "Spot the shift in focus or perspective in the middle",
+        "Examine how the ending links back to or resolves the opening",
+        "Explain why the writer has sequenced the information in this way"
+      ]
+    },
+    "explanation": "Analysis should move chronologically through the text, identifying the focus and then explaining the 'why' behind the sequence."
+  },
+  {
+    "id": "structure-form-term-discourse-markers",
+    "topic": "structure-form",
+    "difficulty": 2,
+    "image": null,
+    "template": "Words and phrases like 'Furthermore', 'On the other hand', and 'In conclusion' are known as [[blank0]] [[blank1]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "fill_blank",
+      "answers": [
+        [
+          "discourse"
+        ],
+        [
+          "markers",
+          "connectives"
+        ]
+      ]
+    },
+    "explanation": "Discourse markers are signposts that help guide the reader through the structure and logic of a piece of writing."
+  },
+  {
+    "id": "structure-form-sentence-types-minor",
+    "topic": "structure-form",
+    "difficulty": 4,
+    "image": null,
+    "template": "Read this extract: 'Silence. Cold. Nothingness.' What is the technical name for these grammatically incomplete sentences?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "minor sentences",
+      "acceptedAnswers": [
+        "minor sentence",
+        "fragment",
+        "sentence fragments"
+      ]
+    },
+    "explanation": "Minor sentences lack a main verb or subject but still convey complete meaning. They are highly effective for creating atmosphere or emphasis."
+  },
+  {
+    "id": "structure-form-matching-effects",
+    "topic": "structure-form",
+    "difficulty": 4,
+    "image": null,
+    "template": "Match the structural shift to its likely effect on the reader.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Shift from outside to inside",
+          "right": "Moves from a broad setting to a claustrophobic or intimate focus"
+        },
+        {
+          "left": "Sudden introduction of a new character",
+          "right": "Creates a mystery or a change in narrative direction"
+        },
+        {
+          "left": "Shift from dialogue to description",
+          "right": "Changes the pace from immediate action to slow observation"
+        },
+        {
+          "left": "Chronological move to the next day",
+          "right": "Signals a fresh start or a passage of time"
+        }
+      ]
+    },
+    "explanation": "Every shift in focus is a deliberate choice by the writer to manipulate the reader's perspective or emotional response."
+  },
+  {
+    "id": "structure-form-term-foreshadowing",
+    "topic": "structure-form",
+    "difficulty": 3,
+    "image": null,
+    "template": "What structural term describes a hint or clue given early in a story about what will happen later?",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "foreshadowing",
+      "acceptedAnswers": [
+        "prolepsis"
+      ]
+    },
+    "explanation": "Foreshadowing creates anticipation and tension, rewarding the reader for paying close attention to early details."
+  },
+  {
+    "id": "structure-form-sentence-compound",
+    "topic": "structure-form",
+    "difficulty": 2,
+    "image": null,
+    "template": "Which sentence is a compound sentence?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "The sun came out and the birds began to sing.",
+        "When the sun came out, the birds sang.",
+        "The sun came out.",
+        "Singing loudly, the birds enjoyed the sun."
+      ],
+      "answer": "The sun came out and the birds began to sing."
+    },
+    "explanation": "A compound sentence joins two independent clauses using a coordinating conjunction (like 'and', 'but', or 'so')."
+  },
+  {
+    "id": "structure-form-focus-shift-zoom",
+    "topic": "structure-form",
+    "difficulty": 3,
+    "image": null,
+    "template": "A writer begins by describing a panoramic view of a mountain range, then shifts to a tiny insect crawling on a single leaf. This structural technique is often called a '[[blank0]] in'.",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "zoom",
+      "acceptedAnswers": [
+        "zooming"
+      ]
+    },
+    "explanation": "Just like a camera lens, a 'zoom' focuses the reader's attention from the general (macro) to the specific (micro)."
+  },
+  {
+    "id": "structure-form-multi-select-nonfiction",
+    "topic": "structure-form",
+    "difficulty": 3,
+    "image": null,
+    "template": "Which structural features would you expect to find in a formal newspaper article? (Select all that apply)",
+    "variables": {},
+    "answerConfig": {
+      "type": "multi_select",
+      "options": [
+        "Headline",
+        "Bullet points",
+        "First-person stream of consciousness",
+        "Sub-headings",
+        "Introductory summary paragraph"
+      ],
+      "correctOptions": [
+        "Headline",
+        "Sub-headings",
+        "Introductory summary paragraph"
+      ]
+    },
+    "explanation": "Articles are structured for clarity and quick reading, using headlines to grab attention and sub-headings to organize information."
+  },
+  {
+    "id": "structure-form-effect-short-paragraph",
+    "topic": "structure-form",
+    "difficulty": 4,
+    "image": null,
+    "template": "What is the most likely reason a writer would use a single-sentence paragraph in the middle of a story?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "To draw maximum attention to a pivotal moment or shock",
+        "Because they ran out of things to say in that section",
+        "To save space on the page for more dialogue",
+        "To show that the character is feeling lazy"
+      ],
+      "answer": "To draw maximum attention to a pivotal moment or shock"
+    },
+    "explanation": "Paragraph breaks create 'white space' on the page. A single sentence surrounded by space forces the reader to stop and process its significance."
+  },
+  {
+    "id": "structure-form-term-opening",
+    "topic": "structure-form",
+    "difficulty": 1,
+    "image": null,
+    "template": "The term used to describe the very first part of a story, where the setting and characters are introduced, is the [[blank0]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "exposition",
+      "acceptedAnswers": [
+        "opening",
+        "introduction"
+      ]
+    },
+    "explanation": "Exposition sets the scene. In some modern stories, writers skip this and start 'in media res' (in the middle of the action)."
+  },
+  {
+    "id": "structure-form-longform-effect-time-shift",
+    "topic": "structure-form",
+    "difficulty": 4,
+    "image": null,
+    "template": "Extract: 'The old man looked at the rusting swings. Suddenly, he was ten years old again, the smell of fresh-cut grass filling his lungs as he soared toward the clouds.'\n\nExplain the structural effect of the time shift in this extract.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 3,
+      "markScheme": "1. Identifies the shift from the present (old man) to the past (flashback) (1). / 2. Explains that the shift is triggered by a physical object (the swings) (1). / 3. Analyzes the contrast between the 'rusting' present and the 'fresh' past to highlight themes of loss or aging (1).",
+      "minWords": 30
+    },
+    "explanation": "This flashback creates a poignant contrast between the character's current reality and their memories, deepening the reader's empathy."
+  },
+  {
+    "id": "structure-form-true-false-omniscient",
+    "topic": "structure-form",
+    "difficulty": 2,
+    "image": null,
+    "template": "True or False: A third-person omniscient narrator can move through time and space and knows the thoughts of all characters.",
+    "variables": {},
+    "answerConfig": {
+      "type": "true_false",
+      "answer": true
+    },
+    "explanation": "Omniscient means 'all-knowing'. This perspective allows for a broad, god-like view of the story's world."
+  },
+  {
+    "id": "structure-form-effect-dialogue",
+    "topic": "structure-form",
+    "difficulty": 3,
+    "image": null,
+    "template": "How does a sudden shift from long descriptive paragraphs to rapid-fire dialogue usually affect the pace of a story?",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "It speeds up the pace",
+        "It slows down the pace",
+        "It makes the pace stop entirely",
+        "It has no effect on the pace"
+      ],
+      "answer": "It speeds up the pace"
+    },
+    "explanation": "Dialogue usually happens in 'real-time,' making the scene feel more immediate and fast-paced compared to descriptive passages."
+  },
+  {
+    "id": "structure-form-matching-punctuation-structure",
+    "topic": "structure-form",
+    "difficulty": 4,
+    "image": null,
+    "template": "Match the punctuation mark to its structural function within a sentence.",
+    "variables": {},
+    "answerConfig": {
+      "type": "matching",
+      "pairs": [
+        {
+          "left": "Semi-colon",
+          "right": "Links two closely related independent clauses"
+        },
+        {
+          "left": "Colon",
+          "right": "Introduces a list or an explanation"
+        },
+        {
+          "left": "Dash",
+          "right": "Creates a dramatic pause or adds an interruption"
+        },
+        {
+          "left": "Ellipsis",
+          "right": "Indicates a trailing off or a cliffhanger"
+        }
+      ]
+    },
+    "explanation": "Punctuation is a structural tool used to control the rhythm and flow of the reader's experience."
+  },
+  {
+    "id": "structure-form-longform-structural-opening",
+    "topic": "structure-form",
+    "difficulty": 5,
+    "image": null,
+    "template": "A story begins with a description of a ticking clock in an empty room. Explain how this structures the reader's expectations.",
+    "variables": {},
+    "answerConfig": {
+      "type": "long_form",
+      "marks": 3,
+      "markScheme": "1. Explains that the ticking clock creates an immediate sense of time passing or tension (1). / 2. Notes that the 'empty room' creates a focus on isolation or mystery (1). / 3. Analyzes how this sets a suspenseful tone for the rest of the narrative (1).",
+      "minWords": 30
+    },
+    "explanation": "Openings are crucial for setting the 'narrative hook'. A ticking clock is a classic structural device to establish a 'race against time' or a sense of impending doom."
+  },
+  {
+    "id": "structure-form-sentence-types-compound-complex",
+    "topic": "structure-form",
+    "difficulty": 5,
+    "image": null,
+    "template": "Identify the sentence type: 'Because it was raining, the match was cancelled, but the fans stayed in their seats.'",
+    "variables": {},
+    "answerConfig": {
+      "type": "multiple_choice",
+      "options": [
+        "Compound-complex sentence",
+        "Complex sentence",
+        "Compound sentence",
+        "Simple sentence"
+      ],
+      "answer": "Compound-complex sentence"
+    },
+    "explanation": "This sentence contains at least two independent clauses ('the match was cancelled', 'the fans stayed in their seats') and at least one dependent clause ('Because it was raining')."
+  },
+  {
+    "id": "structure-form-term-climax",
+    "topic": "structure-form",
+    "difficulty": 2,
+    "image": null,
+    "template": "The structural point of highest tension or drama in a narrative is called the [[blank0]].",
+    "variables": {},
+    "answerConfig": {
+      "type": "text",
+      "textAnswer": "climax",
+      "acceptedAnswers": [
+        "peak",
+        "turning point"
+      ]
+    },
+    "explanation": "The climax is the 'point of no return' where the main conflict reaches its head before the falling action and resolution."
+  }
+]
